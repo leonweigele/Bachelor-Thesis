@@ -1,0 +1,49 @@
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+\chapter{Time-Varying Correlations}
+\label{ch:dcc_garch}
+
+% Target: 5-6 pages
+
+
+\section{Univariate GARCH Estimates}
+\label{sec:dcc_univariate}
+
+% TODO: Table — GARCH(1,1) parameter estimates for each series
+% (omega, alpha, beta, persistence = alpha + beta)
+% TODO: Brief discussion of volatility persistence and clustering
+
+
+\section{Dynamic Conditional Correlations}
+\label{sec:dcc_estimates}
+
+% TODO: DCC parameter estimates (alpha_DCC, beta_DCC)
+% TODO: Figure — rho(USD, VIX) over time with event dates shaded
+% Key test: does this turn negative around Liberation Day?
+% TODO: Figure — rho(Gold, VIX) over time
+% Should remain positive throughout → gold as consistent safe haven
+% TODO: Figure — rho(Oil, EM currencies) over time
+% Should spike during Hormuz crisis
+% TODO: Figure — rho(Oil exporters, Oil) over time
+% Should strengthen during Iran shock
+
+
+\section{Safe-Haven Regression Results}
+\label{sec:dcc_safehaven_results}
+
+% TODO: Table — Baur & Lucey (2010) regression results
+% rho(i,j,t) = c + beta_1 D_tariff + beta_2 D_Iran_Jun + beta_3 D_Iran_Feb + eps
+% TODO: Key results:
+% - USD-VIX: negative beta during tariff event → safe-haven breakdown
+% - Gold-VIX: positive beta during all events → universal safe haven
+% - Oil-EM: significant positive beta during Hormuz → oil channel active
+
+
+\section{Robustness}
+\label{sec:dcc_robustness}
+
+% TODO: Rolling-window OLS correlations (60-day, 90-day) as alternative
+% to DCC-GARCH → do results hold?
+% TODO: Sensitivity to event window definitions

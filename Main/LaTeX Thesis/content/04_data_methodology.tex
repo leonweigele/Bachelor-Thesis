@@ -1,0 +1,91 @@
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+\chapter{Data and Methodology}
+\label{ch:methodology}
+
+% Target: 5-6 pages
+
+
+\section{Data}
+\label{sec:data}
+
+\subsection{Exchange Rates and Financial Variables}
+\label{sec:data_fx}
+
+% TODO: 30 currencies vs USD — source: course dataset + Yahoo Finance / Investing.com
+% TODO: Brent crude (FRED DCOILBRENTEU / Yahoo BZ=F), Gold (FRED / Yahoo GC=F)
+% TODO: VIX (Yahoo ^VIX), S&P 500 (Yahoo ^GSPC), DXY (Yahoo DX-Y.NYB)
+% TODO: Sample period: 2020--2026 (daily)
+% TODO: Log returns: $r_{i,t} = \ln(P_{i,t} / P_{i,t-1})$
+
+\subsection{Geopolitical and Policy Uncertainty Indices}
+\label{sec:data_gpr}
+
+% TODO: GPR index (Caldara & Iacoviello) — daily and monthly, from matteoiacoviello.com
+% TODO: U.S. EPU / TPU index — from policyuncertainty.com
+% TODO: Dollar and Carry factors — from course dataset / Lustig's website
+
+\subsection{Portfolio Construction}
+\label{sec:data_portfolios}
+
+% TODO: Safe vs. Risky classification — based on carry-trade beta
+% Safe: JPY, CHF, EUR, SEK, DKK
+% Risky: TRY, BRL, ZAR, MXN, COP, IDR
+% TODO: Oil exporters vs. Oil importers — based on net oil trade position
+% Exporters: NOK, CAD, COP, MXN, RUB
+% Importers: JPY, KRW, INR, TRY, EUR
+% TODO: Equally-weighted portfolio returns for each group
+
+
+\section{Event Study Methodology}
+\label{sec:method_event}
+
+% TODO: Define estimation window [-130, -11] and event window [-10, +10]
+% TODO: Market model: $R_{i,t} = \alpha_i + \beta_i R_{m,t} + \varepsilon_{i,t}$
+% where $R_{m,t}$ is the dollar factor
+% TODO: Abnormal return:
+% $\AR_{i,t} = R_{i,t} - (\hat{\alpha}_i + \hat{\beta}_i R_{m,t})$
+% TODO: Cumulative abnormal return:
+% $\CAR_i(t_1, t_2) = \sum_{t=t_1}^{t_2} \AR_{i,t}$
+% TODO: Statistical tests: t-test on CARs, Kolari & Pynnönen (2010)
+% adjusted test for cross-sectional dependence
+
+
+\section{DCC-GARCH Model}
+\label{sec:method_dcc}
+
+% TODO: Engle (2002) two-step approach
+% Step 1 — Univariate GARCH(1,1):
+% $h_{i,t} = \omega_i + \alpha_i \varepsilon_{i,t-1}^2 + \beta_i h_{i,t-1}$
+% TODO: Step 2 — DCC specification on standardized residuals
+% $Q_t = (1 - \alpha_{\text{DCC}} - \beta_{\text{DCC}}) \bar{Q}
+%        + \alpha_{\text{DCC}} z_{t-1} z_{t-1}' + \beta_{\text{DCC}} Q_{t-1}$
+% $\rho_{ij,t} = Q_{ij,t} / \sqrt{Q_{ii,t} Q_{jj,t}}$
+
+\subsection{System of Variables}
+\label{sec:dcc_variables}
+
+% TODO: 6-8 series: DXY, EUR/USD, JPY/USD, CHF/USD, Brent, Gold, VIX, EM basket
+
+\subsection{Safe-Haven Test}
+\label{sec:dcc_safehaven}
+
+% TODO: Baur & Lucey (2010) regression:
+% $\rho_{ij,t} = c + \beta_1 D_{\text{tariff}} + \beta_2 D_{\text{Iran,Jun25}}
+%               + \beta_3 D_{\text{Iran,Feb26}} + \varepsilon_t$
+% Interpretation: negative $\beta$ for USD-VIX → safe-haven breakdown
+
+
+\section{Structural VAR}
+\label{sec:method_svar}
+
+% TODO: 7-variable daily VAR (2020--2026):
+% GPR, Brent, VIX, EPU/TPU, Safe basket, Risky basket, DXY
+% TODO: Cholesky ordering — GPR most exogenous, currencies most endogenous
+% TODO: Lag selection: AIC/BIC via VAR.select_order()
+% TODO: Stationarity checks (ADF), stability (eigenvalues inside unit circle)
+% TODO: Impulse response functions (1-20 days), bootstrapped confidence bands
+% TODO: Subsample comparison: tariff period vs. Iran period
+% TODO: Optional: FEVD

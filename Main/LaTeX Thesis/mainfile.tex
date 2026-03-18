@@ -1,0 +1,42 @@
+% !TEX program = lualatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+% 
+% Bachelor's Thesis: Safe-Haven Currencies, Commodity Prices, and the
+% Geopolitical Risk Premium in 2025-2026
+% 
+% To compile:
+% > lualatex mainfile.tex
+% > biber mainfile
+% > lualatex mainfile.tex
+% > lualatex mainfile.tex
+
+\documentclass{scrbook}
+
+%% All important settings are made in the file settings.tex
+\input{settings}
+
+\begin{document}
+	
+	\frontmatter
+		\include{frontbackmatter/title}
+		\tableofcontents
+		\include{frontbackmatter/lists}
+	
+	\mainmatter
+		\include{content/01_introduction}
+		\include{content/02_literature_review}
+		\include{content/03_background}
+		\include{content/04_data_methodology}
+		\include{content/05_event_study}
+		\include{content/06_dcc_garch}
+		\include{content/07_svar}
+		\include{content/08_discussion}
+		\include{content/09_conclusion}
+	
+	\backmatter
+		\printbibliography[heading=head]
+		\include{content/appendix_a}
+		\include{frontbackmatter/statutory_declaration}
+
+\end{document}

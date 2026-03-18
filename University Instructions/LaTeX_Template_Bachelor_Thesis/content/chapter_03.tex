@@ -1,0 +1,61 @@
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+\chapter{Working with \LaTeX}
+
+\section{Style Templates}
+Unlike Word, \LaTeX\ does not work with style templates. As a WYSIWYM program (What you see is what you mean), layout and content are strictly separated in \LaTeX. In contrast, Word is a WYSIWYG program (What you see is what you get), so you can see changes in format directly on the screen.
+In the present template, central properties such as font sizes or spacing are already defined. All settings and packages are loaded in the file \texttt{settings.tex}. There you can of course make changes or add required packages. However, it is again cautioned against tinkering too much with the layout, as this usually leads to "improvements" that make things worse.
+
+\section{Document Structure}
+To structure your text, you have the commands \verb|\section|, \verb|\subsection|, and \verb|\subsubsection| at your disposal. In most cases, these three levels of organization should suffice. If necessary, you can use the \verb|\paragraph| and \verb|\subparagraph| commands. To display more than two levels of organization in the table of contents, you can adjust the depth of the table of contents using the command \begin {verbatim} \setcounter{tocdepth}{1} \end{verbatim}.
+
+\section{Inserting Elements}
+\label{sec:floats}
+
+\subsection{Figures}
+To insert images, the package \texttt{graphicx} is required. This is already included in the template. In principle, there are countless ways to insert images in \LaTeX{}. Therefore, only one example is given here, and you are referred to an internet search or appropriate \LaTeX\ manuals. A good starting point is provided by \href{https://mirrors.ctan.org/info/l2picfaq/german/l2picfaq.pdf}{\color{blue} Dominik Bischoff}.\footnote{The linked introduction is a bit outdated by now and unfortunately does not include newer developments such as \hologo{XeLaTeX} or \hologo{LuaLaTeX}.}
+Please note that you should caption all figures with the \verb|\caption| command. This title will be automatically included in the list of figures. For example, Figure \ref{fig:latexlogo} shows the \LaTeX\ logo and serves as an illustration.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{latex-logo}
+\caption{The \LaTeX\ logo}
+\label{fig:latexlogo}
+\end{figure}
+
+\subsection{Links}
+In this section, you can see an example of including links to an external website:
+
+\begin{center}
+	\href{http://en.wikibooks.org/wiki/LaTeX/Tables}{\color{blue} http://en.wikibooks.org/wiki/LaTeX/Tables}
+\end{center}
+
+\subsection{Tables}
+Creating tables is more complex. Again, excellent instructions on the internet are available, such as those written by \href{https://www.tug.org/pracjourn/2007-1/mori/mori.pdf}{\color{blue} Lapo Mori}. As an example, Table~\ref{tab:wetter} shows the weather forecast for three days. Remember to caption them using \verb|\caption|, which will automatically appear in the list of tables. By the way, \LaTeX\ places tables where they best fit into the layout. In principle, it is possible to fix tables and position them in the text. However, you should wait with these corrections until you have completed the entire work.
+
+\begin{table}
+	\centering
+	\caption{\label{tab:wetter}Weather forecast for the next three days}
+	\begin{tblr}{ 
+		colspec = {lSSX},
+		row{1} = {guard},
+	}
+		\toprule
+			Day & $T_{\min}$ (\si{\celsius}) & $T_{\max}$ (\si{\celsius}) & Summary \\
+		\midrule
+			Monday & 11 & 22 & A clear day with plenty of sunshine.
+			However, the strong breeze will lower temperatures. \\
+			Tuesday & 9 & 19 & Cloudy with rain in many northern regions. \\
+			Wednesday & 10 & 21 & Rain will continue in the morning.
+				In the afternoon, the rain will stop and the sun will come out in the evening.\\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+\section{Manual Adjustments}
+
+Although \LaTeX\ is a very powerful typesetting program with excellent formula typesetting and very good typesetting quality, manual adjustments in layout may still be necessary. The peculiarity that \LaTeX\ places images and tables in the document autonomously according to typographical criteria has already been mentioned (see Section \ref{sec:floats}). This prevents \LaTeX\ from producing half-empty pages or paragraphs that are too short. However, this automatic feature may lead to unsatisfactory results for your academic work, such as images being moved to the next page or illustrations taking up too much space compared to the text.
+
+Moreover, there may also be "outliers" at the line level, where the text protrudes into the margin. This problem can usually be solved by rephrasing or manually inserting hyphens. In any case, you should check your work for faulty line breaks and word hyphenations or unsightly placements before submission.

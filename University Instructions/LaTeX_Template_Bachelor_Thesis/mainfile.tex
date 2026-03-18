@@ -1,0 +1,37 @@
+% !TEX program = lualatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = de_DE
+% 
+% Template for Bachelor's Theses
+% 
+% To compile the template with LaTeX, the following commands should be executed:
+% > lualatex mainfile.tex
+% > biber mainfile
+% > lualatex mainfile.tex
+
+\documentclass{scrbook}
+
+%% All important settings are made in the file settings.tex
+%% and can be modified there.
+\input{settings}
+
+\begin{document}
+	
+	\frontmatter
+		\include{frontbackmatter/title}
+		\tableofcontents
+		\include{frontbackmatter/lists}
+	
+	\mainmatter
+		\include{content/introduction}
+		\include{content/chapter_02}
+		\include{content/chapter_03}
+		\include{content/chapter_04}
+		\include{content/conclusion}
+	
+	\backmatter
+		\printbibliography[heading=head]
+		\include{./content/appendix_01}
+		\include{./frontbackmatter/statutory_declaration}
+	
+\end{document}

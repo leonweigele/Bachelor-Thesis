@@ -1,0 +1,40 @@
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+\chapter{Creating a Bibliography}
+
+In general, there are two ways to create a bibliography with \LaTeX: either you create it manually, or you work with a package like biblatex and the auxiliary program \texttt{biber}.
+
+\section{Manual Bibliography}
+Manually creating a bibliography is particularly suitable for smaller works that use ten to twenty sources. This approach offers the advantage that you can individually address specific requirements of your supervisor without having to extensively familiarize yourself with the comprehensive biblatex package. In particular, you do not face the challenge of adapting the package, which is tailored to the Anglo-American language area, to the German citation style. It is important to keep track and on the one hand list \emph{all cited} sources in the bibliography, but on the other hand also \emph{not list} sources that you do \emph{not} use in the text. Therefore, when revising, it is important to proceed with the necessary care and review all entries again.\\
+If you choose this option, please use the document \texttt{bibliographie.tex}, where you can include all entries sorted alphabetically.
+
+\section{Working with biblatex}
+The extensive biblatex package offers the decisive advantage of extending \LaTeX\ with a personal bibliography database, in which all bibliographic information is stored in a uniform format in a separate file (here \texttt{literatur.bib}).\footnote{biblatex (in combination with biber) is explicitly recommended as it is an extension of \hologo{BibTeX} and is much more flexible in its application.} These can then be called up in any new \LaTeX\ document using a reference key (see below). Thus, as soon as you add or remove an article, the bibliography is automatically updated. In return, this requires a sometimes very extensive familiarization. If you choose this option, we recommend the \href{https://texdoc.org/pkg/biblatex}{\textcolor{blue}{\texttt{manual}}} for biblatex, where you will find all steps explained. You can also find a clear guide by \href{http://www.nagel-net.de/Latex/DOKU/DTK-4_2008-biblatex-Teil2.pdf}{\color{blue}\texttt{Dominik Wassenhoven}}. Roughly simplified, proceed as follows:\\
+
+\begin{enumerate}
+\item Find the desired article and import the bibliographic information into the document \texttt{literatur.bib}. Most databases and libraries now offer literature entries in \hologo{BibTeX} format. Otherwise, you will have to enter the article manually into the document \texttt{literatur.bib}. Depending on the type of source (e.g., monograph, anthology, journal article), different mandatory information is required. Please read more about this in the \href{https://texdoc.org/pkg/biblatex}{\color{blue}manual}. A typical entry looks like this:
+\begin{verbatim}
+@ARTICLE{card2001,
+  author = {David Card},
+  title = {Estimating the return to schooling: 
+	Progress on some persistent econometric problems},
+  journal = {Econometrica},
+  year = {2001},
+  volume = {69},
+  pages = {1127--1160},
+  number = {5},
+  publisher = {Wiley Online Library}}
+\end{verbatim}
+
+\item Once you have created your document \texttt{literatur.bib} with the bibliographic information, you can refer to individual sources using the \verb|\cite| command. For this, you need the reference key, which you can find in the respective bibliographic information (first entry after the type of literature). All citation commands generally have the following syntax: \begin{verbatim} \command[Prefix][Suffix]{ReferenceKey}.\end{verbatim} As a prefix, you can insert indications such as "see" or "refer to"; in the suffix, page numbers can be included. The command is then, for example: \begin{verbatim} As mentioned by \cite{card2001} ...  \end{verbatim} In the output document, you will then get: As mentioned by \cite{card2001} ...\\
+
+\item If you want to add a page number, you do this in the suffix in square brackets. The command \begin{verbatim} \cite[1140]{card2001} \end{verbatim} results in the output document: \cite[1140]{card2001}. The indications "sq." or "sqq." are achieved by \verb|\psq| and \verb|\psqq|, whereby it is generally recommended to always specify the page range as precisely as possible for more than two cited pages. So instead of \cite[1140 \psqq]{card2001}, you should specify the end of the cited range: \cite[1140-1143]{card2001}.\\
+
+\item With the command \begin{verbatim} \parencite[1140]{card2001} \end{verbatim} it is possible to place the reference in round brackets. This is especially helpful when referring to the same article multiple times. The result then appears as \parencite [see][1140]{card2001}.\\
+
+\item If you want to refer to more than one article, you can use the commands \begin{verbatim} \cites[2758]{carneiro2011}[445]{angrist1996} \end{verbatim}  or \begin{verbatim} \parencites[2758]{carneiro2011}[445]{angrist1996} \end{verbatim} . The result in the latter case looks like this: As the authors rightfully criticize, a dynamic adjustment of the model is not possible \parencites [2758]{carneiro2011}[445]{angrist1996}. 
+
+\item Finally, there is the command \begin{verbatim} \textcite[1140]{card2001} \end{verbatim} for references in the text. Here it says then: \textcite[1140]{card2001}
+\end{enumerate}

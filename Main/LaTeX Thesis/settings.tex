@@ -1,0 +1,124 @@
+% !TEX root = mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+
+%% Setting document options:
+
+%%% Layout settings
+	\KOMAoptions{
+		fontsize=12pt,
+		bibliography=totoc,
+		headings=normal,
+		toc=listof,
+		toc=indent,
+		listof=indent,
+		listof=totoc,
+		twoside=false
+	}
+	\setcounter{tocdepth}{2} % show subsections in TOC (useful for methodology chapter)
+	\usepackage{geometry, setspace}
+	\geometry{
+		paper=a4paper,
+		hmargin=30mm,
+		top=15mm,
+		bottom=20mm,
+		includeheadfoot,
+	}
+	\onehalfspacing
+	% Move chapter headings up slightly:
+	\renewcommand*{\chapterheadstartvskip}{\vspace*{-1.48\topskip}}
+
+
+%% Setting the font:
+	\usepackage{lmodern}
+
+
+%% Setting up headers and footers:
+	\usepackage[headsepline=false]{scrlayer-scrpage}
+	\automark[chapter]{chapter}
+	\lohead{}
+	\cohead{\headmark}
+	\rohead{}
+	\lofoot{}
+	\cofoot*{\pagemark}
+	\rofoot{}
+	\pagestyle{scrheadings}
+
+
+%% Language selection:
+	\usepackage{polyglossia}
+	\setmainlanguage{english}
+	\setotherlanguage{german}
+
+
+%% Settings for tables
+	\usepackage{tabularray}
+	\UseTblrLibrary{amsmath, booktabs, siunitx}
+
+
+%% Settings for citations and bibliography:
+	\usepackage{csquotes}
+	\usepackage[
+		backend=biber,
+		style=authoryear, 
+		uniquename=init, 
+		giveninits=true, 
+		maxbibnames=3, 
+		minbibnames=2
+	]{biblatex} 
+	\addbibresource{references.bib}
+	\defbibheading{head}{\chapter{References}}
+	% Colon after last author
+	\renewcommand*{\labelnamepunct}{\addcolon\addspace}
+	% All names as last name, first name
+	\DeclareNameAlias{sortname}{family-given}
+	% Ensure that citations with multiple authors have a "," in the text and in the bibliography
+	\renewcommand*{\finalnamedelim}{\addspace\bibstring{and}\addspace}
+
+
+%% Other packages:
+	\usepackage{
+		float,      % Placement of floats
+		graphicx,   % Inclusion of graphics
+		hologo,     % TeX logos
+		mathtools,  % Math typesetting (loads amsmath)
+		microtype,  % Microtypographic improvements
+		paralist,   % Space-saving lists
+		xcolor,     % Color support
+	}
+
+%% Additional packages for econometrics thesis:
+	\usepackage{amssymb}        % Additional math symbols
+	\usepackage{bm}             % Bold math symbols (e.g., vectors/matrices)
+	\usepackage{dcolumn}        % Decimal-aligned columns in tables
+	\usepackage{threeparttable} % Tables with notes (for regression output)
+	\usepackage{subcaption}     % Subfigures (e.g., side-by-side IRF plots)
+	\usepackage{enumitem}       % Better list control
+
+
+%% LaTeX searches for images in the specified locations:
+	\graphicspath{{./images/},{./}}
+
+
+%% Automatic PDF links in the document:
+	\usepackage[
+		colorlinks=false,
+		pdfborder={0 0 0},
+	]{hyperref}
+
+
+%% Custom math commands for the thesis:
+	% Abnormal return
+	\newcommand{\AR}{\mathrm{AR}}
+	% Cumulative abnormal return
+	\newcommand{\CAR}{\mathrm{CAR}}
+	% Expected value
+	\newcommand{\E}{\mathbb{E}}
+	% Variance
+	\newcommand{\Var}{\mathrm{Var}}
+	% Covariance
+	\newcommand{\Cov}{\mathrm{Cov}}
+	% Correlation
+	\newcommand{\Corr}{\mathrm{Corr}}
+	% DCC correlation

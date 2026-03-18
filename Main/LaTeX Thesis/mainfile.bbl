@@ -1,0 +1,71 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{lustig2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=311b7d63cf4d7b318d0b4705b3e2f11a}{%
+           family={Lustig},
+           familyi={L\bibinitperiod},
+           given={Hanno},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e73a118349b0bd9297f1d2e2386ae3c3}{%
+           family={Roussanov},
+           familyi={R\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e295ef9fa0e4f8d2e874a40c0e4cbac1}{%
+           family={Verdelhan},
+           familyi={V\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{fullhash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{fullhashraw}{673d28611a3abe86eabeed982fa27f65}
+      \strng{bibnamehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{authorbibnamehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{authornamehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{authorfullhash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{authorfullhashraw}{673d28611a3abe86eabeed982fa27f65}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Financial Studies}
+      \field{number}{11}
+      \field{title}{Common Risk Factors in Currency Markets}
+      \field{volume}{24}
+      \field{year}{2011}
+      \field{pages}{3731\bibrangedash 3777}
+      \range{pages}{47}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

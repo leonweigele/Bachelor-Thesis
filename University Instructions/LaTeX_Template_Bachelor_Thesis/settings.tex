@@ -1,0 +1,121 @@
+% !TEX root = mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+%
+% For more information about individual packages, see for example:
+% http://texdoc.org/pkg/paketname
+% http://ctan.org/pkg/paketname
+
+
+%% Setting document options:
+%% (equivalent to \documentclass[<options>]{...}
+
+%%% Layout settings
+	\KOMAoptions{ 				% equivalent to \documentclass[<options>]{...}
+		fontsize=12pt,			% standard font size
+		bibliography=totoc,	% bibliography appears in the table of contents
+		headings=normal,		% size and spacing of headings
+		toc=listof,				% list of floats in table of contents
+		toc=indent,				% table of contents in hierarchical form
+		listof=indent,			% other lists in hierarchical form
+		listof=totoc,           % other lists appear in table of contents
+		twoside=false				% single-sided layout
+	}
+	\setcounter{tocdepth}{1} % table of contents depth
+	\usepackage{geometry, setspace}
+	\geometry{
+		paper=a4paper,		% DIN A4 paper
+		hmargin=30mm,			% horizontal margins
+		top=15mm,				% top margin
+		bottom=20mm,			% bottom margin
+		includeheadfoot,	% header and footer are not part of the margin
+	}
+	\onehalfspacing 		% one-and-a-half line spacing
+	% Move chapter headings up slightly:
+	\renewcommand*{\chapterheadstartvskip}{\vspace*{-1.48\topskip}}
+
+
+%% Setting the font:
+	\usepackage{lmodern}
+	% Alternatively, any font installed on the operating system can be used with fontspec:
+	%\usepackage{fontspec}
+	%\setmainfont{Constantia}
+	%\setsansfont{Corbel}
+	%\setmonofont{Consolas}
+	% For serifs in headings:
+	%\addtokomafont{sectioning}{\rmfamily}
+
+
+%% Setting up headers and footers:
+	\usepackage[headsepline=false]{scrlayer-scrpage}
+	% Automatically fill header with current chapter/section:
+	\automark[chapter]{chapter}
+	% left, center, right
+	\lohead{}
+	\cohead{\headmark}
+	\rohead{}
+	% Page number only on plain pages in footer
+	\lofoot{}
+	\cofoot*{\pagemark}
+	\rofoot{}
+	% Activate defined header style:
+	\pagestyle{scrheadings}
+
+
+%% Language selection:
+	\usepackage{polyglossia}
+	\setmainlanguage{english}
+	\setotherlanguage{german}
+	% The language can be changed within the document with
+	% \begin{german} ... \end{german}
+	%
+
+
+%% Settings for tables
+	\usepackage{tabularray}
+	\UseTblrLibrary{amsmath, booktabs, siunitx}
+
+
+%% Settings for citations and bibliography:
+	\usepackage{csquotes}
+	\usepackage[
+		backend=biber,
+		style=authoryear, 
+		uniquename=init, 
+		giveninits=true, 
+		maxbibnames=3, 
+		minbibnames=2
+	]{biblatex} 
+	% Specify the .bib file (multiple files can be used)
+	\addbibresource{references.bib}
+	\defbibheading{head}{\chapter{References}}
+	% Colon after last author
+	\renewcommand*{\labelnamepunct}{\addcolon\addspace}
+	% All names as last name, first name
+	\DeclareNameAlias{sortname}{family-given}
+	% Ensure that citations with multiple authors have a "/" in the text and in the bibliography
+	\renewcommand*{\multinamedelim}{\addslash}
+	\renewcommand*{\finalnamedelim}{\addslash}
+
+
+	%% other packages:
+	\usepackage{
+		float,      % Placement of floats (figures, tables), own float types
+		graphicx,   % Enables inclusion of graphics with \includegraphics
+		hologo,     % For TeX logos
+		mathtools,  % Improvements for math typesetting (loads, among others, amsmath)
+		microtype,  % Microtypographic improvements (e.g., optical margin alignment)
+		paralist,   % Space-saving lists with compactitem
+		xcolor,     % Use of color
+	}
+
+
+%% LaTeX searches for images in the specified locations:
+	\graphicspath{{./images/},{./}}
+
+
+%% Automatic PDF links in the document:
+	\usepackage[
+		colorlinks=false,		% Do not highlight links in color
+		pdfborder={0 0 0},		% Do not highlight links with PDF box
+	]{hyperref}
