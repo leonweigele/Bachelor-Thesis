@@ -1,0 +1,41 @@
+series,description,source,retrieved
+DTWEXBGS,Nominal broad USD index,FRED (API),2026-06-16 17:40
+DTWEXAFEGS,Nominal advanced-economies USD index,FRED (API),2026-06-16 17:40
+DTWEXEMEGS,Nominal emerging-markets USD index,FRED (API),2026-06-16 17:40
+DGS10,10y Treasury constant-maturity yield,FRED (API),2026-06-16 17:40
+DGS5,5y Treasury constant-maturity yield,FRED (API),2026-06-16 17:40
+DFII5,5y TIPS yield,FRED (API),2026-06-16 17:40
+T5YIE,5y breakeven inflation,FRED (API),2026-06-16 17:40
+VIXCLS,CBOE VIX,FRED (API),2026-06-16 17:40
+DCOILBRENTEU,Brent crude spot,FRED (API),2026-06-16 17:40
+DCOILWTICO,WTI crude spot,FRED (API),2026-06-16 17:40
+DHHNGSP,Henry Hub natural gas spot,FRED (API),2026-06-16 17:40
+SP500,S&P 500 index,FRED (API),2026-06-16 17:40
+EUR,"FX, foreign per USD (FRED DEXUSEU)",FRED (API),2026-06-16 17:40
+GBP,"FX, foreign per USD (FRED DEXUSUK)",FRED (API),2026-06-16 17:40
+AUD,"FX, foreign per USD (FRED DEXUSAL)",FRED (API),2026-06-16 17:40
+NZD,"FX, foreign per USD (FRED DEXUSNZ)",FRED (API),2026-06-16 17:40
+JPY,"FX, foreign per USD (FRED DEXJPUS)",FRED (API),2026-06-16 17:40
+CHF,"FX, foreign per USD (FRED DEXSZUS)",FRED (API),2026-06-16 17:40
+CAD,"FX, foreign per USD (FRED DEXCAUS)",FRED (API),2026-06-16 17:40
+SEK,"FX, foreign per USD (FRED DEXSDUS)",FRED (API),2026-06-16 17:40
+NOK,"FX, foreign per USD (FRED DEXNOUS)",FRED (API),2026-06-16 17:40
+DKK,"FX, foreign per USD (FRED DEXDNUS)",FRED (API),2026-06-16 17:40
+MXN,"FX, foreign per USD (FRED DEXMXUS)",FRED (API),2026-06-16 17:40
+BRL,"FX, foreign per USD (FRED DEXBZUS)",FRED (API),2026-06-16 17:40
+ZAR,"FX, foreign per USD (FRED DEXSFUS)",FRED (API),2026-06-16 17:40
+INR,"FX, foreign per USD (FRED DEXINUS)",FRED (API),2026-06-16 17:40
+KRW,"FX, foreign per USD (FRED DEXKOUS)",FRED (API),2026-06-16 17:40
+TWD,"FX, foreign per USD (FRED DEXTAUS)",FRED (API),2026-06-16 17:40
+THB,"FX, foreign per USD (FRED DEXTHUS)",FRED (API),2026-06-16 17:40
+SGD,"FX, foreign per USD (FRED DEXSIUS)",FRED (API),2026-06-16 17:40
+MYR,"FX, foreign per USD (FRED DEXMAUS)",FRED (API),2026-06-16 17:40
+CNY,"FX, foreign per USD (FRED DEXCHUS)",FRED (API),2026-06-16 17:40
+HKD,"FX, foreign per USD (FRED DEXHKUS)",FRED (API),2026-06-16 17:40
+GPR_DAILY,Geopolitical Risk index (Caldara & Iacoviello),https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls,2026-06-16 17:40
+GPR_MONTHLY,Geopolitical Risk index (Caldara & Iacoviello),https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls,2026-06-16 17:40
+EPU_daily,US Economic Policy Uncertainty (daily),https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv,2026-06-16 17:40
+lseg_fx_spot.csv,"LSEG export (AUD, BRL, CAD, CHF, CLP, CNY, COP, CZK, DKK, EUR, GBP, HKD, HUF, IDR, ILS, INR, JPY, KRW, KWD, MXN, MYR, NOK, NZD, PEN, PLN, SAR, SEK, SGD, THB, TRY, TWD, ZAR)",LSEG Workspace,2026-06-16 17:40
+lseg_gold.csv,LSEG export (Gold),LSEG Workspace,2026-06-16 17:40
+lseg_stoxx.csv,LSEG export (EuroStoxx50_EUR),LSEG Workspace,2026-06-16 17:40
+lseg_ttf.csv,LSEG export (TTF),LSEG Workspace,2026-06-16 17:40

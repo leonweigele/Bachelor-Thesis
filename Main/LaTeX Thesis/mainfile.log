@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.6.21)  18 MAR 2026 08:34
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.6.21)  25 JUN 2026 11:27
  restricted system commands enabled.
  file:line:error style messages enabled.
-**"/Users/leon/Library/CloudStorage/OneDrive-UniversitätMannheim/Bachelor Thesis/Main/LaTeX Thesis/mainfile"
-("/Users/leon/Library/CloudStorage/OneDrive-UniversitätMannheim/Bachelor Thesis/Main/LaTeX Thesis/mainfile.tex"
+**"/Users/leon/Bachelor Thesis/Main/LaTeX Thesis/mainfile"
+("/Users/leon/Bachelor Thesis/Main/LaTeX Thesis/mainfile.tex"
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -957,7 +957,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 4040.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4040.
 Package hyperref Info: Hyper figures OFF on input line 4157.
 Package hyperref Info: Link nesting OFF on input line 4162.
 Package hyperref Info: Hyper index ON on input line 4165.
@@ -980,7 +980,7 @@ Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
 Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring ON on input line 6060.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
@@ -1013,7 +1013,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
- (./mainfile.aux (./frontbackmatter/title.aux) (./frontbackmatter/lists.aux) (./content/01_introduction.aux) (./content/02_literature_review.aux) (./content/03_background.aux) (./content/04_data_methodology.aux) (./content/05_event_study.aux) (./content/06_dcc_garch.aux) (./content/07_svar.aux) (./content/08_discussion.aux) (./content/09_conclusion.aux) (./content/appendix_a.aux) (./frontbackmatter/statutory_declaration.aux))
+ (./mainfile.aux (./frontbackmatter/title.aux) (./content/01_introduction.aux) (./content/02_literature_review.aux) (./content/03_background.aux) (./content/04_data_methodology.aux) (./content/05_event_study.aux) (./content/06_regression.aux) (./content/08_discussion.aux) (./content/09_conclusion.aux) (./content/10_data_sources.aux) (./content/10_appendix_a.aux) (./frontbackmatter/statutory_declaration.aux))
 \openout1 = mainfile.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1176,7 +1176,7 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mode
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring ON on input line 19.
  (./mainfile.out) (./mainfile.out)
 \@outlinefile=\write4
 
@@ -1211,7 +1211,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package tocbasic Info: character protrusion at toc deactivated on input line 23.
  (./mainfile.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1219,31 +1219,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1262,70 +1262,118 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 [2]
-\openout2 = frontbackmatter/lists.aux
- (./frontbackmatter/lists.tex
-
-[3
-
-
-
-]
-Package tocbasic Info: character protrusion at lof deactivated on input line 28.
- (./mainfile.lof)
-\tf@lof=\write6
-
-\openout6 = mainfile.lof
-
-
-[4
-
-
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 31.
- (./mainfile.lot)
-\tf@lot=\write7
-
-\openout7 = mainfile.lot
-
-
-[5
-
-
-])
-
-[6
-
-
-]
 \openout2 = content/01_introduction.aux
  (./content/01_introduction.tex
 chapter 1.
-)
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 23.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 23.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 23.
+
+
 
 [1
 
 
 
 
+])
 
-
-]
+[2]
 \openout2 = content/02_literature_review.aux
  (./content/02_literature_review.tex
 chapter 2.
-)
 
-[2
-
-
-
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 20.
 
 
-]
-\openout2 = content/03_background.aux
- (./content/03_background.tex
-chapter 3.
-)
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 30.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 30.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 32.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 34.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 37.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 39.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 49.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 55.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 58.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 61.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 66.
+
+
 
 [3
 
@@ -1334,59 +1382,134 @@ chapter 3.
 
 
 ]
-\openout2 = content/04_data_methodology.aux
- (./content/04_data_methodology.tex
-chapter 4.
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 74.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 79.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 81.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 92.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 95.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 100.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 104.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 107.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 109.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 110.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 110.
+
+
+
+[4]
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 120.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 125.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 131.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 133.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 134.
+
+
+
+[5]
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 152.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 155.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 155.
+
 )
 
-[4
+[6]
+\openout2 = content/03_background.aux
+ (./content/03_background.tex
+chapter 3.
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 24.
 
 
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 24.
 
 
-
-]
-\openout2 = content/05_event_study.aux
- (./content/05_event_study.tex
-chapter 5.
-)
-
-[5
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 37.
 
 
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 37.
 
 
-
-]
-\openout2 = content/06_dcc_garch.aux
-
-No file content/06_dcc_garch.tex.
-
-\openout2 = content/07_svar.aux
-No file content/07_svar.tex.
-
-\openout2 = content/08_discussion.aux
-(./content/08_discussion.tex
-chapter 6.
-)
-
-[6
-
-
-
-
-
-
-
-
-
-
-
-]
-\openout2 = content/09_conclusion.aux
- (./content/09_conclusion.tex
-chapter 7.
-)
 
 [7
 
@@ -1395,10 +1518,237 @@ chapter 7.
 
 
 ]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 62.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 77.
+
+Overfull \hbox (31.34108pt too wide) in paragraph at lines 59--82
+ [] 
+ []
+
+<../../Output/figures/fig1_overview.pdf, id=240, 453.04507pt x 488.42851pt>
+File: ../../Output/figures/fig1_overview.pdf Graphic file (type pdf)
+<use ../../Output/figures/fig1_overview.pdf>
+Package luatex.def Info: ../../Output/figures/fig1_overview.pdf  used on input line 96.
+(luatex.def)             Requested size: 426.79135pt x 460.13644pt.
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 99.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 99.
+
+)
+
+[8]
+
+[9<../../Output/figures/fig1_overview.pdf>]
+\openout2 = content/04_data_methodology.aux
+ (./content/04_data_methodology.tex
+chapter 4.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[10
+
+
+
+
+
+]
+<../../Output/figures/fig_currency_sensitivities.pdf, id=289, 546.90573pt x 470.25047pt>
+File: ../../Output/figures/fig_currency_sensitivities.pdf Graphic file (type pdf)
+<use ../../Output/figures/fig_currency_sensitivities.pdf>
+Package luatex.def Info: ../../Output/figures/fig_currency_sensitivities.pdf  used on input line 72.
+(luatex.def)             Requested size: 349.97203pt x 300.93056pt.
+
+
+[11]
+
+[12<../../Output/figures/fig_currency_sensitivities.pdf>]
+Overfull \hbox (42.73952pt too wide) detected at line 139
+[][][]\OML/lmm/m/it/12 r[] \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 a \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 b[] \OT1/lmr/m/n/12 [][] + [] \OML/lmm/m/it/12 [] []\OT1/lmr/m/n/12 [][] \OMS/lmsy/m/n/12  \OML/lmm/m/it/12 D[][] \OT1/lmr/m/n/12 + [] \OML/lmm/m/it/12 []D[] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 "[];  k \OMS/lmsy/m/n/12 2 f[]\OML/lmm/m/it/12 ;  [];  []\OMS/lmsy/m/n/12 g\OML/lmm/m/it/12 ;
+ []
+
+)
+
+[13]
+\openout2 = content/05_event_study.aux
+ (./content/05_event_study.tex
+chapter 5.
+(./content/tab_event_study_results.tex
+Overfull \hbox (81.1558pt too wide) in paragraph at lines 48--88
+ [] 
+ []
+
+)
+
+[14
+
+
+
+
+
+]
+
+[15]
+<../../Output/figures/fig_car_liberation_day.pdf, id=367, 452.3744pt x 227.75087pt>
+File: ../../Output/figures/fig_car_liberation_day.pdf Graphic file (type pdf)
+<use ../../Output/figures/fig_car_liberation_day.pdf>
+Package luatex.def Info: ../../Output/figures/fig_car_liberation_day.pdf  used on input line 65.
+(luatex.def)             Requested size: 426.79135pt x 214.88165pt.
+
+
+[16]
+
+[17<../../Output/figures/fig_car_liberation_day.pdf>] (./content/tab_cross_event_diff.tex)
+
+[18]
+<../../Output/figures/fig_cross_event_usd.pdf, id=411, 452.3744pt x 227.57104pt>
+File: ../../Output/figures/fig_cross_event_usd.pdf Graphic file (type pdf)
+<use ../../Output/figures/fig_cross_event_usd.pdf>
+Package luatex.def Info: ../../Output/figures/fig_cross_event_usd.pdf  used on input line 150.
+(luatex.def)             Requested size: 426.79135pt x 214.71199pt.
+
+
+[19<../../Output/figures/fig_cross_event_usd.pdf>]
+
+[20]
+<../../Output/figures/fig_car_hormuz_w50.pdf, id=444, 453.47292pt x 227.75087pt>
+File: ../../Output/figures/fig_car_hormuz_w50.pdf Graphic file (type pdf)
+<use ../../Output/figures/fig_car_hormuz_w50.pdf>
+Package luatex.def Info: ../../Output/figures/fig_car_hormuz_w50.pdf  used on input line 222.
+(luatex.def)             Requested size: 426.79135pt x 214.34995pt.
+)
+
+[21<../../Output/figures/fig_car_hormuz_w50.pdf>]
+\openout2 = content/06_regression.aux
+ (./content/06_regression.tex
+chapter 6.
+(./content/tab_safehaven_regression.tex)
+
+[22
+
+
+
+
+
+])
+
+[23]
+\openout2 = content/08_discussion.aux
+ (./content/08_discussion.tex
+chapter 7.
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 21.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 25.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 25.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 39.
+
+
+
+[24
+
+
+
+
+
+]
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 49.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 49.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 64.
+
+
+Package biblatex Warning: bibmacro 'cite:labelyear+extrayear' is deprecated.
+(biblatex)                Please use 'cite:labeldate+extradate'.
+(biblatex)                Using 'cite:labeldate+extradate' instead on input line 64.
+
+)
+
+[25]
+
+[26]
+\openout2 = content/09_conclusion.aux
+ (./content/09_conclusion.tex
+chapter 8.
+)
+
+[27
+
+
+
+
+
+]
+chapter 9.
+
+
+[28
+
+
+
+
+]
+
+[29]
+\openout2 = content/10_data_sources.aux
+ (./content/10_data_sources.tex
+chapter 10.
+)
+
+[30
+
+
+
+]
+\openout2 = content/10_appendix_a.aux
+ (./content/10_appendix_a.tex
 chapter without number
+)
 
+[31
 
-[8
 
 
 
@@ -1406,23 +1756,18 @@ chapter without number
 
 
 ]
-\openout2 = content/appendix_a.aux
 
-No file content/appendix_a.tex.
-
+[32]
 \openout2 = frontbackmatter/statutory_declaration.aux
-(./frontbackmatter/statutory_declaration.tex
-chapter without number
-)
+ (./frontbackmatter/statutory_declaration.tex)
 
-[9
+[33
 
 
 
 
 
-
-] (./mainfile.aux (./frontbackmatter/title.aux) (./frontbackmatter/lists.aux) (./content/01_introduction.aux) (./content/02_literature_review.aux) (./content/03_background.aux) (./content/04_data_methodology.aux) (./content/05_event_study.aux) (./content/06_dcc_garch.aux) (./content/07_svar.aux) (./content/08_discussion.aux) (./content/09_conclusion.aux) (./content/appendix_a.aux) (./frontbackmatter/statutory_declaration.aux))
+] (./mainfile.aux (./frontbackmatter/title.aux) (./content/01_introduction.aux) (./content/02_literature_review.aux) (./content/03_background.aux) (./content/04_data_methodology.aux) (./content/05_event_study.aux) (./content/06_regression.aux) (./content/08_discussion.aux) (./content/09_conclusion.aux) (./content/10_data_sources.aux) (./content/10_appendix_a.aux) (./frontbackmatter/statutory_declaration.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1435,19 +1780,19 @@ Package logreq Info: Writing requests to 'mainfile.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38922 strings out of 475506
+ 39359 strings out of 475506
  100000,2373549 words of node,token memory allocated
- 698 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 local_par, 5 glue, 4 kern, 1 penalty, 3 glyph, 11 attribute, 79 glue_spec, 11 attribute_list, 3 write nodes
-   avail lists: 1:1,2:1417,3:483,4:197,5:234,6:143,7:3069,8:12,9:735,10:8,11:240,12:1
- 61014 multiletter control sequences out of 65536+600000
- 55 fonts using 4376359 bytes
- 108i,19n,106p,10997b,2855s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmromanslant12-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb>
-Output written on mainfile.pdf (16 pages, 99057 bytes).
+ 909 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 5 kern, 1 penalty, 1 margin_kern, 4 glyph, 37 attribute, 80 glue_spec, 37 attribute_list, 3 write, 12 pdf_action nodes
+   avail lists: 1:2,2:1566,3:504,4:356,5:494,6:146,7:9992,8:65,9:939,10:19,11:639,12:1
+ 61356 multiletter control sequences out of 65536+600000
+ 93 fonts using 7309655 bytes
+ 108i,20n,106p,10946b,2855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmromanslant12-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on mainfile.pdf (36 pages, 462194 bytes).
 
-PDF statistics: 354 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
- 59 named destinations out of 1000 (max. 131072)
- 321 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 791 PDF objects out of 1000 (max. 8388607)
+ 667 compressed objects within 7 object streams
+ 138 named destinations out of 1000 (max. 131072)
+ 313 words of extra memory for PDF output out of 10000 (max. 100000000)
 

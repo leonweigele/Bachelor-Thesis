@@ -1,0 +1,9 @@
+event,date,description,win_start,win_end
+ukraine,2022-02-24,Russia invades Ukraine (non-US control),2022-01-27,2022-03-24
+liberation_day,2025-04-02,Liberation Day tariff announcement,2025-03-05,2025-04-30
+tariff_pause,2025-04-09,90-day tariff pause,2025-03-12,2025-05-07
+iran_12day,2025-06-13,Israel/US strikes on Iran (12-day war),2025-05-16,2025-07-11
+hormuz,2026-02-28,"Iran escalation, Hormuz crisis begins",2026-02-02,2026-03-30
+hormuz_closure,2026-03-04,Iran closes Strait of Hormuz,2026-02-04,2026-04-01
+us_strikes,2026-05-28,US strikes on Iran,2026-04-30,2026-06-16
+ceasefire,2026-06-11,60-day ceasefire announced,2026-05-14,2026-06-16
