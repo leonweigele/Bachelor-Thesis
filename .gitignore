@@ -14,3 +14,16 @@ __pycache__/
 /Color Highlights.docx
 /Event_Study_Writeup_Plan.md
 /_READ_ME_current_folder.txt
+
+# Licensed LSEG / Refinitiv market data — kept locally, NOT redistributable.
+# Regenerate from your own LSEG access via Code/get_data.py + consolidate_lseg.py
+# (see Data/manual/LSEG_TODO.md). Derived returns/factors/results are kept.
+/Data/manual/LSEG/
+/Data/manual/lseg_fx_spot.csv
+/Data/manual/lseg_fx_fwd1m_points.csv
+/Data/manual/lseg_gold.csv
+/Data/manual/lseg_stoxx.csv
+/Data/manual/lseg_ttf.csv
+/Data/manual/LSEG_Download_Checklist.pdf
+/Data/processed/daily_panel.csv
+/Datastream_dataypes.pdf
