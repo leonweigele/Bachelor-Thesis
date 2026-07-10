@@ -3,3 +3,14 @@
 *.log
 *.synctex.gz
 __pycache__/
+
+# Reference material & working drafts — kept locally, not published
+/BachelorsThesisDanielStepanski.pdf
+/Literature.pdf
+/Thesis Proposal.pdf
+/Thesis Notes.docx
+/Thesis Roadmap.docx
+/Consistency_Read_2026-06-30.md
+/Color Highlights.docx
+/Event_Study_Writeup_Plan.md
+/_READ_ME_current_folder.txt
