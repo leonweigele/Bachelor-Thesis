@@ -62,11 +62,14 @@
 	\usepackage[
 		backend=biber,
 		style=authoryear, 
-		uniquename=init, 
-		giveninits=true, 
-		maxbibnames=3, 
-		minbibnames=2
-	]{biblatex} 
+		uniquename=init,
+		giveninits=true,
+		maxbibnames=99,
+		minbibnames=99,
+		maxcitenames=2,
+		mincitenames=1,
+		uniquelist=false
+	]{biblatex}
 	\addbibresource{references.bib}
 	\defbibheading{head}{\chapter{References}}
 	% Colon after last author
@@ -88,15 +91,15 @@
 	         {\usebibmacro{cite:label}}
 	         {\printnames{labelname}}%
 	       \setunit{\printdelim{nameyeardelim}}%
-	       \usebibmacro{cite:labelyear+extrayear}}
+	       \usebibmacro{cite:labeldate+extradate}}
 	      {\usebibmacro{cite:shorthand}}}}
 	\renewbibmacro*{textcite}{%
 	  \printtext[citehyperref]{%
 	    \ifnameundef{labelname}
 	      {\usebibmacro{cite:label}}
 	      {\printnames{labelname}}%
-	    \setunit{\printdelim{nametitledelim}}%
-	    \usebibmacro{cite:labelyear+extrayear}}}
+	    \setunit{\addspace}%
+	    \printtext{\mkbibparens{\usebibmacro{cite:labeldate+extradate}}}}}
 	\makeatother
 
 

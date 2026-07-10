@@ -11,7 +11,7 @@
 Table~\ref{tab:app_ccy} lists the 32 currencies in the panel with their carry-sorted bucket
 (low/middle/high forward-discount tercile, pegged and managed currencies excluded from the
 sort) and their oil-trade role. The named safe-haven robustness baskets used in
-Chapter~\ref{ch:event_study} are the yen, Swiss franc and euro (safe) against the Turkish
+Chapter~\ref{ch:results} are the yen, Swiss franc and euro (safe) against the Turkish
 lira, Brazilian real, South African rand, Mexican peso, Colombian peso and Indonesian rupiah
 (risky).
 
@@ -75,10 +75,10 @@ follows the net oil-trade classification.
 market-model abnormal returns for the individual currencies, using the equal-weighted dollar
 factor as the market return (Code/\texttt{03\_event\_study.py}, method \texttt{market\_model}).
 These are reported in the replication output; the safe-haven ordering across currencies is
-unchanged relative to the constant-mean results in Chapter~\ref{ch:event_study}.
+unchanged relative to the constant-mean results in Chapter~\ref{ch:results}.
 
 \paragraph{Regression robustness.} The safe-haven regression of
-Chapter~\ref{ch:regression} uses Newey--West (HAC) standard errors, so its inference is
+Section~\ref{sec:results_regression} uses Newey--West (HAC) standard errors, so its inference is
 robust to the autocorrelation and volatility clustering of daily returns---the main reason a
 simple least-squares interaction is preferred here to a conditional-correlation model. The
 crisis windows are the same event-day-to-$+20$ windows used in the event study, so the

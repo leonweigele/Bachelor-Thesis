@@ -19,7 +19,52 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{baur2010}{article}{}{}
+    \entry{arslanalp_eichengreen_simpsonbell_2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=90cf828507bc0b17e2584354b525d27f}{%
+           family={Arslanalp},
+           familyi={A\bibinitperiod},
+           given={Serkan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4d61c3fbb6caa6fbfa7f45bda4630b4}{%
+           family={Eichengreen},
+           familyi={E\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82f7f8393e47ec38e4efb82fb18bbb93}{%
+           family={Simpson-Bell},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Chima},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{125ce035e8dd7f07a247f538b9e65b48}
+      \strng{fullhash}{ae6f718d95b60a88945d962ebe78e5a6}
+      \strng{fullhashraw}{ae6f718d95b60a88945d962ebe78e5a6}
+      \strng{bibnamehash}{ae6f718d95b60a88945d962ebe78e5a6}
+      \strng{authorbibnamehash}{ae6f718d95b60a88945d962ebe78e5a6}
+      \strng{authornamehash}{125ce035e8dd7f07a247f538b9e65b48}
+      \strng{authorfullhash}{ae6f718d95b60a88945d962ebe78e5a6}
+      \strng{authorfullhashraw}{ae6f718d95b60a88945d962ebe78e5a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of International Economics}
+      \field{title}{The Stealth Erosion of Dollar Dominance and the Rise of Nontraditional Reserve Currencies}
+      \field{volume}{138}
+      \field{year}{2022}
+      \field{pages}{103656}
+      \range{pages}{1}
+    \endentry
+    \entry{baur_lucey_2010}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=1ce923a1009897ad72fa3ab179f295a6}{%
            family={Baur},
@@ -59,7 +104,44 @@
       \field{pages}{217\bibrangedash 229}
       \range{pages}{13}
     \endentry
-    \entry{debock2015}{article}{}{}
+    \entry{benguria_saffie_2025}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=520ded7284679717baa9ac9a307574d4}{%
+           family={Benguria},
+           familyi={B\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e24a9347e0a9a606b097c9296604d2d0}{%
+           family={Saffie},
+           familyi={S\bibinitperiod},
+           given={Felipe\bibnamedelima E.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{fullhash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{fullhashraw}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{bibnamehash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{authorbibnamehash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{authornamehash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{authorfullhash}{367743e3c48237d81f8b8cc04f3e3707}
+      \strng{authorfullhashraw}{367743e3c48237d81f8b8cc04f3e3707}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{34036}
+      \field{title}{Rounding Up the Effect of Tariffs on Financial Markets: Evidence from April 2, 2025}
+      \field{type}{NBER Working Paper}
+      \field{year}{2025}
+    \endentry
+    \entry{debock_decarvalhofilho_2015}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b88361e7a98ba21ab79a5cb213155052}{%
            family={Bock},
@@ -101,7 +183,7 @@
       \field{pages}{218\bibrangedash 234}
       \range{pages}{17}
     \endentry
-    \entry{caldara2022}{article}{}{}
+    \entry{caldara_iacoviello_2022}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=5f270f9711a1f97bafde54495f318697}{%
            family={Caldara},
@@ -141,14 +223,59 @@
       \field{pages}{1194\bibrangedash 1225}
       \range{pages}{32}
     \endentry
-    \entry{chen2003}{article}{}{}
+    \entry{cheema_faff_szulczyk_2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=38389959fd7b4003d25a174105e85356}{%
+           family={Cheema},
+           familyi={C\bibinitperiod},
+           given={Muhammad\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78ecd815266e3932e8e58483baa6086a}{%
+           family={Faff},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1691c1766b1e74c79bf27833029442b}{%
+           family={Szulczyk},
+           familyi={S\bibinitperiod},
+           given={Kenneth\bibnamedelima R.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{489a8543f23d1296231acf8493a26a44}
+      \strng{fullhash}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \strng{fullhashraw}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \strng{bibnamehash}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \strng{authorbibnamehash}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \strng{authornamehash}{489a8543f23d1296231acf8493a26a44}
+      \strng{authorfullhash}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \strng{authorfullhashraw}{778e001ee27b644b7ba29dd35c1c0aa0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Review of Financial Analysis}
+      \field{title}{The 2008 Global Financial Crisis and {COVID-19} Pandemic: How Safe Are the Safe Haven Assets?}
+      \field{volume}{83}
+      \field{year}{2022}
+      \field{pages}{102316}
+      \range{pages}{1}
+    \endentry
+    \entry{chen_rogoff_2003}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=e2bb2f61474caa8d0c060d4802e30605}{%
+        {{un=1,uniquepart=given,hash=e2bb2f61474caa8d0c060d4802e30605}{%
            family={Chen},
            familyi={C\bibinitperiod},
            given={Yu-Chin},
            giveni={Y\bibinithyphendelim C\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=dfacefa9dbd5b7bedeeb1764cc5fd084}{%
            family={Rogoff},
            familyi={R\bibinitperiod},
@@ -181,41 +308,58 @@
       \field{pages}{133\bibrangedash 160}
       \range{pages}{28}
     \endentry
-    \entry{dalgic2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=8fb5b6ca01a556bd7f209d58729c608f}{%
-           family={Dalgic},
-           familyi={D\bibinitperiod},
-           given={Husnu\bibnamedelima C.},
-           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod},
+    \entry{chen_liu_wang_zhu_2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=fd6445a232e06771eec6dee957687279}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hongtao},
+           giveni={H\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=fa3e4da50b3416b1a04c39a932b2344c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=6983037816f43d3be528d1254a19cf4d}{%
-           family={Ozhan},
-           familyi={O\bibinitperiod},
-           given={Galip\bibnamedelima Kemal},
-           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+        {{un=0,uniquepart=base,hash=741b5ebfbcb0e20ad57a36825f1ce0d8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yudong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=834eb054ab70cf5c64f2d599483a89c7}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Yingming},
+           giveni={Y\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{fullhash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{fullhashraw}{453a4da0a4d227ec004857d331773eb9}
-      \strng{bibnamehash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{authorbibnamehash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{authornamehash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{authorfullhash}{453a4da0a4d227ec004857d331773eb9}
-      \strng{authorfullhashraw}{453a4da0a4d227ec004857d331773eb9}
-      \field{extraname}{1}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ca03c5e640af337f69d934d31f7caf6b}
+      \strng{fullhash}{a470cb240bbdc7d0a150f26428fed9da}
+      \strng{fullhashraw}{a470cb240bbdc7d0a150f26428fed9da}
+      \strng{bibnamehash}{a470cb240bbdc7d0a150f26428fed9da}
+      \strng{authorbibnamehash}{a470cb240bbdc7d0a150f26428fed9da}
+      \strng{authornamehash}{ca03c5e640af337f69d934d31f7caf6b}
+      \strng{authorfullhash}{a470cb240bbdc7d0a150f26428fed9da}
+      \strng{authorfullhashraw}{a470cb240bbdc7d0a150f26428fed9da}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Working paper}
-      \field{title}{Global Shocks and Local Response}
-      \field{year}{2024}
+      \field{journaltitle}{Energy}
+      \field{title}{Oil Price Shocks and {U.S.} Dollar Exchange Rates}
+      \field{volume}{112}
+      \field{year}{2016}
+      \field{pages}{1036\bibrangedash 1048}
+      \range{pages}{13}
     \endentry
-    \entry{dalgic2025}{report}{}{}
+    \entry{dalgic_ozhan_2025}{report}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=8fb5b6ca01a556bd7f209d58729c608f}{%
            family={Dalgic},
@@ -241,7 +385,6 @@
       \strng{authornamehash}{453a4da0a4d227ec004857d331773eb9}
       \strng{authorfullhash}{453a4da0a4d227ec004857d331773eb9}
       \strng{authorfullhashraw}{453a4da0a4d227ec004857d331773eb9}
-      \field{extraname}{2}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
@@ -253,7 +396,7 @@
       \field{type}{Discussion Paper}
       \field{year}{2025}
     \endentry
-    \entry{ecb2025fsr}{report}{}{}
+    \entry{ecb_2025_fsr}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
            family={{European Central Bank}},
@@ -282,7 +425,7 @@
       \field{type}{Report}
       \field{year}{2025}
     \endentry
-    \entry{ecb2026bulletin}{report}{}{}
+    \entry{ecb_2026_bulletin}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
            family={{European Central Bank}},
@@ -310,7 +453,7 @@
       \field{type}{Report}
       \field{year}{2026}
     \endentry
-    \entry{fattouh2026}{report}{}{}
+    \entry{fattouh_economou_2026}{report}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=8015ab7d10a572cdb08c1875e0a8a089}{%
            family={Fattouh},
@@ -347,7 +490,7 @@
       \field{type}{OIES Paper}
       \field{year}{2026}
     \endentry
-    \entry{gourinchasrey2005}{report}{}{}
+    \entry{gourinchas_rey_2005}{report}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=0862b1f093d5875cafbeb1af76eca6e7}{%
            family={Gourinchas},
@@ -384,7 +527,7 @@
       \field{type}{NBER Working Paper}
       \field{year}{2005}
     \endentry
-    \entry{gourinchas2017}{article}{}{}
+    \entry{gourinchas_rey_govillot_2017}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0862b1f093d5875cafbeb1af76eca6e7}{%
            family={Gourinchas},
@@ -405,12 +548,12 @@
            giveni={N\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{94c41ea825d0187265a065321126f3bd}
+      \strng{namehash}{306f24ff16336fe2787e18b4f94b045f}
       \strng{fullhash}{94c41ea825d0187265a065321126f3bd}
       \strng{fullhashraw}{94c41ea825d0187265a065321126f3bd}
       \strng{bibnamehash}{94c41ea825d0187265a065321126f3bd}
       \strng{authorbibnamehash}{94c41ea825d0187265a065321126f3bd}
-      \strng{authornamehash}{94c41ea825d0187265a065321126f3bd}
+      \strng{authornamehash}{306f24ff16336fe2787e18b4f94b045f}
       \strng{authorfullhash}{94c41ea825d0187265a065321126f3bd}
       \strng{authorfullhashraw}{94c41ea825d0187265a065321126f3bd}
       \field{sortinit}{G}
@@ -423,50 +566,7 @@
       \field{title}{Exorbitant Privilege and Exorbitant Duty}
       \field{year}{2017}
     \endentry
-    \entry{gourinchas2019}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=0862b1f093d5875cafbeb1af76eca6e7}{%
-           family={Gourinchas},
-           familyi={G\bibinitperiod},
-           given={Pierre-Olivier},
-           giveni={P\bibinithyphendelim O\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0831f012d6f4c95339341fe3ec7cc5ea}{%
-           family={Rey},
-           familyi={R\bibinitperiod},
-           given={Hélène},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f71bdd38d85af9c09b4c06db82234a34}{%
-           family={Sauzet},
-           familyi={S\bibinitperiod},
-           given={Maxime},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Annual Reviews}%
-      }
-      \strng{namehash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{fullhash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{fullhashraw}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{bibnamehash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{authorbibnamehash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{authornamehash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{authorfullhash}{63ae574917dc6dafe70e9c42c59e9086}
-      \strng{authorfullhashraw}{63ae574917dc6dafe70e9c42c59e9086}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Annual Review of Economics}
-      \field{title}{The International Monetary and Financial System}
-      \field{volume}{11}
-      \field{year}{2019}
-    \endentry
-    \entry{habib2012}{article}{}{}
+    \entry{habib_stracca_2012}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ed001c682ea9485d3997c9b44aa5a611}{%
            family={Habib},
@@ -506,7 +606,7 @@
       \field{pages}{50\bibrangedash 64}
       \range{pages}{15}
     \endentry
-    \entry{hassan2025}{report}{}{}
+    \entry{hassan_mertens_wang_zhang_2025}{report}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=af18102ff00f4d0b470567a5fbd38024}{%
            family={Hassan},
@@ -539,8 +639,8 @@
       \strng{namehash}{ba184ddb15261ede8af564bf299c389d}
       \strng{fullhash}{9bd17c213d6e5b138ab51e8eb7abcb91}
       \strng{fullhashraw}{9bd17c213d6e5b138ab51e8eb7abcb91}
-      \strng{bibnamehash}{354404a0c8b8aef31bd29bd16bf6bd4f}
-      \strng{authorbibnamehash}{354404a0c8b8aef31bd29bd16bf6bd4f}
+      \strng{bibnamehash}{9bd17c213d6e5b138ab51e8eb7abcb91}
+      \strng{authorbibnamehash}{9bd17c213d6e5b138ab51e8eb7abcb91}
       \strng{authornamehash}{ba184ddb15261ede8af564bf299c389d}
       \strng{authorfullhash}{9bd17c213d6e5b138ab51e8eb7abcb91}
       \strng{authorfullhashraw}{9bd17c213d6e5b138ab51e8eb7abcb91}
@@ -555,7 +655,7 @@
       \field{type}{Conference Draft}
       \field{year}{2025}
     \endentry
-    \entry{imf2025gfsr}{report}{}{}
+    \entry{imf_2026_menap}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
            family={{International Monetary Fund}},
@@ -572,36 +672,6 @@
       \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{title}{Global Financial Stability Report, {C}hapter 2: {G}eopolitical Risks: Implications for Asset Prices}
-      \field{type}{Report}
-      \field{year}{2025}
-    \endentry
-    \entry{imf2026menap}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
-           family={{International Monetary Fund}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {International Monetary Fund}%
-      }
-      \strng{namehash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{fullhash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{fullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{bibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{authorbibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
-      \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
-      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -613,44 +683,54 @@
       \field{type}{Regional Economic Outlook: Middle East and Central Asia}
       \field{year}{2026}
     \endentry
-    \entry{itskhoki2025}{report}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=cb5bcd383e6297076d2baaa8b66c8381}{%
-           family={Itskhoki},
-           familyi={I\bibinitperiod},
-           given={Oleg},
-           giveni={O\bibinitperiod},
+    \entry{jiang_krishnamurthy_lustig_2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ea87a0440c5c9b77b8cc1ed0bfaa1935}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Zhengyang},
+           giveni={Z\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=94b6bd27fb803e41657270fd8cd7f159}{%
-           family={Mukhin},
-           familyi={M\bibinitperiod},
-           given={Dmitry},
-           giveni={D\bibinitperiod},
+        {{un=0,uniquepart=base,hash=04f860aabbcc66922143c48686ffbd89}{%
+           family={Krishnamurthy},
+           familyi={K\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=311b7d63cf4d7b318d0b4705b3e2f11a}{%
+           family={Lustig},
+           familyi={L\bibinitperiod},
+           given={Hanno},
+           giveni={H\bibinitperiod},
            givenun=0}}%
       }
-      \list{institution}{1}{%
-        {National Bureau of Economic Research}%
+      \list{publisher}{1}{%
+        {Wiley}%
       }
-      \strng{namehash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{fullhash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{fullhashraw}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{bibnamehash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{authorbibnamehash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{authornamehash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{authorfullhash}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \strng{authorfullhashraw}{4c0ebb92a1f927e0fd45d526cb3df2a1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{b99bf73274b8753d22bbb84bb2957703}
+      \strng{fullhash}{541cfcb74af7403da3e6ea336279cb51}
+      \strng{fullhashraw}{541cfcb74af7403da3e6ea336279cb51}
+      \strng{bibnamehash}{541cfcb74af7403da3e6ea336279cb51}
+      \strng{authorbibnamehash}{541cfcb74af7403da3e6ea336279cb51}
+      \strng{authornamehash}{b99bf73274b8753d22bbb84bb2957703}
+      \strng{authorfullhash}{541cfcb74af7403da3e6ea336279cb51}
+      \strng{authorfullhashraw}{541cfcb74af7403da3e6ea336279cb51}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{number}{33839}
-      \field{title}{The Optimal Macro Tariff}
-      \field{type}{NBER Working Paper}
-      \field{year}{2025}
+      \field{journaltitle}{Journal of Finance}
+      \field{number}{3}
+      \field{title}{Foreign Safe Asset Demand and the Dollar Exchange Rate}
+      \field{volume}{76}
+      \field{year}{2021}
+      \field{pages}{1049\bibrangedash 1089}
+      \range{pages}{41}
     \endentry
-    \entry{jiang2026}{article}{}{}
+    \entry{jiang_krishnamurthy_lustig_richmond_2026}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=ea87a0440c5c9b77b8cc1ed0bfaa1935}{%
            family={Jiang},
@@ -680,11 +760,12 @@
       \strng{namehash}{b99bf73274b8753d22bbb84bb2957703}
       \strng{fullhash}{f751d5b3040852ed021e2b555ae402a6}
       \strng{fullhashraw}{f751d5b3040852ed021e2b555ae402a6}
-      \strng{bibnamehash}{57f81aa5654bfce899a1239bfc8fbd30}
-      \strng{authorbibnamehash}{57f81aa5654bfce899a1239bfc8fbd30}
+      \strng{bibnamehash}{f751d5b3040852ed021e2b555ae402a6}
+      \strng{authorbibnamehash}{f751d5b3040852ed021e2b555ae402a6}
       \strng{authornamehash}{b99bf73274b8753d22bbb84bb2957703}
       \strng{authorfullhash}{f751d5b3040852ed021e2b555ae402a6}
       \strng{authorfullhashraw}{f751d5b3040852ed021e2b555ae402a6}
+      \field{extraname}{2}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -695,50 +776,7 @@
       \field{title}{Dollar Erosion: Understanding the Loss of Reserve Currency Status}
       \field{year}{2026}
     \endentry
-    \entry{kalemliozcan2026}{report}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=92863fd331f0b4e7e8f083aeeb7a1dac}{%
-           family={Kalemli-Özcan},
-           familyi={K\bibinithyphendelim Ö\bibinitperiod},
-           given={Şebnem},
-           giveni={Ş\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=03c670c9a5be1c9c32e65fc66f1a7c34}{%
-           family={Soylu},
-           familyi={S\bibinitperiod},
-           given={Can},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=974bc793a6b6f7b152593d65fad1ccb8}{%
-           family={Yildirim},
-           familyi={Y\bibinitperiod},
-           given={Muhammed\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {National Bureau of Economic Research}%
-      }
-      \strng{namehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{fullhash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{fullhashraw}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{bibnamehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{authorbibnamehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{authornamehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{authorfullhash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \strng{authorfullhashraw}{7b50d5faf6f7ba519d3784a8ced9b0ea}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{34728}
-      \field{title}{Global Trade, Tariff Uncertainty and the {U.S.} Dollar}
-      \field{type}{NBER Working Paper}
-      \field{year}{2026}
-    \endentry
-    \entry{kamin2025}{report}{}{}
+    \entry{kamin_2025}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d1de9e45eff4c874e406f15fcf513790}{%
            family={Kamin},
@@ -769,7 +807,44 @@
       \field{type}{AEI Economics Working Paper}
       \field{year}{2025}
     \endentry
-    \entry{kilian2009}{article}{}{}
+    \entry{khalil_strobel_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=632b065636688a79c59c7920dbfe7db0}{%
+           family={Khalil},
+           familyi={K\bibinitperiod},
+           given={Makram},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b799272fb4697928450b0dc72286316a}{%
+           family={Strobel},
+           familyi={S\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{fullhash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{fullhashraw}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{bibnamehash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{authorbibnamehash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{authornamehash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{authorfullhash}{fec023010e1ec717fc5c3fdb14c72464}
+      \strng{authorfullhashraw}{fec023010e1ec717fc5c3fdb14c72464}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of International Economics}
+      \field{note}{Article 103970}
+      \field{title}{{US} Trade Policy and the {US} Dollar}
+      \field{year}{2024}
+    \endentry
+    \entry{kilian_2009}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9170e9b9292218b3597d8f9f52d2a454}{%
            family={Kilian},
@@ -803,8 +878,8 @@
       \field{pages}{1053\bibrangedash 1069}
       \range{pages}{17}
     \endentry
-    \entry{kilian2026}{report}{}{}
-      \name{author}{4}{ul=1}{%
+    \entry{kilian_plante_richter_zhou_2026}{report}{}{}
+      \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=9170e9b9292218b3597d8f9f52d2a454}{%
            family={Kilian},
            familyi={K\bibinitperiod},
@@ -836,8 +911,8 @@
       \strng{namehash}{c0986ccfb5233f00b036c566b9ef076c}
       \strng{fullhash}{23997864dd790d7372b31c133e6405aa}
       \strng{fullhashraw}{23997864dd790d7372b31c133e6405aa}
-      \strng{bibnamehash}{c0986ccfb5233f00b036c566b9ef076c}
-      \strng{authorbibnamehash}{c0986ccfb5233f00b036c566b9ef076c}
+      \strng{bibnamehash}{23997864dd790d7372b31c133e6405aa}
+      \strng{authorbibnamehash}{23997864dd790d7372b31c133e6405aa}
       \strng{authornamehash}{c0986ccfb5233f00b036c566b9ef076c}
       \strng{authorfullhash}{23997864dd790d7372b31c133e6405aa}
       \strng{authorfullhashraw}{23997864dd790d7372b31c133e6405aa}
@@ -852,68 +927,29 @@
       \field{type}{Working Paper}
       \field{year}{2026}
     \endentry
-    \entry{kumar2025}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=c4665f76db9bd49e7d08a82359ed197b}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Ashish},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6e407b31fbc60f95a620539edb77bd1e}{%
-           family={Mohan},
-           familyi={M\bibinitperiod},
-           given={C.\bibnamedelimi R.},
-           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a6287404127e3e039c458d7069ce3fee}{%
-           family={Niveditha},
-           familyi={N\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{fullhash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{fullhashraw}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{bibnamehash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{authorbibnamehash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{authornamehash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{authorfullhash}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \strng{authorfullhashraw}{e7acd366e3ee5c853402adf59e9eeb0e}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Working paper}
-      \field{title}{Rolling-Window {DCC-GARCH} Analysis of {Bitcoin} and Gold as Safe Havens}
-      \field{year}{2025}
-    \endentry
-    \entry{liu2024}{article}{}{}
+    \entry{liu_zhang_2024}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=dbde7e5b380fa3672a9eecaa40212fbc}{%
+        {{un=0,uniquepart=base,hash=f184e2dbf642dd5904c4de423f29ccc9}{%
            family={Liu},
            familyi={L\bibinitperiod},
-           given={Jinan},
-           giveni={J\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=af39b0a776073368ef522e21006f5f29}{%
+        {{un=0,uniquepart=base,hash=cf891be3d9c0c8eba309c5669bd7a873}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
-           given={Chongfeng},
-           giveni={C\bibinitperiod},
+           given={Xueyong},
+           giveni={X\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{fullhash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{fullhashraw}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{bibnamehash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{authorbibnamehash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{authornamehash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{authorfullhash}{c74ecd6c1db518342c499ad641de8da3}
-      \strng{authorfullhashraw}{c74ecd6c1db518342c499ad641de8da3}
+      \strng{namehash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{fullhash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{fullhashraw}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{bibnamehash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{authorbibnamehash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{authornamehash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{authorfullhash}{08de6c5547e1a3c6bc6b4c29d148b4e5}
+      \strng{authorfullhashraw}{08de6c5547e1a3c6bc6b4c29d148b4e5}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -921,11 +957,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Banking \& Finance}
-      \field{note}{Forthcoming}
+      \field{note}{Article 107097}
       \field{title}{Geopolitical Risk and Currency Returns}
+      \field{volume}{161}
       \field{year}{2024}
     \endentry
-    \entry{lustig2011}{article}{}{}
+    \entry{lustig_roussanov_verdelhan_2011}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=311b7d63cf4d7b318d0b4705b3e2f11a}{%
            family={Lustig},
@@ -949,12 +986,12 @@
       \list{publisher}{1}{%
         {Oxford University Press}%
       }
-      \strng{namehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{namehash}{a6d66264c49e3892083f20296dcfc7ee}
       \strng{fullhash}{673d28611a3abe86eabeed982fa27f65}
       \strng{fullhashraw}{673d28611a3abe86eabeed982fa27f65}
       \strng{bibnamehash}{673d28611a3abe86eabeed982fa27f65}
       \strng{authorbibnamehash}{673d28611a3abe86eabeed982fa27f65}
-      \strng{authornamehash}{673d28611a3abe86eabeed982fa27f65}
+      \strng{authornamehash}{a6d66264c49e3892083f20296dcfc7ee}
       \strng{authorfullhash}{673d28611a3abe86eabeed982fa27f65}
       \strng{authorfullhashraw}{673d28611a3abe86eabeed982fa27f65}
       \field{sortinit}{L}
@@ -971,7 +1008,7 @@
       \field{pages}{3731\bibrangedash 3777}
       \range{pages}{47}
     \endentry
-    \entry{obstfeld2023}{report}{}{}
+    \entry{obstfeld_zhou_2023}{report}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=0c923601596f623c2abb75d6ce9e3d84}{%
            family={Obstfeld},
@@ -1008,7 +1045,7 @@
       \field{type}{NBER Working Paper}
       \field{year}{2023}
     \endentry
-    \entry{corsetti2025}{article}{}{}
+    \entry{ostry_lloyd_corsetti_2025}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=350b692e48a2abf9c0483eec8a4b5211}{%
            family={Ostry},
@@ -1029,12 +1066,12 @@
            giveni={G\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{659f41e4d9a989cf1a9ee0467015f872}
+      \strng{namehash}{d713309546d98fd6ce88468173f5e615}
       \strng{fullhash}{659f41e4d9a989cf1a9ee0467015f872}
       \strng{fullhashraw}{659f41e4d9a989cf1a9ee0467015f872}
       \strng{bibnamehash}{659f41e4d9a989cf1a9ee0467015f872}
       \strng{authorbibnamehash}{659f41e4d9a989cf1a9ee0467015f872}
-      \strng{authornamehash}{659f41e4d9a989cf1a9ee0467015f872}
+      \strng{authornamehash}{d713309546d98fd6ce88468173f5e615}
       \strng{authorfullhash}{659f41e4d9a989cf1a9ee0467015f872}
       \strng{authorfullhashraw}{659f41e4d9a989cf1a9ee0467015f872}
       \field{sortinit}{O}
@@ -1048,7 +1085,7 @@
       \field{title}{Trading Blows: The Exchange-Rate Response to Tariffs and Retaliations}
       \field{year}{2025}
     \endentry
-    \entry{ranaldo2010}{article}{}{}
+    \entry{ranaldo_soderlind_2010}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9f7229a3033bdb98d9e1d931e71b341a}{%
            family={Ranaldo},
@@ -1087,6 +1124,37 @@
       \field{year}{2010}
       \field{pages}{385\bibrangedash 407}
       \range{pages}{23}
+    \endentry
+    \entry{yilmazkuday_2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=402205f0c39747f56f8e1a82907b802d}{%
+           family={Yilmazkuday},
+           familyi={Y\bibinitperiod},
+           given={Hakan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{fullhash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{fullhashraw}{402205f0c39747f56f8e1a82907b802d}
+      \strng{bibnamehash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{authorbibnamehash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{authornamehash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{authorfullhash}{402205f0c39747f56f8e1a82907b802d}
+      \strng{authorfullhashraw}{402205f0c39747f56f8e1a82907b802d}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance Research Letters}
+      \field{note}{Article 106769}
+      \field{title}{Geopolitical Risks and Exchange Rates}
+      \field{year}{2025}
     \endentry
   \enddatalist
 \endrefsection

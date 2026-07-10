@@ -5,156 +5,47 @@
 \chapter{Literature Review}
 \label{ch:literature}
 
-This chapter situates the thesis within five strands of research---currency
-factor models, safe-haven currencies and gold, geopolitical risk, tariff shocks,
-and commodity currencies---and closes by distilling them into testable
-hypotheses. The unifying question is when, and through which channel, the U.S.\
-dollar functions as a safe haven, and whether that function survives when the
-United States is itself the source of the shock.
+This chapter situates the thesis within six distinct strands of literature. Each body of research addresses a specific dimension of our core question: does the dollar's status as a safe haven depend on the nature of a shock, rather than its source? By reviewing these fields, this chapter establishes the theoretical framework to understand how the dollar's safe-haven functions, setting the stage for examening the cosequences of when the United States itself originates a shock or acts as a co-belligerent.
 
+\section{Currency Risk Factors}
+\label{sec:lit_factors}
 
-\section{Currency Returns and Factor Models}
-\label{sec:lit_currency_factors}
+\textcite{lustig_roussanov_verdelhan_2011} establish the foundational framework for understanding currency risk by identifying two primary common risk factors: a ``level'' factor, representing the dollar's average fluctuations against all foreign currencies, and a ``slope'' factor, which captures the excess returns of carry trades. They demonstrate that high-interest-rate currencies load more heavily on the slope factor, which is closely linked to global equity-market volatility. Crucially, their model shows that during periods of high global risk, low-interest-rate currencies endogenously appreciate, acting as a hedge or safe haven, while high-interest-rate currencies depreciate. This suggests that the dollar's behavior as a safe haven is intrinsically tied to its role as a low-yield currency that provides insurance against global risk by appreciating during adverse shocks.
 
-The modern cross-section of currency returns is organised around a small number
-of risk factors. \textcite{lustig2011} identify a ``slope'' factor (the return on
-a portfolio long high-interest-rate and short low-interest-rate currencies) that
-explains most of the cross-sectional variation in carry returns and is tied to
-innovations in global equity-market volatility; high-interest-rate currencies
-load more heavily on this common factor, so investors in the carry trade are
-compensated for bearing global risk. This logic motivates sorting currencies into
-portfolios by their exposure to common shocks, and the dollar and carry factors
-derived from it underpin the portfolio construction used in
-Chapter~\ref{ch:methodology}. Related work on dominant-currency pricing links the
-pricing of trade and the currency composition of invoicing to these risk premia
-\parencite{dalgic2024,dalgic2025}.
+Furthermore, the dollar's safe-haven role is amplified when shocks interact with specific trade and financial frictions. \textcite{dalgic_ozhan_2025} argue that the dollar's response is endogenously determined by an economy's level of dollar invoicing and dollar-denominated debt. In their framework, a shock---such as a foreign interest-rate hike---that triggers a depreciation in a small open economy becomes recessionary because it inflates the real burden of dollar debt and mutes expenditure switching. This countercyclical co-movement between GDP and the exchange rate renders the local currency a poor hedge, forcing a flight to the safety of the dollar. For the empirical design, this strand supplies the building blocks: the dollar and carry factors rebuilt through mid-2026 underpin the portfolio construction of Chapter~\ref{ch:methodology}.
 
-The dollar occupies a special position in this system. \textcite{gourinchasrey2005}
-document the United States' ``exorbitant privilege''---a persistent excess return
-on its external assets over its liabilities---and \textcite{gourinchas2017} show
-that this privilege is mirrored by an ``exorbitant duty'': the hegemon transfers
-wealth to the rest of the world precisely during global crises, with transfers of
-roughly $19\%$ of U.S.\ GDP during the 2007--2009 financial crisis. \textcite{gourinchas2019}
-embed this in a broader account of the international monetary system and a renewed
-Triffin dilemma, while \textcite{obstfeld2023} describe a ``global dollar cycle''
-in which dollar appreciation tightens financial conditions worldwide. Together these
-contributions frame the dollar's safe-haven status as a structural feature of the
-international monetary system---and therefore something whose erosion would be
-economically consequential.
+\section{Dollar Dominance and Its Erosion}
+\label{sec:lit_dominance}
 
+The dollar's role as the primary global reserve currency confers an ``exorbitant privilege''---a persistent excess return on U.S.\ external assets over its liabilities \parencite{gourinchas_rey_2005}---mirrored by an ``exorbitant duty'': in global crises the United States transfers wealth to the rest of the world, roughly $19\%$ of U.S.\ GDP during 2007--2009, as the dollar's flight-to-safety appreciation revalues its external balance sheet \parencite{gourinchas_rey_govillot_2017}. On the mechanism, \textcite{jiang_krishnamurthy_lustig_2021} identify surges in foreign demand for safe dollar assets---``safety shocks''---that widen the Treasury basis and appreciate the dollar immediately: precisely the reflex a safe-haven currency should display.
+
+Crucially, this literature implies that the haven response depends on what a shock does to the demand for dollar safety. While the 2008 financial crisis and the COVID-19 pandemic elicited the standard appreciation, \textcite{jiang_krishnamurthy_lustig_richmond_2026} document an anomalous depreciation after the 2025 U.S.\ tariff announcements---a ``flight away'' from the dollar examined in detail in Section~\ref{sec:lit_tariffs}. \textcite{obstfeld_zhou_2023} add the cyclical dimension: a ``global dollar cycle'' in which dollar appreciation tightens financial conditions worldwide, with dollar movements correlating most reliably with investor risk appetite. A slow-moving counterpart to any abrupt break is visible in official reserves, which \textcite{arslanalp_eichengreen_simpsonbell_2022} show have been actively diversified away from the dollar for two decades. For the thesis, this strand establishes the stakes: if the dollar's haven status is structural, it should hold across shock types; if it is eroding, U.S.-originated policy shocks are where the cracks should show first.
 
 \section{Safe-Haven Currencies and Gold}
 \label{sec:lit_safe_haven}
 
-Following \textcite{baur2010}, an asset is a \emph{hedge} if it is uncorrelated
-with risky assets on average and a \emph{safe haven} if it is uncorrelated with
-(or negatively correlated with) them specifically during market stress; they find
-gold to be a hedge against equities on average and a safe haven in extreme
-declines, though the safe-haven property is short-lived. This conditional, crisis-
-contingent definition is the one adopted throughout the thesis. Applied to
-currencies, \textcite{ranaldo2010} show that the Swiss franc and Japanese yen
-appreciate against the dollar when U.S.\ equities fall and volatility rises, with
-the effect strengthening non-linearly in the volatility factor and during crises.
-\textcite{debock2015} document the same recurrent pattern across risk-off
-episodes---the yen, franc and dollar all appreciate against other currencies---and
-relate it to fundamentals such as the nominal interest rate and the net foreign
-asset position. \textcite{habib2012} push beyond the carry trade to ask what
-\emph{makes} a currency a safe haven, finding that the net foreign asset position,
-low external vulnerability, and economic size are robustly associated with
-safe-haven status, whereas the interest-rate spread against the United States is
-not. Methodologically, the time-varying correlation approach used to test these
-properties---and applied to gold and other assets by \textcite{kumar2025}---rests
-on the dynamic conditional correlation model discussed in Section~\ref{sec:lit_gpr}
-and Chapter~\ref{ch:methodology}.
+The literature on safe-haven currencies indicates that the U.S.\ dollar's status is not static but varies with the nature and epicentre of a shock. A central paradox, identified by \textcite{habib_stracca_2012}, is the dollar's appreciation during the 2008 global financial crisis---an episode the United States itself exported. They find that while the net foreign asset position is the most robust long-term predictor of safe-haven status, the dollar's 2008 behaviour was anomalous compared with historical regularities.
 
+The comparative efficacy of the dollar across shocks is most directly addressed by \textcite{cheema_faff_szulczyk_2022}, who find that the dollar's safe-haven character weakened considerably during the COVID-19 pandemic compared with 2008: an intermediate haven in the earlier crisis, it performed weakly across most settings in the later one---the empirical counterpart of the demand-side reading of the same episodes in Section~\ref{sec:lit_dominance}. Providing broader context, \textcite{debock_decarvalhofilho_2015} demonstrate that the dollar, Japanese yen and Swiss franc consistently appreciate during risk-off episodes, with magnitudes shaped by pre-crisis yields and market-liquidity factors. At the highest frequencies, however, the ordering within pairs reverses: \textcite{ranaldo_soderlind_2010} show that in U.S.\ equity sell-offs the franc and yen appreciate \emph{against the dollar}, with these haven properties materialising within hours to days and strengthening non-linearly in volatility---so against the classic havens themselves, the dollar is the risky leg. Gold supplies the natural non-sovereign benchmark: \textcite{baur_lucey_2010} find that gold is a hedge against equities on average but a safe haven only in extreme declines, and only briefly. This conditional, crisis-contingent notion of safety is the one the thesis adopts (Chapter~\ref{ch:framework}) and tests for the dollar, with the yen, the franc and gold as the benchmarks against which its response is judged.
 
-\section{Geopolitical Risk and Currency Markets}
+\section{Geopolitical Risk}
 \label{sec:lit_gpr}
 
-\textcite{caldara2022} construct the news-based Geopolitical Risk (GPR) index used
-in this thesis, showing that it spikes around wars and major adverse events and
-that higher geopolitical risk foreshadows lower investment and employment and
-larger downside risks; importantly, they distinguish the \emph{threat} of adverse
-events from their \emph{realisation}, a distinction directly relevant to staged
-crises such as the Hormuz episode. Building on such measures, \textcite{liu2024}
-study geopolitical-risk-sorted currency portfolios and report a positive risk
-premium for exposure to geopolitical shocks, and the \textcite{imf2025gfsr} finds
-that geopolitical-risk shocks predict currency depreciation and equity declines,
-particularly in more vulnerable economies. This literature motivates treating
-geopolitical events as priced risk rather than noise, and supplies the GPR series
-used as an external control in the empirical chapters.
-
+Recent research suggests that the dollar's response to geopolitical shocks is contingent on the nature of the event and a country's position in the global network. \textcite{caldara_iacoviello_2022} provide the foundational measurement, distinguishing geopolitical ``threats''---the expectation of future adverse events---from geopolitical ``acts'', their actual realisation; a shock to their news-based index induces persistent declines in investment, employment and stock prices, driven by both the threat and the realisation components. Expanding this to exchange rates, \textcite{yilmazkuday_2025} demonstrates that the dollar's geopolitical safe-haven status is not universal: shocks to global geopolitical risk---driven primarily by geopolitical acts---produce a statistically significant depreciation of the U.S.\ dollar, even as currencies such as the South African rand or Brazilian real appreciate, with the currencies of countries more deeply embedded in global value chains depreciating most. Complementing this, \textcite{liu_zhang_2024} find that a strategy long high-GPR currencies and short low-GPR currencies earns a significant excess return, and that this return predictability stems from country-specific and regional risk components rather than a single global factor---implying that a currency's risk--return profile is sensitive to the geographic origin of the shock. The thesis draws on this strand directly: the \textcite{caldara_iacoviello_2022} index dates and scales the Hormuz and Ukraine episodes, its threat--act distinction maps onto the staged escalation of the Hormuz crisis, and the GPR series serves as an external control in the empirical chapters.
 
 \section{Tariff Shocks and Exchange Rates}
 \label{sec:lit_tariffs}
 
-The 2025 tariff episode has generated a fast-growing literature that is central to
-this thesis. \textcite{kamin2025} provides econometric evidence that, following
-the Liberation Day announcements of April~2025, the dollar switched from behaving
-as a safe haven---appreciating in periods of market volatility---to behaving as a
-``risk-on'' currency that moves inversely with volatility. \textcite{jiang2026}
-document the same break in historical correlations (the dollar depreciating while
-U.S.\ rates rose relative to the euro, the VIX increased, and the dollar
-convenience yield fell) and interpret it through shifts in global demand for
-dollar safe assets, calibrating a steady-state real dollar depreciation of around
-$7.6\%$ should the United States lose reserve-currency demand. \textcite{hassan2025}
-provide the theoretical counterpart: in a general-equilibrium model where currency
-safety is endogenous, a trade war that isolates U.S.\ goods markets erodes the
-dollar's safety premium and raises U.S.\ interest rates. On the empirical
-exchange-rate response, \textcite{corsetti2025} construct a tariff-shock database
-and show that exchange rates react to U.S.\ tariff shocks systematically once the
-size and relevance of the measures (and expected retaliation) are accounted for,
-while \textcite{kalemliozcan2026} emphasise the role of tariff \emph{uncertainty}
-in the dollar's behaviour. The theoretical tariff--exchange-rate offset is
-formalised by \textcite{itskhoki2025}. Policy institutions corroborate the market
-dislocation: the \textcite{ecb2025fsr} and the \textcite{ecb2026bulletin} document
-trade fragmentation, the pass-through of higher U.S.\ tariffs, and the effects of
-trade-policy uncertainty on activity. This thesis contributes a direct event-study
-comparison of this trade-policy shock against contemporaneous military/oil-supply
-shocks.
+The 2025 tariff episode has generated a fast-growing literature that is central to this thesis. \textcite{kamin_2025} provides econometric evidence that, following the Liberation Day announcements of April~2025, the dollar switched from behaving as a safe haven---appreciating in periods of market volatility---to behaving as a ``risk-on'' currency that moves inversely with volatility. \textcite{jiang_krishnamurthy_lustig_richmond_2026} document the same break in historical correlations---the dollar depreciating while U.S.\ rates rose relative to the euro, the VIX increased, and the dollar convenience yield fell---and interpret it through shifts in global demand for dollar safe assets, calibrating a steady-state real dollar depreciation of around $7.6\%$ should the United States lose reserve-currency demand. \textcite{hassan_mertens_wang_zhang_2025} provide the theoretical counterpart: in a general-equilibrium model in which currency safety is endogenous, a trade war that isolates U.S.\ goods markets erodes the dollar's safety premium and raises U.S.\ interest rates.
 
+On the empir ical exchange-rate response, \textcite{ostry_lloyd_corsetti_2025} construct a tariff-shock database and show that exchange rates react to U.S.\ tariff shocks systematically once the size and relevance of the measures---and expected retaliation---are accounted for. Notably, the 2025 depreciation inverts the pre-2025 evidence, in which U.S.\ tariff actions tended to \emph{strengthen} the dollar: \textcite{khalil_strobel_2024} trace the dollar's appreciation during the 2018--2019 tariffs to trade policy itself, making the 2025 episode a genuine puzzle. Closest to the present design, \textcite{benguria_saffie_2025} run an event study of the 2~April 2025 announcement and identify sizeable declines in U.S.\ equity prices that scale with the tariff increment. This strand supplies the thesis's first treatment: the Liberation Day shock, whose event-study comparison against contemporaneous military/oil-supply shocks is the contribution of this thesis.
 
 \section{Commodity Currencies and Oil}
 \label{sec:lit_commodities}
 
-\textcite{chen2003} establish that the U.S.-dollar price of commodity exports
-exerts a strong and stable influence on the real exchange rates of commodity
-exporters such as Australia, Canada and New Zealand, providing the basis for the
-oil-exporter versus oil-importer portfolio split used in
-Chapter~\ref{ch:methodology}. The nature of the oil shock matters, however:
-\textcite{kilian2009} shows that oil-price movements driven by supply
-disruptions, aggregate demand, and precautionary (oil-specific) demand have
-distinct macroeconomic consequences, so a price increase caused by a supply scare
-is not equivalent to one caused by strong demand---nor to a tariff-induced demand
-collapse. This typology maps directly onto the thesis's contrast between the
-demand-side tariff shock (falling oil) and the supply-side Hormuz shock (surging
-oil). For the 2026 episode specifically, \textcite{fattouh2026} provide a detailed
-anatomy of the Strait of Hormuz oil shock and the associated disruption to Gulf
-output, while \textcite{kilian2026} quantify the inflationary consequences of the
-2026 Iran war through oil prices, and the \textcite{imf2026menap} documents the
-regional and global spillovers, including Brent rising above \$100 per barrel and
-the role of the ceasefire in de-escalation.
+\textcite{chen_rogoff_2003} establish that the U.S.-dollar price of commodity exports exerts a strong and stable influence on the real exchange rates of commodity exporters such as Australia, Canada and New Zealand, providing the basis for the oil-exporter versus oil-importer portfolio split used in Chapter~\ref{ch:methodology}. The nature of the oil shock matters, however: \textcite{kilian_2009} shows that oil-price movements driven by supply disruptions, aggregate demand, and precautionary (oil-specific) demand have distinct macroeconomic consequences, so a price increase caused by a supply scare is not equivalent to one caused by strong demand---nor to a tariff-induced demand collapse. This typology maps directly onto the thesis's contrast between the demand-side tariff shock (falling oil) and the supply-side Hormuz shock (surging oil). The oil--dollar link also runs through the exchange rate directly: \textcite{chen_liu_wang_zhu_2016} show that the dollar's response to oil-price shocks depends on whether they originate in supply or demand. The anatomy of the 2026 Hormuz episode itself, and the sources documenting it, are set out in Chapter~\ref{ch:background}.
 
+\section{Synthesis and Research Gap}
+\label{sec:lit_synthesis}
 
-\section{Hypotheses}
-\label{sec:hypotheses}
-
-Taken together, these strands point to a single organising prediction: the dollar's
-safe-haven response is conditional on the \emph{type} of shock rather than on whether the
-United States is its originator. Both the external benchmark (the 2022 Russian invasion of
-Ukraine) and the U.S.-originated Hormuz crisis are military/oil-supply shocks, around which
-the safe-haven literature (Section~\ref{sec:lit_safe_haven}) implies the dollar should
-appreciate; the Liberation Day tariff announcement, by contrast, is a U.S.\ trade-policy
-shock that the dollar-erosion literature (Section~\ref{sec:lit_tariffs}) suggests should
-weaken the very currency it originates from. Gold offers a natural counterpoint: as an asset
-external to any sovereign it might be expected to bid in \emph{both} kinds of episode, so
-that comparing it against the dollar isolates what is specific to the dollar's status
-\parencite{baur2010}---a prediction this thesis puts directly to the data. The cross-section
-of currencies should in turn sort on the oil channel, exporter currencies outperforming
-importers when the Hormuz supply shock lifts crude but losing ground when the tariff shock
-depresses oil through weaker demand \parencite{chen2003,kilian2009}.
-
-\noindent The remainder of the thesis puts these predictions to the data: the dollar
-and the oil cross-section in the event study of Chapter~\ref{ch:event_study}, with gold
-examined alongside them, while a regression test in Chapter~\ref{ch:regression} establishes
-whether the dollar's safe-haven relationship with risk held or broke in each episode.
+Across these six strands, the dollar's safe-haven status has been established structurally, as a feature of the international monetary system; conditionally, as a crisis-contingent property in the sense of \textcite{baur_lucey_2010}; and, most recently, as something the 2025 trade-policy shock may have disturbed. What the literature has not yet done is hold a U.S.-originated trade-policy shock against a contemporaneous military and oil-supply shock within a single research design, carrying the oil channel and a gold benchmark through the same lens. That comparison is the gap this thesis addresses. The next chapter distils these strands into a working definition of a safe-haven currency, a taxonomy that separates a shock's originator from its nature, and the hypotheses that follow.

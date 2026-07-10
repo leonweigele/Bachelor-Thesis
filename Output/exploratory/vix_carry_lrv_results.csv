@@ -1,0 +1,17 @@
+sample,var,n,pearson,t_pearson,spearman,t_spearman
+full_sample,CARRY_HML,1944,-0.341,-16.01,-0.308,-14.24
+full_sample,SAFE,1944,-0.154,-6.88,-0.207,-9.31
+full_sample,RISKY,1944,-0.377,-17.93,-0.384,-18.34
+full_sample,USD_EW,1944,0.337,15.8,0.341,15.96
+excl_both_windows,CARRY_HML,1862,-0.322,-14.68,-0.291,-13.14
+excl_both_windows,SAFE,1862,-0.158,-6.88,-0.206,-9.06
+excl_both_windows,RISKY,1862,-0.366,-16.94,-0.377,-17.55
+excl_both_windows,USD_EW,1862,0.329,15.02,0.336,15.39
+liberation_day_win,CARRY_HML,41,-0.657,-5.44,-0.564,-4.26
+liberation_day_win,SAFE,41,-0.005,-0.03,0.066,0.41
+liberation_day_win,RISKY,41,-0.549,-4.1,-0.275,-1.79
+liberation_day_win,USD_EW,41,0.41,2.8,0.207,1.32
+hormuz_win,CARRY_HML,41,-0.635,-5.14,-0.702,-6.15
+hormuz_win,SAFE,41,-0.472,-3.34,-0.497,-3.58
+hormuz_win,RISKY,41,-0.67,-5.64,-0.738,-6.83
+hormuz_win,USD_EW,41,0.606,4.76,0.616,4.89

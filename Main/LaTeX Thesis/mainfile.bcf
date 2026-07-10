@@ -96,15 +96,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -116,7 +116,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
@@ -124,7 +124,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -180,7 +180,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
@@ -331,15 +331,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -351,7 +351,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
@@ -359,7 +359,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -395,7 +395,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
@@ -2373,59 +2373,84 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">corsetti2025</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">kamin2025</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">obstfeld2023</bcf:citekey>
-    <bcf:citekey order="1" intorder="4">jiang2026</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">gourinchasrey2005</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">habib2012</bcf:citekey>
-    <bcf:citekey order="2" intorder="3">ranaldo2010</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">lustig2011</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">dalgic2024</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">dalgic2025</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">gourinchasrey2005</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">gourinchas2017</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">gourinchas2019</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">obstfeld2023</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">baur2010</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">ranaldo2010</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">debock2015</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">habib2012</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">kumar2025</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">caldara2022</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">liu2024</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">imf2025gfsr</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">kamin2025</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">jiang2026</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">hassan2025</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">corsetti2025</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">kalemliozcan2026</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">itskhoki2025</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">ecb2025fsr</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">ecb2026bulletin</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">chen2003</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">kilian2009</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">fattouh2026</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">kilian2026</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">imf2026menap</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">baur2010</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">chen2003</bcf:citekey>
-    <bcf:citekey order="31" intorder="2">kilian2009</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">corsetti2025</bcf:citekey>
-    <bcf:citekey order="32" intorder="2">ecb2025fsr</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">fattouh2026</bcf:citekey>
-    <bcf:citekey order="33" intorder="2">kilian2026</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">caldara2022</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">caldara2022</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">corsetti2025</bcf:citekey>
-    <bcf:citekey order="36" intorder="2">kamin2025</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">ranaldo2010</bcf:citekey>
-    <bcf:citekey order="37" intorder="2">habib2012</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">baur2010</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">chen2003</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">kilian2009</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">obstfeld2023</bcf:citekey>
-    <bcf:citekey order="41" intorder="2">jiang2026</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">ostry_lloyd_corsetti_2025</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">kamin_2025</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">gourinchas_rey_2005</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">obstfeld_zhou_2023</bcf:citekey>
+    <bcf:citekey order="2" intorder="3">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="2" intorder="4">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">dalgic_ozhan_2025</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">gourinchas_rey_2005</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">gourinchas_rey_govillot_2017</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">jiang_krishnamurthy_lustig_2021</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">obstfeld_zhou_2023</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">arslanalp_eichengreen_simpsonbell_2022</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">cheema_faff_szulczyk_2022</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">yilmazkuday_2025</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">liu_zhang_2024</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">ostry_lloyd_corsetti_2025</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">khalil_strobel_2024</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">benguria_saffie_2025</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">kilian_2009</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">chen_liu_wang_zhu_2016</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">gourinchas_rey_2005</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">obstfeld_zhou_2023</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">kilian_2009</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="38" intorder="2">kilian_2009</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">ecb_2025_fsr</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">ecb_2026_bulletin</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">ecb_2025_fsr</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">fattouh_economou_2026</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">imf_2026_menap</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">imf_2026_menap</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="55" intorder="2">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="55" intorder="3">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="57" intorder="2">kilian_2009</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">ostry_lloyd_corsetti_2025</bcf:citekey>
+    <bcf:citekey order="59" intorder="2">kamin_2025</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="60" intorder="2">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">kilian_2009</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">obstfeld_zhou_2023</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

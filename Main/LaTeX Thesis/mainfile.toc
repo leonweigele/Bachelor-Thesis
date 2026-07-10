@@ -1,47 +1,53 @@
 \xpg@aux {}{english}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Currency Returns and Factor Models}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Safe-Haven Currencies and Gold}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Geopolitical Risk and Currency Markets}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Tariff Shocks and Exchange Rates}{5}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Commodity Currencies and Oil}{5}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Hypotheses}{6}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Background: The Events of 2022--2026}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Liberation Day and the U.S.\ Tariff Shock}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The Israel--Iran Escalation and the Strait of Hormuz}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The Ukraine Control}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Event Timeline}{8}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Key Variables Over the Sample}{8}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Data and Methodology}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Data}{10}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Exchange Rates and Financial Variables}{10}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Geopolitical and Policy Uncertainty Indices}{10}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Portfolio Construction}{11}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Event Study Methodology}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}A Regression Test of the Safe-Haven Breakdown}{13}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Event Study Results}{14}{chapter.5}%
-\contentsline {section}{\numberline {5.1}CARs: Tariff Shock (Liberation Day)}{16}{section.5.1}%
-\contentsline {section}{\numberline {5.2}CARs: Iran/Hormuz Shock}{16}{section.5.2}%
-\contentsline {paragraph}{\nonumberline Twelve-day war (June 2025).}{16}{paragraph*.14}%
-\contentsline {paragraph}{\nonumberline Hormuz crisis (February--March 2026).}{17}{paragraph*.16}%
-\contentsline {section}{\numberline {5.3}Cross-Event Comparison}{18}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Gold and Commodities}{19}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Robustness}{20}{section.5.5}%
-\contentsline {chapter}{\numberline {6}A Regression Test of the Safe-Haven Breakdown}{22}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussion}{24}{chapter.7}%
-\contentsline {section}{\numberline {7.1}The Dollar's Safe Haven Is Conditional on Shock Type}{24}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Gold and the Oil Channel}{24}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Policy Implications}{25}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Limitations}{25}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Conclusion}{27}{chapter.8}%
-\contentsline {chapter}{\numberline {9}References}{28}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Data Sources}{30}{chapter.10}%
-\contentsline {chapter}{\nonumberline Appendix}{31}{chapter*.23}%
-\contentsline {section}{\numberline {1}Currency Universe and Classification}{31}{section.10.1}%
-\contentsline {section}{\numberline {2}Robustness}{31}{section.10.2}%
-\contentsline {paragraph}{\nonumberline Market model.}{31}{paragraph*.27}%
-\contentsline {paragraph}{\nonumberline Regression robustness.}{31}{paragraph*.29}%
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Currency Risk Factors}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Dollar Dominance and Its Erosion}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Safe-Haven Currencies and Gold}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Geopolitical Risk}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Tariff Shocks and Exchange Rates}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Commodity Currencies and Oil}{7}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Synthesis and Research Gap}{8}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Conceptual Framework}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Safe Haven, Hedge, and the Dollar's Conditional Status}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}A Taxonomy of Shocks}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Hypotheses}{10}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Background: The Events of 2022--2026}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Liberation Day and the U.S.\ Tariff Shock}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The Israel--Iran Escalation and the Strait of Hormuz}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}The Ukraine Control}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}The Structure of the Comparison}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Market Backdrop, 2019--2026}{14}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Data and Methodology}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data}{16}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Exchange Rates and Financial Variables}{16}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Geopolitical and Policy Uncertainty Indices}{16}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Portfolio Construction}{17}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Event Study Methodology}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Regression Specification: The Safe-Haven Breakdown}{19}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Empirical Results}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}CARs: Tariff Shock (Liberation Day)}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.2}CARs: Iran/Hormuz Shock}{22}{section.6.2}%
+\contentsline {paragraph}{\nonumberline Twelve-day war (June 2025).}{22}{paragraph*.12}%
+\contentsline {paragraph}{\nonumberline Hormuz crisis (February--March 2026).}{24}{paragraph*.14}%
+\contentsline {section}{\numberline {6.3}Cross-Event Comparison}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Gold and Commodities}{26}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Robustness}{27}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Regression Evidence on the Safe-Haven Breakdown}{28}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Discussion}{30}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Findings in Light of the Literature}{30}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Dollar's Safe Haven Is Conditional on Shock Type}{31}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Gold and the Oil Channel}{31}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Policy Implications}{32}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Limitations}{32}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Conclusion}{34}{chapter.8}%
+\contentsline {chapter}{\numberline {9}References}{35}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Data Sources}{37}{chapter.10}%
+\contentsline {chapter}{\nonumberline Appendix}{38}{chapter*.21}%
+\contentsline {section}{\numberline {1}Currency Universe and Classification}{38}{section.10.1}%
+\contentsline {section}{\numberline {2}Robustness}{38}{section.10.2}%
+\contentsline {paragraph}{\nonumberline Market model.}{38}{paragraph*.25}%
+\contentsline {paragraph}{\nonumberline Regression robustness.}{38}{paragraph*.27}%
 \xpg@aux {}{german}
 \xpg@aux {}{english}
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
