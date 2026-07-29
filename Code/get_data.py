@@ -48,7 +48,11 @@ OLD_RAW = ROOT / "Main/Data (old)/data/raw"            # old artefacts to reuse
 for p in (RAW, MANUAL, PROC):
     p.mkdir(parents=True, exist_ok=True)
 
-FRED_API_KEY = os.environ.get("FRED_API_KEY", "")      # or paste key here
+FRED_API_KEY = os.environ.get("FRED_API_KEY", "")      # env var wins if set
+if not FRED_API_KEY:                                    # fallback: gitignored key file
+    _kf = Path(__file__).resolve().parent / "fred_api_key.txt"
+    if _kf.exists():
+        FRED_API_KEY = _kf.read_text().strip()
 
 # --- FRED macro block --------------------------------------------------------
 FRED_SERIES = {
@@ -150,10 +154,14 @@ GPR_URLS = {
                     "https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xlsx"],
 }
 EPU_DAILY_URL = "https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv"
-TPU_URLS = ["https://www.matteoiacoviello.com/tpu_files/tpu_daily_data.csv",
+TPU_URLS = ["https://www.matteoiacoviello.com/tpu_files/tpu_web_latest.xlsx",  # live as of 2026-07-22
+            "https://www.matteoiacoviello.com/tpu_files/tpu_daily_data.csv",
             "https://www.matteoiacoviello.com/tpu_files/tpu_web_daily.xlsx"]
 
-CARRY_OVER = ["factors_course.csv", "liberation_day_data.xlsx", "epu_categorical.xlsx"]
+# Course carry-over files removed — everything is now rebuilt fresh from LSEG
+# (factors via build_fx_factors.py). factors_course.csv was only a never-triggered
+# fallback; liberation_day_data.xlsx / epu_categorical.xlsx were unused.
+CARRY_OVER = []
 
 HEADERS = {"User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                           "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -322,19 +330,68 @@ def get_indices():
         print(f"  OK  epu_daily ({len(df)} rows)")
     else:
         print("  !!  epu_daily: get from policyuncertainty.com -> Data/raw/epu_daily.csv")
-    df, url = fetch_table(TPU_URLS)
-    if df is not None:
+    # TPU: the current file (tpu_web_latest.xlsx) is a multi-sheet workbook whose
+    # first sheet is a README, so read all sheets and pick the DAILY one, then
+    # normalise to the legacy day,month,year,daily_tpu_index layout.
+    # A manually downloaded copy in Data/raw/ always beats the URLs (they have
+    # been flaky/renamed twice).
+    df, url = None, None
+    _local = RAW / "tpu_web_latest.xlsx"
+    if _local.exists():
+        try:
+            _book = pd.read_excel(_local, engine="openpyxl", sheet_name=None)
+            _sheet = next((s for s in _book if "DAILY" in str(s).upper()), None)
+            if _sheet is not None:
+                df, url = _book[_sheet], f"local file {_local.name}"
+        except Exception:
+            pass
+    if df is None:
+        for _u in TPU_URLS:
+            try:
+                _r = http_get(_u)
+                if _u.endswith(".csv"):
+                    df, url = pd.read_csv(BytesIO(_r.content)), _u
+                    break
+                _book = pd.read_excel(BytesIO(_r.content), engine="openpyxl",
+                                      sheet_name=None)
+                _sheet = next((s for s in _book
+                               if "DAILY" in str(s).upper()), None)
+                if _sheet is None:  # fallback: biggest sheet = daily data
+                    _sheet = max(_book, key=lambda s: len(_book[s]))
+                    if len(_book[_sheet]) < 1000:
+                        continue    # nothing daily-sized in this file
+                df, url = _book[_sheet], _u
+                break
+            except Exception:
+                continue
+    if df is not None and "daily_tpu_index" not in df.columns:
+        _dcol = next((c for c in df.columns if "DATE" in str(c).upper()),
+                     df.columns[0])
+        # value column: the INDEX itself, not the raw article counts
+        # (TPUD_ARTICLES) and not the moving averages (TPUD_index_MA7/MA30)
+        _cands = [c for c in df.columns if "TPU" in str(c).upper() and c != _dcol]
+        _vcol = next((c for c in _cands
+                      if "INDEX" in str(c).upper()
+                      and not any(m in str(c).upper() for m in ("MA7", "MA30"))),
+                     _cands[0] if _cands else df.columns[-1])
+        _dt = pd.to_datetime(df[_dcol], errors="coerce")
+        df = (pd.DataFrame({"day": _dt.dt.day, "month": _dt.dt.month,
+                            "year": _dt.dt.year,
+                            "daily_tpu_index": pd.to_numeric(df[_vcol],
+                                                             errors="coerce")})
+              .dropna())
+        df[["day", "month", "year"]] = df[["day", "month", "year"]].astype(int)
+    if df is not None and len(df) > 1000:
         df.to_csv(RAW / "tpu_daily.csv", index=False)
         stamp("TPU_daily", "Trade Policy Uncertainty (daily)", url)
-        print(f"  OK  tpu_daily ({len(df)} rows)")
+        print(f"  OK  tpu_daily ({len(df)} rows, "
+              f"{int(df.year.min())}-{int(df.year.max())})")
     else:
-        print("  !!  tpu_daily: auto-download failed.")
-        old = OLD_RAW / "tpu_daily.csv"
-        if old.exists() and not (RAW / "tpu_daily.csv").exists():
-            shutil.copy(old, RAW / "tpu_daily.csv")
-            stamp("TPU_daily", "TPU daily (old file, ends Mar 2026 — REFRESH "
-                  "from matteoiacoviello.com/tpu.htm before freeze)", str(old))
-            print("      -> used old file for now (ends 2026-03-16)")
+        print("  !!  tpu_daily: auto-download failed AND no local "
+              "Data/raw/tpu_web_latest.xlsx — download it manually from "
+              "matteoiacoviello.com/tpu.htm and rerun. (The pre-2026 fallback "
+              "file was retired: it is a different index construction, "
+              "corr ~0.6 with the current vintage.)")
 
 
 # ----------------------------------------------------------------------------

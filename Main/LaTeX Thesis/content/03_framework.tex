@@ -2,34 +2,132 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX spellcheck = en_US
 
+% \chapter{Conceptual Framework}
+% \label{ch:framework}
+
+% This chapter explains the concepts the empirical analysis rests on. It states the working definition of a safe-haven currency, sets out a classification that separates a shock's \emph{origin} from its \emph{nature}, and distils the literature of Chapter~\ref{ch:literature} into the hypotheses the rest of the thesis tests.
+
+% \section{Safe Haven, Hedge, and the Dollar's Conditional Status}
+% \label{sec:fw_safehaven}
+
+% Following \textcite{baur_lucey_2010}, this thesis adopts a conditional definition. An asset is a \emph{hedge} if it is uncorrelated with risky assets on average, and a \emph{safe haven} if it is uncorrelated with -- or negatively correlated with -- them \emph{specifically during market stress}. The distinction matters because safe-haven status is a crisis-contingent property rather than an average one: an asset can hedge in calm markets yet fail in a particular episode, or carry a haven bid only when risk spikes. Applied to currencies, the empirical signature of safe-haven behaviour is that the currency appreciates when global risk rises -- when equities fall and volatility increases \parencite{ranaldo_soderlind_2010,debock_decarvalhofilho_2015}. This is the property the thesis tests for the dollar, episode by episode, in the event study and the regression of Chapter~\ref{ch:results}.
+
+% The dollar's claim to that status is structural. The literature on the ``exorbitant
+% privilege'' \parencite{gourinchas_rey_2005} and on the global dollar cycle
+% \parencite{obstfeld_zhou_2023} casts the dollar as the anchor of the international monetary system, the currency to which capital flees in a crisis. \textcite{habib_stracca_2012} show that this status rests on fundamentals -- a strong net foreign asset position, low external vulnerability, and economic size -- rather than on the interest-rate spread against the United States.
+
+% % The question this thesis poses is whether that structural status is \emph{unconditional}, holding around any shock, or whether it can be suspended by the nature of the shock itself -- in particular when the shock originates in U.S.\ policy.
+
+% \section{Classifying Shocks by Origin and Nature}
+% \label{sec:fw_classification}
+
+% The thesis separates two attributes of a shock that empirical work often confounds: who
+% \emph{originates} it and what \emph{kind} of shock it is. The originator may be the United States or an external actor; the nature may be an economic-policy shock -- here, trade policy -- or a military/oil-supply shock. Crossing these two dimensions, the three episodes studied occupy three distinct cells. The 2025 Liberation Day tariffs are a U.S.-originated economic-policy shock. The 2026 Israel--Iran/Hormuz crisis is a military/oil-supply shock in which the United States is involved as a co-belligerent. The 2022 Russian invasion of Ukraine is an external military oil-supply shock that the United States did not author.
+
+% This design is what allows origin and nature to be told apart. If the dollar's response were governed by \emph{origin}, the two U.S.-linked shocks -- tariffs and Hormuz -- would move the dollar alike and differ from the external Ukraine benchmark. If instead it were governed by \emph{nature}, the two military/oil-supply shocks -- Hormuz and Ukraine -- would look alike regardless of U.S.\ involvement, and the trade-policy shock would stand apart. The two readings make opposite predictions about which episodes cluster together, and the empirical chapter adjudicates between them.
+
+% The nature of the oil move matters in its own right. \textcite{kilian_2009} distinguishes oil-price changes driven by supply disruptions from those driven by demand, with different macroeconomic consequences. The classification maps onto that distinction: the Hormuz episode is a supply-driven oil shock -- crude rises as a chokepoint is threatened -- whereas the tariff shock depresses oil through weaker expected \emph{demand}. The sign of the oil move therefore helps classify the shock and, through the commodity-currency channel \parencite{chen_rogoff_2003}, sorts the currency cross-section between oil exporters and importers.
+
+% \section{Hypotheses}
+% \label{sec:hypotheses}
+
+% Taken together, these strands point to a single organising prediction---the dollar's
+% safe-haven response is conditional on the \emph{type} of shock rather than on whether the
+% United States is its originator---which the empirical chapters test in the form of three
+% ex-ante hypotheses.
+
+% \begin{description}
+% \item[H1 (conditional safe haven).] Around military/oil-supply shocks---the external
+% Ukraine invasion and the U.S.-involved Hormuz crisis---the dollar appreciates, as the
+% safe-haven literature implies; around the U.S.-originated Liberation Day trade-policy
+% shock it depreciates, as the dollar-erosion literature suggests. Responses therefore
+% cluster by the \emph{nature} of a shock, not by U.S.\ involvement.
+% \item[H2 (gold as the unconditional counterpart).] Gold, external to any sovereign,
+% appreciates in \emph{both} kinds of episode \parencite{baur_lucey_2010}, so any
+% conditionality documented under H1 is specific to the dollar rather than a feature of
+% safe assets generally.
+% \item[H3 (oil channel in the cross-section).] Oil-exporter currencies outperform
+% importers when a shock lifts crude (Hormuz, Ukraine) and lose ground when a shock
+% depresses crude through weaker demand (Liberation Day)
+% \parencite{chen_rogoff_2003,kilian_2009}.
+% \end{description}
+
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+% !TEX root = ../mainfile.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en_US
+
+% DRAFT final — sized for ~3 pages (12pt, one-half spacing). Original untouched.
+
 \chapter{Conceptual Framework}
 \label{ch:framework}
 
-This chapter explaines the concepts the empirical analysis rests on. It states the working definition of a safe-haven currency, sets out a taxonomy that separates a shock's \emph{originator} from its \emph{nature}, and distils the literature of Chapter~\ref{ch:literature} into the hypotheses the rest of the thesis tests.
+This chapter turns the literature of Chapter~\ref{ch:literature} into the frame the empirical chapters apply. It fixes the working definition of a safe-haven currency, classifies the three shocks by origin and nature, maps both onto measurable quantities, and states the hypotheses.
 
 \section{Safe Haven, Hedge, and the Dollar's Conditional Status}
 \label{sec:fw_safehaven}
 
-Following \textcite{baur_lucey_2010}, this thesis adopts a conditional definition. An asset is a \emph{hedge} if it is uncorrelated with risky assets on average, and a \emph{safe haven} if it is uncorrelated with -- or negatively correlated with -- them \emph{specifically during market stress}. The distinction matters because safe-haven status is a crisis-contingent property rather than an average one: an asset can hedge in calm markets yet fail in a particular episode, or carry a haven bid only when risk spikes. Applied to currencies, the empirical signature of safe-haven behaviour is that the currency appreciates when global risk rises -- when equities fall and volatility increases \parencite{ranaldo_soderlind_2010,debock_decarvalhofilho_2015}. This is the property the thesis tests for the dollar, episode by episode, in the event study and the regression of Chapter~\ref{ch:results}.
+Following \textcite{baur_lucey_2010}, this thesis adopts a conditional definition. A \emph{hedge} is an asset that is uncorrelated or negatively correlated with risky assets on average. A \emph{safe haven} is an asset that is uncorrelated or negatively correlated with risky assets in times of market stress. Safe-haven status is therefore a crisis-contingent property rather than an average one. Applied to currencies, its empirical signature is appreciation when global risk rises, that is when equity prices fall and volatility increases \parencite{ranaldo_soderlind_2010,debock_decarvalhofilho_2015}.
 
-The dollar's claim to that status is structural. The literature on the ``exorbitant
-privilege'' \parencite{gourinchas_rey_2005} and on the global dollar cycle
-\parencite{obstfeld_zhou_2023} casts the dollar as the anchor of the international monetary system, the currency to which capital flees in a crisis. \textcite{habib_stracca_2012} show that this status rests on fundamentals -- a strong net foreign asset position, low external vulnerability, and economic size -- rather than on the interest-rate spread against the United States.
+The dollar's claim to that status is structural. The ``exorbitant privilege'' literature casts the United States as the centre of the international monetary system and the issuer of the assets the world treats as safe \parencite{gourinchas_rey_2005}, and in global crises the flight into those assets appreciates the dollar \parencite{gourinchas_rey_govillot_2017,obstfeld_zhou_2023}. Across a broad currency panel, however, \textcite{habib_stracca_2012} tie safe-haven behaviour to fundamentals such as the net foreign asset position rather than to interest-rate spreads. The question this thesis poses follows. Is the dollar's status unconditional, or can the shock itself suspend it, in particular when it originates in U.S.\ policy?
 
-% The question this thesis poses is whether that structural status is \emph{unconditional}, holding around any shock, or whether it can be suspended by the nature of the shock itself -- in particular when the shock originates in U.S.\ policy.
+The definition carries two observable implications. Around a dated stress event a safe haven should record abnormal appreciation, which the event study measures episode by episode. On ordinary days its return should rise with risk, a sensitivity the regression of Chapter~\ref{ch:results} tests inside each crisis window.
 
-\section{A Taxonomy of Shocks}
-\label{sec:fw_taxonomy}
+\section{Classifying Shocks by Origin and Nature}
+\label{sec:fw_classification}
 
-The thesis separates two attributes of a shock that empirical work often confounds: who
-\emph{originates} it and what \emph{kind} of shock it is. The originator may be the United States or an external actor; the nature may be an economic-policy shock -- here, trade policy -- or a military/oil-supply shock. Crossing these two dimensions, the three episodes studied occupy three distinct cells. The 2025 Liberation Day tariffs are a U.S.-originated economic-policy shock. The 2026 Israel--Iran/Hormuz crisis is a military/oil-supply shock in which the United States is implicated as a co-belligerent. The 2022 Russian invasion of Ukraine is an external military oil-supply shock that the United States did not author.
+The thesis separates two attributes that empirical work often confounds, who \emph{originates} a shock and what \emph{kind} of shock it is. The originator may be the United States or an external actor, the nature an economic-policy shock, here trade policy, or a military/oil-supply shock. Crossing the two yields the four cells of Table~\ref{tab:fw_classification}. The three episodes occupy three of them, and the fourth, an external trade-policy shock, has no counterpart in the sample.
 
-This design is what allows origin and nature to be told apart. If the dollar's response were governed by \emph{origin}, the two U.S.-originated shocks -- tariffs and Hormuz -- would move the dollar alike and differ from the external Ukraine benchmark. If instead it were governed by \emph{nature}, the two military/oil-supply shocks -- Hormuz and Ukraine -- would look alike regardless of U.S.\ involvement, and the trade-policy shock would stand apart. The two readings make opposite predictions about which episodes cluster together, and the empirical chapter adjudicates between them.
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{The three episodes in the origin--nature classification}
+\label{tab:fw_classification}
+\small
+\begin{tabular}{l l l}
+\toprule
+ & Trade-policy shock & Military/oil-supply shock \\
+\midrule
+U.S.-linked origin & Liberation Day tariffs & Israel--Iran/Hormuz crisis \\
+ & (2 April 2025, U.S.-originated) & (28 February 2026, U.S.-involved) \\
+\addlinespace
+External origin & \emph{no episode in sample} & Invasion of Ukraine \\
+ & & (24 February 2022) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes.} Dates are the event days that fix $t_0$ of the event windows in Chapter~\ref{ch:methodology}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
 
-The nature of the oil move matters in its own right. \textcite{kilian_2009} distinguishes oil-price changes driven by supply disruptions from those driven by demand, with different macroeconomic consequences. The taxonomy maps onto that distinction: the Hormuz episode is a supply-driven oil shock -- crude rises as a chokepoint is threatened -- whereas the tariff shock depresses oil through weaker expected \emph{demand}. The sign of the oil move therefore helps classify the shock and, through the commodity-currency channel \parencite{chen_rogoff_2003}, sorts the currency cross-section between oil exporters and importers.
+This crossing is what allows origin and nature to be told apart. If the dollar's response were governed by \emph{origin}, the two U.S.-linked shocks would move the dollar alike and differ from the external Ukraine benchmark. If instead it were governed by \emph{nature}, the two military/oil-supply shocks would resemble each other regardless of U.S.\ involvement, and the trade-policy shock would stand apart. The two readings make opposite predictions about which episodes cluster together, and the empirical chapters adjudicate between them.
+
+The design's limits follow from the same table. Each occupied cell holds a single episode and the two U.S.-linked shocks differ in the degree of involvement, as originator in one case and co-belligerent in the other, so the comparison identifies patterns across these three episodes rather than properties of shock classes.
+
+The oil move classifies the nature of a shock in its own right. \textcite{kilian_2009} distinguishes physical supply disruptions, global demand for industrial commodities, and precautionary demand driven by concern about future supply, each with different macroeconomic effects. In that scheme the Hormuz episode is broadly supply-side, lifting crude through disrupted shipments and precautionary demand, whereas the tariff shock depresses crude through weaker expected demand. Through the commodity-currency channel the crude response should also sort currencies by oil-trade position \parencite{chen_rogoff_2003,chen_liu_wang_zhu_2016}.
+
+\section{From Concepts to Measurable Quantities}
+\label{sec:fw_measurement}
+
+The concepts are measured on a small set of objects, constructed in Chapter~\ref{ch:methodology}. The dollar's response is read from the broad dollar index and an equal-weighted basket of the sample currencies, so no single bilateral rate drives the result. Following the currency risk-factor literature, a forward-discount sort yields safe funding and risky carry baskets \parencite{lustig_roussanov_verdelhan_2011}, and a split by net oil-trade position carries the oil channel into the cross-section. Gold, a crisis haven for equities \parencite{baur_lucey_2010}, serves as the non-sovereign benchmark and is also read in euro terms to strip mechanical dollar effects. The VIX proxies market stress and the index of \textcite{caldara_iacoviello_2022} tracks geopolitical tension.
 
 \section{Hypotheses}
 \label{sec:hypotheses}
 
-Taken together, these strands point to a single organising prediction: the dollar's
-safe-haven response is conditional on the \emph{type} of shock rather than on whether the United States is its originator. Both the external benchmark (the 2022 Russian invasion of Ukraine) and the U.S.-originated Hormuz crisis are military/oil-supply shocks, around which the safe-haven literature implies the dollar should appreciate; the Liberation Day tariff announcement, by contrast, is a U.S.\ trade-policy shock that the dollar-erosion literature suggests should weaken the very currency it originates from. Gold offers a natural counterpoint: as an asset external to any sovereign it might be expected to bid in \emph{both} kinds of episode, so that comparing it against the dollar isolates what is specific to the dollar's status \parencite{baur_lucey_2010} -- a prediction this thesis puts directly to the data. The cross-section of currencies should in turn sort on the oil channel, exporter currencies outperforming importers when the Hormuz supply shock lifts crude but losing ground when the tariff shock depresses oil through weaker demand \parencite{chen_rogoff_2003,kilian_2009}.
+Together these strands yield one organising prediction, that the dollar's safe-haven response depends on the nature of a shock rather than on U.S.\ involvement. Three ex-ante hypotheses make it testable.
+
+\begin{description}
+\item[H1 (conditional safe haven).] Around the military/oil-supply shocks, Ukraine and Hormuz, the dollar appreciates, as the safe-haven literature implies. Around the U.S.-originated trade-policy shock it depreciates, as the erosion literature suggests. Responses cluster by nature, not by U.S.\ involvement.
+\item[H2 (gold as the non-sovereign benchmark).] Gold, free of sovereign and counterparty risk, has no reason to discriminate between shocks by origin. It retains its haven bid even in the U.S.-originated episode, where the erosion logic predicts a weaker dollar. Any conditionality under H1 is then specific to the dollar.
+\item[H3 (oil channel in the cross-section).] The exporter--importer spread follows the sign of the crude move. Oil exporters outperform importers when a shock lifts crude, as under Hormuz and Ukraine, and lose ground when it depresses crude, as on Liberation Day.
+\end{description}
+
+These predictions are not foregone, since \textcite{yilmazkuday_2025} finds the dollar depreciating in the year after global geopolitical-risk shocks. H1 fails if the tariff episode moves like the military pair or the military pair splits along involvement, H2 if gold weakens in the U.S.-originated episode, H3 if the spread ignores the crude response. Chapter~\ref{ch:results} reports the tests, Chapter~\ref{ch:discussion} the verdicts.

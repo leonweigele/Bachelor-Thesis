@@ -39,7 +39,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 PROC = ROOT / "Data/processed"
 OUT = PROC / "event_study"
-FIGS = ROOT / "Output/figures"
+FIGS = ROOT / "Output/figures/ch06_results"
 OUT.mkdir(parents=True, exist_ok=True)
 FIGS.mkdir(parents=True, exist_ok=True)
 
@@ -51,7 +51,8 @@ MIN_POST = 45                # need at least this many post-event days for a fig
 FIG_SERIES = ["USD_EW", "SAFE", "RISKY", "OIL_EXP", "OIL_IMP"]
 KEY_SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "RISKY", "CARRY_HML",
               "OIL_EXP", "OIL_IMP", "r_DCOILBRENTEU", "r_DCOILWTICO",
-              "r_SP500", "r_Gold", "d_VIXCLS", "d_DGS10"]
+              "r_SP500", "r_Gold", "r_Oil_EUR", "r_Gold_EUR",
+              "d_VIXCLS", "d_DGS10"]
 
 
 def stars(t):
@@ -116,7 +117,7 @@ def run_event(data, name, date):
 
 # ----------------------------------------------------------------------------- figures
 from thesis_style import (apply_style, style_axis, legend_below, save_fig,  # noqa: E402
-                          PALETTE)
+                          panel_label, PALETTE)
 import matplotlib.pyplot as plt  # noqa: E402
 apply_style()
 
@@ -135,10 +136,16 @@ SHORT = {"ukraine": "Ukraine", "liberation_day": "Liberation Day",
 STYLES = {"USD_EW": ("black", "--"), "SAFE": (PALETTE[2], "-"),
           "RISKY": (PALETTE[1], "-"), "OIL_EXP": (PALETTE[3], "-"),
           "OIL_IMP": (PALETTE[4], "-")}
-# crude benchmarks on a secondary (right) axis — over +/-50 days oil's CAR runs
-# ~10-30x the FX baskets, so it cannot share the left axis.
-OIL_STYLE = {"r_DCOILBRENTEU": ("#8c6d31", "-.", "Brent crude (rhs)"),
-             "r_DCOILWTICO": ("#666666", ":", "WTI crude (rhs)")}
+# Crude on a secondary (right) axis — over +/-50 days oil's CAR runs ~10-30x
+# the FX baskets, so it cannot share the left axis. Brent ONLY: it is the
+# benchmark for ~2/3 of internationally traded crude (EIA), while the
+# WTI-Brent spread reflects US-local Cushing logistics, i.e. noise w.r.t.
+# global shocks (Fattouh 2011; Kilian 2016). WTI stays in the appendix tables.
+# Figure layout: two stacked panels (small multiples) instead of one 7-line
+# "spaghetti chart" — Schwabish (2014, JEP 28(1)), citing Tufte (2006).
+OIL_STYLE = {"r_DCOILBRENTEU": ("#8c6d31", "-.", "Brent crude (rhs)")}
+PANEL_A = ["USD_EW", "SAFE", "RISKY"]          # safe-haven hierarchy
+PANEL_B = ["OIL_EXP", "OIL_IMP"]               # oil channel (+ Brent rhs)
 
 
 def mark_neighbors(ax, index, this_event, this_date, events):
@@ -158,47 +165,59 @@ def mark_neighbors(ax, index, this_event, this_date, events):
 
 
 def figure_event(name, paths, index, date, events, post_avail):
-    cols = [c for c in FIG_SERIES if c in paths.columns]
-    if not cols:
+    """Two stacked panels (small multiples, Schwabish 2014):
+    A = currency portfolios (safe-haven hierarchy), B = oil channel."""
+    cols_a = [c for c in PANEL_A if c in paths.columns]
+    cols_b = [c for c in PANEL_B if c in paths.columns]
+    if not cols_a and not cols_b:
         return
-    fig, ax = plt.subplots(figsize=(6.3, 3.0))
-    for c in cols:
-        color, ls = STYLES.get(c, (PALETTE[5], "-"))
-        ax.plot(paths.index, 100 * paths[c], lw=1.1, color=color, ls=ls,
-                label=NICE.get(c, c))
+    fig, (axA, axB) = plt.subplots(2, 1, figsize=(6.3, 4.6), sharex=True)
 
-    # --- crude oil (Brent + WTI) on a secondary right-hand axis ------------
-    ax2 = ax.twinx()
+    for c in cols_a:
+        color, ls = STYLES.get(c, (PALETTE[5], "-"))
+        axA.plot(paths.index, 100 * paths[c], lw=1.1, color=color, ls=ls,
+                 label=NICE.get(c, c))
+    for c in cols_b:
+        color, ls = STYLES.get(c, (PALETTE[5], "-"))
+        axB.plot(paths.index, 100 * paths[c], lw=1.1, color=color, ls=ls,
+                 label=NICE.get(c, c))
+
+    # --- Brent on a secondary right-hand axis of the oil panel -------------
+    axB2 = axB.twinx()
     for c, (color, ls, lab) in OIL_STYLE.items():
         if c in paths.columns:
-            ax2.plot(paths.index, 100 * paths[c], lw=1.0, color=color, ls=ls,
-                     label=lab)
-    ax2.set_ylabel("Crude CAR (%)")
-    ax2.spines["top"].set_visible(False)
-    ax2.spines["right"].set_visible(True)
-    ax2.spines["right"].set_linewidth(0.6)
-    ax2.grid(False)
-    ax2.yaxis.set_ticks_position("right")
-    ax2.tick_params(left=False, right=True, labelright=True, width=0.6, length=3)
-    ax2.margins(x=0.01)
+            axB2.plot(paths.index, 100 * paths[c], lw=1.0, color=color, ls=ls,
+                      label=lab)
+    axB2.set_ylabel("Brent CAR (%)")
+    axB2.spines["top"].set_visible(False)
+    axB2.spines["right"].set_visible(True)
+    axB2.spines["right"].set_linewidth(0.6)
+    axB2.grid(False)
+    axB2.yaxis.set_ticks_position("right")
+    axB2.tick_params(left=False, right=True, labelright=True, width=0.6, length=3)
+    axB2.margins(x=0.01)
 
-    mark_neighbors(ax, index, name, date, events)
-    ax.axvline(0, color="#999999", lw=0.7)
-    ax.axhline(0, color="#999999", lw=0.5)
+    mark_neighbors(axA, index, name, date, events)
+    for ax in (axA, axB):
+        ax.axvline(0, color="#999999", lw=0.7)
+        ax.axhline(0, color="#999999", lw=0.5)
+        ax.set_xlim(EVT_WIN[0], EVT_WIN[1])
+        ax.xaxis.set_major_locator(plt.matplotlib.ticker.MultipleLocator(10))
     # if the window was clipped by end-of-sample, say so on the figure
     last = int(paths.index.max())
     if last < EVT_WIN[1]:
-        ax.annotate(f"data ends at +{last}", xy=(last, 0),
-                    xytext=(-4, 6), textcoords="offset points",
-                    fontsize=6, color="#808080", ha="right")
-    ax.set_xlabel("Trading days relative to event")
-    ax.set_xlim(EVT_WIN[0], EVT_WIN[1])
-    ax.xaxis.set_major_locator(plt.matplotlib.ticker.MultipleLocator(10))
-    style_axis(ax, ylabel="FX CAR (%)")
-    h1, l1 = ax.get_legend_handles_labels()
-    h2, l2 = ax2.get_legend_handles_labels()
-    legend_below(fig, handles=h1 + h2, labels=l1 + l2, ncol=5, y=-0.04)
-    save_fig(fig, FIGS / f"fig_car_{name}_w50", legend_pad=0.16)
+        axA.annotate(f"data ends at +{last}", xy=(last, 0),
+                     xytext=(-4, 6), textcoords="offset points",
+                     fontsize=6, color="#808080", ha="right")
+    # No in-figure panel titles — panels are described in the LaTeX caption.
+    axB.set_xlabel(f"Trading days around {SHORT.get(name, name)}")
+    style_axis(axA, ylabel="FX CAR (%)")
+    style_axis(axB, ylabel="FX CAR (%)")
+    hA, lA = axA.get_legend_handles_labels()
+    hB, lB = axB.get_legend_handles_labels()
+    h2, l2 = axB2.get_legend_handles_labels()
+    legend_below(fig, handles=hA + hB + h2, labels=lA + lB + l2, ncol=3, y=0.0)
+    save_fig(fig, FIGS / f"fig_car_{name}_w50", legend_pad=0.05)
 
 
 if __name__ == "__main__":

@@ -54,6 +54,16 @@
   publisher = {American Economic Association},
 }
 
+@ARTICLE{caldara_etal_2020_tpu,
+  author  = {Dario Caldara and Matteo Iacoviello and Patrick Molligo and
+             Andrea Prestipino and Andrea Raffo},
+  title   = {The Economic Effects of Trade Policy Uncertainty},
+  journal = {Journal of Monetary Economics},
+  year    = {2020},
+  volume  = {109},
+  pages   = {38--59},
+}
+
 @ARTICLE{liu_zhang_2024,
   author    = {Xi Liu and Xueyong Zhang},
   title     = {Geopolitical Risk and Currency Returns},
@@ -293,6 +303,27 @@
 
 
 %% ===== Event-study methodology =====
+@BOOK{campbell_lo_mackinlay_1997,
+  author    = {John Y. Campbell and Andrew W. Lo and A. Craig MacKinlay},
+  title     = {The Econometrics of Financial Markets},
+  publisher = {Princeton University Press},
+  address   = {Princeton, NJ},
+  year      = {1997},
+}
+
+@INCOLLECTION{kothari_warner_2007,
+  author    = {S. P. Kothari and Jerold B. Warner},
+  title     = {Econometrics of Event Studies},
+  booktitle = {Handbook of Empirical Corporate Finance},
+  editor    = {B. Espen Eckbo},
+  volume    = {1},
+  chapter   = {1},
+  pages     = {3--36},
+  publisher = {Elsevier},
+  address   = {Amsterdam},
+  year      = {2007},
+}
+
 
 @ARTICLE{mackinlay_1997,
   author    = {A. Craig MacKinlay},
@@ -541,4 +572,117 @@
   number    = {2},
   pages     = {189--224},
   publisher = {Palgrave Macmillan},
+}
+
+
+%% ===== Data sources (Chapter 9 list; excluded from main bibliography) =====
+@MISC{ds_fed_dollar,
+  author  = {{Board of Governors of the Federal Reserve System}},
+  title   = {Nominal Broad U.S. Dollar Index; Advanced Foreign Economies and Emerging Market Economies Dollar Indexes (\texttt{DTWEXBGS}, \texttt{DTWEXAFEGS}, \texttt{DTWEXEMEGS})},
+  year    = {2026},
+  url     = {https://fred.stlouisfed.org/series/DTWEXBGS},
+  urldate = {2026-07-15},
+  note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_fed_yields,
+  author  = {{Board of Governors of the Federal Reserve System}},
+  title   = {Market Yields on U.S. Treasury Securities at 10- and 5-Year Constant Maturity; 5-Year TIPS Yield; 5-Year Breakeven Inflation Rate (\texttt{DGS10}, \texttt{DGS5}, \texttt{DFII5}, \texttt{T5YIE})},
+  year    = {2026},
+  url     = {https://fred.stlouisfed.org/series/DGS10},
+  urldate = {2026-07-15},
+  note    = {Daily, H.15 release. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_fed_h10,
+  author  = {{Board of Governors of the Federal Reserve System}},
+  title   = {Foreign Exchange Rates, H.10 Release (21 daily bilateral dollar rates; cross-check panel)},
+  year    = {2026},
+  url     = {https://www.federalreserve.gov/releases/h10/},
+  urldate = {2026-07-15},
+  note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_cboe_vix,
+  author  = {{Cboe Global Markets}},
+  title   = {Cboe Volatility Index (\texttt{VIXCLS})},
+  year    = {2026},
+  url     = {https://fred.stlouisfed.org/series/VIXCLS},
+  urldate = {2026-07-15},
+  note    = {Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_eia_energy,
+  author  = {{U.S. Energy Information Administration}},
+  title   = {Crude Oil Prices: Brent---Europe and West Texas Intermediate; Henry Hub Natural Gas Spot Price (\texttt{DCOILBRENTEU}, \texttt{DCOILWTICO}, \texttt{DHHNGSP})},
+  year    = {2026},
+  url     = {https://fred.stlouisfed.org/series/DCOILBRENTEU},
+  urldate = {2026-07-15},
+  note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_spdji_sp500,
+  author  = {{S\&P Dow Jones Indices}},
+  title   = {S\&P 500 Index (\texttt{SP500})},
+  year    = {2026},
+  url     = {https://fred.stlouisfed.org/series/SP500},
+  urldate = {2026-07-15},
+  note    = {Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  keywords = {data},
+}
+@MISC{ds_lseg_spot,
+  author  = {{LSEG}},
+  title   = {WM/Refinitiv Closing Spot Rates: 32 currencies against the U.S. dollar (RICs \texttt{EUR=} through \texttt{KWD=})},
+  year    = {2026},
+  url     = {https://www.lseg.com/en/data-analytics/products/workspace},
+  urldate = {2026-07-15},
+  note    = {Daily mid rates. Retrieved via the LSEG Workspace desktop application},
+  keywords = {data},
+}
+@MISC{ds_lseg_fwd,
+  author  = {{LSEG}},
+  title   = {One-Month Forward Points, same 32-currency panel (RICs \texttt{<CCY>1M=})},
+  year    = {2026},
+  url     = {https://www.lseg.com/en/data-analytics/products/workspace},
+  urldate = {2026-07-15},
+  note    = {Daily mid rates. Retrieved via the LSEG Workspace desktop application},
+  keywords = {data},
+}
+@MISC{ds_lseg_assets,
+  author  = {{LSEG}},
+  title   = {Gold Spot (\texttt{XAU=}); EURO STOXX 50 (\texttt{.STOXX50E}); TTF Natural Gas Front Month (\texttt{TRNLTTFMc1}); Brent Front Month (\texttt{LCOc1}, cross-check)},
+  year    = {2026},
+  url     = {https://www.lseg.com/en/data-analytics/products/workspace},
+  urldate = {2026-07-15},
+  note    = {Daily. Retrieved via the LSEG Workspace desktop application},
+  keywords = {data},
+}
+@MISC{ds_gpr,
+  author  = {Dario Caldara and Matteo Iacoviello},
+  title   = {Daily Geopolitical Risk (GPR) Index},
+  year    = {2026},
+  url     = {https://www.matteoiacoviello.com/gpr.htm},
+  urldate = {2026-07-15},
+  note    = {Daily. Index of Caldara and Iacoviello (2022)},
+  keywords = {data},
+}
+@MISC{ds_epu,
+  author  = {Scott R. Baker and Nicholas Bloom and Steven J. Davis},
+  title   = {Daily U.S. Economic Policy Uncertainty Index; Trade Policy Uncertainty Index},
+  year    = {2026},
+  url     = {https://www.policyuncertainty.com/},
+  urldate = {2026-07-15},
+  note    = {Daily},
+  keywords = {data},
+}
+
+@ARTICLE{gopinath_boz_casas_diez_gourinchas_plagborgmoller_2020,
+  author    = {Gita Gopinath and Emine Boz and Camila Casas and Federico J. D{\'i}ez and Pierre-Olivier Gourinchas and Mikkel Plagborg-M{\o}ller},
+  title     = {Dominant Currency Paradigm},
+  journal   = {American Economic Review},
+  year      = {2020},
+  volume    = {110},
+  number    = {3},
+  pages     = {677--719},
+  publisher = {American Economic Association},
 }

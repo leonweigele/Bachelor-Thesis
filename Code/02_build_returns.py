@@ -80,8 +80,9 @@ EVENTS = {
     "tariff_pause":   ("2025-04-09", "90-day tariff pause"),
     "iran_12day":     ("2025-06-13", "Israel/US strikes on Iran (12-day war)"),
     "hormuz":         ("2026-02-28", "Iran escalation, Hormuz crisis begins"),
-    "hormuz_closure": ("2026-03-04", "Iran closes Strait of Hormuz"),
-    "us_strikes":     ("2026-05-28", "US strikes on Iran"),
+    "hormuz_closure": ("2026-03-02", "Iran declares Strait of Hormuz closed"),
+    "hormuz_ceasefire": ("2026-04-07", "Two-week ceasefire announced (collapsed 13 Apr)"),
+    "us_strikes":     ("2026-05-25", "US strikes on Iran"),
     "ceasefire":      ("2026-06-11", "60-day ceasefire announced"),
 }
 WINDOW = 20            # trading days on each side for the event windows
@@ -228,9 +229,19 @@ if __name__ == "__main__":
         if c in panel.columns:                          # guard: WTI < 0 in Apr 2020
             rets[f"r_{c}"] = np.log(panel[c].where(panel[c] > 0)).diff()
     for c in ("DGS10", "DGS5", "DFII5", "T5YIE", "VIXCLS",
-              "GPRD", "GPRD_ACT", "GPRD_THREAT"):
+              "GPRD", "GPRD_ACT", "GPRD_THREAT", "VXY_Global"):
         if c in panel.columns:
             rets[f"d_{c}"] = panel[c].diff()           # first differences
+
+    # --- EUR-denominated commodities (denomination robustness) ---------------
+    # rets["EUR"] = dln(USD per EUR)  (euro appreciation vs USD), so in logs:
+    # r(X in EUR) = r(X in USD) - rets["EUR"].  Strips the mechanical
+    # dollar-in-the-denominator effect from USD-priced commodities.
+    if "EUR" in rets.columns:
+        if "r_DCOILBRENTEU" in rets.columns:
+            rets["r_Oil_EUR"] = rets["r_DCOILBRENTEU"] - rets["EUR"]
+        if "r_Gold" in rets.columns:
+            rets["r_Gold_EUR"] = rets["r_Gold"] - rets["EUR"]
 
     # --- portfolios ----------------------------------------------------------
     ports = pd.DataFrame(index=panel.index)

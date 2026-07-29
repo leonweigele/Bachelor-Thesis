@@ -32,14 +32,14 @@ OUT = PROC / "event_study"
 TEXOUT = ROOT / "Main/LaTeX Thesis/content/tab_cross_event_diff.tex"
 OUT.mkdir(parents=True, exist_ok=True)
 
-EST_WIN = (-130, -11)
-HORIZONS = [5, 10, 20]
+EST_WIN = (-140, -21)   # ends before the [-20,+20] event window (matches 03)
+HORIZONS = [1, 5, 10, 20]
 # pairs (A, B): A - B.  First is the headline trade-policy vs military/oil contrast.
 PAIRS = [("liberation_day", "hormuz"),
          ("liberation_day", "ukraine"),
          ("hormuz", "ukraine"),
          ("liberation_day", "iran_12day")]
-SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "r_DCOILBRENTEU"]
+SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "r_DCOILBRENTEU", "r_Oil_EUR", "r_Gold_EUR"]
 NICE_EV = {"liberation_day": "Liberation Day", "hormuz": "Hormuz crisis",
            "ukraine": "Ukraine", "iran_12day": "Twelve-day war"}
 
@@ -114,20 +114,20 @@ if __name__ == "__main__":
         r"\begin{table}[htbp]", r"\centering", r"\begin{threeparttable}",
         r"\caption{Difference in dollar CARs across events (broad USD index, \%)}",
         r"\label{tab:es_cross_diff}", r"\small",
-        r"\begin{tabular}{l rrr}", r"\toprule",
-        r" & \multicolumn{3}{c}{$\Delta\CAR(0,h)$, percentage points} \\",
-        r"\cmidrule(lr){2-4}",
-        r"Contrast (A $-$ B) & $h{=}5$ & $h{=}10$ & $h{=}20$ \\", r"\midrule",
+        r"\begin{tabular}{l rrrr}", r"\toprule",
+        r" & \multicolumn{4}{c}{$\Delta\CAR(0,h)$, percentage points} \\",
+        r"\cmidrule(lr){2-5}",
+        r"Contrast (A $-$ B) & $h{=}1$ & $h{=}5$ & $h{=}10$ & $h{=}20$ \\", r"\midrule",
     ]
     for a, b in PAIRS:
         label = f"{NICE_EV[a]} $-$ {NICE_EV[b]}"
-        lines.append(f"{label} & {cell(a,b,5)} & {cell(a,b,10)} & {cell(a,b,20)} \\\\")
+        lines.append(f"{label} & {cell(a,b,1)} & {cell(a,b,5)} & {cell(a,b,10)} & {cell(a,b,20)} \\\\")
     lines += [
         r"\bottomrule", r"\end{tabular}",
         r"\begin{tablenotes}[flushleft]\footnotesize",
         r"\item \textit{Notes.} Difference between two events' cumulative abnormal "
         r"returns of the broad nominal U.S.\ dollar index (\%), constant-mean model, "
-        r"estimation window $[-130,-11]$. Standard error "
+        r"estimation window $[-140,-21]$. Standard error "
         r"$\sqrt{L\,(\sigma_A^2+\sigma_B^2)}$ with $L=h+1$; events treated as "
         r"independent (windows do not overlap). A positive value means the dollar rose "
         r"more (or fell less) under shock~A than shock~B. "

@@ -19,6 +19,45 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{albulescu_ajmi_2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c4f52aa718a1fca35f756be446522e44}{%
+           family={Albulescu},
+           familyi={A\bibinitperiod},
+           given={Claudiu\bibnamedelima Tiberiu},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab1a999a8aef3fb7d41799f66c545d7a}{%
+           family={Ajmi},
+           familyi={A\bibinitperiod},
+           given={Ahdi\bibnamedelima Noomen},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{fullhash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{fullhashraw}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{bibnamehash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{authorbibnamehash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{authornamehash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{authorfullhash}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \strng{authorfullhashraw}{33ce118a3ec70c9ddf1f450a6b90fd47}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energy Economics}
+      \field{title}{Oil Price and {US} Dollar Exchange Rate: Change Detection of Bi-directional Causal Impact}
+      \field{volume}{100}
+      \field{year}{2021}
+      \field{pages}{105385}
+      \range{pages}{1}
+    \endentry
     \entry{arslanalp_eichengreen_simpsonbell_2022}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=90cf828507bc0b17e2584354b525d27f}{%
@@ -63,6 +102,57 @@
       \field{year}{2022}
       \field{pages}{103656}
       \range{pages}{1}
+    \endentry
+    \entry{ds_epu}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=44c1fb654911b2846ca5c9262f750497}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Scott\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f9ed1162402cc5a63ec1d1f470ea527}{%
+           family={Bloom},
+           familyi={B\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436e25609a5e8f78d485f754f4af4176}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d8d72ca78173273239b3a45b739acce9}
+      \strng{fullhash}{06807450d490fd8ee92d0ce9beddc842}
+      \strng{fullhashraw}{06807450d490fd8ee92d0ce9beddc842}
+      \strng{bibnamehash}{06807450d490fd8ee92d0ce9beddc842}
+      \strng{authorbibnamehash}{06807450d490fd8ee92d0ce9beddc842}
+      \strng{authornamehash}{d8d72ca78173273239b3a45b739acce9}
+      \strng{authorfullhash}{06807450d490fd8ee92d0ce9beddc842}
+      \strng{authorfullhashraw}{06807450d490fd8ee92d0ce9beddc842}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily}
+      \field{title}{Daily U.S. Economic Policy Uncertainty Index; Trade Policy Uncertainty Index}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.policyuncertainty.com/
+      \endverb
+      \verb{url}
+      \verb https://www.policyuncertainty.com/
+      \endverb
+      \keyw{data}
     \endentry
     \entry{baur_lucey_2010}{article}{}{}
       \name{author}{2}{}{%
@@ -141,6 +231,120 @@
       \field{type}{NBER Working Paper}
       \field{year}{2025}
     \endentry
+    \entry{ds_fed_h10}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3cd2bc76777b6930ba38f494b40da914}{%
+           family={{Board of Governors of the Federal Reserve System}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{bibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorbibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authornamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{Foreign Exchange Rates, H.10 Release (21 daily bilateral dollar rates; cross-check panel)}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.federalreserve.gov/releases/h10/
+      \endverb
+      \verb{url}
+      \verb https://www.federalreserve.gov/releases/h10/
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{ds_fed_yields}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3cd2bc76777b6930ba38f494b40da914}{%
+           family={{Board of Governors of the Federal Reserve System}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{bibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorbibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authornamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily, H.15 release. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{Market Yields on U.S. Treasury Securities at 10- and 5-Year Constant Maturity; 5-Year TIPS Yield; 5-Year Breakeven Inflation Rate (\texttt{DGS10}, \texttt{DGS5}, \texttt{DFII5}, \texttt{T5YIE})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fred.stlouisfed.org/series/DGS10
+      \endverb
+      \verb{url}
+      \verb https://fred.stlouisfed.org/series/DGS10
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{ds_fed_dollar}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3cd2bc76777b6930ba38f494b40da914}{%
+           family={{Board of Governors of the Federal Reserve System}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{fullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{bibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorbibnamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authornamehash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhash}{3cd2bc76777b6930ba38f494b40da914}
+      \strng{authorfullhashraw}{3cd2bc76777b6930ba38f494b40da914}
+      \field{extraname}{3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{Nominal Broad U.S. Dollar Index; Advanced Foreign Economies and Emerging Market Economies Dollar Indexes (\texttt{DTWEXBGS}, \texttt{DTWEXAFEGS}, \texttt{DTWEXEMEGS})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fred.stlouisfed.org/series/DTWEXBGS
+      \endverb
+      \verb{url}
+      \verb https://fred.stlouisfed.org/series/DTWEXBGS
+      \endverb
+      \keyw{data}
+    \endentry
     \entry{debock_decarvalhofilho_2015}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b88361e7a98ba21ab79a5cb213155052}{%
@@ -156,8 +360,7 @@
            giveni={I\bibinitperiod},
            givenun=0,
            prefix={de},
-           prefixi={d\bibinitperiod},
-           prefixun=0}}%
+           prefixi={d\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Elsevier}%
@@ -209,6 +412,7 @@
       \strng{authornamehash}{45eddbbff9bd83730679491044b7c6ed}
       \strng{authorfullhash}{45eddbbff9bd83730679491044b7c6ed}
       \strng{authorfullhashraw}{45eddbbff9bd83730679491044b7c6ed}
+      \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -222,6 +426,186 @@
       \field{year}{2022}
       \field{pages}{1194\bibrangedash 1225}
       \range{pages}{32}
+    \endentry
+    \entry{ds_gpr}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5f270f9711a1f97bafde54495f318697}{%
+           family={Caldara},
+           familyi={C\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acea90ed4b11d5b6a53225c00869ef09}{%
+           family={Iacoviello},
+           familyi={I\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{fullhash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{fullhashraw}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{bibnamehash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{authorbibnamehash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{authornamehash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{authorfullhash}{45eddbbff9bd83730679491044b7c6ed}
+      \strng{authorfullhashraw}{45eddbbff9bd83730679491044b7c6ed}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily. Index of Caldara and Iacoviello (2022)}
+      \field{title}{Daily Geopolitical Risk (GPR) Index}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.matteoiacoviello.com/gpr.htm
+      \endverb
+      \verb{url}
+      \verb https://www.matteoiacoviello.com/gpr.htm
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{caldara_etal_2020_tpu}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5f270f9711a1f97bafde54495f318697}{%
+           family={Caldara},
+           familyi={C\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acea90ed4b11d5b6a53225c00869ef09}{%
+           family={Iacoviello},
+           familyi={I\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5943089d823d25b5a4ff6d41de55b527}{%
+           family={Molligo},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52a0aab5e14117db4774b107bcb3ca70}{%
+           family={Prestipino},
+           familyi={P\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e635a7d2345cd6376859a96e724b8f18}{%
+           family={Raffo},
+           familyi={R\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2cb81ea3340742603e1e3d2021a67097}
+      \strng{fullhash}{7d180443a94ce92a2e99d5803ff63e1d}
+      \strng{fullhashraw}{7d180443a94ce92a2e99d5803ff63e1d}
+      \strng{bibnamehash}{7d180443a94ce92a2e99d5803ff63e1d}
+      \strng{authorbibnamehash}{7d180443a94ce92a2e99d5803ff63e1d}
+      \strng{authornamehash}{2cb81ea3340742603e1e3d2021a67097}
+      \strng{authorfullhash}{7d180443a94ce92a2e99d5803ff63e1d}
+      \strng{authorfullhashraw}{7d180443a94ce92a2e99d5803ff63e1d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{title}{The Economic Effects of Trade Policy Uncertainty}
+      \field{volume}{109}
+      \field{year}{2020}
+      \field{pages}{38\bibrangedash 59}
+      \range{pages}{22}
+    \endentry
+    \entry{campbell_lo_mackinlay_1997}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b7ec0e33525f8b94af88e38cc709b02d}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima Y.},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3991aad95c3885c82267fa604f5bbe20}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5167d2112d64a227f42442bc7e4e70de}{%
+           family={MacKinlay},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi Craig},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Princeton, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{279abb2a59cb1d2b4c807feb40728ece}
+      \strng{fullhash}{66b81c47bf867cb7cb1a717a7554670a}
+      \strng{fullhashraw}{66b81c47bf867cb7cb1a717a7554670a}
+      \strng{bibnamehash}{66b81c47bf867cb7cb1a717a7554670a}
+      \strng{authorbibnamehash}{66b81c47bf867cb7cb1a717a7554670a}
+      \strng{authornamehash}{279abb2a59cb1d2b4c807feb40728ece}
+      \strng{authorfullhash}{66b81c47bf867cb7cb1a717a7554670a}
+      \strng{authorfullhashraw}{66b81c47bf867cb7cb1a717a7554670a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Econometrics of Financial Markets}
+      \field{year}{1997}
+    \endentry
+    \entry{ds_cboe_vix}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=de5236409e429baf8de6e080392264ea}{%
+           family={{Cboe Global Markets}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{de5236409e429baf8de6e080392264ea}
+      \strng{fullhash}{de5236409e429baf8de6e080392264ea}
+      \strng{fullhashraw}{de5236409e429baf8de6e080392264ea}
+      \strng{bibnamehash}{de5236409e429baf8de6e080392264ea}
+      \strng{authorbibnamehash}{de5236409e429baf8de6e080392264ea}
+      \strng{authornamehash}{de5236409e429baf8de6e080392264ea}
+      \strng{authorfullhash}{de5236409e429baf8de6e080392264ea}
+      \strng{authorfullhashraw}{de5236409e429baf8de6e080392264ea}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{Cboe Volatility Index (\texttt{VIXCLS})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fred.stlouisfed.org/series/VIXCLS
+      \endverb
+      \verb{url}
+      \verb https://fred.stlouisfed.org/series/VIXCLS
+      \endverb
+      \keyw{data}
     \endentry
     \entry{cheema_faff_szulczyk_2022}{article}{}{}
       \name{author}{3}{}{%
@@ -490,6 +874,70 @@
       \field{type}{OIES Paper}
       \field{year}{2026}
     \endentry
+    \entry{gopinath_boz_casas_diez_gourinchas_plagborgmoller_2020}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2249e3d4cb006e7deb525ca850109bad}{%
+           family={Gopinath},
+           familyi={G\bibinitperiod},
+           given={Gita},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62da64576a950e24a633bfbd95762134}{%
+           family={Boz},
+           familyi={B\bibinitperiod},
+           given={Emine},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=592eb046279c29b07305362d328d29ef}{%
+           family={Casas},
+           familyi={C\bibinitperiod},
+           given={Camila},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2be04c3efc57359c3b2942292bd50435}{%
+           family={Díez},
+           familyi={D\bibinitperiod},
+           given={Federico\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0862b1f093d5875cafbeb1af76eca6e7}{%
+           family={Gourinchas},
+           familyi={G\bibinitperiod},
+           given={Pierre-Olivier},
+           giveni={P\bibinithyphendelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f6cf2ac45cd8a96f620c751c55b8bc3}{%
+           family={Plagborg-M{ø}ller},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Mikkel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{4da40e87681465c1c55f702ec5bd9582}
+      \strng{fullhash}{bc3b6867c8499ff9a292e69645313c46}
+      \strng{fullhashraw}{bc3b6867c8499ff9a292e69645313c46}
+      \strng{bibnamehash}{bc3b6867c8499ff9a292e69645313c46}
+      \strng{authorbibnamehash}{bc3b6867c8499ff9a292e69645313c46}
+      \strng{authornamehash}{4da40e87681465c1c55f702ec5bd9582}
+      \strng{authorfullhash}{bc3b6867c8499ff9a292e69645313c46}
+      \strng{authorfullhashraw}{bc3b6867c8499ff9a292e69645313c46}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review}
+      \field{number}{3}
+      \field{title}{Dominant Currency Paradigm}
+      \field{volume}{110}
+      \field{year}{2020}
+      \field{pages}{677\bibrangedash 719}
+      \range{pages}{43}
+    \endentry
     \entry{gourinchas_rey_2005}{report}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=0862b1f093d5875cafbeb1af76eca6e7}{%
@@ -655,6 +1103,35 @@
       \field{type}{Conference Draft}
       \field{year}{2025}
     \endentry
+    \entry{imf_2025_gfsr}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
+           family={{International Monetary Fund}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {International Monetary Fund}%
+      }
+      \strng{namehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{fullhash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{fullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{bibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorbibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Global Financial Stability Report, {C}hapter 2: {G}eopolitical Risks: Implications for Asset Prices}
+      \field{type}{Report}
+      \field{year}{2025}
+    \endentry
     \entry{imf_2026_menap}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
@@ -672,6 +1149,7 @@
       \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
+      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -774,6 +1252,49 @@
       \field{labeltitlesource}{title}
       \field{note}{Working paper}
       \field{title}{Dollar Erosion: Understanding the Loss of Reserve Currency Status}
+      \field{year}{2026}
+    \endentry
+    \entry{kalemliozcan_soylu_yildirim_2026}{report}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=92863fd331f0b4e7e8f083aeeb7a1dac}{%
+           family={Kalemli-Özcan},
+           familyi={K\bibinithyphendelim Ö\bibinitperiod},
+           given={Şebnem},
+           giveni={Ş\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03c670c9a5be1c9c32e65fc66f1a7c34}{%
+           family={Soylu},
+           familyi={S\bibinitperiod},
+           given={Can},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=974bc793a6b6f7b152593d65fad1ccb8}{%
+           family={Yildirim},
+           familyi={Y\bibinitperiod},
+           given={Muhammed\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{d82674b26a84eb4318cdf2cac03a1d0f}
+      \strng{fullhash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \strng{fullhashraw}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \strng{bibnamehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \strng{authorbibnamehash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \strng{authornamehash}{d82674b26a84eb4318cdf2cac03a1d0f}
+      \strng{authorfullhash}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \strng{authorfullhashraw}{7b50d5faf6f7ba519d3784a8ced9b0ea}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{34728}
+      \field{title}{Global Trade, Tariff Uncertainty and the {U.S.} Dollar}
+      \field{type}{NBER Working Paper}
       \field{year}{2026}
     \endentry
     \entry{kamin_2025}{report}{}{}
@@ -927,6 +1448,140 @@
       \field{type}{Working Paper}
       \field{year}{2026}
     \endentry
+    \entry{kolari_pynnonen_2010}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a6de12903ed94b49f869cdc216ff5b38}{%
+           family={Kolari},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a7648aa479681e99bd9e1845f8d4317}{%
+           family={Pynnönen},
+           familyi={P\bibinitperiod},
+           given={Seppo},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{1eaa189befe220c5078a93729a825a44}
+      \strng{fullhash}{1eaa189befe220c5078a93729a825a44}
+      \strng{fullhashraw}{1eaa189befe220c5078a93729a825a44}
+      \strng{bibnamehash}{1eaa189befe220c5078a93729a825a44}
+      \strng{authorbibnamehash}{1eaa189befe220c5078a93729a825a44}
+      \strng{authornamehash}{1eaa189befe220c5078a93729a825a44}
+      \strng{authorfullhash}{1eaa189befe220c5078a93729a825a44}
+      \strng{authorfullhashraw}{1eaa189befe220c5078a93729a825a44}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Financial Studies}
+      \field{number}{11}
+      \field{title}{Event Study Testing with Cross-sectional Correlation of Abnormal Returns}
+      \field{volume}{23}
+      \field{year}{2010}
+      \field{pages}{3996\bibrangedash 4025}
+      \range{pages}{30}
+    \endentry
+    \entry{kothari_warner_2007}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=dd7ac6af940cbe12cb1ac75e3e28bdbe}{%
+           family={Kothari},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3277494e16e6ec90c34d689edd095896}{%
+           family={Warner},
+           familyi={W\bibinitperiod},
+           given={Jerold\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=04febb048d2cf9f332035fbd724ede8d}{%
+           family={Eckbo},
+           familyi={E\bibinitperiod},
+           given={B.\bibnamedelimi Espen},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{fullhash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{fullhashraw}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{bibnamehash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{authorbibnamehash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{authornamehash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{authorfullhash}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{authorfullhashraw}{0373d947ddda7b65c7925a3a9484416f}
+      \strng{editorbibnamehash}{04febb048d2cf9f332035fbd724ede8d}
+      \strng{editornamehash}{04febb048d2cf9f332035fbd724ede8d}
+      \strng{editorfullhash}{04febb048d2cf9f332035fbd724ede8d}
+      \strng{editorfullhashraw}{04febb048d2cf9f332035fbd724ede8d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Empirical Corporate Finance}
+      \field{chapter}{1}
+      \field{title}{Econometrics of Event Studies}
+      \field{volume}{1}
+      \field{year}{2007}
+      \field{pages}{3\bibrangedash 36}
+      \range{pages}{34}
+    \endentry
+    \entry{kwok_brooks_1990}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=55ede118bab0082e12ce647bc819173d}{%
+           family={Kwok},
+           familyi={K\bibinitperiod},
+           given={Chuck\bibnamedelimb C.\bibnamedelimi Y.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=523f30a19ec29c9c2bfb9b12a15af6e5}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={LeRoy\bibnamedelima D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Palgrave Macmillan}%
+      }
+      \strng{namehash}{60f5526006db698343afb7501ae26914}
+      \strng{fullhash}{60f5526006db698343afb7501ae26914}
+      \strng{fullhashraw}{60f5526006db698343afb7501ae26914}
+      \strng{bibnamehash}{60f5526006db698343afb7501ae26914}
+      \strng{authorbibnamehash}{60f5526006db698343afb7501ae26914}
+      \strng{authornamehash}{60f5526006db698343afb7501ae26914}
+      \strng{authorfullhash}{60f5526006db698343afb7501ae26914}
+      \strng{authorfullhashraw}{60f5526006db698343afb7501ae26914}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of International Business Studies}
+      \field{number}{2}
+      \field{title}{Examining Event Study Methodologies in Foreign Exchange Markets}
+      \field{volume}{21}
+      \field{year}{1990}
+      \field{pages}{189\bibrangedash 224}
+      \range{pages}{36}
+    \endentry
     \entry{liu_zhang_2024}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=f184e2dbf642dd5904c4de423f29ccc9}{%
@@ -961,6 +1616,120 @@
       \field{title}{Geopolitical Risk and Currency Returns}
       \field{volume}{161}
       \field{year}{2024}
+    \endentry
+    \entry{ds_lseg_assets}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f92469475fed83c73017600f58392691}{%
+           family={{LSEG}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f92469475fed83c73017600f58392691}
+      \strng{fullhash}{f92469475fed83c73017600f58392691}
+      \strng{fullhashraw}{f92469475fed83c73017600f58392691}
+      \strng{bibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorbibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authornamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhashraw}{f92469475fed83c73017600f58392691}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily. Retrieved via the LSEG Workspace desktop application}
+      \field{title}{Gold Spot (\texttt{XAU=}); EURO STOXX 50 (\texttt{.STOXX50E}); TTF Natural Gas Front Month (\texttt{TRNLTTFMc1}); Brent Front Month (\texttt{LCOc1}, cross-check)}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \verb{url}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{ds_lseg_fwd}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f92469475fed83c73017600f58392691}{%
+           family={{LSEG}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f92469475fed83c73017600f58392691}
+      \strng{fullhash}{f92469475fed83c73017600f58392691}
+      \strng{fullhashraw}{f92469475fed83c73017600f58392691}
+      \strng{bibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorbibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authornamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhashraw}{f92469475fed83c73017600f58392691}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily mid rates. Retrieved via the LSEG Workspace desktop application}
+      \field{title}{One-Month Forward Points, same 32-currency panel (RICs \texttt{<CCY>1M=})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \verb{url}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{ds_lseg_spot}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f92469475fed83c73017600f58392691}{%
+           family={{LSEG}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f92469475fed83c73017600f58392691}
+      \strng{fullhash}{f92469475fed83c73017600f58392691}
+      \strng{fullhashraw}{f92469475fed83c73017600f58392691}
+      \strng{bibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorbibnamehash}{f92469475fed83c73017600f58392691}
+      \strng{authornamehash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhash}{f92469475fed83c73017600f58392691}
+      \strng{authorfullhashraw}{f92469475fed83c73017600f58392691}
+      \field{extraname}{3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily mid rates. Retrieved via the LSEG Workspace desktop application}
+      \field{title}{WM/Refinitiv Closing Spot Rates: 32 currencies against the U.S. dollar (RICs \texttt{EUR=} through \texttt{KWD=})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \verb{url}
+      \verb https://www.lseg.com/en/data-analytics/products/workspace
+      \endverb
+      \keyw{data}
     \endentry
     \entry{lustig_roussanov_verdelhan_2011}{article}{}{}
       \name{author}{3}{}{%
@@ -1007,6 +1776,40 @@
       \field{year}{2011}
       \field{pages}{3731\bibrangedash 3777}
       \range{pages}{47}
+    \endentry
+    \entry{mackinlay_1997}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5167d2112d64a227f42442bc7e4e70de}{%
+           family={MacKinlay},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi Craig},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{fullhash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{fullhashraw}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{bibnamehash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{authorbibnamehash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{authornamehash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{authorfullhash}{5167d2112d64a227f42442bc7e4e70de}
+      \strng{authorfullhashraw}{5167d2112d64a227f42442bc7e4e70de}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Literature}
+      \field{number}{1}
+      \field{title}{Event Studies in Economics and Finance}
+      \field{volume}{35}
+      \field{year}{1997}
+      \field{pages}{13\bibrangedash 39}
+      \range{pages}{27}
     \endentry
     \entry{obstfeld_zhou_2023}{report}{}{}
       \name{author}{2}{}{%
@@ -1124,6 +1927,121 @@
       \field{year}{2010}
       \field{pages}{385\bibrangedash 407}
       \range{pages}{23}
+    \endentry
+    \entry{ds_spdji_sp500}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd934393edbd0dcc0a70fa8323dbe535}{%
+           family={{S\&P Dow Jones Indices}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{fullhash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{fullhashraw}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{bibnamehash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{authorbibnamehash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{authornamehash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{authorfullhash}{fd934393edbd0dcc0a70fa8323dbe535}
+      \strng{authorfullhashraw}{fd934393edbd0dcc0a70fa8323dbe535}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{S\&P 500 Index (\texttt{SP500})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fred.stlouisfed.org/series/SP500
+      \endverb
+      \verb{url}
+      \verb https://fred.stlouisfed.org/series/SP500
+      \endverb
+      \keyw{data}
+    \endentry
+    \entry{salisu_olaniran_tchankam_2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5f8ce7f33538440a60cc1a80c878099e}{%
+           family={Salisu},
+           familyi={S\bibinitperiod},
+           given={Afees\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c205de9ab5fc0880a1a4aae751692ca}{%
+           family={Olaniran},
+           familyi={O\bibinitperiod},
+           given={Abeeb},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aac4b8a2cceb4ebc8b991c91a39b36c0}{%
+           family={Tchankam},
+           familyi={T\bibinitperiod},
+           given={Jean-Paul},
+           giveni={J\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{66576bb2861e36a8c641a95e9c1f2e7f}
+      \strng{fullhash}{20921ddc11d9e90c7f33bcb9057ca258}
+      \strng{fullhashraw}{20921ddc11d9e90c7f33bcb9057ca258}
+      \strng{bibnamehash}{20921ddc11d9e90c7f33bcb9057ca258}
+      \strng{authorbibnamehash}{20921ddc11d9e90c7f33bcb9057ca258}
+      \strng{authornamehash}{66576bb2861e36a8c641a95e9c1f2e7f}
+      \strng{authorfullhash}{20921ddc11d9e90c7f33bcb9057ca258}
+      \strng{authorfullhashraw}{20921ddc11d9e90c7f33bcb9057ca258}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energy Economics}
+      \field{note}{Article 105960}
+      \field{title}{Oil Tail Risk and the Tail Risk of the {US} Dollar Exchange Rates}
+      \field{year}{2022}
+    \endentry
+    \entry{ds_eia_energy}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9e2e11e29f64a338e6cdb702b7241e70}{%
+           family={{U.S. Energy Information Administration}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{fullhash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{fullhashraw}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{bibnamehash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{authorbibnamehash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{authornamehash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{authorfullhash}{9e2e11e29f64a338e6cdb702b7241e70}
+      \strng{authorfullhashraw}{9e2e11e29f64a338e6cdb702b7241e70}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis}
+      \field{title}{Crude Oil Prices: Brent---Europe and West Texas Intermediate; Henry Hub Natural Gas Spot Price (\texttt{DCOILBRENTEU}, \texttt{DCOILWTICO}, \texttt{DHHNGSP})}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fred.stlouisfed.org/series/DCOILBRENTEU
+      \endverb
+      \verb{url}
+      \verb https://fred.stlouisfed.org/series/DCOILBRENTEU
+      \endverb
+      \keyw{data}
     \endentry
     \entry{yilmazkuday_2025}{article}{}{}
       \name{author}{1}{}{%

@@ -19,14 +19,19 @@ relationship with risk held or broke across the episodes. The two layers reinfor
 another, reaching the same conclusion by different routes.
 
 The event study isolates the thesis's central contrast:
-three of the shocks are \emph{U.S.-originated} (the Liberation Day tariff announcement,
-the twelve-day war, and the 2026 Hormuz crisis), while the 2022 Russian invasion of
+three of the shocks are \emph{U.S.-linked}---the Liberation Day tariff announcement is
+U.S.-originated, and the twelve-day war and the 2026 Hormuz crisis are military shocks in
+which the United States is involved as a co-belligerent---while the 2022 Russian invasion of
 Ukraine is an \emph{external} military/oil shock in which the United States is not the
 instigator, and which therefore serves as a benchmark for the ``classical'' safe-haven
 response. Abnormal returns are computed with a constant-mean model: the normal return of
-each series is its mean over the estimation window $[-130,-11]$ trading days, the
+each series is its mean over the estimation window $[-140,-21]$ trading days, the
 abnormal return is the deviation from that mean, and the cumulative abnormal return
-$\CAR(0,h)$ sums abnormal returns from the event day through trading day~$h$.%
+$\CAR(t_1,t_2)$ sums abnormal returns over the stated window. Inference rests on the
+short windows---$\CAR(-1,+1)$, $\CAR(0,+1)$ and $\CAR(0,+5)$---because daily prices
+absorb many overlapping influences at longer horizons; the ten- and twenty-day
+cumulations, and the fifty-day persistence exhibit, are read as robustness on the
+durability of each response (Section~\ref{sec:method_event}).%
 \footnote{The constant-mean specification is preferred to the market model here because
 the object of study is the dollar itself: the natural ``market'' factor for the currency
 baskets is the dollar factor, which is endogenous to the response we seek to measure and
@@ -43,24 +48,29 @@ headline numbers; the discussion below reads them event by event.
 \section{CARs: Tariff Shock (Liberation Day)}
 \label{sec:es_tariff}
 
-The April~2, 2025 tariff announcement triggered an immediate and \emph{persistent}
-depreciation of the dollar. The broad dollar index fell $1.41\%$ on the announcement day
-(significant at the $1\%$ level) and continued to slide: $-2.81\%$ by ten trading days,
-$-3.62\%$ by twenty, and $-6.34\%$ by fifty (Table~\ref{tab:es_dollar_horizon},
-Panel~A). The 90-day tariff pause on April~9 did not arrest the move---if anything it
-deepened it, the broad index reaching $-6.74\%$ fifty days out---indicating that markets
-read the episode as a durable shift in the U.S.\ policy regime rather than a transient
-shock.
+The April~2, 2025 tariff announcement triggered an immediate depreciation of the dollar.
+The broad dollar index fell $1.44\%$ on the announcement day and $1.70\%$ over the
+symmetric $(-1,+1)$ window, both significant at the $1\%$ level
+(Table~\ref{tab:es_dollar_horizon}, Panel~A). The five-day CAR is temporarily pulled back
+to $-0.10\%$ by the relief bounce that followed the 90-day tariff pause of April~9---the
+pause itself, dated as its own sub-event, shows the dollar falling a further $1.48\%$ on
+announcement---before the slide resumes. The longer horizons confirm that the initial
+reaction understates rather than overstates the move: $-3.00\%$ by ten trading days,
+$-3.98\%$ by twenty, and $-6.34\%$ by fifty (Section~\ref{sec:es_robust}), indicating
+that markets read the episode as a durable shift in the U.S.\ policy regime rather than
+a transient shock.
 
 The cross-section confirms that the safe-haven premium did not accrue to the dollar but
 \emph{leaked away from it}. Over the five-day window the named-haven basket---the yen,
-Swiss franc and euro---appreciated $2.02\%$ against the dollar, the move concentrated in
-the franc ($+3.08\%$, significant at the $1\%$ level); the broader carry-sorted safe
-basket, which also contains low-yield Asian currencies, gained a more muted $0.97\%$
+Swiss franc and euro---appreciated $2.12\%$ against the dollar, the move concentrated in
+the franc ($+3.16\%$, significant at the $1\%$ level); the broader carry-sorted safe
+basket, which also contains low-yield Asian currencies, gained a more muted $1.07\%$
 (Table~\ref{tab:es_cross_section}). Either way the flight to quality went to competing
-havens rather than to the dollar. Crude oil fell sharply---Brent $-14.24\%$ and WTI
-$-13.19\%$ over five days---European equities sold off hard (Euro Stoxx~50 $-14.58\%$),
-and the oil-exporter basket slipped $0.90\%$, consistent with the tariff shock operating
+havens rather than to the dollar. Crude oil fell sharply---Brent $-14.32\%$ and WTI
+$-13.14\%$ over five days, and $-15.99\%$ for Brent re-expressed in euro, so the collapse
+is not an artefact of the weakening dollar in the denominator---European equities sold
+off hard (Euro Stoxx~50 $-14.58\%$), and the oil-exporter basket slipped $0.80\%$,
+consistent with the tariff shock operating
 through a global \emph{demand}-destruction channel rather than a supply channel. This is
 the signature of the United States acting as a destabiliser: a U.S.-made shock that
 simultaneously weakens the dollar, depresses oil and equities, and redirects safe-haven
@@ -70,8 +80,13 @@ flows to competing currencies.
   \centering
   \includegraphics[width=\linewidth]{fig_car_liberation_day}
   \caption[Liberation Day: portfolio CARs]{Liberation Day (2~April 2025): cumulative
-  abnormal returns of the dollar and the currency baskets over $\pm 20$ trading days. The
-  dollar slides while the named-haven currencies bid; crude and European equities fall.}
+  abnormal returns over $\pm 20$ trading days. Top panel: broad dollar (equal-weighted)
+  and the safe and risky currency baskets. Bottom panel: oil-exporter and oil-importer
+  baskets (left axis) and Brent crude (right axis); WTI is omitted from the figures
+  because Brent prices the bulk of internationally traded crude while the WTI--Brent
+  spread reflects U.S.-local storage logistics (WTI is reported in
+  Appendix~\ref{ch:appendix_a}). The dollar slides while the named-haven currencies bid
+  and crude falls.}
   \label{fig:car_liberation_day}
 \end{figure}
 
@@ -84,23 +99,45 @@ both intensity and the role the data assign to the United States.
 
 \paragraph{Twelve-day war (June 2025).}
 The response is muted and statistically insignificant throughout: the broad dollar index
-moves $+0.06\%$ on day one and $+0.94\%$ over five days, neither distinguishable from
+moves $+0.04\%$ on day one and $+0.88\%$ over five days, neither distinguishable from
 zero (Table~\ref{tab:es_dollar_horizon}, Panel~B). Crude rose meaningfully (Brent
-$+11.21\%$ at five days), but the currency response is essentially flat. This is the
+$+11.25\%$ at five days), but the currency response is essentially flat. This is the
 ``ambiguous actor'' case anticipated in the introduction: with the United States a
 co-belligerent rather than a pure safe harbour, the flight-to-the-dollar reflex and the
 erosion pressure roughly offset, leaving no significant net move.
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_car_iran_12day}
+  \caption[Twelve-day war: portfolio CARs]{Twelve-day war (13~June 2025): cumulative
+  abnormal returns over $\pm 20$ trading days. Top panel: dollar and currency baskets;
+  bottom panel: oil-exposure baskets (left axis) and Brent (right axis). Crude rises
+  while the currency response stays flat---the ambiguous-actor case.}
+  \label{fig:car_iran_12day}
+\end{figure}
+
 \paragraph{Hormuz crisis (February--March 2026).}
-Here the dollar behaves as a classical safe haven. The broad index appreciates $1.40\%$
-on impact, building to $+2.12\%$ at ten days and $+3.29\%$ at twenty
-(Table~\ref{tab:es_dollar_horizon}). Crude spikes violently---Brent $+27.83\%$ and WTI
-$+34.71\%$ over five days---and the currency cross-section sorts on oil exposure: the
-oil-importer basket (yen, won, rupee) depreciates $1.10\%$ against the surging dollar,
-underperforming the oil-exporter basket, which falls only $0.71\%$ as higher crude
+Here the dollar behaves as a classical safe haven. The broad index appreciates $1.39\%$
+on impact and $1.53\%$ over five days---both significant at the $1\%$ level---building
+to $+2.10\%$ at ten days and $+3.25\%$ at twenty
+(Table~\ref{tab:es_dollar_horizon}). Crude spikes violently---Brent $+27.63\%$ and WTI
+$+34.55\%$ over five days, and $+29.21\%$ for Brent in euro, so the spike survives the
+change of numéraire---and the currency cross-section sorts on oil exposure: the
+oil-importer basket (yen, won, rupee) depreciates $1.03\%$ against the surging dollar,
+underperforming the oil-exporter basket, which falls only $0.69\%$ as higher crude
 cushions exporters. The dollar is bid even though the United States is the originator of
 the strikes, indicating that for a security/oil-supply shock the safe-haven reflex
 survives U.S.\ implication---in sharp contrast to the trade-policy shock.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_car_hormuz}
+  \caption[Hormuz crisis: portfolio CARs]{Hormuz crisis (28~February 2026): cumulative
+  abnormal returns over $\pm 20$ trading days. Top panel: dollar and currency baskets;
+  bottom panel: oil-exposure baskets (left axis) and Brent (right axis). The dollar is
+  bid as crude spikes; oil importers underperform exporters.}
+  \label{fig:car_hormuz}
+\end{figure}
 
 Crucially, the Hormuz appreciation is \emph{transitory}. By fifty days the broad-index
 CAR has returned to $-0.13\%$ (insignificant): the entire move unwinds. The clearest
@@ -117,38 +154,41 @@ about as close to clean identification as a single-country event study allows.
 \section{Cross-Event Comparison}
 \label{sec:es_comparison}
 
-Reading across Table~\ref{tab:es_cross_section}, the two U.S.-originated shocks produce a
+Reading across Table~\ref{tab:es_cross_section}, the two U.S.-linked shocks produce a
 \emph{mirror image}. The trade-policy shock weakens the dollar and depresses oil; the
 military/oil-supply shock strengthens the dollar and lifts oil. The dollar is therefore
 not a fixed safe haven or a fixed casualty---its response is conditioned by the
-\emph{type} of shock, even holding the originator (the United States) fixed.
+\emph{type} of shock, even holding U.S.\ involvement fixed.
 
 This contrast is not merely descriptive. Table~\ref{tab:es_cross_diff} tests the
-difference in the dollar's CAR between events directly. At the ten-day horizon the broad
-dollar index is $4.93$ percentage points lower under the tariff shock than under the
-Hormuz crisis ($t=-3.7$) and $4.51$ points lower than under Ukraine ($t=-3.4$), both
-significant at the $1\%$ level; by twenty days the tariff--Hormuz gap widens to $6.9$
-points. Crucially, the Hormuz and Ukraine responses are statistically
-\emph{indistinguishable} (differences of $0.4$--$2.4$ points, none significant): the
-dollar appreciates after the U.S.-originated Hormuz shock by as much as it does after the
-external Ukraine shock. The mirror image is thus driven entirely by the trade-policy
-shock---the only episode that moves the dollar significantly differently from a classical
-safe-haven event. The divergence is a horizon phenomenon: at five days no pair is yet
-significant, consistent with the announcement reaction taking up to two weeks to resolve.
+difference in the dollar's CAR between events directly, and the separation is immediate:
+already on the first trading day the broad dollar index is $2.83$ percentage points lower
+under the tariff shock than under the Hormuz crisis ($t=-5.2$) and $1.93$ points lower
+than under Ukraine ($t=-3.5$), both significant at the $1\%$ level. The five-day
+difference narrows to $-1.63$ points ($t=-1.7$) as the tariff-pause bounce temporarily
+retraces the dollar's fall, before the gap re-opens to $5.10$ points at ten days
+($t=-4.0$) and $7.24$ points at twenty ($t=-4.1$); against Ukraine the pattern is the
+same ($-4.65$ at ten days, $t=-3.6$). The Hormuz and Ukraine responses, by contrast,
+share the same sign throughout: at day one the Hormuz bid is somewhat stronger
+($+0.91$ points, $t=2.0$)---a difference of intensity, not direction---and at five and
+ten days the two are statistically indistinguishable. The mirror image is thus driven by
+the trade-policy shock---the only episode in which the dollar moves \emph{against} the
+classical safe-haven direction, and it does so identifiably from the first day.
 
 \input{content/tab_cross_event_diff}
 
 The Ukraine benchmark disciplines the interpretation. As an external military/oil shock,
-it generates the textbook response---the dollar appreciates ($+1.70\%$ at ten days,
-$+3.12\%$ at fifty) and crude rises $13.63\%$ (Table~\ref{tab:es_cross_section})---and,
-as just shown, that response is statistically the same as Hormuz. Two features
-nonetheless distinguish the external from the U.S.-originated military shock. First, the
+it generates the textbook response---the dollar appreciates ($+1.65\%$ at ten days,
+$+3.12\%$ at fifty) and crude rises $13.82\%$ (Table~\ref{tab:es_cross_section})---and,
+as just shown, that response shares its sign and, beyond the first day, its magnitude
+with Hormuz. Two features
+nonetheless distinguish the external from the U.S.-involved military shock. First, the
 Ukraine appreciation is durable whereas the Hormuz appreciation reverts, consistent with
-an external shock conferring a lasting safe-haven bid and a U.S.-implicated one only a
+an external shock conferring a lasting safe-haven bid and a U.S.-involved one only a
 temporary one. Second, and most importantly for the thesis, the \emph{trade-policy} shock
 breaks the pattern entirely: the only episode in which the dollar depreciates is the one
 the United States itself authored on the economic-policy front. The safe-haven function
-is intact for geopolitical/oil-supply shocks---even U.S.-originated ones---but it inverts
+is intact for geopolitical/oil-supply shocks---even U.S.-involved ones---but it inverts
 for a U.S.\ trade-policy shock.
 
 \begin{figure}[htbp]
@@ -165,21 +205,29 @@ for a U.S.\ trade-policy shock.
 \label{sec:es_gold}
 
 The commodity dimension reinforces the demand-versus-supply reading. Brent and WTI move
-in opposite directions across the two shock types---down $\sim$$14\%$ on the tariff shock
-(a demand shock) and up $\sim$$28$--$35\%$ on the Hormuz supply shock---and the two
-benchmarks agree closely, so the result does not depend on the choice of crude reference
-(Section~\ref{sec:es_robust} returns to this). The oil response is the channel through
+in opposite directions across the two shock types---down $\sim$$13$--$14\%$ on the tariff
+shock (a demand shock) and up $\sim$$28$--$35\%$ on the Hormuz supply shock---and the two
+benchmarks agree closely, so the result does not depend on the choice of crude reference.
+Nor does it depend on the currency of denomination: re-expressed in euro, Brent falls
+$15.99\%$ on the tariff shock and rises $29.21\%$ on Hormuz
+(Table~\ref{tab:es_cross_section}), so the oil moves are genuine commodity repricings,
+not the dollar moving in the denominator (Section~\ref{sec:es_robust} returns to this). The oil response is the channel through
 which the cross-section of oil-exporter and oil-importer currencies sorts in
 Table~\ref{tab:es_cross_section}.
 
 Gold tells a subtler story than the ``universal haven'' a first intuition would suggest.
 Rather than rising around every shock, gold tracks the \emph{inverse of the dollar} across
-the U.S.-originated episodes: it gains when the tariff shock weakens the dollar ($+5.99\%$
-at ten days, and $+8.48\%$ around the tariff pause) and falls when the Hormuz shock
-strengthens it ($-8.36\%$ at ten days, deepening at longer horizons). The one departure is
-the external control: around the Ukraine invasion gold and the dollar rise \emph{together}
-($+4.24\%$ for gold at ten days), the dual-haven response a classical risk-off episode
-produces. Gold is thus not an unconditional substitute for the dollar but a hedge against
+the U.S.-originated episodes: it gains when the tariff shock weakens the dollar ($+6.07\%$
+at ten days, and $+8.85\%$ around the tariff pause) and falls when the Hormuz shock
+strengthens it ($-8.74\%$ at ten days, deepening to $-22.3\%$ at twenty). The
+euro-denominated series sharpens this reading into a test: stripped of the dollar
+denominator, gold's tariff-window gain essentially vanishes ($+0.21\%$ at ten days,
+insignificant, versus $+6.07\%$ in dollars), so most of gold's ``rally'' around the
+tariff shock was the dollar falling underneath it. The one departure is
+the external control: around the Ukraine invasion gold rises \emph{with} the dollar, and
+does so in euro as well ($+6.71\%$ at ten days, significant at the $1\%$ level)---a
+genuine dual-haven bid rather than a denomination effect. Gold is thus not an
+unconditional substitute for the dollar but a hedge against
 it---for the U.S.-made shocks it moves opposite the dollar, reinforcing that the dollar's
 own conditional response, and not a generic flight to safety, is the organising variable of
 this chapter; only for the external shock do both havens bid at once. Two caveats temper the
@@ -190,8 +238,8 @@ quote used for the gold fix (LSEG \texttt{XAU=ZKBZ}) is noted in
 Appendix~\ref{ch:appendix_a}.
 
 Equities corroborate the risk-off reading without the dollar's conditionality. The Euro
-Stoxx~50 falls around every shock---$-14.58\%$ on Liberation Day, $-8.23\%$ around Hormuz,
-and $-6.03\%$ after the Ukraine invasion (all significant at $5\%$ or better)---so European
+Stoxx~50 falls around every shock---$-14.58\%$ on Liberation Day, $-8.11\%$ around Hormuz,
+and $-5.96\%$ after the Ukraine invasion (all significant at $5\%$ or better)---so European
 risk assets sell off whether the shock is a trade war, an oil-supply scare, or an external
 invasion. The contrast with the dollar is the point: equities are an \emph{unconditional}
 casualty of geopolitical and policy shocks, whereas the dollar's sign flips with the type of
@@ -202,34 +250,43 @@ of risk assets.
 \section{Robustness}
 \label{sec:es_robust}
 
-Three checks support the readings above. First, \emph{longer windows} confirm the
-persistence pattern (Table~\ref{tab:es_dollar_horizon}, $h{=}50$): the tariff
-depreciation deepens to $-6.34\%$, the Hormuz appreciation fully reverts, and the Ukraine
-appreciation persists at $+3.12\%$---the long horizon thus separates a level re-rating of
-the dollar (tariffs) from a transitory risk premium (Hormuz). The $\pm 50$-day figures
+Four checks support the readings above. First, \emph{longer windows}. Because many
+things move daily prices at once, the ten- and twenty-day cumulations are not treated as
+independent identification of the event effect; read as durability checks, they confirm
+that every headline sign extends rather than reverses ($-3.00\%$ and $-3.98\%$ for the
+tariff shock, $+2.10\%$ and $+3.25\%$ for Hormuz), and the fifty-day horizon
+(Table~\ref{tab:es_dollar_horizon}) then separates a level re-rating of
+the dollar (tariffs, deepening to $-6.34\%$) from a transitory risk premium (Hormuz,
+fully reverting). The $\pm 50$-day figures
 (e.g.\ Figure~\ref{fig:car_hormuz_w50}) plot crude on a secondary axis and mark
 neighbouring sub-events, making both the persistence and the ceasefire reversal visible.
 Second, \emph{Brent versus WTI}: the crude responses are quantitatively similar across all
 events (Table~\ref{tab:es_cross_section}), so conclusions are invariant to the benchmark.
-Third, the \emph{market model} with the dollar factor, reported for individual currencies
+Third, \emph{denomination}: re-expressing the USD-priced commodities in euro
+(Table~\ref{tab:es_cross_section}, bottom panel) leaves the crude responses essentially
+unchanged while shrinking gold's tariff-window move toward zero---the former are genuine
+commodity repricings, the latter largely the dollar in the denominator
+(Section~\ref{sec:es_gold}).
+Fourth, the \emph{market model} with the dollar factor, reported for individual currencies
 in Appendix~\ref{ch:appendix_a}, leaves the safe-haven hierarchy unchanged.
 
 Two limitations bound the long-horizon results. The $\pm 50$-day windows of the two 2025
 events overlap (Liberation Day's tail reaches the twelve-day war $\sim$$52$ trading days
 later), so their long-horizon CARs are not fully independent; this is why the persistence
 figures are read event by event, while the formal cross-event \emph{difference} tests
-(Table~\ref{tab:es_cross_diff}) use horizons up to twenty days, at which the windows of
-the compared pairs do not overlap. And the two most recent shocks---the May~2026 U.S.\
+(Table~\ref{tab:es_cross_diff}) use horizons from one to twenty days, at which the
+windows of the compared pairs do not overlap. And the two most recent shocks---the May~2026 U.S.\
 strikes and the June~2026 ceasefire---are omitted from the longer horizons because the
-sample ends 2026-06-16, leaving too few post-event trading days for a stable window.
+sample ends 30~June 2026, leaving too few post-event trading days for a stable window.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth]{fig_car_hormuz_w50}
   \caption[Hormuz crisis: CARs over $\pm 50$ days with crude]{Hormuz crisis,
-  $\pm 50$ trading days. Left axis: currency-basket CARs; right axis: Brent and WTI CARs.
-  The dollar's appreciation reverts by $+50$; the April~7 two-week ceasefire (marked)
-  both crashes crude and unwinds the dollar premium.}
+  $\pm 50$ trading days. Top panel: dollar and currency baskets; bottom panel:
+  oil-exposure baskets (left axis) and Brent (right axis). The dollar's appreciation
+  reverts by $+50$; the April~7 two-week ceasefire (marked) both crashes crude and
+  unwinds the dollar premium.}
   \label{fig:car_hormuz_w50}
 \end{figure}
 

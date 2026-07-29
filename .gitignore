@@ -4,6 +4,12 @@
 *.synctex.gz
 __pycache__/
 
+# LSEG Data Library app key — SECRET, never commit
+/Code/lseg-data.config.json
+
+# FRED API key — SECRET, never commit
+/Code/fred_api_key.txt
+
 # Reference material & working drafts — kept locally, not published
 /BachelorsThesisDanielStepanski.pdf
 /Literature.pdf

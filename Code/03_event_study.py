@@ -3,7 +3,7 @@
 ================================================================
 Method (per the research design):
   - Main: constant-mean abnormal returns.
-      estimation window [-130, -11] trading days, event window [-20, +20]
+      estimation window [-140, -21] trading days, event window [-20, +20]
       AR_t  = r_t - mean(r, estimation window)
       CAR   = sum of ARs;  t = CAR / (sigma_est * sqrt(L))
   - Appendix robustness: market-model ARs for currencies,
@@ -28,11 +28,11 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 PROC = ROOT / "Data/processed"
 OUT = PROC / "event_study"
-FIGS = ROOT / "Output/figures"
+FIGS = ROOT / "Output/figures/ch06_results"
 OUT.mkdir(parents=True, exist_ok=True)
 FIGS.mkdir(parents=True, exist_ok=True)
 
-EST_WIN = (-130, -11)        # estimation window (trading days rel. to event)
+EST_WIN = (-140, -21)        # estimation window (trading days rel. to event); ends at -21 so it does not overlap the [-20,+20] event window
 EVT_WIN = (-20, 20)          # event window
 CAR_WINDOWS = [(-1, 1), (0, 1), (0, 5), (0, 10), (0, 20)]
 MAIN_EVENTS = ["ukraine", "liberation_day", "iran_12day", "hormuz"]
@@ -42,7 +42,8 @@ FIG_SERIES = ["USD_EW", "SAFE", "RISKY", "OIL_EXP", "OIL_IMP"]
 # Key series for the cross-event comparison table
 KEY_SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "RISKY", "CARRY_HML",
               "OIL_EXP", "OIL_IMP", "r_DCOILBRENTEU", "r_DCOILWTICO", "r_SP500",
-              "r_Gold", "r_XAU", "d_VIXCLS", "d_DGS10"]
+              "r_Gold", "r_XAU", "r_Oil_EUR", "r_Gold_EUR",
+              "d_VIXCLS", "d_DGS10"]
 
 
 def stars(t):
@@ -149,21 +150,59 @@ STYLES = {  # color, linestyle — headline black solid, USD dashed black
     "OIL_IMP": (PALETTE[4], "-")}
 
 
+# Two stacked panels (small multiples) instead of one 5-line "spaghetti
+# chart" — Schwabish (2014, JEP 28(1)), citing Tufte (2006). Panel A =
+# safe-haven hierarchy, Panel B = oil channel with Brent (only) on the right
+# axis: Brent is the world benchmark (~2/3 of internationally traded crude,
+# EIA); the WTI-Brent spread is US-local Cushing noise (Fattouh 2011).
+PANEL_A = ["USD_EW", "SAFE", "RISKY"]
+PANEL_B = ["OIL_EXP", "OIL_IMP"]
+BRENT = "r_DCOILBRENTEU"
+SHORT = {"ukraine": "the Ukraine invasion", "liberation_day": "Liberation Day",
+         "tariff_pause": "the tariff pause", "iran_12day": "the 12-day war",
+         "hormuz": "the Hormuz crisis", "hormuz_closure": "the Hormuz closure",
+         "us_strikes": "the US strikes", "ceasefire": "the ceasefire"}
+
+
 def figure_event(name, paths):
-    cols = [c for c in FIG_SERIES if f"{c}__cm" in paths.columns]
-    if not cols:
+    cols_a = [c for c in PANEL_A if f"{c}__cm" in paths.columns]
+    cols_b = [c for c in PANEL_B if f"{c}__cm" in paths.columns]
+    if not cols_a and not cols_b:
         return
-    fig, ax = plt.subplots(figsize=(6.3, 3.0))
-    for c in cols:
-        color, ls = STYLES.get(c, (PALETTE[5], "-"))
-        ax.plot(paths.index, 100 * paths[f"{c}__cm"], lw=1.1,
-                color=color, ls=ls, label=NICE.get(c, c))
-    ax.axvline(0, color="#999999", lw=0.7)
-    ax.axhline(0, color="#999999", lw=0.5)
-    ax.set_xlabel("Trading days relative to event")
-    style_axis(ax, ylabel="CAR (%)")
-    legend_below(fig, ncol=5, y=-0.04)
-    save_fig(fig, FIGS / f"fig_car_{name}", legend_pad=0.10)
+    fig, (axA, axB) = plt.subplots(2, 1, figsize=(6.3, 4.6), sharex=True)
+    for ax, cols in ((axA, cols_a), (axB, cols_b)):
+        for c in cols:
+            color, ls = STYLES.get(c, (PALETTE[5], "-"))
+            ax.plot(paths.index, 100 * paths[f"{c}__cm"], lw=1.1,
+                    color=color, ls=ls, label=NICE.get(c, c))
+        ax.axvline(0, color="#999999", lw=0.7)
+        ax.axhline(0, color="#999999", lw=0.5)
+
+    axB2 = None
+    if f"{BRENT}__cm" in paths.columns:
+        axB2 = axB.twinx()
+        axB2.plot(paths.index, 100 * paths[f"{BRENT}__cm"], lw=1.0,
+                  color="#8c6d31", ls="-.", label="Brent crude (rhs)")
+        axB2.set_ylabel("Brent CAR (%)")
+        axB2.spines["top"].set_visible(False)
+        axB2.spines["right"].set_visible(True)
+        axB2.spines["right"].set_linewidth(0.6)
+        axB2.grid(False)
+        axB2.yaxis.set_ticks_position("right")
+        axB2.tick_params(left=False, right=True, labelright=True,
+                         width=0.6, length=3)
+        axB2.margins(x=0.01)
+
+    # No in-figure panel titles — panels are described in the LaTeX caption
+    # (top = currency portfolios, bottom = oil-exposure portfolios + Brent).
+    axB.set_xlabel(f"Trading days around {SHORT.get(name, name)}")
+    style_axis(axA, ylabel="CAR (%)")
+    style_axis(axB, ylabel="CAR (%)")
+    hA, lA = axA.get_legend_handles_labels()
+    hB, lB = axB.get_legend_handles_labels()
+    h2, l2 = axB2.get_legend_handles_labels() if axB2 else ([], [])
+    legend_below(fig, handles=hA + hB + h2, labels=lA + lB + l2, ncol=3, y=0.0)
+    save_fig(fig, FIGS / f"fig_car_{name}", legend_pad=0.05)
 
 
 # Sub-events marked on their parent's CAR path (events are NOT point events;

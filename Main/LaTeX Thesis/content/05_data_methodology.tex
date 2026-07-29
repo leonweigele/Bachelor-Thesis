@@ -34,6 +34,17 @@ price index (\texttt{.STOXX50E}, EUR) and the Dutch TTF front-month natural-gas 
 (\texttt{TRNLTTFMc1}, EUR/MWh). Indices, equities and commodities enter as log returns;
 yields and the VIX enter in first differences.
 
+All series are denominated consistently against the U.S.\ dollar: exchange rates as
+foreign currency per dollar, and oil and gold in dollars. One consequence requires care.
+Because commodities are priced in dollars, a dollar movement enters their prices
+mechanically: a depreciation of the dollar raises the dollar price of oil even if oil is
+unchanged in every other currency. To separate genuine commodity movements from this
+denomination effect, Brent and gold are additionally re-expressed in euro---in log
+returns, $r^{\mathrm{EUR}}_{X,t} = r^{\mathrm{USD}}_{X,t} - r_{\mathrm{EUR},t}$, where
+$r_{\mathrm{EUR},t}$ is the euro's log appreciation against the dollar---and the
+euro-denominated series are carried through the event study as a robustness check on
+denomination.
+
 \subsection{Geopolitical and Policy Uncertainty Indices}
 \label{sec:data_gpr}
 
@@ -84,30 +95,39 @@ basket (\texttt{USD\_EW}).
 \section{Event Study Methodology}
 \label{sec:method_event}
 
-The main specification is the \emph{constant-mean return} model. For each series $i$ the
-normal return is its average over an estimation window of $[-130,-11]$ trading days
-preceding the event; the abnormal return on day $t$ of the event window is the deviation
+The main specification is the \emph{constant-mean return} model
+\parencite{mackinlay_1997,campbell_lo_mackinlay_1997}. For each series $i$ the
+normal return is its average over an estimation window of $[-140,-21]$ trading days
+preceding the event, ending where the event window begins so that no event-window day
+enters the estimation of the benchmark; the abnormal return on day $t$ of the event window is the deviation
 from that mean,
 \begin{equation}
   \AR_{i,t} = R_{i,t} - \hat\mu_i, \qquad
-  \hat\mu_i = \frac{1}{120}\sum_{s=-130}^{-11} R_{i,s},
+  \hat\mu_i = \frac{1}{120}\sum_{s=-140}^{-21} R_{i,s},
 \end{equation}
 and the cumulative abnormal return aggregates these over the window,
 \begin{equation}
   \CAR_i(t_1,t_2) = \sum_{t=t_1}^{t_2} \AR_{i,t}.
 \end{equation}
-The event window is $[-20,+20]$ trading days. Cumulative windows $\CAR(0,h)$ for
-$h\in\{1,5,10,20\}$ capture the announcement reaction, while a long horizon $\CAR(0,50)$
----estimated on $[-170,-51]$ so the estimation window does not overlap the wider event
-window---gauges persistence. The significance of a single CAR is assessed with
+The event window is $[-20,+20]$ trading days. Because daily financial prices absorb many
+overlapping influences, the longer the cumulation window the weaker the claim that the
+measured movement belongs to the event alone \parencite{mackinlay_1997,
+kothari_warner_2007}. Inference therefore rests on the short windows: the symmetric
+$\CAR(-1,+1)$, which also guards against information reaching prices the day before the
+announcement, and $\CAR(0,+1)$ and $\CAR(0,+5)$ for the announcement reaction. The longer
+cumulations $\CAR(0,+10)$ and $\CAR(0,+20)$ are reported as robustness checks on the
+durability of the response rather than as independent identification, and a long horizon
+$\CAR(0,50)$---a robustness exhibit on persistence---is estimated on
+$[-170,-51]$ so the estimation window does not overlap the wider event window. The significance of a single CAR is assessed with
 $t=\CAR/(\hat\sigma_i\sqrt{L})$, where $\hat\sigma_i$ is the estimation-window standard
 deviation of $\AR_i$ and $L=t_2-t_1+1$. The difference between two events' CARs is tested
 with $\Delta=\CAR_A-\CAR_B$ and standard error
-$\sqrt{L\,(\hat\sigma_A^2+\hat\sigma_B^2)}$, treating the (non-overlapping) event windows
-as independent.
+$\sqrt{L\,(\hat\sigma_A^2+\hat\sigma_B^2)}$, the two-sample analogue of the CAR variance
+in \textcite{campbell_lo_mackinlay_1997}; independence is warranted because the event
+windows do not overlap.
 
 The constant-mean model is preferred to the market model because the object of study is
-the dollar itself. The natural market factor for the currency baskets is the dollar
+the dollar itself. This choice is consequential in currency applications: \textcite{kwok_brooks_1990}, comparing competing abnormal-return specifications in foreign-exchange markets, find inference sensitive to both the numeraire and the benchmark model, so event-study practice developed for equities does not carry over automatically. The natural market factor for the currency baskets is the dollar
 factor, which is endogenous to the response under examination: regressing dollar exchange
 rates on a dollar factor would absorb the common dollar movement into $\beta_i R_{m,t}$
 and leave little in the abnormal return. As a robustness check on \emph{individual}
@@ -118,9 +138,10 @@ currencies, the market model
 \end{equation}
 with $R_{m,t}$ the equal-weighted dollar factor, is reported in
 Appendix~\ref{ch:appendix_a} and leaves the safe-haven hierarchy unchanged. Where
-cross-sectional dependence across currencies is a concern, the Kolari and Pynnönen (2010)
-adjusted test can replace the plain $t$-test; given the small number of non-overlapping
-events, that refinement is relegated to the appendix.
+cross-sectional dependence across currencies is a concern, the adjusted test of
+\textcite{kolari_pynnonen_2010} can replace the plain $t$-test; because inference here is
+drawn at the portfolio level around single, non-overlapping event dates rather than by
+averaging many correlated securities on a common date, the plain $t$-test is retained.
 
 
 \section{Regression Specification: The Safe-Haven Breakdown}

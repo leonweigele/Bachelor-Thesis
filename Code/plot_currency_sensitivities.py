@@ -109,6 +109,6 @@ ax.set_ylabel("Average 1-month forward discount (annualised)")
 ax.legend(loc="upper right", frameon=False, fontsize=7,
           handletextpad=0.3, labelspacing=0.3)
 
-save_fig(fig, ROOT / "Output/figures/fig_currency_sensitivities")
+save_fig(fig, ROOT / "Output/figures/ch05_methodology/fig_currency_sensitivities")
 print(f"saved fig_currency_sensitivities ({len(B)} currencies); "
       f"cut-offs at {cut_lo:.2f}% and {cut_hi:.2f}%")

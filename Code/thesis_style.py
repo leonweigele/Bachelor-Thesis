@@ -29,6 +29,12 @@ def apply_style():
     plt.rcParams.update({
         "figure.facecolor": "white",
         "axes.facecolor": "white",
+        # Latin Modern serif to match the thesis body font (\usepackage{lmodern})
+        # and the Ch.4 background figures (fig41_overview.py).
+        "font.family": "serif",
+        "font.serif": ["Latin Modern Roman", "CMU Serif", "DejaVu Serif"],
+        "mathtext.fontset": "cm",
+        "axes.unicode_minus": False,
         "font.size": 8,
         "axes.labelsize": 8,
         "axes.titlesize": 8,
@@ -37,10 +43,10 @@ def apply_style():
         "legend.fontsize": 7,
         "axes.spines.top": False,
         "axes.spines.right": False,
-        "axes.spines.left": False,
+        "axes.spines.left": True,   # left spine kept — matches Ch.4 figures
         "axes.grid": True,
         "axes.grid.axis": "y",
-        "grid.color": "#e6e6e6",
+        "grid.color": "#e0e0e0",
         "grid.linewidth": 0.6,
         "axes.axisbelow": True,
         "xtick.direction": "out",
@@ -55,6 +61,7 @@ def apply_style():
 def style_axis(ax, ylabel=None, pct=False):
     """Apply per-axis cosmetics."""
     ax.spines["bottom"].set_linewidth(0.6)
+    ax.spines["left"].set_linewidth(0.6)
     ax.tick_params(width=0.6, length=3)
     ax.margins(x=0.01)
     if ylabel:
