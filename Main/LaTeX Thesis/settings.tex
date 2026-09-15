@@ -115,12 +115,30 @@
 		xcolor,     % Color support
 	}
 
+
+%% Float page layout:
+	% By default LaTeX centres floats vertically on a float page (\@fptop is
+	% rubber). These make a float page start flush at the top instead.
+	\makeatletter
+	\setlength{\@fptop}{0pt}
+	\setlength{\@fpsep}{12pt plus 1fil}
+	\setlength{\@fpbot}{0pt plus 1fil}
+	\makeatother
+	% how much of a page a float may take, and how little text may remain
+	\renewcommand{\bottomfraction}{0.45}
+	\renewcommand{\textfraction}{0.15}
+	\renewcommand{\floatpagefraction}{0.70}
+	% distance between a top/bottom float and the text (KOMA default 20pt); raised 2026-09-11 so a table at a section end sits further from the next heading
+	\setlength{\textfloatsep}{56pt plus 2pt minus 4pt}
+
 %% Additional packages for econometrics thesis:
 	\usepackage{amssymb}        % Additional math symbols
 	\usepackage{bm}             % Bold math symbols (e.g., vectors/matrices)
 	\usepackage{dcolumn}        % Decimal-aligned columns in tables
 	\usepackage{threeparttable} % Tables with notes (for regression output)
 	\usepackage{subcaption}     % Subfigures (e.g., side-by-side IRF plots)
+	\usepackage[section]{placeins} % Floats stay inside the section they are placed in (barrier before every \section)
+	\setcapindent{0pt}          % caption text flush left, no hanging indent under the label
 	\usepackage{enumitem}       % Better list control
 
 

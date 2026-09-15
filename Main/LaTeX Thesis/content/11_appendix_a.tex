@@ -10,7 +10,7 @@
 
 Table~\ref{tab:app_ccy} lists the 32 currencies in the panel with their carry-sorted bucket
 (low/middle/high forward-discount tercile, pegged and managed currencies excluded from the
-sort) and their oil-trade role. The named safe-haven robustness baskets used in
+sort) and their oil-trade role. The literature-standard robustness baskets used in
 Chapter~\ref{ch:results} are the yen, Swiss franc and euro (safe) against the Turkish
 lira, Brazilian real, South African rand, Mexican peso, Colombian peso and Indonesian rupiah
 (risky).
@@ -21,12 +21,12 @@ lira, Brazilian real, South African rand, Mexican peso, Colombian peso and Indon
 \caption{Currency classification}
 \label{tab:app_ccy}
 \small
-\begin{tabular}{ll l l}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll l l @{}}
 \toprule
 Code & Currency & Carry bucket & Oil role \\
 \midrule
 AUD & Australian dollar   & middle            & --- \\
-BRL & Brazilian real      & high (risky)      & exporter \\
+BRL & Brazilian real      & no 1M forward     & exporter \\
 CAD & Canadian dollar     & middle            & exporter \\
 CHF & Swiss franc         & low (safe)        & --- \\
 CLP & Chilean peso        & no 1M forward     & --- \\
@@ -52,18 +52,17 @@ PEN & Peruvian sol        & no 1M forward     & --- \\
 PLN & Polish zloty        & high (risky)      & --- \\
 SAR & Saudi riyal         & pegged            & exporter \\
 SEK & Swedish krona       & low (safe)        & --- \\
-SGD & Singapore dollar    & low (safe)        & --- \\
+SGD & Singapore dollar    & middle            & --- \\
 THB & Thai baht           & low (safe)        & importer \\
 TRY & Turkish lira        & high (risky)      & importer \\
 TWD & Taiwan dollar       & low (safe)        & importer \\
 ZAR & South African rand  & high (risky)      & --- \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \begin{tablenotes}[flushleft]\footnotesize
 \item \textit{Notes.} Carry buckets are terciles of the average one-month forward discount
-(Section~\ref{sec:data_portfolios}); pegged/managed currencies and the three currencies
-without a clean one-month forward (CLP, COP, PEN) are excluded from the carry sort. Oil role
-follows the net oil-trade classification.
+(Section~\ref{sec:data_portfolios}). Pegged/managed currencies and the four currencies
+without a clean one-month forward (BRL, CLP, COP, PEN) are excluded from the carry sort. Oil role follows net crude oil trade over 2019--2024 (Section~\ref{sec:data_portfolios}). In the Comtrade extract one trade direction is unreported for India, Taiwan, Saudi Arabia and Kuwait, Japan's exports are reported only for 2021--2022 and Mexico's imports only for 2019. These unreported flows are treated as zero. Reversing a classification would require the missing flow to exceed the absolute observed net trade balance, which ranges from 134 to 1,042 billion dollars over 2019--2024 for these six countries. Türkiye is measured from the mirror side as described in Section~\ref{sec:data_portfolios} (28.6 billion dollars of imports) and its own crude exports are assumed to be negligible.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -72,42 +71,65 @@ follows the net oil-trade classification.
 \label{sec:app_robustness}
 
 \paragraph{Market model.} Alongside the constant-mean specification, the event study computes
-market-model abnormal returns, using the equal-weighted dollar factor as the market return
+market-model abnormal returns, using the equal-weighted dollar basket as the market return
 (Code/\texttt{03\_event\_study.py}, method \texttt{market\_model}).
-Table~\ref{tab:market_model} reports the basket-level results: the safe-haven ordering is
-unchanged relative to the constant-mean results in Chapter~\ref{ch:results}.
+Table~\ref{tab:market_model} reports the basket-level results: the safe-haven ordering under both treatment shocks is unchanged relative to the constant-mean results in Chapter~\ref{ch:results}.
 
 \input{content/tab_market_model}
 
 \paragraph{Benchmark and persistence figures.} Figure~\ref{fig:car_ukraine_app} shows the
-full portfolio response around the external Ukraine benchmark at the identification window;
-in the main text its dollar path appears only inside the cross-event overlay
-(Figure~\ref{fig:cross_event_usd}). Figure~\ref{fig:car_liberation_w50_app} extends the
-Liberation Day window to $\pm 50$ days: the tariff drift deepens rather than reverts, the
-mirror image of the transitory Hormuz premium in Figure~\ref{fig:car_hormuz_w50}.
+full portfolio response around the external Ukraine benchmark at the identification window.
+In the main text the Ukraine dollar path enters only through the
+cross-event differences of Figure~\ref{fig:cross_event_usd}. Figure~\ref{fig:car_liberation_w50_app} extends the Liberation Day window to $+50$ days, plotted from $-10$ to $+50$. The tariff drift deepens rather than reverts, the mirror image of the transitory Hormuz premium in Figure~\ref{fig:car_hormuz_w50}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{fig_car_ukraine}
-  \caption[Ukraine invasion: portfolio CARs]{Ukraine invasion (24~February 2022):
-  cumulative abnormal returns over $\pm 20$ trading days. Top panel: dollar and currency
-  baskets; bottom panel: oil-exposure baskets (left axis) and Brent (right axis).}
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_usd_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_brent_half}
+  \end{subfigure}
+  \\[0.8em]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_safe_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_risky_half}
+  \end{subfigure}
+  \\[0.8em]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_oilexp_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_ukraine_oilimp_half}
+  \end{subfigure}
+  \caption[Ukraine invasion: portfolio CARs]{Ukraine invasion (24~February 2022): cumulative abnormal returns over $-5$ to $+20$ trading days. Construction as in Figure~\ref{fig:car_liberation_day}.}
   \label{fig:car_ukraine_app}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{fig_car_liberation_day_w50}
-  \caption[Liberation Day: CARs over $\pm 50$ days]{Liberation Day, $\pm 50$ trading
-  days. Top panel: dollar and currency baskets; bottom panel: oil-exposure baskets (left
-  axis) and Brent (right axis). The post-announcement dollar decline deepens over the
-  horizon; the April~9 tariff pause (marked) interrupts but does not reverse it.}
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_w50_liberation_day_usd_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_w50_liberation_day_brent_half}
+  \end{subfigure}
+  \\[0.8em]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_w50_liberation_day_oilexp_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_w50_liberation_day_oilimp_half}
+  \end{subfigure}
+  \caption[Liberation Day: CARs over $+50$ days]{Liberation Day, $-10$ to $+50$ trading days, estimation window $[-170,-51]$. Construction as in Figure~\ref{fig:car_liberation_day}. The post-announcement dollar decline deepens over the horizon. The 9~April tariff pause (marked) interrupts but does not reverse it.}
   \label{fig:car_liberation_w50_app}
 \end{figure}
 
 \paragraph{Regression robustness.} The safe-haven regression of
 Section~\ref{sec:results_regression} uses Newey--West (HAC) standard errors, so its inference is
-robust to the autocorrelation and volatility clustering of daily returns---the main reason a
+robust to the autocorrelation and volatility clustering of daily returns. This is the main reason a
 simple least-squares interaction is preferred here to a conditional-correlation model. The
 crisis windows are the same event-day-to-$+20$ windows used in the event study, so the
 regression and the event study rest on a common, transparent definition of each episode.

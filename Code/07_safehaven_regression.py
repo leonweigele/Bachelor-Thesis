@@ -171,8 +171,10 @@ def cell(label, term):
     model = results[label]
     if term not in model.params.index:
         return "---"
-    return (f"${model.params[term]:+.3f}{stars(model.pvalues[term])}$"
-            f"\\;({model.tvalues[term]:+.1f})")
+    sup = stars(model.pvalues[term])
+    pad = "\\phantom{^{" + "*" * (3 - sup.count("*")) + "}}" if sup.count("*") < 3 else ""
+    return (f"${model.params[term]:+.3f}{sup}{pad}$"
+            f"\\;(${model.tvalues[term]:+.1f}$)")
 
 
 cols = list(SPECS)
@@ -183,7 +185,7 @@ lines = [
     r" (OLS, HAC standard errors)}",
     r"\label{tab:safehaven_reg}", r"\footnotesize",
     r"\setlength{\tabcolsep}{4pt}",
-    r"\begin{tabular}{l cccc}", r"\toprule",
+    r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l cccc @{}}", r"\toprule",
     " & " + " & ".join(f"({c.split(':')[0]}) {c.split(': ')[1]}"
                        for c in cols) + r" \\",
     r"\midrule",
@@ -207,7 +209,7 @@ lines += [
     "$N$ & " + " & ".join(str(int(results[c].nobs)) for c in cols) + r" \\",
     "$R^2$ & " + " & ".join(f"{results[c].rsquared:.3f}"
                             for c in cols) + r" \\",
-    r"\bottomrule", r"\end{tabular}",
+    r"\bottomrule", r"\end{tabular*}",
     r"\begin{tablenotes}[flushleft]\footnotesize",
     r"\item \textit{Notes.} OLS of the daily broad-dollar return (percent) on"
     r" daily risk shocks, their interactions with crisis-window dummies, and"

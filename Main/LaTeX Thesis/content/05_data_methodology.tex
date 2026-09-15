@@ -5,8 +5,7 @@
 \chapter{Data and Methodology}
 \label{ch:methodology}
 
-% Target: 5-6 pages
-
+This chapter describes the data and the empirical methods used for the analysis in Chapter~\ref{ch:results}. Section~\ref{sec:data} describes the exchange rates and financial variables, the geopolitical and policy uncertainty indices, and the construction of the currency baskets. Section~\ref{sec:method_event} sets out the event study and Section~\ref{sec:method_regression} the regression.
 
 \section{Data}
 \label{sec:data}
@@ -14,93 +13,46 @@
 \subsection{Exchange Rates and Financial Variables}
 \label{sec:data_fx}
 
-The currency panel comprises 32 exchange rates against the U.S.\ dollar, sampled daily from
-1~January 2019 to 30~June 2026. Spot rates are taken from LSEG/Refinitiv at the WM/Reuters
-(WMR) fixing and exported as a single consistent panel; the Federal Reserve's H.10 release
-(via FRED) serves as a cross-check. All rates are expressed as foreign currency per U.S.\
-dollar, so that a rise denotes dollar appreciation; the four rates LSEG quotes in the opposite
-convention (EUR, GBP, AUD, NZD) are inverted accordingly. Daily returns are log changes,
-$r_{i,t}=\ln(S_{i,t-1}/S_{i,t})$, signed so that a positive value is an appreciation of the
-foreign currency against the dollar.
+The currency panel contains daily exchange rates for 32 currencies against the U.S.\ dollar from 1~January 2019 to 30~June 2026. Spot rates are the mid of the closing bid and ask quotes from LSEG Workspace \parencite{ds_lseg_spot}, with the Federal Reserve's H.10 release as a cross-check \parencite{ds_fed_h10}. All rates are expressed as foreign currency per dollar, and the four that LSEG quotes as dollars per currency (EUR, GBP, AUD, NZD) are inverted. Daily returns are computed as log changes,
+\begin{equation}
+  r_{i,t}=\ln(S_{i,t-1}/S_{i,t}),
+\end{equation}
+where $S_{i,t}$ is the spot rate of currency $i$ on day $t$. A positive return is an appreciation of the foreign currency against the dollar.
 
-The macro-financial block is drawn from FRED: the broad, advanced-economy and
-emerging-market nominal dollar indices (\texttt{DTWEXBGS}, \texttt{DTWEXAFEGS},
-\texttt{DTWEXEMEGS}); the 5- and 10-year Treasury yields (\texttt{DGS5}, \texttt{DGS10}), the
-5-year TIPS yield (\texttt{DFII5}) and 5-year breakeven inflation (\texttt{T5YIE}); the VIX
-(\texttt{VIXCLS}); Brent and WTI crude (\texttt{DCOILBRENTEU}, \texttt{DCOILWTICO}); Henry Hub
-natural gas (\texttt{DHHNGSP}); and the S\&P~500 (\texttt{SP500}). Three series not carried by
-FRED are taken from LSEG: the gold spot price (\texttt{XAU=ZKBZ}, USD/oz), the Euro Stoxx~50
-price index (\texttt{.STOXX50E}, EUR) and the Dutch TTF front-month natural-gas contract
-(\texttt{TRNLTTFMc1}, EUR/MWh). Indices, equities and commodities enter as log returns;
-yields and the VIX enter in first differences.
+The remaining series come from FRED and LSEG. FRED provides the nominal broad dollar index, the 10-year Treasury yield, the VIX, the Brent and West Texas Intermediate (WTI) crude prices and the S\&P~500 index \parencite{ds_fed_dollar,ds_fed_yields,ds_cboe_vix,ds_eia_energy,ds_spdji_sp500}. Brent serves as the global crude benchmark and WTI as the U.S.\ benchmark \parencite{eia_2022_ukraine}. LSEG provides the gold price in dollars and the Euro Stoxx~50 index in euros \parencite{ds_lseg_assets}. Series identifiers are listed in Chapter~\ref{ch:data_sources}. Indices, equities and commodities enter as log returns. The 10-year yield and the VIX enter in first differences.\footnote{Missing prices over market holidays are filled with the previous quote for up to
+three days, producing exact zero returns on 3.5~percent of Brent trading days, 0.6~percent of
+gold days and 4.3~percent of days of the broad dollar index. A few such days fall inside event
+windows (Good Friday and Easter Monday 2025 in the Liberation Day window, Juneteenth and
+Independence Day 2025 in the twelve-day-war window), and no estimation window holds more than
+nine zero days for any of the price series reported here. The 10-year yield has more zero days because it is
+quoted to two decimals and can be genuinely unchanged. Recomputing the headline cross-event
+statistic without the zero days moves its $t$ from $-4.11$ to $-4.0$, so the effect on the
+reported statistics is negligible.}
 
-All series are denominated consistently against the U.S.\ dollar: exchange rates as
-foreign currency per dollar, and oil and gold in dollars. One consequence requires care.
-Because commodities are priced in dollars, a dollar movement enters their prices
-mechanically: a depreciation of the dollar raises the dollar price of oil even if oil is
-unchanged in every other currency. To separate genuine commodity movements from this
-denomination effect, Brent and gold are additionally re-expressed in euro---in log
-returns, $r^{\mathrm{EUR}}_{X,t} = r^{\mathrm{USD}}_{X,t} - r_{\mathrm{EUR},t}$, where
-$r_{\mathrm{EUR},t}$ is the euro's log appreciation against the dollar---and the
-euro-denominated series are carried through the event study as a robustness check on
-denomination.
+Because oil and gold are priced in dollars, part of any change in their dollar price reflects the dollar itself rather than the commodity. A depreciation of the dollar raises the dollar price of oil even when oil is unchanged in every other currency. To separate commodity movements from this denomination effect, Brent and gold are additionally re-expressed in euros as
+\begin{equation}
+  r^{\mathrm{EUR}}_{X,t} = r^{\mathrm{USD}}_{X,t} - r_{\mathrm{EUR},t},
+\end{equation}
+where $X$ denotes Brent or gold and $r_{\mathrm{EUR},t}$ is the euro's log appreciation against the dollar. The euro-denominated series enter the event study as a robustness check on denomination.
 
 \subsection{Geopolitical and Policy Uncertainty Indices}
 \label{sec:data_gpr}
 
-Geopolitical risk is measured by the Caldara and Iacoviello (2022) Geopolitical Risk (GPR)
-index, used at daily frequency---with its \emph{threat} and \emph{act} sub-indices---and
-monthly, downloaded from the authors' site. Policy uncertainty is captured by the U.S.\ daily
-Economic Policy Uncertainty (EPU) index and the Trade Policy Uncertainty (TPU) index from
-\textit{policyuncertainty.com}. The dollar and carry risk factors are reconstructed from spot
-and one-month forward exchange rates following Lustig, Roussanov and Verdelhan (2011): the
-one-month forward discount $f_{i,t}-s_{i,t}$ proxies the interest-rate differential under
-covered interest parity; currencies are sorted on this signal each month, and the dollar
-factor (the average forward-implied excess return) and the carry factor (the high-minus-low
-portfolio return) are formed. Rebuilding the factors from current market data extends them
-through the 2026 sample, replacing the course-supplied series that end in 2017.
+Geopolitical risk is measured by the daily Geopolitical Risk (GPR) index of \textcite{caldara_iacoviello_2022} and trade-policy uncertainty by the daily Trade Policy Uncertainty (TPU) index of \textcite{caldara_etal_2020_tpu}, both downloaded from the authors' site \parencite{ds_gpr,ds_tpu}.\footnote{The TPU series is revised as it is updated, so the results reflect the version downloaded on 23~July 2026.} Both indices count newspaper coverage. The GPR index measures the share of articles discussing adverse geopolitical events in ten leading U.S., British and Canadian newspapers, and the TPU index the share of articles discussing trade-policy uncertainty in seven major newspapers. The J.P.\,Morgan VXY Global index of implied U.S.-dollar exchange-rate volatility is the currency-market counterpart of the VIX \parencite{ds_lseg_vxy}. The one-month forward discount $f_{i,t}-s_{i,t}$, the log forward minus the log spot rate, with the forward rates from LSEG Workspace \parencite{ds_lseg_fwd}, proxies the interest-rate differential under covered interest parity \parencite{lustig_roussanov_verdelhan_2011} and is the sorting variable for the currency baskets of Section~\ref{sec:data_portfolios}.
 
 \subsection{Portfolio Construction}
 \label{sec:data_portfolios}
 
-Two basket schemes are used. The first sorts currencies by their average one-month forward
-discount over the sample into terciles: the low-yield tercile forms the \emph{safe} (funding)
-basket and the high-yield tercile the \emph{risky} (carry) basket, with pegged and managed
-currencies (DKK, HKD, SAR, KWD, CNY) excluded from the sort. This is the classification that
-underlies the carry factor and the main event-study specification
-(Figure~\ref{fig:currency_sensitivities}). Because the low-yield
-tercile also contains low-rate Asian currencies that are not conventional safe havens, a
-second, literature-standard scheme is reported as a robustness check: a \emph{named-haven}
-safe basket of the yen, Swiss franc and euro against a \emph{risky} basket of the Turkish
-lira, Brazilian real, South African rand, Mexican peso, Colombian peso and Indonesian rupiah.
-Independently, currencies are split by net oil-trade position into oil exporters (NOK, CAD,
-MXN, COP, BRL, SAR, KWD) and oil importers (JPY, KRW, INR, THB, TWD, TRY). All baskets are
-equally weighted; the equal-weighted average of all currency returns defines the dollar
-basket (\texttt{USD\_EW}).
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.82\linewidth]{fig_currency_sensitivities}
-  \caption[Currency classification: dollar loading vs forward discount]{Currency
-  classification. Each currency is plotted by its dollar-factor loading
-  $\beta^{\mathrm{DOL}}$ (from a time-series regression of its monthly excess return on the
-  reconstructed dollar and carry factors) against its average one-month forward discount,
-  the signal used for the tercile sort. Dashed lines mark the tercile cut-offs, so marker
-  shape (bucket) and vertical position agree: low forward discount $\rightarrow$ safe
-  (funding), high $\rightarrow$ risky (carry).}
-  \label{fig:currency_sensitivities}
-\end{figure}
-
+The safe-haven prediction concerns types of currencies rather than any single one, so the currencies enter the event study in baskets. The central pair, a safe and a risky basket, is defined in two ways. In the first, currencies are sorted into terciles by their average one-month forward discount over the sample. The low-yield tercile forms the safe basket and the high-yield tercile the risky basket, with pegged and managed currencies (DKK, HKD, SAR, KWD, CNY) excluded from the sort.\footnote{HKD, SAR and KWD are fixed to the dollar or to a dollar-dominated basket and CNY is
+tightly managed, so against the dollar these four cannot move freely on risk news. DKK is
+pegged to the euro instead: against the dollar it moves almost one-for-one with the euro
+(correlation $0.998$ over the sample) and is excluded as a euro duplicate rather than for lack
+of movement.} Four further currencies (BRL, CLP, COP, PEN) trade forward only as non-deliverable contracts without a clean one-month quote and drop from the currency sort for lack of data, leaving 23 currencies in the sort. The choice of terciles follows the sizing convention of the sorting literature, which builds fewer, broader portfolios when there are few assets to sort. \textcite{asness_moskowitz_pedersen_2013} sort the ten currencies in their sample into three equal groups and \textcite{lustig_roussanov_verdelhan_2011} form six portfolios from at most 35 currencies. Sorting the 23 currencies into terciles gives the safe and the risky basket seven each. Quintiles would leave four or five, few enough that a single currency's swings could dominate the basket. This fixed tercile classification defines the safe and risky currency baskets used in the main event-study specification (the full classification is given in Table~\ref{tab:app_ccy} in the Appendix). Because the low-yield tercile also contains low-rate Asian currencies that are not conventional safe havens, a second, literature-standard scheme is reported as a robustness check, pairing the yen, Swiss franc and euro as the safe basket \parencite{ranaldo_soderlind_2010} with the Turkish lira, Brazilian real, South African rand, Mexican peso, Colombian peso and Indonesian rupiah as the risky basket \parencite{debock_decarvalhofilho_2015}. The euro enters the literature-standard safe basket as the largest liquid alternative to the dollar rather than as a documented safe haven. Direct haven evidence for the euro is confined to the period before 2008 \parencite{habib_stracca_2012}, but recent work on the dollar's reserve status treats the euro as the principal alternative currency \parencite{jiang_krishnamurthy_lustig_richmond_2026}. A separate split tracks the oil channel. Currencies are grouped by their net crude oil trade over 2019--2024 into oil exporters (NOK, CAD, MXN, COP, BRL, SAR, KWD) and oil importers (JPY, KRW, INR, THB, TWD, TRY) \parencite{ds_un_comtrade}\footnote{Türkiye reports no crude-oil trade to UN Comtrade, so its importer status is measured from the mirror side, the crude exports of all other countries to Türkiye.}. \textcite{chen_liu_wang_zhu_2016} apply the same split to the six of these currencies in their sample, grouping Canada, Norway and Mexico as oil exporters and Japan, Korea and Turkey among the importers. A higher oil price improves the exporters' terms of trade and worsens the importers', so the two baskets should separate in oil-driven shocks \parencite{chen_rogoff_2003,chen_liu_wang_zhu_2016}. All baskets are equally weighted, the convention of the sorting literature. The dollar basket averages the dollar's return against all 32 currencies.
 
 \section{Event Study Methodology}
 \label{sec:method_event}
 
-The main specification is the \emph{constant-mean return} model
-\parencite{mackinlay_1997,campbell_lo_mackinlay_1997}. For each series $i$ the
-normal return is its average over an estimation window of $[-140,-21]$ trading days
-preceding the event, ending where the event window begins so that no event-window day
-enters the estimation of the benchmark; the abnormal return on day $t$ of the event window is the deviation
-from that mean,
+The main specification is the constant-mean return model \parencite{mackinlay_1997,campbell_lo_mackinlay_1997}. The event window is $[-20,+20]$ trading days. For each series $i$ the normal return is its average over an estimation window of $[-140,-21]$ trading days preceding the event, ending where the event window begins so that no event-window day enters the estimation of the benchmark. The abnormal return on day $t$ of the event window is the deviation from that mean,
 \begin{equation}
   \AR_{i,t} = R_{i,t} - \hat\mu_i, \qquad
   \hat\mu_i = \frac{1}{120}\sum_{s=-140}^{-21} R_{i,s},
@@ -109,59 +61,39 @@ and the cumulative abnormal return aggregates these over the window,
 \begin{equation}
   \CAR_i(t_1,t_2) = \sum_{t=t_1}^{t_2} \AR_{i,t}.
 \end{equation}
-The event window is $[-20,+20]$ trading days. Because daily financial prices absorb many
-overlapping influences, the longer the cumulation window the weaker the claim that the
-measured movement belongs to the event alone \parencite{mackinlay_1997,
-kothari_warner_2007}. Inference therefore rests on the short windows: the symmetric
-$\CAR(-1,+1)$, which also guards against information reaching prices the day before the
-announcement, and $\CAR(0,+1)$ and $\CAR(0,+5)$ for the announcement reaction. The longer
-cumulations $\CAR(0,+10)$ and $\CAR(0,+20)$ are reported as robustness checks on the
-durability of the response rather than as independent identification, and a long horizon
-$\CAR(0,50)$---a robustness exhibit on persistence---is estimated on
-$[-170,-51]$ so the estimation window does not overlap the wider event window. The significance of a single CAR is assessed with
-$t=\CAR/(\hat\sigma_i\sqrt{L})$, where $\hat\sigma_i$ is the estimation-window standard
-deviation of $\AR_i$ and $L=t_2-t_1+1$. The difference between two events' CARs is tested
-with $\Delta=\CAR_A-\CAR_B$ and standard error
-$\sqrt{L\,(\hat\sigma_A^2+\hat\sigma_B^2)}$, the two-sample analogue of the CAR variance
-in \textcite{campbell_lo_mackinlay_1997}; independence is warranted because the event
-windows do not overlap.
+Each event is dated by its announcement, the point at which the information reaches markets, and that trading day is day~0. When an announcement falls on a non-trading day, day~0 is the first trading day after it, so the strikes of 28~February 2026 enter on Monday 2~March 2026. Because daily prices react to many things at once, the longer the window over which abnormal returns are summed, the weaker the claim that the measured movement belongs to the event alone \parencite{mackinlay_1997, kothari_warner_2007}. Inference therefore rests on the short windows. The symmetric $\CAR(-1,+1)$ guards against information reaching prices the day before the announcement, and $\CAR(0,+1)$ and $\CAR(0,+5)$ capture the announcement reaction. Both tariff announcements, Liberation Day and the tariff pause, came in the U.S.\ afternoon, just after 4~p.m.\ Eastern time on 2~April 2025 \parencite{benguria_saffie_2025} and in the early afternoon of 9~April 2025. That is after the noon pricing of the H.10 dollar indices and late in the pricing day of the currency panel, so the day-0 return contains at most a first partial reaction and the full response appears on the following trading day. Capturing announcements that arrive around or after the close is the standard reason for the two-day window. The longer cumulations $\CAR(0,+10)$ and $\CAR(0,+20)$ are reported as robustness checks on the durability of the response rather than as independent identification, and a long horizon $\CAR(0,+50)$, a persistence check, is estimated on $[-170,-51]$ so the estimation window stays clear of this check's wider $[-50,+50]$ event window.
 
-The constant-mean model is preferred to the market model because the object of study is
-the dollar itself. This choice is consequential in currency applications: \textcite{kwok_brooks_1990}, comparing competing abnormal-return specifications in foreign-exchange markets, find inference sensitive to both the numeraire and the benchmark model, so event-study practice developed for equities does not carry over automatically. The natural market factor for the currency baskets is the dollar
-factor, which is endogenous to the response under examination: regressing dollar exchange
-rates on a dollar factor would absorb the common dollar movement into $\beta_i R_{m,t}$
-and leave little in the abnormal return. As a robustness check on \emph{individual}
-currencies, the market model
+The significance of a single CAR is assessed with
+\begin{equation}
+  t = \frac{\CAR_i(t_1,t_2)}{\hat\sigma_i \sqrt{L}},
+  \qquad L = t_2 - t_1 + 1,
+\end{equation}
+where $\hat\sigma_i$ is the estimation-window standard deviation of $\AR_{i,t}$. The statistic is compared with the standard normal distribution, and the tables mark significance at the 10, 5 and 1 percent levels with its critical values of 1.65, 1.96 and 2.58. The difference between two events' CARs is tested with
+\begin{equation}
+  \label{eq:cross_event_difference}
+  \Delta = \CAR_A(t_1,t_2) - \CAR_B(t_1,t_2), \qquad
+  \mathrm{s.e.}(\Delta) = \sqrt{L\,\bigl(\hat\sigma_A^2 + \hat\sigma_B^2\bigr)},
+\end{equation}
+where $\mathrm{s.e.}(\Delta)$ is the standard error of the difference, the two-sample analogue of the CAR variance in \textcite{campbell_lo_mackinlay_1997}. The two events are treated as independent because their windows do not overlap.
+
+The constant-mean model is preferred to the market model because the object of study is the dollar itself. The choice matters in currency applications. \textcite{kwok_brooks_1990}, comparing competing abnormal-return specifications in foreign-exchange markets, find inference sensitive both to the currency in which returns are measured and to the benchmark model, so event-study practice developed for equities does not carry over automatically. When an event moves many currencies at once, a market model subtracts the common movement, the very thing this study wants to measure. Kwok and Brooks therefore prefer mean-adjusted returns when the whole unexpected movement is the quantity being measured. The natural market return for the currency baskets is the equal-weighted dollar basket, the average of the panel itself. Regressing dollar exchange rates on it would absorb the common dollar movement into the market term and leave little in the abnormal return. The market model is nevertheless reported as a robustness check,
 \begin{equation}
   R_{i,t} = \alpha_i + \beta_i R_{m,t} + \varepsilon_{i,t}, \qquad
   \AR_{i,t} = R_{i,t} - (\hat\alpha_i + \hat\beta_i R_{m,t}),
 \end{equation}
-with $R_{m,t}$ the equal-weighted dollar factor, is reported in
-Appendix~\ref{ch:appendix_a} and leaves the safe-haven hierarchy unchanged. Where
-cross-sectional dependence across currencies is a concern, the adjusted test of
-\textcite{kolari_pynnonen_2010} can replace the plain $t$-test; because inference here is
-drawn at the portfolio level around single, non-overlapping event dates rather than by
-averaging many correlated securities on a common date, the plain $t$-test is retained.
+where $R_{m,t}$ is the equal-weighted dollar basket. The basket-level results in the Appendix leave the safe-haven ordering under both treatment shocks unchanged. When many correlated securities share a common event date, cross-sectional dependence inflates the test statistics, and the adjusted test of \textcite{kolari_pynnonen_2010} corrects for it. Neither condition applies here. Inference is drawn at the basket level around single, non-overlapping event dates, so the plain $t$-test is kept.
 
-
-\section{Regression Specification: The Safe-Haven Breakdown}
+\section{Regression Specification}
 \label{sec:method_regression}
 
-The event study measures \emph{whether} the dollar moved; a complementary regression
-measures \emph{whether its relationship with risk changed}. The classical safe-haven
-property is that the dollar appreciates when global risk rises, so the daily broad-dollar
-return is regressed on the daily change in the VIX, interacted with a dummy for each crisis
-window:
+The event study measures whether the dollar moved. The regression measures whether its relationship with risk changed. The classical safe-haven property is that the dollar appreciates when global risk rises \parencite{habib_stracca_2012}, so the daily broad-dollar return is regressed on a daily risk shock $\Delta R_t$, interacted with a dummy for each crisis window, following the interaction tests of \textcite{baur_lucey_2010},
 \begin{equation}
-  r^{\text{USD}}_{t} = a + b_1\,\Delta\mathrm{VIX}_t
-     + \sum_{k}\beta_k\,\bigl(\Delta\mathrm{VIX}_t \times D^{k}_t\bigr)
+  r^{\text{USD}}_{t} = a + b_1\,\Delta R_t
+     + \sum_{k}\beta_k\,\bigl(\Delta R_t \times D^{k}_t\bigr)
      + \sum_{k}\gamma_k D^{k}_t + \varepsilon_t,
-  \qquad k\in\{\text{tariff},\,\text{Hormuz},\,\text{Ukraine}\},
 \end{equation}
-where $D^{k}_t$ equals one from the event day through twenty trading days after shock $k$. A
-positive $\Delta\mathrm{VIX}$ is a risk-off move and a positive $r^{\text{USD}}$ a dollar
-appreciation, so $b_1>0$ is the normal safe-haven reflex; a negative interaction $\beta_k$
-means the reflex weakened during episode $k$, and the dollar's risk-sensitivity within that
-window is $b_1+\beta_k$. Standard errors are Newey--West (HAC, five lags), robust to the
-volatility clustering of daily returns. Results are reported in
-Section~\ref{sec:results_regression}.
+where the sum runs over the three crisis windows, $k\in\{\text{tariff},\,\text{Hormuz},\,\text{Ukraine}\}$. The dummy $D^{k}_t$ marks the window of shock $k$. It is one on the event day and the twenty trading days after it, and zero on all other days. The coefficient $b_1$ gives the dollar's response to a risk shock on days outside these windows. The $\beta_k$ measure how that response changes inside each crisis window, and the $\gamma_k$ capture the dollar's average drift within each window, so a window in which the dollar simply trended does not show up as a changed risk response. The event dates and the twenty-day horizon are the same as in the event study, so both methods work with the same definition of each episode.\footnote{An alternative would be a DCC-GARCH model (dynamic conditional correlation with generalised autoregressive conditional heteroskedasticity), in which the correlation between the dollar and risk varies continuously over time \parencite{engle_2002}. The dummy-interaction design is kept because it is simpler and ties each hypothesis to a single coefficient.} The equation is estimated by ordinary least squares (OLS) with Newey--West standard errors with five lags \parencite{newey_west_1987}, which are heteroskedasticity- and autocorrelation-consistent (HAC) and therefore robust to the volatility clustering of daily returns. All computations use Python (version 3.14) with the pandas, statsmodels and matplotlib libraries, and the code and data are provided together with the thesis.
+
+The choice of $\Delta R_t$ matters because no single index captures both shock types equally well. The VIX responds strongly to the trade-policy shock but only mildly to the Gulf escalation, and the news-based GPR index does the opposite and barely registers a tariff announcement. The regression is therefore estimated in four versions. The baseline uses the change in the VIX. The second adds the GPR index alongside the VIX, each with its own interaction terms, so stock-market risk and geopolitical risk enter separately. Their daily changes are almost uncorrelated, $\rho=-0.04$, so the data can tell the two effects apart. The third replaces both with the VXY Global index of implied U.S.-dollar exchange-rate volatility, a measure taken from the currency market itself. The fourth combines the two news-based indices, GPR and TPU. Each risk shock is scaled by its own standard deviation over the full sample, so the coefficients are comparable across versions and read as the percent dollar response to a one-standard-deviation rise in risk. Results are reported in Section~\ref{sec:results_regression}.
+
+% The choice of $\Delta R_t$ is not innocuous, because no single index captures both shock types equally well: the VIX responds strongly to the trade-policy shock but only mildly to the Gulf escalation, while the news-based GPR index does the opposite and barely registers a tariff announcement. Four variants are therefore estimated. The baseline uses the change in the VIX; a second specification includes the VIX and the GPR index \emph{jointly}, each with its own interactions, so that the equity-volatility and geopolitical channels are separated (their daily changes are essentially uncorrelated, $\rho=-0.04$, so the joint specification is unproblematic); a third replaces both with implied U.S.-dollar exchange-rate volatility (the VXY Global index), a single market-based measure that prices currency risk directly; and a fourth combines the two news-based indices, GPR and TPU. All risk shocks are standardized to unit variance over the sample, so coefficients are comparable across measures and read as the percent dollar response to a one-standard-deviation risk-off day. Results are reported in Section~\ref{sec:results_regression}.

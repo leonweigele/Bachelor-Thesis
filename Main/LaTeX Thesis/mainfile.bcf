@@ -2373,13 +2373,12 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">ostry_lloyd_corsetti_2025</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">kamin_2025</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
     <bcf:citekey order="2" intorder="1">gourinchas_rey_2005</bcf:citekey>
     <bcf:citekey order="2" intorder="2">obstfeld_zhou_2023</bcf:citekey>
     <bcf:citekey order="2" intorder="3">habib_stracca_2012</bcf:citekey>
-    <bcf:citekey order="2" intorder="4">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="2" intorder="4">debock_decarvalhofilho_2015</bcf:citekey>
     <bcf:citekey order="3" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
     <bcf:citekey order="4" intorder="1">gopinath_boz_casas_diez_gourinchas_plagborgmoller_2020</bcf:citekey>
     <bcf:citekey order="5" intorder="1">dalgic_ozhan_2025</bcf:citekey>
@@ -2411,73 +2410,129 @@
     <bcf:citekey order="31" intorder="1">albulescu_ajmi_2021</bcf:citekey>
     <bcf:citekey order="32" intorder="1">salisu_olaniran_tchankam_2022</bcf:citekey>
     <bcf:citekey order="33" intorder="1">kilian_2009</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">baur_lucey_2010</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
-    <bcf:citekey order="35" intorder="2">debock_decarvalhofilho_2015</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">gourinchas_rey_2005</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">gourinchas_rey_govillot_2017</bcf:citekey>
-    <bcf:citekey order="37" intorder="2">obstfeld_zhou_2023</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">habib_stracca_2012</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">kilian_2009</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">chen_rogoff_2003</bcf:citekey>
-    <bcf:citekey order="40" intorder="2">chen_liu_wang_zhu_2016</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">baur_lucey_2010</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">yilmazkuday_2025</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">kamin_2025</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">ecb_2025_fsr</bcf:citekey>
-    <bcf:citekey order="46" intorder="2">ecb_2026_bulletin</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">ecb_2025_fsr</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">kamin_2025</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">kamin_2025</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">fattouh_economou_2026</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">imf_2026_menap</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">imf_2026_menap</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">mackinlay_1997</bcf:citekey>
-    <bcf:citekey order="58" intorder="2">campbell_lo_mackinlay_1997</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">mackinlay_1997</bcf:citekey>
-    <bcf:citekey order="59" intorder="2">kothari_warner_2007</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">campbell_lo_mackinlay_1997</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">kwok_brooks_1990</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">kolari_pynnonen_2010</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">caldara_etal_2020_tpu</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">kamin_2025</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
-    <bcf:citekey order="68" intorder="2">habib_stracca_2012</bcf:citekey>
-    <bcf:citekey order="68" intorder="3">debock_decarvalhofilho_2015</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">baur_lucey_2010</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">chen_rogoff_2003</bcf:citekey>
-    <bcf:citekey order="70" intorder="2">kilian_2009</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">jiang_krishnamurthy_lustig_2021</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="36" intorder="2">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">jiang_krishnamurthy_lustig_2021</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">jiang_krishnamurthy_lustig_2021</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">kilian_2009</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="43" intorder="2">chen_liu_wang_zhu_2016</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">yilmazkuday_2025</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">crs_2025_tariff_timeline</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">ecb_2026_bulletin</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">ecb_2025_fsr</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">eia_2026_crude</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">crs_2025_tariff_timeline</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">crs_2025_tariff_timeline</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">scotus_2026_tariffs</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">crs_2025_israel_iran</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
+    <bcf:citekey order="55" intorder="2">eia_2026_crude</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">crs_2026_iran_conflict</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">hoc_2026_conflict</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">fattouh_economou_2026</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">kilian_plante_richter_zhou_2026</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">crs_2026_iran_conflict</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">fattouh_economou_2026</bcf:citekey>
+    <bcf:citekey order="61" intorder="2">imf_2026_menap</bcf:citekey>
+    <bcf:citekey order="61" intorder="3">eia_2026_hormuz</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">ds_eia_energy</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">fattouh_economou_2026</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">crs_2026_ceasefire</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">cnn_2026_strikes</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">hoc_2026_ceasefire</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">eia_2026_hormuz</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">hoc_2026_ceasefire</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">hoc_2025_sanctions</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">hoc_2025_sanctions</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">eia_2022_ukraine</bcf:citekey>
     <bcf:citekey order="71" intorder="1">caldara_iacoviello_2022</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">ostry_lloyd_corsetti_2025</bcf:citekey>
-    <bcf:citekey order="72" intorder="2">kamin_2025</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
-    <bcf:citekey order="73" intorder="2">habib_stracca_2012</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">baur_lucey_2010</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">chen_rogoff_2003</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">kilian_2009</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">obstfeld_zhou_2023</bcf:citekey>
-    <bcf:citekey order="77" intorder="2">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
-    <bcf:citekey order="78" intorder="1" nocite="1">ds_fed_dollar</bcf:citekey>
-    <bcf:citekey order="79" intorder="2" nocite="1">ds_fed_yields</bcf:citekey>
-    <bcf:citekey order="80" intorder="3" nocite="1">ds_fed_h10</bcf:citekey>
-    <bcf:citekey order="81" intorder="4" nocite="1">ds_cboe_vix</bcf:citekey>
-    <bcf:citekey order="82" intorder="5" nocite="1">ds_eia_energy</bcf:citekey>
-    <bcf:citekey order="83" intorder="6" nocite="1">ds_spdji_sp500</bcf:citekey>
-    <bcf:citekey order="84" intorder="7" nocite="1">ds_lseg_spot</bcf:citekey>
-    <bcf:citekey order="85" intorder="8" nocite="1">ds_lseg_fwd</bcf:citekey>
-    <bcf:citekey order="86" intorder="9" nocite="1">ds_lseg_assets</bcf:citekey>
-    <bcf:citekey order="87" intorder="10" nocite="1">ds_gpr</bcf:citekey>
-    <bcf:citekey order="88" intorder="11" nocite="1">ds_epu</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">ds_fed_dollar</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">ds_fed_dollar</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">ds_eia_energy</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">ds_eia_energy</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">ds_gpr</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">ds_gpr</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">ds_lseg_spot</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">ds_fed_h10</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">ds_fed_dollar</bcf:citekey>
+    <bcf:citekey order="80" intorder="2">ds_fed_yields</bcf:citekey>
+    <bcf:citekey order="80" intorder="3">ds_cboe_vix</bcf:citekey>
+    <bcf:citekey order="80" intorder="4">ds_eia_energy</bcf:citekey>
+    <bcf:citekey order="80" intorder="5">ds_spdji_sp500</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">eia_2022_ukraine</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">ds_lseg_assets</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">caldara_etal_2020_tpu</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">ds_gpr</bcf:citekey>
+    <bcf:citekey order="85" intorder="2">ds_tpu</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">ds_lseg_vxy</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">ds_lseg_fwd</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">asness_moskowitz_pedersen_2013</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">lustig_roussanov_verdelhan_2011</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">ds_un_comtrade</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">chen_liu_wang_zhu_2016</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="97" intorder="2">chen_liu_wang_zhu_2016</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="98" intorder="2">campbell_lo_mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="99" intorder="2">kothari_warner_2007</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">benguria_saffie_2025</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">campbell_lo_mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">kwok_brooks_1990</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">kolari_pynnonen_2010</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">engle_2002</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">newey_west_1987</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">mackinlay_1997</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">caldara_etal_2020_tpu</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">hassan_mertens_wang_zhang_2025</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="115" intorder="2">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="115" intorder="3">debock_decarvalhofilho_2015</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">chen_rogoff_2003</bcf:citekey>
+    <bcf:citekey order="117" intorder="2">kilian_2009</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">caldara_iacoviello_2022</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">kamin_2025</bcf:citekey>
+    <bcf:citekey order="119" intorder="2">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">ranaldo_soderlind_2010</bcf:citekey>
+    <bcf:citekey order="120" intorder="2">habib_stracca_2012</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">baur_lucey_2010</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">chen_liu_wang_zhu_2016</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">obstfeld_zhou_2023</bcf:citekey>
+    <bcf:citekey order="123" intorder="2">jiang_krishnamurthy_lustig_richmond_2026</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">ds_fed_dollar</bcf:citekey>
+    <bcf:citekey order="125" intorder="2">ds_fed_yields</bcf:citekey>
+    <bcf:citekey order="126" intorder="3">ds_fed_h10</bcf:citekey>
+    <bcf:citekey order="127" intorder="4">ds_cboe_vix</bcf:citekey>
+    <bcf:citekey order="128" intorder="5">ds_eia_energy</bcf:citekey>
+    <bcf:citekey order="129" intorder="6">ds_spdji_sp500</bcf:citekey>
+    <bcf:citekey order="130" intorder="7">ds_lseg_spot</bcf:citekey>
+    <bcf:citekey order="131" intorder="8">ds_lseg_fwd</bcf:citekey>
+    <bcf:citekey order="132" intorder="9">ds_lseg_assets</bcf:citekey>
+    <bcf:citekey order="133" intorder="10">ds_lseg_vxy</bcf:citekey>
+    <bcf:citekey order="134" intorder="11">ds_gpr</bcf:citekey>
+    <bcf:citekey order="135" intorder="12">ds_tpu</bcf:citekey>
+    <bcf:citekey order="136" intorder="13">ds_un_comtrade</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

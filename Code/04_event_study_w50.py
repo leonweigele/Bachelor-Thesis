@@ -56,6 +56,8 @@ KEY_SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "RISKY", "CARRY_HML",
 
 
 def stars(t):
+    if t is None or not np.isfinite(t):
+        return ""
     return "***" if abs(t) > 2.58 else "**" if abs(t) > 1.96 else \
            "*" if abs(t) > 1.65 else ""
 
@@ -103,9 +105,14 @@ def run_event(data, name, date):
         if col in KEY_SERIES:
             for (a, b) in CAR_WINDOWS:
                 m = (rel >= a) & (rel <= b)
-                c = ar.iloc[m[:len(ar)]].sum()
                 L = int(m[:len(ar)].sum())
-                t = c / (sig * np.sqrt(L)) if sig > 0 and L > 0 else np.nan
+                if L < b - a + 1:
+                    # window runs past the end of the sample: report nothing
+                    # rather than a partial sum labelled as the full window
+                    c = t = np.nan
+                else:
+                    c = ar.iloc[m[:len(ar)]].sum()
+                    t = c / (sig * np.sqrt(L)) if sig > 0 else np.nan
                 rows.append({"event": name, "series": col,
                              "window": f"({a},{b})", "CAR": c, "t": t,
                              "sig": stars(t)})

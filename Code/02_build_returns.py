@@ -83,7 +83,6 @@ EVENTS = {
     "hormuz_closure": ("2026-03-02", "Iran declares Strait of Hormuz closed"),
     "hormuz_ceasefire": ("2026-04-07", "Two-week ceasefire announced (collapsed 13 Apr)"),
     "us_strikes":     ("2026-05-25", "US strikes on Iran"),
-    "ceasefire":      ("2026-06-11", "60-day ceasefire announced"),
 }
 WINDOW = 20            # trading days on each side for the event windows
 
@@ -268,6 +267,10 @@ if __name__ == "__main__":
             ports["OIL_EXP"] = rets[oilx].mean(axis=1)
         if oilm:
             ports["OIL_IMP"] = rets[oilm].mean(axis=1)
+        if oilx and oilm:
+            # Exporter-minus-importer spread (the H3 cross-section test),
+            # built like CARRY_HML so 03_event_study.py tests it directly.
+            ports["OIL_SPREAD"] = ports["OIL_EXP"] - ports["OIL_IMP"]
         if not rank.empty:
             rank.to_csv(PROC / "classification.csv")
 

@@ -17,17 +17,23 @@ CLOSE for indices, and writes:
 
 Re-run this whenever you drop fresh exports into Data/manual/LSEG/.
 RUN ORDER:  consolidate_lseg.py -> get_data.py -> build_fx_factors.py -> 02_build_returns.py
+
+LEGACY ROUTE (note of 2026-09-15): the shipped Data/manual/lseg_*.csv come from
+lseg_pull.py (Workspace API, 23 July 2026, series to 30 June 2026). The manual exports
+this script reads end on 16 June 2026 and now live in Data/manual/LSEG_legacy_ends_2026-06-16/.
+Running this script would overwrite the shipped CSVs, so it exits unless called with --force.
 """
 
 import datetime
 import glob
 import os
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "Data/manual/LSEG"
+SRC = ROOT / "Data/manual/LSEG_legacy_ends_2026-06-16"   # legacy manual exports (moved 2026-09-14)
 OUT = ROOT / "Data/manual"
 
 # Forward variants whose scaling/definition is non-standard -> skipped.
@@ -96,6 +102,9 @@ def main():
         df.index.name = "date"
         return df
 
+    if "--force" not in sys.argv:
+        sys.exit("legacy importer: would overwrite the 23 July 2026 API CSVs (lseg_*.csv) in Data/manual/; "
+                 "the shipped inputs come from lseg_pull.py. Pass --force to run it anyway.")
     OUT.mkdir(parents=True, exist_ok=True)
     wide(spot).to_csv(OUT / "lseg_fx_spot.csv")
     wide(pts).to_csv(OUT / "lseg_fx_fwd1m_points.csv")

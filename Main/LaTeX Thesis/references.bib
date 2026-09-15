@@ -18,6 +18,15 @@
 
 %% ===== Safe-haven currencies =====
 
+@ARTICLE{asness_moskowitz_pedersen_2013,
+  author  = {Clifford S. Asness and Tobias J. Moskowitz and Lasse Heje Pedersen},
+  title   = {Value and Momentum Everywhere},
+  journal = {The Journal of Finance},
+  year    = {2013},
+  volume  = {68},
+  number  = {3},
+  pages   = {929--985},
+}
 @ARTICLE{baur_lucey_2010,
   author    = {Dirk G. Baur and Brian M. Lucey},
   title     = {Is Gold a Hedge or a Safe Haven? {A}n Analysis of Stocks, Bonds and Gold},
@@ -141,6 +150,15 @@
   publisher = {Taylor \& Francis},
 }
 
+@ARTICLE{newey_west_1987,
+  author    = {Whitney K. Newey and Kenneth D. West},
+  title     = {A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix},
+  journal   = {Econometrica},
+  year      = {1987},
+  volume    = {55},
+  number    = {3},
+  pages     = {703--708},
+}
 
 %% ===== Event study methodology =====
 
@@ -262,7 +280,7 @@
 }
 
 @ARTICLE{debock_decarvalhofilho_2015,
-  author    = {Reinout De Bock and Irineu de Carvalho Filho},
+  author    = {De Bock, Reinout and de Carvalho Filho, Irineu},
   title     = {The Behavior of Currencies during Risk-off Episodes},
   journal   = {Journal of International Money and Finance},
   year      = {2015},
@@ -377,6 +395,7 @@
   title     = {{US} Trade Policy and the {US} Dollar},
   journal   = {Journal of International Economics},
   year      = {2024},
+  volume    = {151},
   note      = {Article 103970},
   publisher = {Elsevier},
 }
@@ -547,6 +566,7 @@
   title     = {Oil Tail Risk and the Tail Risk of the {US} Dollar Exchange Rates},
   journal   = {Energy Economics},
   year      = {2022},
+  volume    = {109},
   note      = {Article 105960},
   publisher = {Elsevier},
 }
@@ -556,6 +576,7 @@
   title     = {Geopolitical Risks and Exchange Rates},
   journal   = {Finance Research Letters},
   year      = {2025},
+  volume    = {74},
   note      = {Article 106769},
   publisher = {Elsevier},
 }
@@ -578,11 +599,11 @@
 %% ===== Data sources (Chapter 9 list; excluded from main bibliography) =====
 @MISC{ds_fed_dollar,
   author  = {{Board of Governors of the Federal Reserve System}},
-  title   = {Nominal Broad U.S. Dollar Index; Advanced Foreign Economies and Emerging Market Economies Dollar Indexes (\texttt{DTWEXBGS}, \texttt{DTWEXAFEGS}, \texttt{DTWEXEMEGS})},
+  title   = {Nominal Broad U.S. Dollar Index; Advanced Foreign Economies and Emerging Market Economies Dollar Indexes},
   year    = {2026},
   url     = {https://fred.stlouisfed.org/series/DTWEXBGS},
-  urldate = {2026-07-15},
-  note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  urldate = {2026-07-23},
+  note    = {Daily; series \texttt{DTWEXBGS}, \texttt{DTWEXAFEGS} and \texttt{DTWEXEMEGS}. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
 @MISC{ds_fed_yields,
@@ -590,7 +611,7 @@
   title   = {Market Yields on U.S. Treasury Securities at 10- and 5-Year Constant Maturity; 5-Year TIPS Yield; 5-Year Breakeven Inflation Rate (\texttt{DGS10}, \texttt{DGS5}, \texttt{DFII5}, \texttt{T5YIE})},
   year    = {2026},
   url     = {https://fred.stlouisfed.org/series/DGS10},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily, H.15 release. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
@@ -599,8 +620,8 @@
   title   = {Foreign Exchange Rates, H.10 Release (21 daily bilateral dollar rates; cross-check panel)},
   year    = {2026},
   url     = {https://www.federalreserve.gov/releases/h10/},
-  urldate = {2026-07-15},
-  note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
+  urldate = {2026-07-23},
+  note    = {Daily noon buying rates in New York. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
 @MISC{ds_cboe_vix,
@@ -608,7 +629,7 @@
   title   = {Cboe Volatility Index (\texttt{VIXCLS})},
   year    = {2026},
   url     = {https://fred.stlouisfed.org/series/VIXCLS},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
@@ -617,25 +638,37 @@
   title   = {Crude Oil Prices: Brent---Europe and West Texas Intermediate; Henry Hub Natural Gas Spot Price (\texttt{DCOILBRENTEU}, \texttt{DCOILWTICO}, \texttt{DHHNGSP})},
   year    = {2026},
   url     = {https://fred.stlouisfed.org/series/DCOILBRENTEU},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
+@MISC{ds_un_comtrade,
+  author  = {{United Nations Statistics Division}},
+  title   = {UN Comtrade Database: Annual Trade in Crude Petroleum Oils (HS 2709), 2019--2024},
+  year    = {2026},
+  url     = {https://comtradeplus.un.org},
+  urldate = {2026-08-14},
+  note    = {Annual exports and imports by reporter country, partner World},
+  keywords = {data},
+}
+
+
+
 @MISC{ds_spdji_sp500,
   author  = {{S\&P Dow Jones Indices}},
   title   = {S\&P 500 Index (\texttt{SP500})},
   year    = {2026},
   url     = {https://fred.stlouisfed.org/series/SP500},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily close. Retrieved via FRED, Federal Reserve Bank of St.\ Louis},
   keywords = {data},
 }
 @MISC{ds_lseg_spot,
   author  = {{LSEG}},
-  title   = {WM/Refinitiv Closing Spot Rates: 32 currencies against the U.S. dollar (RICs \texttt{EUR=} through \texttt{KWD=})},
+  title   = {Spot Exchange Rates, End-of-Day Composite Mid Quotes: 32 currencies against the U.S. dollar (RICs \texttt{EUR=} through \texttt{KWD=})},
   year    = {2026},
   url     = {https://www.lseg.com/en/data-analytics/products/workspace},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily mid rates. Retrieved via the LSEG Workspace desktop application},
   keywords = {data},
 }
@@ -644,7 +677,7 @@
   title   = {One-Month Forward Points, same 32-currency panel (RICs \texttt{<CCY>1M=})},
   year    = {2026},
   url     = {https://www.lseg.com/en/data-analytics/products/workspace},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily mid rates. Retrieved via the LSEG Workspace desktop application},
   keywords = {data},
 }
@@ -653,8 +686,17 @@
   title   = {Gold Spot (\texttt{XAU=}); EURO STOXX 50 (\texttt{.STOXX50E}); TTF Natural Gas Front Month (\texttt{TRNLTTFMc1}); Brent Front Month (\texttt{LCOc1}, cross-check)},
   year    = {2026},
   url     = {https://www.lseg.com/en/data-analytics/products/workspace},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily. Retrieved via the LSEG Workspace desktop application},
+  keywords = {data},
+}
+@MISC{ds_lseg_vxy,
+  author  = {{LSEG}},
+  title   = {J.P.\,Morgan VXY Global Index of Implied U.S. Dollar Exchange-Rate Volatility (\texttt{.JPMVXYGL})},
+  year    = {2026},
+  url     = {https://www.lseg.com/en/data-analytics/products/workspace},
+  urldate = {2026-07-23},
+  note    = {Daily mid quotes, manual price-history export. Retrieved via the LSEG Workspace desktop application},
   keywords = {data},
 }
 @MISC{ds_gpr,
@@ -662,17 +704,17 @@
   title   = {Daily Geopolitical Risk (GPR) Index},
   year    = {2026},
   url     = {https://www.matteoiacoviello.com/gpr.htm},
-  urldate = {2026-07-15},
+  urldate = {2026-07-23},
   note    = {Daily. Index of Caldara and Iacoviello (2022)},
   keywords = {data},
 }
-@MISC{ds_epu,
-  author  = {Scott R. Baker and Nicholas Bloom and Steven J. Davis},
-  title   = {Daily U.S. Economic Policy Uncertainty Index; Trade Policy Uncertainty Index},
+@MISC{ds_tpu,
+  author  = {Dario Caldara and Matteo Iacoviello and Patrick Molligo and Andrea Prestipino and Andrea Raffo},
+  title   = {Daily Trade Policy Uncertainty (TPU) Index},
   year    = {2026},
-  url     = {https://www.policyuncertainty.com/},
-  urldate = {2026-07-15},
-  note    = {Daily},
+  url     = {https://www.matteoiacoviello.com/tpu.htm},
+  urldate = {2026-07-23},
+  note    = {Daily. Index of Caldara et al.\ (2020); current vintage},
   keywords = {data},
 }
 
@@ -685,4 +727,183 @@
   number    = {3},
   pages     = {677--719},
   publisher = {American Economic Association},
+}
+
+% ============================================================================
+% SANDBOX 2026-08-06 (v3) -- new entries for the revised ch.4
+% (04_background_SANDBOX.tex). Paste into references.bib.
+% Keys follow the firstauthor/institution_year convention.
+%
+% EVENT-DOCUMENTATION MARKER. All nine entries below are event-dating /
+% narrative sources, not research literature (PDFs live in
+% "Literature/8 - Event Documentation/"). Each entry has a commented-out
+%     keywords    = {events},
+% line directly ABOVE it (kept outside the entry so biber never sees it).
+% To print them as a separate "Event documentation" list later -- pending
+% supervisor OK, see the "Ask Dalgic" item in TODO.md -- do three things:
+%   1. move the marker line INTO each entry (e.g. after "number"),
+%   2. mainfile.tex l.34:
+%      \printbibliography[heading=head, notkeyword=data, notkeyword=events]
+%   3. content/10_data_sources.tex, after the data list:
+%      \printbibliography[keyword=events, heading=subbibliography,
+%                         title={Event documentation}]
+% In-text \parencite/\textcite commands stay unchanged either way.
+% ============================================================================
+
+%% ===== Official event documentation: tariffs =====
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{crs_2025_tariff_timeline,
+  author      = {{Congressional Research Service}},
+  title       = {Presidential 2025 Tariff Actions: Timeline and Status},
+  year        = {2026},
+  institution = {Congressional Research Service},
+  type        = {CRS Report},
+  number      = {R48549},
+  note        = {Updated 12 January 2026},
+  url         = {https://www.congress.gov/crs-product/R48549},
+  urldate     = {2026-08-06},
+}
+
+%% ===== Official event documentation: Israel--Iran / Hormuz =====
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{crs_2025_israel_iran,
+  author      = {{Congressional Research Service}},
+  title       = {Israel-Iran Conflict, {U.S.} Strikes, and Ceasefire},
+  year        = {2025},
+  institution = {Congressional Research Service},
+  type        = {CRS In Focus},
+  number      = {IF13032},
+  note        = {Updated 26 June 2025},
+  url         = {https://www.congress.gov/crs-product/IF13032},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{crs_2026_iran_conflict,
+  author      = {{Congressional Research Service}},
+  title       = {{U.S.} Conflict with Iran},
+  year        = {2026},
+  institution = {Congressional Research Service},
+  type        = {CRS Report},
+  number      = {R48887},
+  note        = {26 March 2026},
+  url         = {https://www.congress.gov/crs-product/R48887},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{crs_2026_ceasefire,
+  author      = {{Congressional Research Service}},
+  title       = {{U.S.}-Iran Ceasefire and Negotiations: Assessment and Issues for Congress},
+  year        = {2026},
+  institution = {Congressional Research Service},
+  type        = {CRS Insight},
+  number      = {IN12678},
+  note        = {Updated 13 May 2026},
+  url         = {https://www.congress.gov/crs-product/IN12678},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{hoc_2026_conflict,
+  author      = {{House of Commons Library}},
+  title       = {Israel/{US}-Iran Conflict 2026: Background and {UK} Response},
+  year        = {2026},
+  institution = {House of Commons Library},
+  type        = {Research Briefing},
+  number      = {CBP-10521},
+  note        = {24 April 2026},
+  url         = {https://commonslibrary.parliament.uk/research-briefings/cbp-10521/},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{hoc_2026_ceasefire,
+  author      = {{House of Commons Library}},
+  title       = {{US}-Iran Ceasefire and Nuclear Talks in 2026},
+  year        = {2026},
+  institution = {House of Commons Library},
+  type        = {Research Briefing},
+  number      = {CBP-10637},
+  note        = {2 July 2026},
+  url         = {https://commonslibrary.parliament.uk/research-briefings/cbp-10637/},
+  urldate     = {2026-08-06},
+}
+
+%% ===== Official market documentation: oil =====
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@REPORT{eia_2026_crude,
+  author      = {{U.S. Energy Information Administration}},
+  title       = {Crude Oil Prices Fell in 2025 amid Oversupply},
+  year        = {2026},
+  month       = {1},
+  institution = {U.S. Energy Information Administration},
+  type        = {Today in Energy},
+  note        = {5 January 2026},
+  url         = {https://www.eia.gov/todayinenergy/detail.php?id=66944},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@REPORT{eia_2026_hormuz,
+  author      = {{U.S. Energy Information Administration}},
+  title       = {Petroleum Markets Responded to Disruptions in the Middle East in the Second Quarter},
+  year        = {2026},
+  month       = {7},
+  institution = {U.S. Energy Information Administration},
+  type        = {Today in Energy},
+  note        = {15 July 2026},
+  url         = {https://www.eia.gov/todayinenergy/detail.php?id=67865},
+  urldate     = {2026-08-06},
+}
+
+%% ===== News documentation (single dated event; see chat note) =====
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@MISC{cnn_2026_strikes,
+  author  = {{CNN}},
+  title   = {{US} Strikes on Iranian Missile Launch Sites and Boats, Iran Threatens to Retaliate},
+  year    = {2026},
+  note    = {Live coverage, 25--26 May 2026},
+  url     = {https://www.cnn.com/2026/05/25/world/live-news/iran-war-us-peace-deal},
+  urldate = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@TECHREPORT{hoc_2025_sanctions,
+  author      = {{House of Commons Library}},
+  title       = {Sanctions against Russia (February 2022 to January 2025)},
+  year        = {2025},
+  institution = {House of Commons Library},
+  type        = {Research Briefing},
+  number      = {CBP-9481},
+  note        = {21 January 2025},
+  url         = {https://commonslibrary.parliament.uk/research-briefings/cbp-9481/},
+  urldate     = {2026-08-06},
+}
+ 
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@REPORT{eia_2022_ukraine,
+  author      = {{U.S. Energy Information Administration}},
+  title       = {Crude Oil Prices Rise above \$100 per Barrel after Russia's Further Invasion into Ukraine},
+  year        = {2022},
+  month       = {3},
+  institution = {U.S. Energy Information Administration},
+  type        = {Today in Energy},
+  note        = {4 March 2022},
+  url         = {https://www.eia.gov/todayinenergy/detail.php?id=55020},
+  urldate     = {2026-08-06},
+}
+
+%   keywords    = {events},   % EVENT DOC marker -- paste into entry to activate (TODO.md)
+@MISC{scotus_2026_tariffs,
+  author  = {{Supreme Court of the United States}},
+  title   = {Learning Resources, Inc.\ v.\ Trump},
+  year    = {2026},
+  note    = {Nos.\ 24--1287 and 25--250, decided 20~February 2026},
+  url     = {https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf},
+  urldate = {2026-08-11},
 }

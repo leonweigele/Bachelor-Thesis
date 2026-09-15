@@ -1,0 +1,189 @@
+fig_car_liberation_day_usd_half           path == car_paths csv              OK    max|d|=9.4e-17
+fig_car_liberation_day_usd_half           CAR/t (0,1) == car_summary         OK    -1.44%, t=-3.25
+fig_car_liberation_day_usd_half           CAR/t (0,5) == car_summary         OK    -0.10%, t=-0.13
+fig_car_liberation_day_usd_half           CAR/t (0,10) == car_summary        OK    -3.00%, t=-2.89
+fig_car_liberation_day_usd_half           CAR/t (0,20) == car_summary        OK    -3.98%, t=-2.77
+fig_car_liberation_day_brent_half         path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_liberation_day_brent_half         CAR/t (0,1) == car_summary         OK    -6.92%, t=-2.82
+fig_car_liberation_day_brent_half         CAR/t (0,5) == car_summary         OK    -14.32%, t=-3.37
+fig_car_liberation_day_brent_half         CAR/t (0,10) == car_summary        OK    -13.25%, t=-2.30
+fig_car_liberation_day_brent_half         CAR/t (0,20) == car_summary        OK    -19.96%, t=-2.51
+fig_car_liberation_day_safe_half          path == car_paths csv              OK    max|d|=9.5e-17
+fig_car_liberation_day_safe_half          CAR/t (0,1) == car_summary         OK    +1.52%, t=+2.82
+fig_car_liberation_day_safe_half          CAR/t (0,5) == car_summary         OK    +1.07%, t=+1.15
+fig_car_liberation_day_safe_half          CAR/t (0,10) == car_summary        OK    +4.17%, t=+3.30
+fig_car_liberation_day_safe_half          CAR/t (0,20) == car_summary        OK    +4.29%, t=+2.45
+fig_car_liberation_day_risky_half         path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_liberation_day_risky_half         CAR/t (0,1) == car_summary         OK    +0.76%, t=+1.57
+fig_car_liberation_day_risky_half         CAR/t (0,5) == car_summary         OK    -0.53%, t=-0.64
+fig_car_liberation_day_risky_half         CAR/t (0,10) == car_summary        OK    +1.27%, t=+1.12
+fig_car_liberation_day_risky_half         CAR/t (0,20) == car_summary        OK    +2.28%, t=+1.46
+fig_car_liberation_day_oilexp_half        path == car_paths csv              OK    max|d|=9.0e-17
+fig_car_liberation_day_oilexp_half        CAR/t (0,1) == car_summary         OK    +0.89%, t=+1.93
+fig_car_liberation_day_oilexp_half        CAR/t (0,5) == car_summary         OK    -0.80%, t=-0.99
+fig_car_liberation_day_oilexp_half        CAR/t (0,10) == car_summary        OK    +0.04%, t=+0.04
+fig_car_liberation_day_oilexp_half        CAR/t (0,20) == car_summary        OK    +1.54%, t=+1.03
+fig_car_liberation_day_oilimp_half        path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_liberation_day_oilimp_half        CAR/t (0,1) == car_summary         OK    +0.84%, t=+2.12
+fig_car_liberation_day_oilimp_half        CAR/t (0,5) == car_summary         OK    +0.84%, t=+1.24
+fig_car_liberation_day_oilimp_half        CAR/t (0,10) == car_summary        OK    +2.84%, t=+3.08
+fig_car_liberation_day_oilimp_half        CAR/t (0,20) == car_summary        OK    +3.05%, t=+2.39
+fig_car_iran_12day_usd_half               path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_iran_12day_usd_half               CAR/t (0,1) == car_summary         OK    +0.04%, t=+0.08
+fig_car_iran_12day_usd_half               CAR/t (0,5) == car_summary         OK    +0.88%, t=+0.96
+fig_car_iran_12day_usd_half               CAR/t (0,10) == car_summary        OK    -0.13%, t=-0.11
+fig_car_iran_12day_usd_half               CAR/t (0,20) == car_summary        OK    +0.35%, t=+0.20
+fig_car_iran_12day_brent_half             path == car_paths csv              OK    max|d|=9.2e-17
+fig_car_iran_12day_brent_half             CAR/t (0,1) == car_summary         OK    +6.00%, t=+2.44
+fig_car_iran_12day_brent_half             CAR/t (0,5) == car_summary         OK    +11.25%, t=+2.65
+fig_car_iran_12day_brent_half             CAR/t (0,10) == car_summary        OK    -0.83%, t=-0.14
+fig_car_iran_12day_brent_half             CAR/t (0,20) == car_summary        OK    +4.13%, t=+0.52
+fig_car_iran_12day_safe_half              path == car_paths csv              OK    max|d|=1.0e-16
+fig_car_iran_12day_safe_half              CAR/t (0,1) == car_summary         OK    -0.13%, t=-0.21
+fig_car_iran_12day_safe_half              CAR/t (0,5) == car_summary         OK    -1.04%, t=-0.95
+fig_car_iran_12day_safe_half              CAR/t (0,10) == car_summary        OK    +0.48%, t=+0.33
+fig_car_iran_12day_safe_half              CAR/t (0,20) == car_summary        OK    -0.16%, t=-0.08
+fig_car_iran_12day_risky_half             path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_iran_12day_risky_half             CAR/t (0,1) == car_summary         OK    -0.22%, t=-0.43
+fig_car_iran_12day_risky_half             CAR/t (0,5) == car_summary         OK    -1.03%, t=-1.15
+fig_car_iran_12day_risky_half             CAR/t (0,10) == car_summary        OK    +0.31%, t=+0.26
+fig_car_iran_12day_risky_half             CAR/t (0,20) == car_summary        OK    -0.01%, t=-0.00
+fig_car_iran_12day_oilexp_half            path == car_paths csv              OK    max|d|=9.2e-17
+fig_car_iran_12day_oilexp_half            CAR/t (0,1) == car_summary         OK    +0.26%, t=+0.44
+fig_car_iran_12day_oilexp_half            CAR/t (0,5) == car_summary         OK    -0.45%, t=-0.44
+fig_car_iran_12day_oilexp_half            CAR/t (0,10) == car_summary        OK    -0.16%, t=-0.11
+fig_car_iran_12day_oilexp_half            CAR/t (0,20) == car_summary        OK    -0.23%, t=-0.12
+fig_car_iran_12day_oilimp_half            path == car_paths csv              OK    max|d|=9.9e-17
+fig_car_iran_12day_oilimp_half            CAR/t (0,1) == car_summary         OK    -0.24%, t=-0.47
+fig_car_iran_12day_oilimp_half            CAR/t (0,5) == car_summary         OK    -1.12%, t=-1.29
+fig_car_iran_12day_oilimp_half            CAR/t (0,10) == car_summary        OK    -0.34%, t=-0.28
+fig_car_iran_12day_oilimp_half            CAR/t (0,20) == car_summary        OK    -1.07%, t=-0.66
+fig_car_hormuz_usd_half                   path == car_paths csv              OK    max|d|=9.8e-17
+fig_car_hormuz_usd_half                   CAR/t (0,1) == car_summary         OK    +1.39%, t=+4.41
+fig_car_hormuz_usd_half                   CAR/t (0,5) == car_summary         OK    +1.53%, t=+2.80
+fig_car_hormuz_usd_half                   CAR/t (0,10) == car_summary        OK    +2.10%, t=+2.84
+fig_car_hormuz_usd_half                   CAR/t (0,20) == car_summary        OK    +3.25%, t=+3.18
+fig_car_hormuz_brent_half                 path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_hormuz_brent_half                 CAR/t (0,1) == car_summary         OK    +15.38%, t=+6.20
+fig_car_hormuz_brent_half                 CAR/t (0,5) == car_summary         OK    +27.63%, t=+6.43
+fig_car_hormuz_brent_half                 CAR/t (0,10) == car_summary        OK    +34.18%, t=+5.88
+fig_car_hormuz_brent_half                 CAR/t (0,20) == car_summary        OK    +52.34%, t=+6.51
+fig_car_hormuz_safe_half                  path == car_paths csv              OK    max|d|=9.9e-17
+fig_car_hormuz_safe_half                  CAR/t (0,1) == car_summary         OK    -1.24%, t=-2.70
+fig_car_hormuz_safe_half                  CAR/t (0,5) == car_summary         OK    -1.03%, t=-1.29
+fig_car_hormuz_safe_half                  CAR/t (0,10) == car_summary        OK    -2.42%, t=-2.24
+fig_car_hormuz_safe_half                  CAR/t (0,20) == car_summary        OK    -3.70%, t=-2.48
+fig_car_hormuz_risky_half                 path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_hormuz_risky_half                 CAR/t (0,1) == car_summary         OK    -2.27%, t=-6.63
+fig_car_hormuz_risky_half                 CAR/t (0,5) == car_summary         OK    -1.97%, t=-3.33
+fig_car_hormuz_risky_half                 CAR/t (0,10) == car_summary        OK    -2.98%, t=-3.72
+fig_car_hormuz_risky_half                 CAR/t (0,20) == car_summary        OK    -4.37%, t=-3.95
+fig_car_hormuz_oilexp_half                path == car_paths csv              OK    max|d|=9.9e-17
+fig_car_hormuz_oilexp_half                CAR/t (0,1) == car_summary         OK    -1.32%, t=-3.36
+fig_car_hormuz_oilexp_half                CAR/t (0,5) == car_summary         OK    -0.69%, t=-1.01
+fig_car_hormuz_oilexp_half                CAR/t (0,10) == car_summary        OK    -1.15%, t=-1.25
+fig_car_hormuz_oilexp_half                CAR/t (0,20) == car_summary        OK    -2.12%, t=-1.66
+fig_car_hormuz_oilimp_half                path == car_paths csv              OK    max|d|=9.8e-17
+fig_car_hormuz_oilimp_half                CAR/t (0,1) == car_summary         OK    -1.26%, t=-3.96
+fig_car_hormuz_oilimp_half                CAR/t (0,5) == car_summary         OK    -1.03%, t=-1.88
+fig_car_hormuz_oilimp_half                CAR/t (0,10) == car_summary        OK    -1.81%, t=-2.43
+fig_car_hormuz_oilimp_half                CAR/t (0,20) == car_summary        OK    -2.65%, t=-2.58
+fig_car_ukraine_usd_half                  path == car_paths csv              OK    max|d|=9.9e-17
+fig_car_ukraine_usd_half                  CAR/t (0,1) == car_summary         OK    +0.49%, t=+1.53
+fig_car_ukraine_usd_half                  CAR/t (0,5) == car_summary         OK    +1.03%, t=+1.87
+fig_car_ukraine_usd_half                  CAR/t (0,10) == car_summary        OK    +1.65%, t=+2.20
+fig_car_ukraine_usd_half                  CAR/t (0,20) == car_summary        OK    +0.84%, t=+0.82
+fig_car_ukraine_brent_half                path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_ukraine_brent_half                CAR/t (0,1) == car_summary         OK    -1.13%, t=-0.38
+fig_car_ukraine_brent_half                CAR/t (0,5) == car_summary         OK    +13.82%, t=+2.69
+fig_car_ukraine_brent_half                CAR/t (0,10) == car_summary        OK    +12.12%, t=+1.74
+fig_car_ukraine_brent_half                CAR/t (0,20) == car_summary        OK    +18.06%, t=+1.88
+fig_car_ukraine_safe_half                 path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_ukraine_safe_half                 CAR/t (0,1) == car_summary         OK    -0.31%, t=-0.85
+fig_car_ukraine_safe_half                 CAR/t (0,5) == car_summary         OK    -1.07%, t=-1.70
+fig_car_ukraine_safe_half                 CAR/t (0,10) == car_summary        OK    -1.78%, t=-2.08
+fig_car_ukraine_safe_half                 CAR/t (0,20) == car_summary        OK    -2.06%, t=-1.74
+fig_car_ukraine_risky_half                path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_ukraine_risky_half                CAR/t (0,1) == car_summary         OK    -0.45%, t=-0.56
+fig_car_ukraine_risky_half                CAR/t (0,5) == car_summary         OK    -2.56%, t=-1.82
+fig_car_ukraine_risky_half                CAR/t (0,10) == car_summary        OK    -3.03%, t=-1.59
+fig_car_ukraine_risky_half                CAR/t (0,20) == car_summary        OK    -0.93%, t=-0.35
+fig_car_ukraine_oilexp_half               path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_ukraine_oilexp_half               CAR/t (0,1) == car_summary         OK    -0.39%, t=-0.88
+fig_car_ukraine_oilexp_half               CAR/t (0,5) == car_summary         OK    +0.30%, t=+0.39
+fig_car_ukraine_oilexp_half               CAR/t (0,10) == car_summary        OK    -0.21%, t=-0.20
+fig_car_ukraine_oilexp_half               CAR/t (0,20) == car_summary        OK    +1.88%, t=+1.31
+fig_car_ukraine_oilimp_half               path == car_paths csv              OK    max|d|=9.7e-17
+fig_car_ukraine_oilimp_half               CAR/t (0,1) == car_summary         OK    -0.26%, t=-0.33
+fig_car_ukraine_oilimp_half               CAR/t (0,5) == car_summary         OK    -0.74%, t=-0.55
+fig_car_ukraine_oilimp_half               CAR/t (0,10) == car_summary        OK    -2.12%, t=-1.17
+fig_car_ukraine_oilimp_half               CAR/t (0,20) == car_summary        OK    -2.50%, t=-1.00
+fig_w50_hormuz_usd_half                   CAR/t (0,5) == w50_long            OK    +1.39%, t=+2.46
+fig_w50_hormuz_usd_half                   CAR/t (0,20) == w50_long           OK    +2.76%, t=+2.61
+fig_w50_hormuz_usd_half                   CAR/t (0,50) == w50_long           OK    -0.13%, t=-0.08
+fig_w50_hormuz_brent_half                 CAR/t (0,5) == w50_long            OK    +28.72%, t=+6.91
+fig_w50_hormuz_brent_half                 CAR/t (0,20) == w50_long           OK    +56.15%, t=+7.23
+fig_w50_hormuz_brent_half                 CAR/t (0,50) == w50_long           OK    +45.96%, t=+3.80
+fig_w50_hormuz_oilexp_half                CAR/t (0,5) == w50_long            OK    -0.53%, t=-0.82
+fig_w50_hormuz_oilexp_half                CAR/t (0,20) == w50_long           OK    -1.56%, t=-1.29
+fig_w50_hormuz_oilexp_half                CAR/t (0,50) == w50_long           OK    +0.85%, t=+0.45
+fig_w50_hormuz_oilimp_half                CAR/t (0,5) == w50_long            OK    -0.94%, t=-1.72
+fig_w50_hormuz_oilimp_half                CAR/t (0,20) == w50_long           OK    -2.33%, t=-2.27
+fig_w50_hormuz_oilimp_half                CAR/t (0,50) == w50_long           OK    -0.03%, t=-0.02
+fig_w50_liberation_day_usd_half           CAR/t (0,5) == w50_long            OK    -0.04%, t=-0.05
+fig_w50_liberation_day_usd_half           CAR/t (0,20) == w50_long           OK    -3.75%, t=-2.68
+fig_w50_liberation_day_usd_half           CAR/t (0,50) == w50_long           OK    -6.34%, t=-2.91
+fig_w50_liberation_day_brent_half         CAR/t (0,5) == w50_long            OK    -14.72%, t=-3.26
+fig_w50_liberation_day_brent_half         CAR/t (0,20) == w50_long           OK    -21.37%, t=-2.53
+fig_w50_liberation_day_brent_half         CAR/t (0,50) == w50_long           OK    -10.85%, t=-0.83
+fig_w50_liberation_day_oilexp_half        CAR/t (0,5) == w50_long            OK    -0.80%, t=-0.90
+fig_w50_liberation_day_oilexp_half        CAR/t (0,20) == w50_long           OK    +1.52%, t=+0.91
+fig_w50_liberation_day_oilexp_half        CAR/t (0,50) == w50_long           OK    +4.07%, t=+1.57
+fig_w50_liberation_day_oilimp_half        CAR/t (0,5) == w50_long            OK    +0.73%, t=+1.01
+fig_w50_liberation_day_oilimp_half        CAR/t (0,20) == w50_long           OK    +2.67%, t=+1.97
+fig_w50_liberation_day_oilimp_half        CAR/t (0,50) == w50_long           OK    +4.90%, t=+2.31
+fig_w50_ukraine_usd_half                  CAR/t (0,5) == w50_long            OK    +0.94%, t=+1.73
+fig_w50_ukraine_usd_half                  CAR/t (0,20) == w50_long           OK    +0.53%, t=+0.52
+fig_w50_ukraine_usd_half                  CAR/t (0,50) == w50_long           OK    +3.12%, t=+1.96
+fig_w50_ukraine_brent_half                CAR/t (0,5) == w50_long            OK    +15.22%, t=+2.81
+fig_w50_ukraine_brent_half                CAR/t (0,20) == w50_long           OK    +22.96%, t=+2.27
+fig_w50_ukraine_brent_half                CAR/t (0,50) == w50_long           OK    +13.97%, t=+0.89
+fig_w50_ukraine_oilexp_half               CAR/t (0,5) == w50_long            OK    +0.46%, t=+0.55
+fig_w50_ukraine_oilexp_half               CAR/t (0,20) == w50_long           OK    +2.47%, t=+1.57
+fig_w50_ukraine_oilexp_half               CAR/t (0,50) == w50_long           OK    +0.14%, t=+0.06
+fig_w50_ukraine_oilimp_half               CAR/t (0,5) == w50_long            OK    -0.63%, t=-0.75
+fig_w50_ukraine_oilimp_half               CAR/t (0,20) == w50_long           OK    -2.11%, t=-1.33
+fig_w50_ukraine_oilimp_half               CAR/t (0,50) == w50_long           OK    -2.08%, t=-0.84
+fig_diff_liberation_day_hormuz_half       endpoint h=1 == cross_event_diff   OK    -2.834 pp, t=-5.21
+fig_diff_liberation_day_hormuz_half       endpoint h=5 == cross_event_diff   OK    -1.632 pp, t=-1.73
+fig_diff_liberation_day_hormuz_half       endpoint h=10 == cross_event_diff  OK    -5.102 pp, t=-4.00
+fig_diff_liberation_day_hormuz_half       endpoint h=20 == cross_event_diff  OK    -7.237 pp, t=-4.11
+fig_diff_liberation_day_ukraine_half      endpoint h=1 == cross_event_diff   OK    -1.928 pp, t=-3.53
+fig_diff_liberation_day_ukraine_half      endpoint h=5 == cross_event_diff   OK    -1.136 pp, t=-1.20
+fig_diff_liberation_day_ukraine_half      endpoint h=10 == cross_event_diff  OK    -4.649 pp, t=-3.63
+fig_diff_liberation_day_ukraine_half      endpoint h=20 == cross_event_diff  OK    -4.826 pp, t=-2.73
+fig_diff_hormuz_ukraine_half              endpoint h=1 == cross_event_diff   OK    +0.905 pp, t=+2.02
+fig_diff_hormuz_ukraine_half              endpoint h=5 == cross_event_diff   OK    +0.496 pp, t=+0.64
+fig_diff_hormuz_ukraine_half              endpoint h=10 == cross_event_diff  OK    +0.453 pp, t=+0.43
+fig_diff_hormuz_ukraine_half              endpoint h=20 == cross_event_diff  OK    +2.411 pp, t=+1.66
+fig_diff_liberation_day_iran_12day_half   endpoint h=1 == cross_event_diff   OK    -1.481 pp, t=-2.14
+fig_diff_liberation_day_iran_12day_half   endpoint h=5 == cross_event_diff   OK    -0.983 pp, t=-0.82
+fig_diff_liberation_day_iran_12day_half   endpoint h=10 == cross_event_diff  OK    -2.868 pp, t=-1.77
+fig_diff_liberation_day_iran_12day_half   endpoint h=20 == cross_event_diff  OK    -4.335 pp, t=-1.93
+
+172/172 passed, 0 failed.
+
+CAPTION DISCREPANCIES (reported, not papered over):
+(a) The Hormuz +/-50 caption (content/06_results.tex, fig:car_hormuz_w50)
+    marks a '13 April naval blockade' that has no row in events.csv.
+    Handling: the marker is drawn from a context date hard-coded in this
+    script, sourced to content/04_background.tex:26 and the events.csv
+    description of hormuz_ceasefire ('collapsed 13 Apr'). No events.csv
+    row was invented. Same treatment for the 13 Mar Kharg Island strikes
+    (04_background.tex:24) and the 24 Jun 2025 ceasefire (:22).
+(b) The same caption says the panel spans -10 to +50, while
+    04_event_study_w50.py hard-codes its own two-panel figures to +/-50.
+    Handling: these single-series panels follow the CAPTION (-10..+50) —
+    that is what the thesis prints and what the old images show; 04's
+    +/-50 axis belongs to its own fig_car_<event>_w50 figures, which are
+    not part of the thesis. 04 was not modified.

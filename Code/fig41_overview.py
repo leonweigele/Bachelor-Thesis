@@ -7,11 +7,22 @@ only with light y-gridlines, each of the four main events marked by a dot on
 the series and a thin leader line to a serif label (no colour bands, no box).
 
 Reconstructed 2026-07-15 (the original scratchpad script was never committed).
+Day-0 mapping corrected 2026-08-20 (CODE_AUDIT.md): markers now resolve with
+searchsorted, matching the rest of the pipeline, instead of "nearest".
+
 Run from the thesis root AFTER get_data.py:
-    python3 "Code/fig41_overview.py"
-Outputs -> Output/figures/{fig_overview_dollar,fig_overview_oil,fig_overview_gpr}.{png,pdf}
+    python3 "Code/fig41_overview.py"              # dry run -> _ch04_regen/
+    python3 "Code/fig41_overview.py" --install    # writes the thesis copies
+Outputs -> Output/figures/ch04_background/{fig_overview_dollar,fig_overview_oil,
+           fig_overview_gpr}.{png,pdf}
+
+NOTE: load_series() reads Data/processed/daily_panel.csv and Data/raw/gpr_daily.csv,
+both gitignored, so this script cannot run on a fresh clone until get_data.py has
+rebuilt them.
 """
 
+import argparse
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -20,11 +31,15 @@ import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from es_common import ensure_latin_modern, load_events
+
 ROOT = Path(__file__).resolve().parent.parent
 PROC = ROOT / "Data/processed"
 RAW = ROOT / "Data/raw"
-FIGS = ROOT / "Output/figures/ch04_background"
-FIGS.mkdir(parents=True, exist_ok=True)
+FINAL_OUT = ROOT / "Output/figures/ch04_background"
+TEMP_OUT = ROOT / "Output/figures/_ch04_regen"
+FIGS = TEMP_OUT          # set by main(); --install switches it to FINAL_OUT
 
 START, END = pd.Timestamp("2019-01-01"), pd.Timestamp("2026-06-30")
 
@@ -50,13 +65,20 @@ plt.rcParams.update({
     "pdf.fonttype": 42,
 })
 
-# four main events: date + display label
-EVENTS = {
-    "ukraine":        (pd.Timestamp("2022-02-24"), "Ukraine invasion"),
-    "liberation_day": (pd.Timestamp("2025-04-02"), "Liberation Day"),
-    "iran_12day":     (pd.Timestamp("2025-06-13"), "12-day war"),
-    "hormuz":         (pd.Timestamp("2026-02-28"), "Hormuz"),
+# four main events: display labels here, dates from Data/processed/events.csv
+# via es_common (this script used to hold a fourth hard-coded copy of them).
+EVENT_LABELS = {
+    "ukraine":        "Ukraine invasion",
+    "liberation_day": "Liberation Day",
+    "iran_12day":     "12-day war",
+    "hormuz":         "Hormuz",
 }
+_, _EVENT_DATES = load_events()
+_missing = [k for k in EVENT_LABELS if k not in _EVENT_DATES]
+if _missing:
+    raise KeyError(f"events.csv has no row for {_missing}")
+EVENTS = {k: (pd.Timestamp(_EVENT_DATES[k]), lab)
+          for k, lab in EVENT_LABELS.items()}
 
 # per-figure label placement, in AXES FRACTION (x, y) + horizontal alignment.
 # Tuned to match the original Figure 4.1 layout.
@@ -64,24 +86,27 @@ EVENTS = {
 # against the data exceeding the top.
 YLIM = {"dollar": (110, 136), "oil": (5, 150), "gpr": (0, 620)}
 
+# NOTE: an x equal to the event's own axes-fraction position gives a vertical
+# leader line. Event x-positions for START=2019-01-01, END=2026-06-30:
+#   ukraine 0.4202 | liberation_day 0.8341 | iran_12day 0.8604 | hormuz 0.9554
 PLACEMENT = {
     "dollar": {
-        "ukraine":        (0.42, 0.93, "center"),
-        "liberation_day": (0.81, 0.93, "center"),
-        "iran_12day":     (0.845, 0.06, "center"),
-        "hormuz":         (0.955, 0.94, "center"),
+        "ukraine":        (0.42, 0.90, "center"),
+        "liberation_day": (0.81, 0.90, "center"),
+        "iran_12day":     (0.8604, 0.10, "center"),   # vertical leader
+        "hormuz":         (0.955, 0.90, "center"),
     },
     "oil": {
-        "ukraine":        (0.41, 0.95, "center"),
+        "ukraine":        (0.37, 0.95, "center"),
         "liberation_day": (0.80, 0.78, "center"),
-        "iran_12day":     (0.85, 0.28, "center"),
+        "iran_12day":     (0.8604, 0.22, "center"),   # vertical leader
         "hormuz":         (0.95, 0.95, "center"),
     },
     "gpr": {
         "ukraine":        (0.32, 0.82, "center"),
         "liberation_day": (0.72, 0.63, "center"),
         "iran_12day":     (0.81, 0.90, "center"),
-        "hormuz":         (0.93, 0.81, "center"),
+        "hormuz":         (0.93, 0.90, "center"),
     },
 }
 
@@ -97,9 +122,23 @@ def load_series():
 
 
 def value_at(series, date):
-    """Series value on the event date (nearest available trading day)."""
-    idx = series.index.get_indexer([date], method="nearest")[0]
-    return series.index[idx], series.iloc[idx]
+    """Series value on day 0: the first observation at or AFTER the event date.
+
+    This is the day-0 convention of the rest of the pipeline (searchsorted in
+    03_event_study.py:68, 04:77, 05:63, 07:82 and es_common.rel_day) and of
+    Section 5: an announcement on a non-trading day shifts FORWARD to the first
+    day the market can react. The previous `get_indexer(..., method="nearest")`
+    could resolve BACKWARDS — for the Saturday 2026-02-28 Hormuz date it picked
+    Friday 27 Feb, putting the oil marker $5.92 below where it belongs and
+    before the spike it labels.
+    """
+    idx = series.index
+    pos = idx.searchsorted(pd.Timestamp(date))
+    if pos >= len(idx):
+        raise ValueError(
+            f"event date {pd.Timestamp(date).date()} falls past the end of the "
+            f"series (last observation {idx[-1].date()}) — no day 0 exists")
+    return idx[pos], series.iloc[pos]
 
 
 def make_panel(series, ylabel, key, stem):
@@ -137,15 +176,37 @@ def make_panel(series, ylabel, key, stem):
     print(f"  wrote {stem}.png/.pdf")
 
 
-def main():
+def report_markers(panels):
+    """Print the resolved day-0 marker for every event and panel."""
+    print("\nresolved markers (searchsorted = first trading day at or after):")
+    for key, series in panels.items():
+        for ev, (date, _lab) in EVENTS.items():
+            d, v = value_at(series, date)
+            shift = "" if d == date else f"  <- shifted from {date.date()}"
+            print(f"  {key:7s} {ev:15s} {d.date()}  {v:>9.2f}{shift}")
+
+
+def main(install=False):
+    global FIGS
+    FIGS = FINAL_OUT if install else TEMP_OUT
+    FIGS.mkdir(parents=True, exist_ok=True)
+    ensure_latin_modern()
+
     dollar, oil, gpr = load_series()
     print(f"dollar {len(dollar)}, oil {len(oil)}, gpr {len(gpr)} obs "
           f"({dollar.index.min().date()}..{dollar.index.max().date()})")
+    report_markers({"dollar": dollar, "oil": oil, "gpr": gpr})
+    print()
     make_panel(dollar, "Broad dollar index", "dollar", "fig_overview_dollar")
     make_panel(oil, "Brent crude (USD/bbl)", "oil", "fig_overview_oil")
     make_panel(gpr, "Geopolitical risk (daily)", "gpr", "fig_overview_gpr")
-    print("Done -> Output/figures/")
+    print(f"Done -> {FIGS.relative_to(ROOT)}"
+          + ("" if install else "   (dry run; pass --install to write the thesis copies)"))
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--install", action="store_true",
+                    help="write into Output/figures/ch04_background/ "
+                         "instead of the temp directory")
+    main(**vars(ap.parse_args()))

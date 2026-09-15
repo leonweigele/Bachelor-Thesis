@@ -4,6 +4,11 @@
 *.synctex.gz
 __pycache__/
 
+# Local tooling & session plumbing — never commit
+/.venv/
+/.handoff/
+/_to_delete/
+
 # LSEG Data Library app key — SECRET, never commit
 /Code/lseg-data.config.json
 
@@ -11,15 +16,18 @@ __pycache__/
 /Code/fred_api_key.txt
 
 # Reference material & working drafts — kept locally, not published
-/BachelorsThesisDanielStepanski.pdf
-/Literature.pdf
-/Thesis Proposal.pdf
-/Thesis Notes.docx
-/Thesis Roadmap.docx
-/Consistency_Read_2026-06-30.md
-/Color Highlights.docx
-/Event_Study_Writeup_Plan.md
+# (folders created in the 2026-08-20 root reorganisation)
+/Reference Material/
+/Notes & Plans/
+/Reviews/
+/Admin/
 /_READ_ME_current_folder.txt
+/CODE_AUDIT.md
+/audit.html
+/PROSE_FIXES_2026-08-20.md
+
+# Regenerable figure previews (Code/06_make_thesis_figures.py temp output)
+/Output/figures/ch06_results_regen/
 
 # Licensed LSEG / Refinitiv market data — kept locally, NOT redistributable.
 # Regenerate from your own LSEG access via Code/get_data.py + consolidate_lseg.py
@@ -32,4 +40,24 @@ __pycache__/
 /Data/manual/lseg_ttf.csv
 /Data/manual/LSEG_Download_Checklist.pdf
 /Data/processed/daily_panel.csv
-/Datastream_dataypes.pdf
+
+# Local backups & scratch copies — never commit (added 2026-09-15)
+*.bak_*
+*_backup_*
+_bak_*/
+_to_delete/
+
+# Superseded figure preview (Option B trial set; the installed set lives in ch06_results/)
+/Output/figures/ch06_results_B_shared_scale/
+
+# Legacy raw LSEG downloads — licensed, same rule as /Data/manual/LSEG/
+/Data/manual/LSEG_legacy_ends_2026-06-16/
+
+# Literature: markdown conversions stay local (only PDFs are tracked); empty ".md.md…" junk files
+/Literature/Literature-md/
+/Literature/.md.md*
+
+# More LaTeX build leftovers (latexmk databases, biber save-error copies)
+*.fdb_latexmk
+*.fls
+*-SAVE-ERROR

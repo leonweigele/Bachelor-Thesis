@@ -1,0 +1,23 @@
+% Hand-written robustness table (2026-08-20). Numbers recomputed from
+% Data/processed/returns_daily.csv; see Code/verify_results.py.
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Sensitivity of the headline cross-event contrast to the variance estimate}
+\label{tab:es_se_sensitivity}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l rrr c @{}}
+\toprule
+Variance used in the standard error & $\Delta\CAR$ (pp) & s.e. (pp) & $t$ & Rejects at \\
+\midrule
+As reported: estimation-window $\hat\sigma$, $L\hat\sigma^2$ & $-7.24$ & $1.76$ & $-4.11$ & $1\%$ \\
+$+$ estimation error in $\hat\mu$: $L\hat\sigma^2(1+L/T)$ & $-7.24$ & $1.91$ & $-3.79$ & $1\%$ \\
+Event-window $\hat\sigma$ instead & $-7.24$ & $2.99$ & $-2.42$ & $5\%$ \\
+Both corrections & $-7.24$ & $3.24$ & $-2.23$ & $5\%$ \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes.} Liberation Day $-$ Hormuz crisis, broad nominal U.S.\ dollar index, $\CAR(0,+20)$, constant-mean model, the headline cell of Table~\ref{tab:es_cross_diff}. $L=21$, $T=120$. The first row is the specification reported throughout, following \textcite{mackinlay_1997}. The second adds the sampling error of the estimated normal return. The third replaces the pre-event residual standard deviation with the one measured inside the event window. The point estimate is identical in every row. Only the standard error moves.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
