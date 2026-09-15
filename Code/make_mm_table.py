@@ -25,6 +25,15 @@ SERIES = [("SAFE", "Safe currencies"), ("RISKY", "Risky currencies"),
 WINDOWS = ["(0,5)", "(0,20)"]
 
 
+def format_signed(value, decimals):
+    """Keep the sign of small nonzero estimates in the displayed table."""
+    if value == 0:
+        return f"{0:+.{decimals}f}"
+    while decimals < 12 and float(f"{value:.{decimals}f}") == 0:
+        decimals += 1
+    return f"{value:+.{decimals}f}"
+
+
 def cell(df, ev, se, win):
     r = df[(df.event == ev) & (df.series == se) & (df.window == win)]
     if r.empty:
@@ -33,7 +42,7 @@ def cell(df, ev, se, win):
     sig = "" if pd.isna(sig) else str(sig)
     sup = f"^{{{sig}}}" if sig else ""
     pad = "\\phantom{^{" + "*" * (3 - len(sig)) + "}}" if len(sig) < 3 else ""
-    return f"${car:+.2f}{sup}{pad}$"
+    return f"${format_signed(car, 2)}{sup}{pad}$"
 
 
 def main():

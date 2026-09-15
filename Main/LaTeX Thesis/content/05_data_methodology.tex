@@ -20,14 +20,16 @@ The currency panel contains daily exchange rates for 32 currencies against the U
 where $S_{i,t}$ is the spot rate of currency $i$ on day $t$. A positive return is an appreciation of the foreign currency against the dollar.
 
 The remaining series come from FRED and LSEG. FRED provides the nominal broad dollar index, the 10-year Treasury yield, the VIX, the Brent and West Texas Intermediate (WTI) crude prices and the S\&P~500 index \parencite{ds_fed_dollar,ds_fed_yields,ds_cboe_vix,ds_eia_energy,ds_spdji_sp500}. Brent serves as the global crude benchmark and WTI as the U.S.\ benchmark \parencite{eia_2022_ukraine}. LSEG provides the gold price in dollars and the Euro Stoxx~50 index in euros \parencite{ds_lseg_assets}. Series identifiers are listed in Chapter~\ref{ch:data_sources}. Indices, equities and commodities enter as log returns. The 10-year yield and the VIX enter in first differences.\footnote{Missing prices over market holidays are filled with the previous quote for up to
-three days, producing exact zero returns on 3.5~percent of Brent trading days, 0.6~percent of
-gold days and 4.3~percent of days of the broad dollar index. A few such days fall inside event
+three consecutive weekdays. The resulting series contain exact zero returns on
+3.48~percent of Brent trading days, 0.56~percent of
+gold days and 4.30~percent of days of the broad dollar index. A few such days fall inside event
 windows (Good Friday and Easter Monday 2025 in the Liberation Day window, Juneteenth and
 Independence Day 2025 in the twelve-day-war window), and no estimation window holds more than
 nine zero days for any of the price series reported here. The 10-year yield has more zero days because it is
-quoted to two decimals and can be genuinely unchanged. Recomputing the headline cross-event
-statistic without the zero days moves its $t$ from $-4.11$ to $-4.0$, so the effect on the
-reported statistics is negligible.}
+quoted to two decimals and can be genuinely unchanged. For the twenty-day Liberation Day--Hormuz contrast in the broad dollar index,
+re-estimating both the mean and standard deviation after excluding zero returns from
+the original estimation windows changes $t$ from $-4.11$ to $-4.03$. The contrast
+remains significant at the 1~percent level.}
 
 Because oil and gold are priced in dollars, part of any change in their dollar price reflects the dollar itself rather than the commodity. A depreciation of the dollar raises the dollar price of oil even when oil is unchanged in every other currency. To separate commodity movements from this denomination effect, Brent and gold are additionally re-expressed in euros as
 \begin{equation}
