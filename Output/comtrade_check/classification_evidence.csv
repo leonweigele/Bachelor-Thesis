@@ -1,0 +1,157 @@
+iso,flow,year,observed_usd,source,partner_reporter_codes,detail
+BRA,M,2019,4813815110.0,reporter,,
+BRA,M,2020,2761144320.0,reporter,,
+BRA,M,2021,4093484412.0,reporter,,
+BRA,M,2022,10145098434.0,reporter,,
+BRA,M,2023,9382113744.0,reporter,,
+BRA,M,2024,8943296861.0,reporter,,
+BRA,X,2019,24199539301.0,reporter,,
+BRA,X,2020,19613857928.0,reporter,,
+BRA,X,2021,30608981810.0,reporter,,
+BRA,X,2022,42688098560.0,reporter,,
+BRA,X,2023,42611148597.0,reporter,,
+BRA,X,2024,44842761197.0,reporter,,
+CAN,M,2019,14297140175.652,reporter,,
+CAN,M,2020,8460404183.547,reporter,,
+CAN,M,2021,11824567143.042,reporter,,
+CAN,M,2022,16604996383.484,reporter,,
+CAN,M,2023,14558631028.071,reporter,,
+CAN,M,2024,15154800354.105,reporter,,
+CAN,X,2019,68104060281.267,reporter,,
+CAN,X,2020,47574336106.392,reporter,,
+CAN,X,2021,81939749590.761,reporter,,
+CAN,X,2022,120391288495.247,reporter,,
+CAN,X,2023,99464941105.395,reporter,,
+CAN,X,2024,107516759357.17,reporter,,
+COL,M,2019,148162456.8,reporter,,
+COL,M,2020,25024697.59,reporter,,
+COL,M,2021,149657908.13,reporter,,
+COL,M,2022,327381753.6,reporter,,
+COL,M,2023,768159692.96,reporter,,
+COL,M,2024,460003577.08,reporter,,
+COL,X,2019,12979915800.03,reporter,,
+COL,X,2020,7130106325.35,reporter,,
+COL,X,2021,11200541488.13,reporter,,
+COL,X,2022,15836623713.1,reporter,,
+COL,X,2023,12659153725.32,reporter,,
+COL,X,2024,12069395851.83,reporter,,
+JPN,M,2019,73086768742.827,reporter,,
+JPN,M,2020,43495449526.743,reporter,,
+JPN,M,2021,63103354048.043,reporter,,
+JPN,M,2022,100922291093.4,reporter,,
+JPN,M,2023,80884609985.472,reporter,,
+JPN,M,2024,71811869887.915,reporter,,
+JPN,X,2019,90996.656,mirror_observed,"76,360,410,418,608,616,702,724,764,776,784",partner coverage not established
+JPN,X,2020,74067.09999999999,mirror_observed,"76,360,404,418,608,702,784,834",partner coverage not established
+JPN,X,2021,110164.124,reporter,,
+JPN,X,2022,4915255.64,reporter,,
+JPN,X,2023,69269.672,mirror_observed,"56,76,188,203,512,702,784",partner coverage not established
+JPN,X,2024,63338939.120000005,mirror_observed,"56,76,124,188,360,410,470,604,608,702,716",partner coverage not established
+KOR,M,2019,70251768064.0,reporter,,
+KOR,M,2020,44455595815.0,reporter,,
+KOR,M,2021,67012528175.0,reporter,,
+KOR,M,2022,105963515690.0,reporter,,
+KOR,M,2023,86158418645.0,reporter,,
+KOR,M,2024,85334419380.0,reporter,,
+KOR,X,2019,5724.0,reporter,,
+KOR,X,2020,3234.0,reporter,,
+KOR,X,2021,9.0,reporter,,
+KOR,X,2022,9382.0,reporter,,
+KOR,X,2023,7078.0,reporter,,
+KOR,X,2024,50.0,reporter,,
+KWT,M,2019,,unresolved,,successful API query returned no records
+KWT,M,2020,43303.214,mirror_observed,784,partner coverage not established
+KWT,M,2021,119.21,mirror_observed,784,partner coverage not established
+KWT,M,2022,41870.270000000004,mirror_observed,"702,784",partner coverage not established
+KWT,M,2023,,unresolved,,successful API query returned no records
+KWT,M,2024,12500.0,mirror_observed,842,partner coverage not established
+KWT,X,2019,46539357988.0,reporter,,
+KWT,X,2020,28629492308.0,reporter,,
+KWT,X,2021,41770746523.0,reporter,,
+KWT,X,2022,68036100177.451,reporter,,
+KWT,X,2023,49827754836.684,reporter,,
+KWT,X,2024,35530010116.0,reporter,,
+MEX,M,2019,20591584.0,reporter,,
+MEX,M,2020,54583.445,mirror_observed,"76,724",partner coverage not established
+MEX,M,2021,1541.286,mirror_observed,"76,724",partner coverage not established
+MEX,M,2022,101275.898,mirror_observed,"124,251,528,702,724,752",partner coverage not established
+MEX,M,2023,51419.987,mirror_observed,"76,724",partner coverage not established
+MEX,M,2024,3791.862,mirror_observed,"56,724",partner coverage not established
+MEX,X,2019,22361179935.0,reporter,,
+MEX,X,2020,14683690556.0,reporter,,
+MEX,X,2021,24130558561.0,reporter,,
+MEX,X,2022,31587350914.0,reporter,,
+MEX,X,2023,27576064996.0,reporter,,
+MEX,X,2024,22218689852.0,reporter,,
+S19,M,2019,21328832603.48,reporter,,
+S19,M,2020,12636707015.557,reporter,,
+S19,M,2021,19893277357.602,reporter,,
+S19,M,2022,31066609956.63,reporter,,
+S19,M,2023,25095507938.09,reporter,,
+S19,M,2024,23874236648.498,reporter,,
+S19,X,2019,10455.527,mirror_observed,"116,752",partner coverage not established
+S19,X,2020,2881.523,mirror_observed,"528,776",partner coverage not established
+S19,X,2021,2013.6080000000002,mirror_observed,"410,528,702,764,784",partner coverage not established
+S19,X,2022,1186.5959999999998,mirror_observed,"56,124,208,528,702",partner coverage not established
+S19,X,2023,2.163,mirror_observed,528,partner coverage not established
+S19,X,2024,1429.275,mirror_observed,"276,360",partner coverage not established
+NOR,M,2019,1713564769.952,reporter,,
+NOR,M,2020,1036073856.993,reporter,,
+NOR,M,2021,1214067068.469,reporter,,
+NOR,M,2022,605228769.613,reporter,,
+NOR,M,2023,1209585410.4,reporter,,
+NOR,M,2024,722302746.207,reporter,,
+NOR,X,2019,29305062240.449,reporter,,
+NOR,X,2020,22558847311.643,reporter,,
+NOR,X,2021,41896621057.974,reporter,,
+NOR,X,2022,56750851151.13,reporter,,
+NOR,X,2023,50212905016.023,reporter,,
+NOR,X,2024,49315597174.495,reporter,,
+SAU,M,2019,26835648.558000002,mirror_observed,"76,458,528,724,784",partner coverage not established
+SAU,M,2020,16505746.286,mirror_observed,"616,784,842",partner coverage not established
+SAU,M,2021,68520810.622,mirror_observed,"251,498,784,818",partner coverage not established
+SAU,M,2022,649846016.185,mirror_observed,"566,784",partner coverage not established
+SAU,M,2023,66429622.619,mirror_observed,"251,528,566,784,842",partner coverage not established
+SAU,M,2024,73370000.053,mirror_observed,"328,842",partner coverage not established
+SAU,X,2019,166896805817.713,reporter,,
+SAU,X,2020,100382507626.704,reporter,,
+SAU,X,2021,161020161386.229,reporter,,
+SAU,X,2022,258544564094.252,reporter,,
+SAU,X,2023,175993253253.989,reporter,,
+SAU,X,2024,179494074921.181,reporter,,
+IND,M,2019,101948596916.839,reporter,,
+IND,M,2020,64579747983.623,reporter,,
+IND,M,2021,106406786611.469,reporter,,
+IND,M,2022,173515902760.238,reporter,,
+IND,M,2023,140386299645.495,reporter,,
+IND,M,2024,141532322252.516,reporter,,
+IND,X,2019,72711103.12,mirror_observed,"64,124,144,222,251,360,410,528,608,702,752,784,800,842",partner coverage not established
+IND,X,2020,13413442.265,mirror_observed,"64,144,222,251,404,524,528,554,616,702,784",partner coverage not established
+IND,X,2021,41326474.309999995,mirror_observed,"36,124,144,222,404,454,524,528,554,710,724,784",partner coverage not established
+IND,X,2022,2307203.7830000003,mirror_observed,"72,124,144,222,404,410,442,504,528,554,724,834,894",partner coverage not established
+IND,X,2023,31052959.951,mirror_observed,"56,124,144,320,442,528,634,784,842",partner coverage not established
+IND,X,2024,93086053.982,mirror_observed,"56,124,144,156,222,251,320,360,372,516,528,554,634",partner coverage not established
+THA,M,2019,21194651405.887,reporter,,
+THA,M,2020,16128573982.305,reporter,,
+THA,M,2021,23506593457.547,reporter,,
+THA,M,2022,35999781951.51,reporter,,
+THA,M,2023,32178787769.988,reporter,,
+THA,M,2024,31334742360.5,reporter,,
+THA,X,2019,659258735.053,reporter,,
+THA,X,2020,369503254.236,reporter,,
+THA,X,2021,424444023.682,reporter,,
+THA,X,2022,600761481.017,reporter,,
+THA,X,2023,357486570.611,reporter,,
+THA,X,2024,552937983.389,reporter,,
+TUR,M,2019,6594773408.459999,mirror_observed,"31,398,434,528,566,579,643",partner coverage not established
+TUR,M,2020,4051801637.425,mirror_observed,"24,31,300,398,528,566,579,643,788,818",partner coverage not established
+TUR,M,2021,5732689031.693,mirror_observed,"31,191,266,300,380,398,566,579,643,688,757,788,818",partner coverage not established
+TUR,M,2022,4629575164.942,mirror_observed,"31,208,266,380,398,566,579,642,788,860",partner coverage not established
+TUR,M,2023,4500194575.663,mirror_observed,"31,56,266,380,398,566,579,842",partner coverage not established
+TUR,M,2024,3074550382.3729997,mirror_observed,"31,56,300,328,380,398,566,579,788,818,842",partner coverage not established
+TUR,X,2019,1580568643.047,mirror_observed,"31,100,124,380,384,410,528,634,699,724,764,826",partner coverage not established
+TUR,X,2020,816296381.1509999,mirror_observed,"156,251,348,380,528,642,699,702,724,764,784,826",partner coverage not established
+TUR,X,2021,1240032144.593,mirror_observed,"56,203,251,372,380,478,528,642,699,784,826",partner coverage not established
+TUR,X,2022,2953276500.701,mirror_observed,"56,124,203,246,360,372,380,528,642,699,724,784,788,826,842",partner coverage not established
+TUR,X,2023,1746240132.7310002,mirror_observed,"56,100,124,251,288,300,348,360,380,528,699,703,724,764,826,842,887",partner coverage not established
+TUR,X,2024,1223671382.131,mirror_observed,"56,100,124,512,528,699,702,710,826",partner coverage not established

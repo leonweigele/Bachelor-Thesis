@@ -39,7 +39,9 @@ S&P 500; H.10 bilateral rates as a cross-check), LSEG Workspace (32-currency
 spot panel, one-month forward points for 28 currencies, gold, Euro Stoxx 50,
 TTF gas, J.P. Morgan VXY), the Caldara–Iacoviello GPR index, the Caldara et
 al. TPU index and UN Comtrade (HS 2709). Sample 1 January 2019 to 30 June
-2026; inputs frozen with the pull of 23 July 2026.
+2026. Market and risk-series inputs use the pull of 23 July 2026.
+The Comtrade classification uses the original extract and the official API
+supplement collected on 15 September 2026, as described below.
 
 ## Repository layout
 
@@ -66,9 +68,10 @@ python Code/03_event_study.py            # CARs, estimation window [-140,-21]
 python Code/04_event_study_w50.py        # +/-50-day horizon, estimation window [-170,-51]
 python Code/05_cross_event_tests.py      # difference-in-CARs across events
 python Code/07_safehaven_regression.py   # Table 6.5
+python Code/08_regression_sensitivity.py # sensitivity of Table 6.5 (standard errors, single days, placebo windows) quoted in Sections 6.6 and 7.5; writes Output/tables/regression_sensitivity/
 python Code/make_mm_table.py             # Appendix Table 2 (market model)
 python Code/06_make_thesis_figures.py --install ; python Code/fig41_overview.py --install
-python Code/verify_results.py            # compare car_summary.csv and cross_event_diff.csv with the pinned baseline; exit 1 on any difference
+python Code/verify_results.py            # compare car_summary.csv, cross_event_diff.csv and car_persistence_w50.csv with the pinned baseline; exit 1 on any difference
 python Code/comtrade_check.py --offline  # coverage-aware check of the oil-basket classification on the saved Comtrade extracts
 ```
 
@@ -79,6 +82,76 @@ event dropped; the previous pin of 23 July 2026 is kept next to it as
 `*.bak_2026-07-23_prepin`. A matching run means the output files are
 unchanged since the pin, nothing more; whether the thesis text quotes them
 correctly is a separate check.
+
+On 16 September 2026 `car_persistence_w50.csv`, the +/-50-day table behind the
+(0,50) column of Table 6.1, was added to the verifier (v3, record
+`.handoff/VERIFIER-W50-PROPOSAL-2026-09-16.md`). Its first pin was the file of
+11 August 2026, reproduced byte for byte from the saved inputs beforehand, with
+`python Code/verify_results.py --pin car_persistence_w50.csv`. Since v3 a pin
+can name single files, the other baselines stay untouched, and any baseline
+that is overwritten is first copied to `<file>.bak_<date>_prepin`. The
+verifier's own tests run in temporary folders with
+`python -m unittest discover -s Code/tests -p 'test_verify_results.py'`.
+
+On 16 September 2026 the redundant `hormuz_closure` event was removed from
+`02_build_returns.py`. Its date (Saturday 28 February 2026 for `hormuz`, Monday
+2 March 2026 for the closure) mapped to the same trading day 0, so its rows
+duplicated the `hormuz` rows exactly. After re-running 02, 03 and 04,
+`car_summary.csv` (505 rows fewer) and `car_persistence_w50.csv` (15 rows fewer)
+were re-pinned with `python Code/verify_results.py --pin car_summary.csv
+car_persistence_w50.csv`. The previous pins are kept as `*.bak_2026-09-16_prepin`
+and `cross_event_diff.csv` was unaffected. Record: `.handoff/HORMUZ-CLOSURE-REMOVAL-2026-09-16.md`.
+
+On 16 September 2026 `08_regression_sensitivity.py` was added. It rebuilds the four
+specifications of Table 6.5 from the saved inputs, ties them to
+`Output/tables/safehaven_regression.csv` and to the printed table, and then reports the
+tariff interaction under classical, White, HC3 and Newey-West standard errors with 0 to
+21 lags, leave-one-out over the 21 tariff-window days, and placebo windows (the tariff
+window moved to every other 21-day stretch that does not overlap the modelled windows).
+It reads only the saved inputs and writes only `Output/tables/regression_sensitivity/`
+(CSV per block, `provenance.json` with input hashes, full log). The numbers quoted in
+Sections 6.6 and 7.5 come from `02_covariance_estimators.csv`, `03_leave_one_out.csv`
+and `04_placebo_summary.csv` there.
+
+## Comtrade evidence and remaining coverage gaps
+
+`Code/comtrade_check.py --offline` now reads the original reporter totals and
+the saved official API responses in `Data/manual/comtrade_supplement_2026-09-15/`.
+It verifies response hashes and query directions. Existing reporter cells take
+priority, so supplementary partner rows are never added to an already reported
+country-flow-year value.
+
+Partner reports supply 31 of the original 33 missing observations across six
+countries. Kuwait's imports in 2019 and 2023 remain unobserved. Türkiye uses
+partners' exports to Türkiye for imports and partners' imports from Türkiye for
+exports. The observed totals are USD 28.58 billion and USD 9.56 billion,
+respectively, giving an observed import surplus of USD 19.02 billion.
+
+All 13 observed balance signs support the existing baskets. The verdict remains
+**PASS WITH ASSUMPTIONS**, with exit code **2**. Numeric partner records do not
+prove complete coverage. Türkiye's import mirror contains no Iraqi reports for
+2019-2024 or Russian reports for 2022-2024. Empty responses are not confirmed
+zeros, and observed net balances are not bounds on true net trade. Mirror and
+reporter values may differ in valuation, timing and attribution.
+
+The supplement retains raw JSON, request metadata, a coverage table and a review
+notebook. Its fresh reporter totals are retained for comparison only. Japan's
+2023 import revision is not substituted into the original values. See the
+[collection record](Data/manual/comtrade_supplement_2026-09-15/README.md).
+The basket lists in `02_build_returns.py` and the pinned event-study results
+remain unchanged.
+
+Optional local check outputs and regression tests:
+
+```bash
+python Code/comtrade_check.py --offline --report-dir Output/comtrade_check
+python -m unittest discover -s Code/tests -p 'test_comtrade_check.py'
+```
+
+Exit code 0 means matching signs with reporter totals for every cell. Exit code
+2 is the expected qualified result for the saved evidence. Exit code 1 means
+an observed sign contradicts its basket, malformed data or insufficient evidence.
+The offline check makes no API calls and does not change frozen inputs.
 
 ## Refreshing the raw data — not needed for reproduction; overwrites the saved inputs
 

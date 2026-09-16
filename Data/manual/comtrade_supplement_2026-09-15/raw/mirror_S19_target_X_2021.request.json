@@ -1,0 +1,30 @@
+{
+  "label": "mirror_S19_target_X_2021",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2021",
+    "flowCode": "M",
+    "partnerCode": "490"
+  },
+  "query_kind": "mirror",
+  "target_iso": "S19",
+  "target_flow": "X",
+  "year": 2021,
+  "retrieved_at": "2026-09-15T16:13:50.285007+00:00",
+  "attempt": 2,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2021&flowCode=M&partnerCode=490",
+  "http_status": 200,
+  "sha256": "4f0ad709cd3b4a01d7129c9d89789197969326f355bd2facb0f95cf224ab2972",
+  "status": "ok",
+  "error": "429 Client Error: Too Many Requests for url: https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2021&flowCode=M&partnerCode=490",
+  "row_count": 5,
+  "reported_count": 5,
+  "api_error": ""
+}

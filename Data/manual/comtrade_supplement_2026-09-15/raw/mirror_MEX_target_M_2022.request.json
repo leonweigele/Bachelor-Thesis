@@ -1,0 +1,30 @@
+{
+  "label": "mirror_MEX_target_M_2022",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2022",
+    "flowCode": "X",
+    "partnerCode": "484"
+  },
+  "query_kind": "mirror",
+  "target_iso": "MEX",
+  "target_flow": "M",
+  "year": 2022,
+  "retrieved_at": "2026-09-15T16:13:24.528316+00:00",
+  "attempt": 2,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2022&flowCode=X&partnerCode=484",
+  "http_status": 200,
+  "sha256": "e53003447007ffa77559ecb24be93c50fe52dd5754e2be3aa51b2f96a5c22476",
+  "status": "ok",
+  "error": "429 Client Error: Too Many Requests for url: https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2022&flowCode=X&partnerCode=484",
+  "row_count": 6,
+  "reported_count": 6,
+  "api_error": ""
+}

@@ -137,7 +137,7 @@ EVENT_NICE = {"ukraine": "Ukraine invasion (Feb 2022)",
               "hormuz": "Hormuz crisis (Feb 2026)"}
 SHORT = {"ukraine": "Ukraine", "liberation_day": "Liberation Day",
          "tariff_pause": "tariff pause", "iran_12day": "12-day war",
-         "hormuz": "Hormuz", "hormuz_closure": "Hormuz closure",
+         "hormuz": "Hormuz",
          "hormuz_ceasefire": "2-wk ceasefire",
          "us_strikes": "US strikes", "ceasefire": "ceasefire"}
 STYLES = {"USD_EW": ("black", "--"), "SAFE": (PALETTE[2], "-"),

@@ -1,0 +1,28 @@
+{
+  "label": "reporter_world_2024",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2024",
+    "flowCode": "M,X",
+    "partnerCode": "0",
+    "reporterCode": "76,124,170,392,410,414,484,490,579,682,699,764,792"
+  },
+  "query_kind": "reporter",
+  "year": 2024,
+  "retrieved_at": "2026-09-15T16:15:04.583430+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2024&flowCode=M%2CX&partnerCode=0&reporterCode=76%2C124%2C170%2C392%2C410%2C414%2C484%2C490%2C579%2C682%2C699%2C764%2C792",
+  "http_status": 200,
+  "sha256": "d91bd421a5a6f95917e7ff4437b3d8e0c25a966dd9226cd0ad62ecffefc25175",
+  "status": "ok",
+  "row_count": 18,
+  "reported_count": 18,
+  "api_error": ""
+}

@@ -1,0 +1,29 @@
+{
+  "label": "mirror_TUR_target_M_2019",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2019",
+    "flowCode": "X",
+    "partnerCode": "792"
+  },
+  "query_kind": "mirror",
+  "target_iso": "TUR",
+  "target_flow": "M",
+  "year": 2019,
+  "retrieved_at": "2026-09-15T16:10:50.335253+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2019&flowCode=X&partnerCode=792",
+  "http_status": 200,
+  "sha256": "975ac2846663c88a53e2b5e62bb001d2b60fd8ffe37ec477d88eade6b6905ba7",
+  "status": "ok",
+  "row_count": 7,
+  "reported_count": 7,
+  "api_error": ""
+}

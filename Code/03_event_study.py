@@ -170,7 +170,7 @@ PANEL_B = ["OIL_EXP", "OIL_IMP"]
 BRENT = "r_DCOILBRENTEU"
 SHORT = {"ukraine": "the Ukraine invasion", "liberation_day": "Liberation Day",
          "tariff_pause": "the tariff pause", "iran_12day": "the 12-day war",
-         "hormuz": "the Hormuz crisis", "hormuz_closure": "the Hormuz closure",
+         "hormuz": "the Hormuz crisis",
          "us_strikes": "the US strikes", "ceasefire": "the ceasefire"}
 
 
@@ -217,8 +217,7 @@ def figure_event(name, paths):
 
 # Sub-events marked on their parent's CAR path (events are NOT point events;
 # the formal cross-event comparison uses short windows CAR(0,+1)/(0,+5)).
-SUB_EVENTS = {"liberation_day": [("tariff_pause", "pause")],
-              "hormuz": [("hormuz_closure", "closure")]}
+SUB_EVENTS = {"liberation_day": [("tariff_pause", "pause")]}
 CROSS_WIN = (-5, 15)        # shorter window for the comparison figure
 
 

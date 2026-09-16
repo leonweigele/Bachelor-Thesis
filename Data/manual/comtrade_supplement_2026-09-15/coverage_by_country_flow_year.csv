@@ -1,0 +1,49 @@
+country,target_iso,target_flow,target_flow_meaning,year,query_label,api_partner_flow,api_status,returned_partner_rows,partner_reporters,mirror_observed_usd,frozen_reporter_usd,current_reporter_usd,was_missing_from_frozen_reporter,mirror_status
+Türkiye,TUR,M,imports,2019,mirror_TUR_target_M_2019,X,ok,7,"AZE,KAZ,LBY,NGA,NLD,NOR,RUS",6594773408.459999,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,M,imports,2020,mirror_TUR_target_M_2020,X,ok,10,"AGO,AZE,EGY,GRC,KAZ,NGA,NLD,NOR,RUS,TUN",4051801637.425,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,M,imports,2021,mirror_TUR_target_M_2021,X,ok,13,"AZE,CHE,EGY,GAB,GRC,HRV,ITA,KAZ,NGA,NOR,RUS,SRB,TUN",5732689031.693,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,M,imports,2022,mirror_TUR_target_M_2022,X,ok,10,"AZE,DNK,GAB,ITA,KAZ,NGA,NOR,ROU,TUN,UZB",4629575164.942,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,M,imports,2023,mirror_TUR_target_M_2023,X,ok,8,"AZE,BEL,GAB,ITA,KAZ,NGA,NOR,USA",4500194575.663,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,M,imports,2024,mirror_TUR_target_M_2024,X,ok,11,"AZE,BEL,EGY,GRC,GUY,ITA,KAZ,NGA,NOR,TUN,USA",3074550382.3729997,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2019,mirror_TUR_target_X_2019,M,ok,12,"AZE,BGR,CAN,CIV,ESP,GBR,IND,ITA,KOR,NLD,QAT,THA",1580568643.047,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2020,mirror_TUR_target_X_2020,M,ok,12,"ARE,CHN,ESP,FRA,GBR,HUN,IND,ITA,NLD,ROU,SGP,THA",816296381.1509999,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2021,mirror_TUR_target_X_2021,M,ok,11,"ARE,BEL,CZE,FRA,GBR,IND,IRL,ITA,MRT,NLD,ROU",1240032144.593,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2022,mirror_TUR_target_X_2022,M,ok,15,"ARE,BEL,CAN,CZE,ESP,FIN,GBR,IDN,IND,IRL,ITA,NLD,ROU,TUN,USA",2953276500.701,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2023,mirror_TUR_target_X_2023,M,ok,17,"BEL,BGR,CAN,ESP,FRA,GBR,GHA,GRC,HUN,IDN,IND,ITA,NLD,SVK,THA,USA,YEM",1746240132.7310002,,,True,observed_partner_reports_coverage_not_established
+Türkiye,TUR,X,exports,2024,mirror_TUR_target_X_2024,M,ok,9,"BEL,BGR,CAN,GBR,IND,NLD,OMN,SGP,ZAF",1223671382.131,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2019,mirror_IND_target_X_2019,M,ok,14,"ARE,BTN,CAN,FRA,IDN,KOR,LKA,NLD,PHL,SGP,SLV,SWE,UGA,USA",72711103.12,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2020,mirror_IND_target_X_2020,M,ok,11,"ARE,BTN,FRA,KEN,LKA,NLD,NPL,NZL,POL,SGP,SLV",13413442.265,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2021,mirror_IND_target_X_2021,M,ok,12,"ARE,AUS,CAN,ESP,KEN,LKA,MWI,NLD,NPL,NZL,SLV,ZAF",41326474.309999995,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2022,mirror_IND_target_X_2022,M,ok,13,"BWA,CAN,ESP,KEN,KOR,LKA,LUX,MAR,NLD,NZL,SLV,TZA,ZMB",2307203.7830000003,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2023,mirror_IND_target_X_2023,M,ok,9,"ARE,BEL,CAN,GTM,LKA,LUX,NLD,QAT,USA",31052959.951,,,True,observed_partner_reports_coverage_not_established
+India,IND,X,exports,2024,mirror_IND_target_X_2024,M,ok,13,"BEL,CAN,CHN,FRA,GTM,IDN,IRL,LKA,NAM,NLD,NZL,QAT,SLV",93086053.982,,,True,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2019,mirror_JPN_target_X_2019,M,ok,11,"ARE,BRA,ESP,IDN,KOR,LAO,PHL,POL,SGP,THA,TON",90996.656,,,True,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2020,mirror_JPN_target_X_2020,M,ok,8,"ARE,BRA,IDN,KEN,LAO,PHL,SGP,TZA",74067.09999999999,,,True,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2021,mirror_JPN_target_X_2021,M,ok,12,"ARE,BEL,BRA,BRN,CAN,CZE,IND,LAO,NAM,NLD,PHL,SGP",255026066.007,110164.124,110164.124,False,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2022,mirror_JPN_target_X_2022,M,ok,13,"ARE,BEL,BRA,CAN,CHN,DNK,FIN,ISL,KOR,LKA,NLD,SGP,SWE",89680273.81099999,4915255.64,4915255.64,False,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2023,mirror_JPN_target_X_2023,M,ok,7,"ARE,BEL,BRA,CRI,CZE,OMN,SGP",69269.672,,,True,observed_partner_reports_coverage_not_established
+Japan,JPN,X,exports,2024,mirror_JPN_target_X_2024,M,ok,11,"BEL,BRA,CAN,CRI,IDN,KOR,MLT,PER,PHL,SGP,ZWE",63338939.120000005,,,True,observed_partner_reports_coverage_not_established
+Kuwait,KWT,M,imports,2019,mirror_KWT_target_M_2019,X,ok,0,,,,,True,no_records_returned_not_a_confirmed_zero
+Kuwait,KWT,M,imports,2020,mirror_KWT_target_M_2020,X,ok,1,ARE,43303.214,,,True,observed_partner_reports_coverage_not_established
+Kuwait,KWT,M,imports,2021,mirror_KWT_target_M_2021,X,ok,1,ARE,119.21,,,True,observed_partner_reports_coverage_not_established
+Kuwait,KWT,M,imports,2022,mirror_KWT_target_M_2022,X,ok,2,"ARE,SGP",41870.270000000004,,,True,observed_partner_reports_coverage_not_established
+Kuwait,KWT,M,imports,2023,mirror_KWT_target_M_2023,X,ok,0,,,,,True,no_records_returned_not_a_confirmed_zero
+Kuwait,KWT,M,imports,2024,mirror_KWT_target_M_2024,X,ok,1,USA,12500.0,,,True,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2019,mirror_MEX_target_M_2019,X,ok,2,"BRA,USA",28274594.0,20591584.0,20591584.0,False,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2020,mirror_MEX_target_M_2020,X,ok,2,"BRA,ESP",54583.445,,,True,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2021,mirror_MEX_target_M_2021,X,ok,2,"BRA,ESP",1541.286,,,True,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2022,mirror_MEX_target_M_2022,X,ok,6,"CAN,ESP,FRA,NLD,SGP,SWE",101275.898,,,True,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2023,mirror_MEX_target_M_2023,X,ok,2,"BRA,ESP",51419.987,,,True,observed_partner_reports_coverage_not_established
+Mexico,MEX,M,imports,2024,mirror_MEX_target_M_2024,X,ok,2,"BEL,ESP",3791.862,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2019,mirror_S19_target_X_2019,M,ok,2,"KHM,SWE",10455.527,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2020,mirror_S19_target_X_2020,M,ok,2,"NLD,TON",2881.523,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2021,mirror_S19_target_X_2021,M,ok,5,"ARE,KOR,NLD,SGP,THA",2013.6080000000002,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2022,mirror_S19_target_X_2022,M,ok,5,"BEL,CAN,DNK,NLD,SGP",1186.5959999999998,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2023,mirror_S19_target_X_2023,M,ok,1,NLD,2.163,,,True,observed_partner_reports_coverage_not_established
+"Taiwan (Other Asia, nes)",S19,X,exports,2024,mirror_S19_target_X_2024,M,ok,2,"DEU,IDN",1429.275,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2019,mirror_SAU_target_M_2019,X,ok,5,"ARE,BRA,ESP,MYS,NLD",26835648.558000002,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2020,mirror_SAU_target_M_2020,X,ok,3,"ARE,POL,USA",16505746.286,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2021,mirror_SAU_target_M_2021,X,ok,4,"ARE,EGY,FRA,MDA",68520810.622,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2022,mirror_SAU_target_M_2022,X,ok,2,"ARE,NGA",649846016.185,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2023,mirror_SAU_target_M_2023,X,ok,5,"ARE,FRA,NGA,NLD,USA",66429622.619,,,True,observed_partner_reports_coverage_not_established
+Saudi Arabia,SAU,M,imports,2024,mirror_SAU_target_M_2024,X,ok,2,"GUY,USA",73370000.053,,,True,observed_partner_reports_coverage_not_established

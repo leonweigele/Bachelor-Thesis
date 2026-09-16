@@ -168,14 +168,9 @@ def stars(p):
 
 
 def format_signed(value, decimals):
-    """Keep the sign of small nonzero estimates in the displayed table."""
-    if value == 0:
-        return f"{0:+.{decimals}f}"
-    if float(f"{value:.{decimals}f}") == 0:
-        decimals = max(decimals, 5)
-    while decimals < 12 and float(f"{value:.{decimals}f}") == 0:
-        decimals += 1
-    return f"{value:+.{decimals}f}"
+    """Use fixed table precision and suppress negative zero after rounding."""
+    rounded = f"{value:+.{decimals}f}"
+    return f"{0:.{decimals}f}" if float(rounded) == 0 else rounded
 
 
 def cell(label, term):
@@ -184,8 +179,14 @@ def cell(label, term):
         return "---"
     sup = stars(model.pvalues[term])
     pad = "\\phantom{^{" + "*" * (3 - sup.count("*")) + "}}" if sup.count("*") < 3 else ""
-    return (f"${format_signed(model.params[term], 3)}{sup}{pad}$"
-            f"\\,(${format_signed(model.tvalues[term], 2)}$)")
+    coef_display = format_signed(model.params[term], 3)
+    if coef_display == "0.000":
+        coef_display = r"\phantom{+}" + coef_display
+    t_display = format_signed(model.tvalues[term], 2)
+    if t_display == "0.00":
+        t_display = r"\phantom{+}" + t_display
+    return (f"${coef_display}{sup}{pad}$"
+            f"\\,(${t_display}$)")
 
 
 cols = list(SPECS)
@@ -222,7 +223,7 @@ lines += [
                             for c in cols) + r" \\",
     r"\bottomrule", r"\end{tabular*}",
     r"\begin{tablenotes}[flushleft]\footnotesize",
-    '\\item \\textit{Notes.} OLS of the daily broad-dollar return (percent) on daily risk shocks, their interactions with crisis-window dummies, and the window (level) dummies. Newey--West (HAC, 5 lags) standard errors are used, with $t$-statistics in parentheses. Each risk shock is standardized to unit variance, so coefficients read as the percent dollar move on a one-standard-deviation risk-off day. Crisis windows run from the event day to $+20$ trading days. VIX: CBOE (FRED \\texttt{VIXCLS}); GPR: \\textcite{caldara_iacoviello_2022} daily index; VXY: J.P.\\,Morgan VXY Global FX implied volatility (LSEG \\texttt{.JPMVXYGL}, mid); TPU: \\textcite{caldara_etal_2020_tpu} daily index, current vintage (downloaded 23~July 2026). A positive slope is safe-haven behaviour (risk up $\\rightarrow$ dollar up). A negative interaction weakens it. Additional decimals are retained where rounding would conceal a nonzero value. $^{*}/^{**}/^{***}$: 10/5/1\\%.',
+    '\\item \\textit{Notes.} OLS of the daily broad-dollar return (percent) on daily risk shocks, their interactions with crisis-window dummies, and the window (level) dummies. Newey--West (HAC, 5 lags) standard errors are used, with $t$-statistics in parentheses. Each risk shock is standardized to unit variance, so coefficients read as the percent dollar move on a one-standard-deviation risk-off day. Crisis windows run from the event day to $+20$ trading days. VIX: CBOE (FRED \\texttt{VIXCLS}); GPR: \\textcite{caldara_iacoviello_2022} daily index; VXY: J.P.\\,Morgan VXY Global FX implied volatility (LSEG \\texttt{.JPMVXYGL}, mid); TPU: \\textcite{caldara_etal_2020_tpu} daily index, current vintage (downloaded 23~July 2026). A positive slope is safe-haven behaviour (risk up $\\rightarrow$ dollar up). A negative interaction weakens it. $^{*}/^{**}/^{***}$: 10/5/1\\%.',
     r"\end{tablenotes}", r"\end{threeparttable}", r"\end{table}", "",
 ]
 TEX.write_text("\n".join(lines), encoding="utf-8")

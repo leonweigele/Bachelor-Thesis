@@ -1,0 +1,23 @@
+{
+  "source": "UN Comtrade official public API",
+  "successful_queries": 54,
+  "failed_queries": 0,
+  "mirror_queries": 48,
+  "reporter_queries": 6,
+  "raw_mirror_rows": 328,
+  "raw_reporter_rows": 111,
+  "empty_mirror_queries": 2,
+  "maximum_response_rows": 19,
+  "duplicate_mirror_reporter_keys": 0,
+  "duplicate_reporter_keys": 0,
+  "invalid_or_negative_values": 0,
+  "original_missing_six_country_cells": 33,
+  "original_missing_cells_now_with_partner_records": 31,
+  "turkiye_export_years_with_partner_records": 6,
+  "all_observed_net_signs_match_existing_baskets": true,
+  "fresh_reporter_rows_changed_or_added_or_removed": 1,
+  "no_complete_mirror_coverage_claim": true,
+  "baseline_file": "/Users/leon/Bachelor Thesis/Data/manual/comtrade_crude_2709_api.csv",
+  "baseline_sha256": "456782bfe7e4978843fbe30d4efe15fc2632aea8e15fc2e81a86e2ed9c899818",
+  "baseline_mirror_sha256": "8b9a7c54a942fc6e75e0882f596274c2409183ed5e025ad6080d2ec0adb3f31f"
+}

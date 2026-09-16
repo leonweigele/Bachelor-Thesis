@@ -1,0 +1,29 @@
+{
+  "label": "mirror_MEX_target_M_2019",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2019",
+    "flowCode": "X",
+    "partnerCode": "484"
+  },
+  "query_kind": "mirror",
+  "target_iso": "MEX",
+  "target_flow": "M",
+  "year": 2019,
+  "retrieved_at": "2026-09-15T16:13:07.176684+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2019&flowCode=X&partnerCode=484",
+  "http_status": 200,
+  "sha256": "cf67df68b89497d4e6ab33dfb96922663a6c2ebe867e3f156c5d17c227c13b59",
+  "status": "ok",
+  "row_count": 2,
+  "reported_count": 2,
+  "api_error": ""
+}

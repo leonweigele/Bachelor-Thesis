@@ -1,0 +1,12 @@
+{
+  "python": "3.11.15",
+  "platform": "Linux-6.18.44-fc-v33-x86_64-with-glibc2.39",
+  "pandas": "3.0.2",
+  "numpy": "2.4.4",
+  "statsmodels": "0.15.0",
+  "returns_daily.csv": "41597d7703a8b74a7632a662f33705397db2a25288142ba051fb2ef870131b1e",
+  "events.csv": "9cf2cf8d9d0a4aea26a4762503c8b963961c28560612f602cdab93fc0543276f",
+  "tpu_daily.csv": "dddcf2afb406bf4f4e4dcd4e4d931a644b9e16e53f95f1b9f14d594540d7e93f",
+  "safehaven_regression.csv": "d65be3b0e4deccc13ac75fc1d3593f08c1ece3b2174ffa5a724efbc463c1b993",
+  "tab_safehaven_regression.tex": "2fa8fa7dfac97fbc26880f883334f6abc4e731492216d29a2732702e38545c8c"
+}

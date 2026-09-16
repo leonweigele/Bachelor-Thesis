@@ -1,0 +1,8 @@
+country,target_iso,existing_basket,observed_exports_usd,observed_imports_usd,observed_net_exports_usd,observed_role,observed_role_matches_existing_basket,unresolved_country_flow_years,unresolved_cells,interpretation
+India,IND,importer,253897237.41099998,728369656170.18,-728115758932.769,importer,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+Japan,JPN,importer,68598692.312,433304343284.3999,-433235744592.0879,importer,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+Kuwait,KWT,exporter,270333461949.13498,97792.694,270333364156.44098,exporter,True,2,M-2019;M-2023,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+Mexico,MEX,exporter,142557534814.0,20804196.477999996,142536730617.522,exporter,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+"Taiwan (Other Asia, nes)",S19,importer,17968.692000000003,133895171519.857,-133895153551.165,importer,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+Saudi Arabia,SAU,exporter,1042331367100.068,901507844.3229998,1041429859255.745,exporter,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished
+Türkiye,TUR,importer,9560085184.354,28583584200.556,-19023499016.202,importer,True,0,,Observed amounts support this role; mirror coverage remains incomplete or unestablished

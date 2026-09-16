@@ -1,6 +1,6 @@
 """
-02_build_returns.py — log returns, currency classification, portfolios,
-event windows, and Figure 1.
+02_build_returns.py — log returns, currency classification, portfolios
+and event windows.
 ========================================================================
 Runs on whatever get_data.py has downloaded so far; warns about gaps
 instead of crashing. Rerun any time new data lands (e.g. LSEG exports).
@@ -15,7 +15,9 @@ Outputs:
   Data/processed/portfolios_daily.csv  safe/risky, oil exp/imp, EW dollar
   Data/processed/classification.csv    which currency landed in which bucket
   Data/processed/events.csv            event dates + trading-day windows
-  Output/figures/fig1_overview.png/.pdf
+  (The four-panel overview figure this script used to write to
+   Output/figures/fig1_overview.* was dropped on 2026-09-16. The thesis
+   overview figures, Figure 4.1, come from fig41_overview.py.)
 
 Conventions (state once in Ch. 4):
   - Panel FX levels are FOREIGN PER 1 USD.
@@ -32,8 +34,6 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 PROC = ROOT / "Data/processed"
-FIGS = ROOT / "Output/figures"
-FIGS.mkdir(parents=True, exist_ok=True)
 
 # ----------------------------------------------------------------------------
 # CLASSIFICATION SETTINGS
@@ -80,7 +80,10 @@ EVENTS = {
     "tariff_pause":   ("2025-04-09", "90-day tariff pause"),
     "iran_12day":     ("2025-06-13", "Israel/US strikes on Iran (12-day war)"),
     "hormuz":         ("2026-02-28", "Iran escalation, Hormuz crisis begins"),
-    "hormuz_closure": ("2026-03-02", "Iran declares Strait of Hormuz closed"),
+    # 28 Feb 2026 is a Saturday, so day 0 is Monday 2 Mar 2026, the day Iran
+    # declared the Strait closed. A separate "hormuz_closure" (2026-03-02)
+    # event therefore reproduced every hormuz estimate exactly and was dropped.
+    # The closure itself stays in the Ch. 4 narrative (04_background.tex).
     "hormuz_ceasefire": ("2026-04-07", "Two-week ceasefire announced (collapsed 13 Apr)"),
     "us_strikes":     ("2026-05-25", "US strikes on Iran"),
 }
@@ -293,42 +296,3 @@ if __name__ == "__main__":
     print(f"Saved returns ({rets.shape[1]} series), portfolios "
           f"({ports.shape[1]}), events ({len(events)}).")
 
-    # --- Figure 1 ------------------------------------------------------------
-    from thesis_style import (apply_style, style_axis, shade_events,
-                              panel_label, save_fig)
-    import matplotlib.pyplot as plt
-    apply_style()
-
-    def pick(*names):
-        return next((n for n in names if n in panel.columns), None)
-
-    spec = [(pick("DTWEXBGS"), "A. Broad U.S. Dollar Index", "Index"),
-            (pick("VIXCLS"), "B. VIX", "Index"),
-            (pick("DCOILBRENTEU", "Brent_fut"), "C. Brent Crude Oil",
-             "USD per barrel"),
-            (pick("XAU", "Gold"), "D. Gold", "USD per ounce"),
-            (pick("GPRD"), "D. Geopolitical Risk Index (Daily)", "Index")]
-    seen, final = set(), []
-    for c, lab, yl in spec:                    # gold OR gpr as 4th panel
-        if c and lab[0] not in seen:
-            final.append((c, lab, yl))
-            seen.add(lab[0])
-    if not final:
-        sys.exit("Nothing to plot yet.")
-
-    main_events = ["ukraine", "liberation_day", "iran_12day", "hormuz"]
-    event_dates = [EVENTS[e][0] for e in main_events]
-
-    fig, axes = plt.subplots(len(final), 1, figsize=(6.3, 1.7 * len(final)),
-                             sharex=True)
-    axes = np.atleast_1d(axes)
-    for ax, (col, lab, yl) in zip(axes, final):
-        ax.plot(panel.index, panel[col], lw=0.9, color="black")
-        style_axis(ax, ylabel=yl)
-        panel_label(ax, lab)
-        shade_events(ax, event_dates, halfwidth_days=15)
-    save_fig(fig, FIGS / "fig1_overview")
-    print(f"Figure 1 -> Output/figures/fig1_overview.png ({len(final)} panels)")
-    print("LaTeX caption suggestion: 'Key variables, 2019-2026. Shaded bands "
-          "mark the four main events (Ukraine invasion, Liberation Day, "
-          "twelve-day war, Hormuz crisis).'")

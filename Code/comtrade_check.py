@@ -1,40 +1,16 @@
+"""Check oil-basket signs using saved reporter totals and partner observations.
+
+An empty response is unobserved, never a confirmed zero. Numeric partner rows
+do not establish full partner coverage. Any mirror use keeps the verdict
+qualified. Frozen reporter cells take precedence over supplementary mirrors.
+
+Offline CLI exit codes: 0 = reporter coverage and matching signs,
+2 = matching observed signs with coverage assumptions, 1 = fail or incomplete.
+The live collector uses run_check(main_df, make_api_fetch(pull)).
 """
-comtrade_check.py — coverage-aware classification check for the oil baskets.
-===========================================================================
-Proposed new module under Code/. Pure functions plus two entry points:
-
-  python3 Code/comtrade_check.py --offline     # saved extracts only, NO network, no downloads
-  (comtrade_pull.py calls run_check(main_df, make_api_fetch(pull)) after its pulls)
-
-Definitions
-  cell           (reporterISO, flowCode, year); expected = 12 countries x {M, X} x 2019-2024
-  valid value    finite number; NaN, text, +/-inf are INVALID and never count as zero
-  REPORTED       exactly one reporter-side row for the cell with a valid value
-                 (a reported 0 is a confirmed zero)
-  UNREPORTED     no row, or the only row has no valid value
-  DUPLICATE      more than one reporter-side row for the cell (partner = World should
-                 give exactly one) -> the extract is malformed for that cell; it is
-                 rejected, not summed, and the check cannot pass
-  MIRROR         partner-side data for an unreported cell:
-                   imports of C = partners' exports TO C   (flow X, partnerCode = C)
-                   exports of C = partners' imports FROM C (flow M, partnerCode = C)
-                 complete -> every partner row valid: observed
-                 partial  -> some partner rows invalid: LOWER BOUND, flagged
-                 none     -> no valid partner value: unresolved
-  Türkiye        both flows from mirror data, each of the six years fetched and
-                 flagged individually; totals are taken over the observed years and
-                 the coverage state is carried into the verdict wording
-
-Status (never a bare PASS with incomplete coverage)
-  FAIL                   a sign is wrong on the observed data (incl. Türkiye observed
-                         exports >= observed imports)
-  INCOMPLETE             duplicate records, a basket country without any observed data,
-                         or Türkiye imports unobserved -> classification unverified
-  PASS WITH ASSUMPTIONS  every sign verified on observed data, but some cells or years
-                         are unresolved or only partially observed (each listed with the
-                         size the unobserved part would need to reach to flip the sign)
-  PASS                   full coverage: every cell and every Türkiye year fully observed
-"""
+import argparse
+import hashlib
+import json
 import sys
 from pathlib import Path
 
@@ -49,218 +25,273 @@ M49 = {"BRA": "76", "CAN": "124", "COL": "170", "JPN": "392", "KOR": "410", "KWT
        "TUR": "792"}
 EXPORTERS = {"NOR", "CAN", "MEX", "COL", "BRA", "SAU", "KWT"}
 IMPORTERS = {"JPN", "KOR", "IND", "THA", "S19", "TUR"}
-
 ROOT = Path(__file__).resolve().parent.parent
 API_CSV = ROOT / "Data/manual/comtrade_crude_2709_api.csv"
 MIRROR_CSV = ROOT / "Data/manual/comtrade_crude_2709_mirror_tur.csv"
+SUPPLEMENT = ROOT / "Data/manual/comtrade_supplement_2026-09-15"
 
 
-# ---------------------------------------------------------------------------
-# helpers
-# ---------------------------------------------------------------------------
 def _valid(series):
-    """Numeric, finite values only; everything else becomes NaN."""
-    v = pd.to_numeric(series, errors="coerce").astype(float)
-    return v.where(np.isfinite(v))
+    values = pd.to_numeric(series, errors="coerce").astype(float)
+    return values.where(np.isfinite(values) & values.ge(0))
 
 
-def observe(df):
-    """Read a partner-side frame. Returns (value, complete):
-       value    = sum of the valid entries, None if there is none
-       complete = True only if every row carries a valid value."""
-    if df is None or len(df) == 0 or "primaryValue" not in df:
-        return None, False
-    v = _valid(df["primaryValue"])
-    if v.notna().sum() == 0:
-        return None, False
-    return float(v.sum()), bool(v.notna().all())
+def validate_rows(frame, flow=None, partner=None, year=None):
+    """Reject mixed commodities, breakdowns, directions or query years."""
+    fixed = {"cmdCode": 2709, "partner2Code": 0, "motCode": 0}
+    if partner is not None:
+        fixed["partnerCode"] = int(partner)
+    if year is not None:
+        fixed["refYear"] = int(year)
+    required = set(fixed) | {"reporterCode", "flowCode", "customsCode", "primaryValue", "refYear"}
+    if not required.issubset(frame.columns):
+        raise ValueError(f"Missing columns: {sorted(required - set(frame.columns))}")
+    for column, value in fixed.items():
+        if not pd.to_numeric(frame[column], errors="coerce").eq(value).all():
+            raise ValueError(f"Unexpected {column}, expected {value}")
+    if not frame.customsCode.eq("C00").all():
+        raise ValueError("Unexpected customs breakdown")
+    if flow is not None and not frame.flowCode.eq(flow).all():
+        raise ValueError(f"Unexpected mirror direction, expected {flow}")
+    codes = pd.to_numeric(frame.reporterCode, errors="coerce")
+    if not (codes.gt(0) & codes.mod(1).eq(0)).all():
+        raise ValueError("Invalid reporter code")
 
 
 def reporter_cells(main_df):
-    """Classify every reporter-side cell.
-       Returns reported {cell: value}, duplicates [cells], and the set of cells that
-       have a row but no valid value (they are treated as unreported)."""
-    d = main_df.copy()
-    d["refYear"] = pd.to_numeric(d["refYear"], errors="coerce")
-    d = d[d.refYear.between(*WINDOW)]
-    d["val"] = _valid(d["primaryValue"])
+    data = main_df.copy()
+    data["refYear"] = pd.to_numeric(data["refYear"], errors="coerce")
+    data = data[data.refYear.between(*WINDOW)]
+    validate_rows(data, partner=0)
+    if not data.flowCode.isin(["M", "X"]).all():
+        raise ValueError("Unexpected reporter trade direction")
+    data = data[data.reporterISO.isin(M49)]
+    expected_codes = data.reporterISO.map(M49).astype(int)
+    if not pd.to_numeric(data.reporterCode).eq(expected_codes).all():
+        raise ValueError("Reporter ISO and M49 codes disagree")
+    data["value"] = _valid(data.primaryValue)
     reported, duplicates, invalid = {}, [], set()
-    for (iso, flow, year), rows in d.groupby(["reporterISO", "flowCode", "refYear"]):
+    for (iso, flow, year), rows in data.groupby(["reporterISO", "flowCode", "refYear"]):
         cell = (iso, flow, int(year))
-        if len(rows) > 1:
+        if len(rows) != 1:
             duplicates.append(cell)
-        elif rows["val"].notna().iloc[0]:
-            reported[cell] = float(rows["val"].iloc[0])
+        elif pd.notna(rows.value.iloc[0]):
+            reported[cell] = float(rows.value.iloc[0])
         else:
             invalid.add(cell)
     return reported, duplicates, invalid
 
 
-def mirror_resolve(missing, fetch):
-    """fetch(flow, partner_m49, year) -> DataFrame | None (partner-side rows).
-       Returns complete {cell: value}, partial {cell: lower_bound}, unresolved [cells]."""
-    complete, partial, unresolved = {}, {}, []
-    for iso, flow, year in sorted(missing):
-        mirror_flow = "X" if flow == "M" else "M"
-        val, full = observe(fetch(mirror_flow, M49[iso], year))
-        if val is None:
-            unresolved.append((iso, flow, year))
-        elif full:
-            complete[(iso, flow, year)] = val
-        else:
-            partial[(iso, flow, year)] = val
-    return complete, partial, unresolved
+def observe(frame, flow, partner, year):
+    """Return an observed sum, its row-validity state and partner reporter codes."""
+    if frame is None or frame.empty:
+        reason = "query unavailable" if frame is None else frame.attrs.get("query_status", "no returned records")
+        return np.nan, "unresolved", "", reason
+    validate_rows(frame, flow=flow, partner=partner, year=year)
+    codes = pd.to_numeric(frame.reporterCode)
+    if codes.duplicated().any():
+        raise ValueError("Duplicate partner reporter rows")
+    values = _valid(frame.primaryValue)
+    partners = ",".join(str(int(c)) for c in sorted(codes))
+    if not values.notna().any():
+        return np.nan, "unresolved", partners, "no valid nonnegative values"
+    state = "mirror_observed" if values.notna().all() else "mirror_partial"
+    return float(values.sum()), state, partners, "partner coverage not established"
 
 
-def mirror_years(fetch, flow, partner):
-    """One partner-side query per year. Returns total over observed years and the
-       per-year states: {year: 'complete' | 'partial' | 'missing'}."""
-    total, states = 0.0, {}
-    for y in YEARS:
-        val, full = observe(fetch(flow, partner, y))
-        if val is None:
-            states[y] = "missing"
-        else:
-            total += val
-            states[y] = "complete" if full else "partial"
-    observed_any = any(s != "missing" for s in states.values())
-    return (total if observed_any else None), states
-
-
-# ---------------------------------------------------------------------------
-# the check
-# ---------------------------------------------------------------------------
-def run_check(main_df, fetch, out=print):
-    lines = []
-
-    def say(s):
-        lines.append(s); out(s)
-
+def assess(main_df, fetch):
+    """Build one row per country, own trade direction and classification year."""
     reported, duplicates, invalid = reporter_cells(main_df)
-    expected = {(i, f, y) for i in ISO for f in ("M", "X") for y in YEARS}
-    missing = (expected - set(reported)) - set(duplicates)
-    complete, partial, unresolved = mirror_resolve(missing, fetch)
-    observed = dict(reported); observed.update(complete)      # fully observed values
-    bounds = dict(partial)                                     # lower bounds, flagged
-
-    say(f"Coverage: {len(reported)} reported, {len(complete)} mirror-complete, "
-        f"{len(partial)} mirror-partial, {len(unresolved)} unresolved, "
-        f"{len(duplicates)} duplicate of {len(expected)} cells"
-        f"{'; ' + str(len(invalid)) + ' reporter rows without a valid value' if invalid else ''}.")
-
-    fail, incomplete, assumptions = False, [], []
-    if duplicates:
-        incomplete.append("DUPLICATES")
-        say(f"INCOMPLETE: duplicate reporter records for {sorted(duplicates)} — extract malformed, cells rejected")
-
-    for iso in ISO:
-        obs = {(f, y): v for (i, f, y), v in observed.items() if i == iso}
-        low = {(f, y): v for (i, f, y), v in bounds.items() if i == iso}
-        gaps = [(f, y) for (i, f, y) in unresolved if i == iso]
-        if not obs and not low:
-            incomplete.append(iso)
-            say(f"INCOMPLETE {iso}: no observed data {WINDOW[0]}-{WINDOW[1]} — unverified")
-            continue
-        X = sum(v for (f, y), v in obs.items() if f == "X") + sum(v for (f, y), v in low.items() if f == "X")
-        M = sum(v for (f, y), v in obs.items() if f == "M") + sum(v for (f, y), v in low.items() if f == "M")
-        net = X - M
+    rows, errors = [], []
+    for iso in ISO + ["TUR"]:
+        for flow in ("M", "X"):
+            for year in YEARS:
+                cell = (iso, flow, year)
+                value, partners, detail = np.nan, "", ""
+                if cell in duplicates:
+                    state, detail = "rejected", "duplicate reporter records"
+                    errors.append(f"{cell}: {detail}")
+                elif cell in reported:
+                    value, state = reported[cell], "reporter"
+                else:
+                    reverse = "X" if flow == "M" else "M"
+                    try:
+                        value, state, partners, detail = observe(fetch(reverse, M49[iso], year), reverse, M49[iso], year)
+                    except ValueError as exc:
+                        state, detail = "rejected", str(exc)
+                        errors.append(f"{cell}: {detail}")
+                    if cell in invalid:
+                        detail = "invalid reporter value. " + detail
+                rows.append({"iso": iso, "flow": flow, "year": year, "observed_usd": value,
+                             "source": state, "partner_reporter_codes": partners, "detail": detail})
+    evidence = pd.DataFrame(rows)
+    summary = []
+    for iso in ISO + ["TUR"]:
+        data = evidence[evidence.iso.eq(iso)]
+        # Summing observed amounts does not assign zeros to the missing cells.
+        exports = float(data.loc[data.flow.eq("X"), "observed_usd"].sum())
+        imports = float(data.loc[data.flow.eq("M"), "observed_usd"].sum())
+        net = exports - imports
         role = "exporter" if iso in EXPORTERS else "importer"
-        if not ((net > 0) if role == "exporter" else (net < 0)):
-            fail = True
-            say(f"FAIL {iso}: classified {role} but net on observed data = {net/1e9:+.1f} bn")
-        risk_flow = "M" if role == "exporter" else "X"       # the direction that works against the sign
-        risky_gaps = [y for f, y in gaps if f == risk_flow]
-        risky_part = [y for (f, y) in low if f == risk_flow]
-        safe_open = sorted([y for f, y in gaps if f != risk_flow] + [y for (f, y) in low if f != risk_flow])
-        notes = []
-        if risky_gaps:
-            notes.append(f"unreported {risk_flow} {risky_gaps} treated as zero")
-        if risky_part:
-            notes.append(f"{risk_flow} {risky_part} only partially observed (lower bound used)")
-        if risky_gaps or risky_part:
-            notes.append(f"sign flips only if the unobserved part exceeds {abs(net)/1e9:.1f} bn in total")
-        if safe_open:
-            notes.append(f"{'X' if risk_flow == 'M' else 'M'} {safe_open} unobserved or partial (cannot flip the sign)")
-        if notes:
-            assumptions.append(iso)
-            say(f"ASSUMPTION {iso}: " + "; ".join(notes))
-
-    # Türkiye: imports and exports from partner-side data, year by year
-    imp, imp_states = mirror_years(fetch, "X", M49["TUR"])
-    exp, exp_states = mirror_years(fetch, "M", M49["TUR"])
-    imp_full = all(s == "complete" for s in imp_states.values())
-    exp_full = all(s == "complete" for s in exp_states.values())
-    imp_gaps = [y for y, s in imp_states.items() if s != "complete"]
-    exp_gaps = [y for y, s in exp_states.items() if s != "complete"]
-    if imp is None or imp <= 0:
-        incomplete.append("TUR")
-        say("INCOMPLETE TUR: mirror imports unobserved or not positive — unverified")
-    elif exp is None:
-        assumptions.append("TUR")
-        say(f"ASSUMPTION TUR: net importer on available data (mirror imports {imp/1e9:.1f} bn"
-            f"{', years ' + str(imp_gaps) + ' missing or partial' if imp_gaps else ''}); "
-            f"exports not observed, assumed below that — classification conditional on incomplete coverage")
-    elif exp >= imp:
-        fail = True
-        say(f"FAIL TUR: observed mirror exports {exp/1e9:.1f} bn >= observed mirror imports {imp/1e9:.1f} bn")
-    elif imp_full and exp_full:
-        say(f"TUR: mirror imports {imp/1e9:.1f} bn > mirror exports {exp/1e9:.1f} bn, all six years observed — importer confirmed")
+        observed_count = int(data.observed_usd.notna().sum())
+        matches = net > 0 if role == "exporter" else net < 0
+        summary.append({"iso": iso, "role": role, "observed_exports_usd": exports,
+                        "observed_imports_usd": imports, "observed_net_exports_usd": net,
+                        "observed_cells": observed_count,
+                        "unresolved_cells": int(data.observed_usd.isna().sum()),
+                        "mirror_cells": int(data.source.str.startswith("mirror_").sum()),
+                        "sign_matches": bool(matches)})
+    summary = pd.DataFrame(summary)
+    if errors or summary.observed_cells.eq(0).any():
+        status = "INCOMPLETE: malformed or unobserved country data"
+    elif not summary.sign_matches.all():
+        status = "FAIL: an observed trade balance does not support its assigned basket"
+    elif not evidence.source.eq("reporter").all():
+        status = "PASS WITH ASSUMPTIONS: all 13 observed signs match, coverage remains qualified"
     else:
-        assumptions.append("TUR")
-        say(f"ASSUMPTION TUR: net importer on available data (mirror imports {imp/1e9:.1f} bn, exports {exp/1e9:.1f} bn; "
-            f"import years missing or partial {imp_gaps}, export years {exp_gaps}) — "
-            f"classification conditional on incomplete coverage")
-
-    if fail:
-        status = "FAIL — see FAIL lines; classification not confirmed"
-    elif incomplete:
-        status = f"INCOMPLETE — unverified for {sorted(set(incomplete))}"
-    elif assumptions:
-        status = (f"PASS WITH ASSUMPTIONS — every sign verified on observed data; "
-                  f"assumptions for {sorted(set(assumptions))}")
-    else:
-        status = "PASS — full coverage, every sign verified"
-    say("CLASSIFICATION CHECK: " + status)
-    return status, lines
+        status = "PASS: all 13 signs match on available reporter totals for every cell"
+    return status, evidence, summary, errors
 
 
-# ---------------------------------------------------------------------------
-# fetch wrappers
-# ---------------------------------------------------------------------------
+def format_report(result):
+    status, evidence, summary, errors = result
+    base = evidence[evidence.iso.ne("TUR")]
+    missing = base[base.source.ne("reporter")]
+    supplemented = missing.source.str.startswith("mirror_").sum()
+    lines = [f"2019-2024 HS 2709, current USD. Frozen reporter cells take priority.",
+             f"12-country reporter extract: {len(base) - len(missing)}/144 valid cells. "
+             f"Partner observations supply {supplemented}/{len(missing)} other cells."]
+    for row in summary.itertuples():
+        gaps = evidence[evidence.iso.eq(row.iso) & evidence.observed_usd.isna()]
+        gap_text = ", ".join(f"{r.flow} {r.year}" for r in gaps.itertuples()) or "none"
+        lines.append(f"{row.iso} {row.role}: observed X {row.observed_exports_usd / 1e9:.6f} bn, "
+                     f"M {row.observed_imports_usd / 1e9:.6f} bn, "
+                     f"X-M {row.observed_net_exports_usd / 1e9:+.6f} bn. "
+                     f"Mirror cells {row.mirror_cells}, unobserved cells {gap_text}. "
+                     f"Observed sign {'matches' if row.sign_matches else 'does not match'}.")
+    for row in evidence[evidence.source.isin(["unresolved", "rejected", "mirror_partial"])].itertuples():
+        lines.append(f"GAP {row.iso} {row.flow} {row.year}: {row.source}, {row.detail}.")
+    tur_imports = evidence[evidence.iso.eq("TUR") & evidence.flow.eq("M") & evidence.source.str.startswith("mirror_")]
+    for code, name in [(368, "Iraq"), (643, "Russia")]:
+        absent = [r.year for r in tur_imports.itertuples() if str(code) not in r.partner_reporter_codes.split(",")]
+        if absent:
+            lines.append(f"TUR import mirror: no returned {name} records in {absent}. This does not establish zero trade.")
+    if not evidence.source.eq("reporter").all():
+        lines.extend([
+            "Mirror imports = partners' exports to the target. Mirror exports = partners' imports from the target.",
+            "Valid numeric rows do not establish complete partner coverage. Missing cells remain unobserved.",
+            "Totals sum available values only. Observed net balances are not bounds on true net trade.",
+            "Mirror and reporter values may differ in valuation, timing and attribution. Basket support is conditional on coverage.",
+        ])
+    lines.extend("INCOMPLETE: " + error for error in errors)
+    lines.append("CLASSIFICATION CHECK: " + status)
+    return lines
+
+
+def run_check(main_df, fetch, out=print):
+    """Stable interface used by comtrade_pull.py."""
+    result = assess(main_df, fetch)
+    lines = format_report(result)
+    for line in lines:
+        out(line)
+    return result[0], lines
+
+
 def make_api_fetch(pull, sleep=1.5, log=print):
-    """Wrap comtrade_pull.pull(). An API error and an empty answer both return None
-    (-> unresolved / missing); the reason is logged so an outage is not mistaken for absence."""
     import time
 
     def fetch(flow, partner, year):
         try:
-            df = pull(period=str(year), reporterCode=None, flowCode=flow, partnerCode=partner)
-        except Exception as e:                       # network / rate limit / API error
-            log(f"  mirror query failed ({flow}, partner {partner}, {year}): {e}")
-            df = None
+            frame = pull(period=str(year), reporterCode=None, flowCode=flow, partnerCode=partner,
+                         partner2Code="0", customsCode="C00", motCode="0")
+        except Exception as exc:
+            log(f"Mirror query failed ({flow}, partner {partner}, {year}): {exc}")
+            frame = None
         time.sleep(sleep)
-        return df if df is not None and len(df) else None
+        return frame
     return fetch
 
 
-def make_offline_fetch(mirror_tur_df):
-    """No network: only the saved Türkiye import mirror (partners' exports to Türkiye) exists."""
-    m = mirror_tur_df.copy()
-    m["period"] = pd.to_numeric(m["period"], errors="coerce")
+def load_supplement(folder):
+    """Load original API responses, verifying hashes and query perspective."""
+    folder = Path(folder)
+    manifest = json.loads((folder / "request_manifest.json").read_text())
+    queries = {}
+    for meta in manifest:
+        label = meta["label"]
+        if Path(label).name != label:
+            raise ValueError("Invalid raw response label")
+        raw = (folder / "raw" / f"{label}.json").read_bytes()
+        if hashlib.sha256(raw).hexdigest() != meta["sha256"]:
+            raise ValueError(f"Raw response hash differs: {label}")
+        payload = json.loads(raw)
+        data = payload.get("data")
+        if (meta["status"] != "ok" or meta["http_status"] != 200 or payload.get("error")
+                or not isinstance(data, list) or len(data) != payload.get("count")
+                or len(data) != meta["row_count"] or len(data) >= int(meta["parameters"]["maxRecords"])):
+            raise ValueError(f"Failed, inconsistent or capped response: {label}")
+        if meta["query_kind"] != "mirror":
+            continue
+        params = meta["parameters"]
+        flow, partner, year = params["flowCode"], params["partnerCode"], int(params["period"])
+        if (partner != M49[meta["target_iso"]] or year != meta["year"]
+                or flow != ("X" if meta["target_flow"] == "M" else "M")):
+            raise ValueError(f"Target and API perspectives disagree: {label}")
+        key = (flow, partner, year)
+        if key in queries:
+            raise ValueError(f"Duplicate query: {key}")
+        frame = pd.DataFrame(data)
+        if not frame.empty:
+            validate_rows(frame, flow=flow, partner=partner, year=year)
+        frame.attrs["query_status"] = "successful API query returned no records"
+        queries[key] = frame
+    return queries
+
+
+def make_offline_fetch(mirror_tur_df=None, supplement=None):
+    """Saved supplement first, legacy Türkiye imports only if not queried there."""
+    queries = {} if supplement is None else load_supplement(supplement)
 
     def fetch(flow, partner, year):
-        if partner == M49["TUR"] and flow == "X":
-            r = m[(m.partnerCode.astype(str) == M49["TUR"]) & (m.flowCode == "X") & (m.period == year)]
-            return r if len(r) else None
+        key = (flow, str(partner), year)
+        if key in queries:
+            return queries[key].copy()
+        if mirror_tur_df is not None and str(partner) == M49["TUR"] and flow == "X":
+            data = mirror_tur_df
+            rows = data[pd.to_numeric(data.partnerCode).eq(int(partner)) & data.flowCode.eq(flow)
+                        & pd.to_numeric(data.refYear).eq(year)].copy()
+            return rows if not rows.empty else None
         return None
     return fetch
 
 
+def exit_code(status):
+    if status.startswith("PASS WITH ASSUMPTIONS:"):
+        return 2
+    return 0 if status.startswith("PASS:") else 1
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--offline", action="store_true", required=True)
+    parser.add_argument("--supplement-dir", type=Path, default=SUPPLEMENT)
+    parser.add_argument("--report-dir", type=Path, help="Save evidence, country totals and the check log")
+    args = parser.parse_args()
+    try:
+        fetch = make_offline_fetch(pd.read_csv(MIRROR_CSV), args.supplement_dir)
+        result = assess(pd.read_csv(API_CSV), fetch)
+        lines = format_report(result)
+    except (OSError, ValueError, KeyError) as exc:
+        print(f"INCOMPLETE: {exc}")
+        return 1
+    print("\n".join(lines))
+    if args.report_dir:
+        args.report_dir.mkdir(parents=True, exist_ok=True)
+        result[1].to_csv(args.report_dir / "classification_evidence.csv", index=False)
+        result[2].to_csv(args.report_dir / "classification_summary.csv", index=False)
+        (args.report_dir / "classification_check.txt").write_text("\n".join(lines) + "\n")
+    return exit_code(result[0])
+
+
 if __name__ == "__main__":
-    if "--offline" not in sys.argv:
-        sys.exit("Use --offline here (reads the saved extracts, no network). "
-                 "For a live run, comtrade_pull.py calls run_check() after its pulls.")
-    main_df = pd.read_csv(API_CSV)                    # saved extracts, read before anything else
-    mirror = pd.read_csv(MIRROR_CSV)
-    status, _ = run_check(main_df, make_offline_fetch(mirror))
-    sys.exit(0 if status.startswith("PASS —") else 2)
+    sys.exit(main())

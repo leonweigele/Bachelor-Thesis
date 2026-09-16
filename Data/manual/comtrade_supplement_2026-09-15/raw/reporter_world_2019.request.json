@@ -1,0 +1,29 @@
+{
+  "label": "reporter_world_2019",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2019",
+    "flowCode": "M,X",
+    "partnerCode": "0",
+    "reporterCode": "76,124,170,392,410,414,484,490,579,682,699,764,792"
+  },
+  "query_kind": "reporter",
+  "year": 2019,
+  "retrieved_at": "2026-09-15T16:14:42.764192+00:00",
+  "attempt": 2,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2019&flowCode=M%2CX&partnerCode=0&reporterCode=76%2C124%2C170%2C392%2C410%2C414%2C484%2C490%2C579%2C682%2C699%2C764%2C792",
+  "http_status": 200,
+  "sha256": "c8426a50441675c0c68c11439f96d06ea762bfcce4a8b5b0bead64486d9177ab",
+  "status": "ok",
+  "error": "429 Client Error: Too Many Requests for url: https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2019&flowCode=M%2CX&partnerCode=0&reporterCode=76%2C124%2C170%2C392%2C410%2C414%2C484%2C490%2C579%2C682%2C699%2C764%2C792",
+  "row_count": 19,
+  "reported_count": 19,
+  "api_error": ""
+}

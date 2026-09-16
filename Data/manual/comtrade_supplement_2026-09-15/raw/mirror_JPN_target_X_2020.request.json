@@ -1,0 +1,29 @@
+{
+  "label": "mirror_JPN_target_X_2020",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2020",
+    "flowCode": "M",
+    "partnerCode": "392"
+  },
+  "query_kind": "mirror",
+  "target_iso": "JPN",
+  "target_flow": "X",
+  "year": 2020,
+  "retrieved_at": "2026-09-15T16:12:19.100379+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2020&flowCode=M&partnerCode=392",
+  "http_status": 200,
+  "sha256": "599c366aedf1762bd647f24392248581c0877db918db72ba64c770772881be35",
+  "status": "ok",
+  "row_count": 8,
+  "reported_count": 8,
+  "api_error": ""
+}

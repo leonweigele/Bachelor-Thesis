@@ -1,29 +1,26 @@
-"""
-comtrade_pull.py — reproduce the net crude oil trade data behind the oil baskets
-================================================================================
-Pulls UN Comtrade annual trade in HS 2709 (petroleum oils, crude) for the 13
-oil-basket countries of Section 5.1.3, 2019-2025, partner World, both flows —
-the same query as the manual portal download of 2026-08-14
-(Data/manual/comtrade_crude_2709.csv) — plus the MIRROR flow for Türkiye
-(all countries' exports TO Türkiye), because Türkiye suppresses its own
-crude-oil reporting and has no reporter-side 2709 rows.
+"""Refresh the original Comtrade extracts and check oil-basket signs.
 
-Prints the net-position summary (2019-2024, complete years with full coverage)
-that backs the oil exporter/importer classification, and a PASS/FAIL check
-that every exporter is net positive and every importer net negative.
+This overwrites the saved inputs. For reproduction without new API calls, use
+Code/comtrade_check.py --offline instead.
+
+Pull annual HS 2709 reporter totals for 12 countries, 2019-2025, partner World,
+plus partners' exports to Türkiye. The coverage-aware checker then queries
+missing reporter cells and both mirror directions for Türkiye over 2019-2024.
+The original reporter query follows the manual portal download of 14 August
+2026. The separately saved September supplement is documented in the README.
+
+Numeric mirror responses do not establish complete partner coverage. The check
+keeps missing observations explicit and returns exit 2 for qualified support,
+exit 1 for a failed or incomplete check, and exit 0 for matching signs with
+reporter totals in every classification cell.
 
 USAGE
-  pip3 install comtradeapicall pandas
-  python3 Code/comtrade_pull.py                          # keyless preview API
-  COMTRADE_API_KEY=xxx python3 Code/comtrade_pull.py     # free key, no limits
-
-The keyless preview API caps each call at 500 records; every call below stays
-under that, so no key is needed. A free key (https://comtradedeveloper.un.org)
-just removes rate limits.
+  python3 Code/comtrade_pull.py                     # keyless public preview API
+  COMTRADE_API_KEY=xxx python3 Code/comtrade_pull.py # optional subscription key
 
 OUTPUTS
-  Data/manual/comtrade_crude_2709_api.csv         main pull (13 reporters)
-  Data/manual/comtrade_crude_2709_mirror_tur.csv  world exports to Türkiye
+  Data/manual/comtrade_crude_2709_api.csv         12 reporter countries
+  Data/manual/comtrade_crude_2709_mirror_tur.csv  partners' exports to Türkiye
 """
 
 import os
@@ -40,7 +37,7 @@ KEY = os.environ.get("COMTRADE_API_KEY")
 
 CMD = "2709"                       # HS heading: petroleum oils, crude
 YEARS = "2019,2020,2021,2022,2023,2024,2025"
-WINDOW = (2019, 2024)              # classification window (full coverage)
+WINDOW = (2019, 2024)              # classification window, subject to coverage gaps
 
 # UN M49 reporter codes, identical to the portal download
 REPORTERS = {
@@ -58,7 +55,7 @@ IMPORTERS = {"JPN", "KOR", "IND", "THA", "S19"}   # S19 = Other Asia, nes
 def pull(**kw):
     """One API call; keyless preview by default, subscription key if set."""
     base = dict(typeCode="C", freqCode="A", clCode="HS", cmdCode=CMD,
-                partner2Code=None, customsCode=None, motCode=None,
+                partner2Code="0", customsCode="C00", motCode="0",
                 format_output="JSON", aggregateBy=None,
                 breakdownMode="classic", countOnly=None, includeDesc=True)
     base.update(kw)
@@ -77,10 +74,10 @@ def require(df, label):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
 
-    # ---- main pull: 13 reporters x both flows x 2019-2025, partner World ----
+    # ---- main pull: 12 reporters x both flows x 2019-2025, partner World ----
     # The keyless preview endpoint accepts only ONE period per call, so loop
     # over the years when no key is set; with a key one combined call works.
-    print("Pulling main query (13 reporters, HS 2709, 2019-2025) ...")
+    print("Pulling main query (12 reporters, HS 2709, 2019-2025) ...")
     if KEY:
         main_df = pull(period=YEARS, reporterCode=",".join(REPORTERS),
                        flowCode="M,X", partnerCode="0")
@@ -114,9 +111,10 @@ def main():
     print(f"  {len(mirror)} rows -> Data/manual/comtrade_crude_2709_mirror_tur.csv")
 
     # ---- coverage-aware classification check (comtrade_check.py, 2026-09-15) --
-    from comtrade_check import run_check, make_api_fetch
+    from comtrade_check import run_check, make_api_fetch, exit_code
     status, report = run_check(main_df, make_api_fetch(pull))
+    return exit_code(status)
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

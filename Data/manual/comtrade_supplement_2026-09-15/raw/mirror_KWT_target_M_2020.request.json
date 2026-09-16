@@ -1,0 +1,29 @@
+{
+  "label": "mirror_KWT_target_M_2020",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2020",
+    "flowCode": "X",
+    "partnerCode": "414"
+  },
+  "query_kind": "mirror",
+  "target_iso": "KWT",
+  "target_flow": "M",
+  "year": 2020,
+  "retrieved_at": "2026-09-15T16:12:41.088498+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2020&flowCode=X&partnerCode=414",
+  "http_status": 200,
+  "sha256": "b164e1cdc85926fd7834cae66e15b795752fc8d2eaf5117aeb333359e9b5f964",
+  "status": "ok",
+  "row_count": 1,
+  "reported_count": 1,
+  "api_error": ""
+}

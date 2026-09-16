@@ -223,6 +223,43 @@
       \field{type}{NBER Working Paper}
       \field{year}{2025}
     \endentry
+    \entry{toi_2026_sidelines}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d1b96285c25bb6e9658454a71e16c6c9}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Lazar},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{fullhash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{fullhashraw}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{bibnamehash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{authorbibnamehash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{authornamehash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{authorfullhash}{d1b96285c25bb6e9658454a71e16c6c9}
+      \strng{authorfullhashraw}{d1b96285c25bb6e9658454a71e16c6c9}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{The Times of Israel, 21~July 2026}
+      \field{title}{Israel Remains on Sidelines of {US}-Iran Fight, Which for Jerusalem Is Just Fine for Now}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.timesofisrael.com/israel-remains-on-sidelines-of-us-iran-fight-which-for-jerusalem-is-just-fine-for-now/
+      \endverb
+      \verb{url}
+      \verb https://www.timesofisrael.com/israel-remains-on-sidelines-of-us-iran-fight-which-for-jerusalem-is-just-fine-for-now/
+      \endverb
+    \endentry
     \entry{ds_fed_h10}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3cd2bc76777b6930ba38f494b40da914}{%
@@ -1156,6 +1193,49 @@
       \field{type}{OIES Paper}
       \field{year}{2026}
     \endentry
+    \entry{ap_2026_israel_iran}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1ee46942016cc5e3bd0ae9909b5bd528}{%
+           family={Gambrell},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fffa11d1309a7aa4c563d9eb61156ea}{%
+           family={Lidman},
+           familyi={L\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{fullhash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{fullhashraw}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{bibnamehash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{authorbibnamehash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{authornamehash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{authorfullhash}{9da032677630a869f443f8d8d47ac6b4}
+      \strng{authorfullhashraw}{9da032677630a869f443f8d8d47ac6b4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Associated Press, 8~June 2026, published by PBS NewsHour}
+      \field{title}{Israel and Iran Appear to Pause Strikes After Trading Fire for the First Time Since {April} Ceasefire}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pbs.org/newshour/world/israel-and-iran-trade-strikes-threatening-to-drag-the-region-back-into-full-scale-war
+      \endverb
+      \verb{url}
+      \verb https://www.pbs.org/newshour/world/israel-and-iran-trade-strikes-threatening-to-drag-the-region-back-into-full-scale-war
+      \endverb
+    \endentry
     \entry{gopinath_boz_casas_diez_gourinchas_plagborgmoller_2020}{article}{}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=2249e3d4cb006e7deb525ca850109bad}{%
@@ -1507,7 +1587,7 @@
       \verb https://commonslibrary.parliament.uk/research-briefings/cbp-10637/
       \endverb
     \endentry
-    \entry{imf_2025_gfsr}{report}{}{}
+    \entry{imf_2025_exchange_arrangements}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
            family={{International Monetary Fund}},
@@ -1527,6 +1607,45 @@
       \field{extraname}{1}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Annual Report 2025: Appendices}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.imf.org/external/pubs/ft/ar/2025/pdfs/imf-annual-report-2025-appendices.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.imf.org/external/pubs/ft/ar/2025/pdfs/imf-annual-report-2025-appendices.pdf
+      \endverb
+    \endentry
+    \entry{imf_2025_gfsr}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ebb24d27be637c70ebf0c297ab842b7f}{%
+           family={{International Monetary Fund}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {International Monetary Fund}%
+      }
+      \strng{namehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{fullhash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{fullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{bibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorbibnamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
+      \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1553,7 +1672,7 @@
       \strng{authornamehash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhash}{ebb24d27be637c70ebf0c297ab842b7f}
       \strng{authorfullhashraw}{ebb24d27be637c70ebf0c297ab842b7f}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -2250,6 +2369,43 @@
       \field{pages}{13\bibrangedash 39}
       \range{pages}{27}
     \endentry
+    \entry{mackinnon_white_1985}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cfe7ee6a48f0dc865491ef865627d742}{%
+           family={MacKinnon},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima G.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c5669faa0ed02795902d060f0012d163}
+      \strng{fullhash}{c5669faa0ed02795902d060f0012d163}
+      \strng{fullhashraw}{c5669faa0ed02795902d060f0012d163}
+      \strng{bibnamehash}{c5669faa0ed02795902d060f0012d163}
+      \strng{authorbibnamehash}{c5669faa0ed02795902d060f0012d163}
+      \strng{authornamehash}{c5669faa0ed02795902d060f0012d163}
+      \strng{authorfullhash}{c5669faa0ed02795902d060f0012d163}
+      \strng{authorfullhashraw}{c5669faa0ed02795902d060f0012d163}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{3}
+      \field{title}{Some Heteroskedasticity-Consistent Covariance Matrix Estimators with Improved Finite Sample Properties}
+      \field{volume}{29}
+      \field{year}{1985}
+      \field{pages}{305\bibrangedash 325}
+      \range{pages}{21}
+    \endentry
     \entry{newey_west_1987}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=058d74ae5e89fbd5a49ebdbe97b4c922}{%
@@ -2483,6 +2639,49 @@
       \field{volume}{109}
       \field{year}{2022}
     \endentry
+    \entry{inss_2026_mou}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e4bf21e07fe904c35df1c02dc9bac74c}{%
+           family={Shavit},
+           familyi={S\bibinitperiod},
+           given={Eldad},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe2d5c8c7ff7c1baa5448c6f8acb202d}{%
+           family={Shine},
+           familyi={S\bibinitperiod},
+           given={Sima},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{fullhash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{fullhashraw}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{bibnamehash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{authorbibnamehash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{authornamehash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{authorfullhash}{2f4f4172efae6008462ccaddf284cbfc}
+      \strng{authorfullhashraw}{2f4f4172efae6008462ccaddf284cbfc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{INSS Insight No.~2158, Institute for National Security Studies, Tel Aviv, 22~June 2026}
+      \field{title}{Not Quite the End: The Implications of the {U.S.}--Iran Memorandum of Understanding}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.inss.org.il/publication/us-iran-negotiations/
+      \endverb
+      \verb{url}
+      \verb https://www.inss.org.il/publication/us-iran-negotiations/
+      \endverb
+    \endentry
     \entry{scotus_2026_tariffs}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3278075928b149e16e1521d0140bae79}{%
@@ -2696,10 +2895,10 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Annual exports and imports by reporter country, partner World}
+      \field{note}{Reporter totals (partner World) retrieved 14 August 2026, supplemented with partner reports retrieved 15 September 2026}
       \field{title}{UN Comtrade Database: Annual Trade in Crude Petroleum Oils (HS 2709), 2019--2024}
-      \field{urlday}{14}
-      \field{urlmonth}{8}
+      \field{urlday}{15}
+      \field{urlmonth}{9}
       \field{urlyear}{2026}
       \field{year}{2026}
       \field{urldateera}{ce}
@@ -2710,6 +2909,37 @@
       \verb https://comtradeplus.un.org
       \endverb
       \keyw{data}
+    \endentry
+    \entry{white_1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{fullhash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{fullhashraw}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{bibnamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authorbibnamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authornamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authorfullhash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authorfullhashraw}{426e452a5ec8e692f7740ce0d3e3655c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{4}
+      \field{title}{A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity}
+      \field{volume}{48}
+      \field{year}{1980}
+      \field{pages}{817\bibrangedash 838}
+      \range{pages}{22}
     \endentry
     \entry{yilmazkuday_2025}{article}{}{}
       \name{author}{1}{}{%

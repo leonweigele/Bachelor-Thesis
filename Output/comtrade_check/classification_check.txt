@@ -1,0 +1,24 @@
+2019-2024 HS 2709, current USD. Frozen reporter cells take priority.
+12-country reporter extract: 111/144 valid cells. Partner observations supply 31/33 other cells.
+BRA exporter: observed X 204.564387 bn, M 40.138953 bn, X-M +164.425435 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+CAN exporter: observed X 524.991135 bn, M 80.900539 bn, X-M +444.090596 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+COL exporter: observed X 71.875737 bn, M 1.878390 bn, X-M +69.997347 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+JPN importer: observed X 0.068599 bn, M 433.304343 bn, X-M -433.235745 bn. Mirror cells 4, unobserved cells none. Observed sign matches.
+KOR importer: observed X 0.000025 bn, M 459.176246 bn, X-M -459.176220 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+KWT exporter: observed X 270.333462 bn, M 0.000098 bn, X-M +270.333364 bn. Mirror cells 4, unobserved cells M 2019, M 2023. Observed sign matches.
+MEX exporter: observed X 142.557535 bn, M 0.020804 bn, X-M +142.536731 bn. Mirror cells 5, unobserved cells none. Observed sign matches.
+S19 importer: observed X 0.000018 bn, M 133.895172 bn, X-M -133.895154 bn. Mirror cells 6, unobserved cells none. Observed sign matches.
+NOR exporter: observed X 250.039884 bn, M 6.500823 bn, X-M +243.539061 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+SAU exporter: observed X 1042.331367 bn, M 0.901508 bn, X-M +1041.429859 bn. Mirror cells 6, unobserved cells none. Observed sign matches.
+IND importer: observed X 0.253897 bn, M 728.369656 bn, X-M -728.115759 bn. Mirror cells 6, unobserved cells none. Observed sign matches.
+THA importer: observed X 2.964392 bn, M 160.343131 bn, X-M -157.378739 bn. Mirror cells 0, unobserved cells none. Observed sign matches.
+TUR importer: observed X 9.560085 bn, M 28.583584 bn, X-M -19.023499 bn. Mirror cells 12, unobserved cells none. Observed sign matches.
+GAP KWT M 2019: unresolved, successful API query returned no records.
+GAP KWT M 2023: unresolved, successful API query returned no records.
+TUR import mirror: no returned Iraq records in [2019, 2020, 2021, 2022, 2023, 2024]. This does not establish zero trade.
+TUR import mirror: no returned Russia records in [2022, 2023, 2024]. This does not establish zero trade.
+Mirror imports = partners' exports to the target. Mirror exports = partners' imports from the target.
+Valid numeric rows do not establish complete partner coverage. Missing cells remain unobserved.
+Totals sum available values only. Observed net balances are not bounds on true net trade.
+Mirror and reporter values may differ in valuation, timing and attribution. Basket support is conditional on coverage.
+CLASSIFICATION CHECK: PASS WITH ASSUMPTIONS: all 13 observed signs match, coverage remains qualified

@@ -1,0 +1,29 @@
+{
+  "label": "mirror_SAU_target_M_2019",
+  "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "parameters": {
+    "cmdCode": "2709",
+    "partner2Code": "0",
+    "customsCode": "C00",
+    "motCode": "0",
+    "maxRecords": 500,
+    "format": "JSON",
+    "includeDesc": "true",
+    "period": "2019",
+    "flowCode": "X",
+    "partnerCode": "682"
+  },
+  "query_kind": "mirror",
+  "target_iso": "SAU",
+  "target_flow": "M",
+  "year": 2019,
+  "retrieved_at": "2026-09-15T16:14:07.934545+00:00",
+  "attempt": 1,
+  "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?cmdCode=2709&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&format=JSON&includeDesc=true&period=2019&flowCode=X&partnerCode=682",
+  "http_status": 200,
+  "sha256": "e146988935075418ac3c79d15b1c6414caa03934275d6725b1f98102f67ed028",
+  "status": "ok",
+  "row_count": 5,
+  "reported_count": 5,
+  "api_error": ""
+}
