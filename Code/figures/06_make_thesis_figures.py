@@ -71,8 +71,8 @@ The old PNG/PDFs are never used as a comparison target — they are style
 reference only, since their provenance is unknown by construction.
 
 USAGE
-  python3 Code/06_make_thesis_figures.py            # -> Output/figures/ch06_results_regen/
-  python3 Code/06_make_thesis_figures.py --install  # -> Output/figures/ch06_results/
+  python3 Code/figures/06_make_thesis_figures.py            # -> Output/figures/ch06_results_regen/
+  python3 Code/figures/06_make_thesis_figures.py --install  # -> Output/figures/ch06_results/
 The default run never touches Output/figures/ch06_results/.
 """
 
@@ -83,6 +83,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))  # shared helpers live in Code/common/
 from es_common import (ROOT, ES_OUT, EST_WIN_MAIN, EVT_WIN_MAIN,
                        EST_WIN_W50, EVT_WIN_W50, load_data, load_events,
                        rel_day, const_mean_event, ensure_latin_modern)

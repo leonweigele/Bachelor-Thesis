@@ -1,5 +1,5 @@
 """
-regression_sensitivity.py -- diagnostic companion to Code/07_safehaven_regression.py
+regression_sensitivity.py -- diagnostic companion to Code/regression/07_safehaven_regression.py
 =====================================================================================
 Read-only diagnostic. Reads the three FROZEN inputs of the thesis regression from
 ./inputs/ and writes everything to ./out/. It never touches the thesis repository.
@@ -35,7 +35,7 @@ Blocks
 
 Run:  python regression_sensitivity.py        (about 40 seconds)
 
-Placed inside the repository as Code/<name>.py with no inputs/ folder next to it, the
+Placed inside the repository as Code/regression/<name>.py with no inputs/ folder next to it, the
 script reads the frozen inputs at their repository paths and writes to
 Output/tables/regression_sensitivity/ instead. It never writes anything else.
 """
@@ -66,9 +66,9 @@ if (HERE / "inputs").is_dir():
     PATHS = {f: INP / f for f in ["returns_daily.csv", "events.csv", "tpu_daily.csv",
                                   "safehaven_regression.csv", "tab_safehaven_regression.tex"]}
 else:
-    # repository mode (script placed in Code/): read the frozen inputs in place and
+    # repository mode (script placed in Code/regression/): read the frozen inputs in place and
     # write under Output/, never next to the code
-    ROOT = HERE.parent
+    ROOT = HERE.parents[1]
     OUT = ROOT / "Output/tables/regression_sensitivity"
     PATHS = {"returns_daily.csv": ROOT / "Data/processed/returns_daily.csv",
              "events.csv": ROOT / "Data/processed/events.csv",

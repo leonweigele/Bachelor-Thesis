@@ -22,14 +22,14 @@ PREREQUISITES (do once):
      (open_session() reads that file automatically.)
 
 RUN:
-    python3 "Code/lseg_pull.py"            # full pull
-    python3 "Code/lseg_pull.py" --test     # just connect + pull EUR=, print columns
+    python3 "Code/data/lseg_pull.py"            # full pull
+    python3 "Code/data/lseg_pull.py" --test     # just connect + pull EUR=, print columns
 
 THEN:
-    python3 "Code/get_data.py"             # merges the lseg_*.csv written here
-    python3 "Code/build_fx_factors.py"     # set FWD_IS_POINTS=True (see note below)
-    python3 "Code/02_build_returns.py"
-    python3 "Code/03_event_study.py"       # after the EST_WIN=(-140,-21) fix
+    python3 "Code/data/get_data.py"             # merges the lseg_*.csv written here
+    python3 "Code/data/build_fx_factors.py"     # set FWD_IS_POINTS=True (see note below)
+    python3 "Code/data/02_build_returns.py"
+    python3 "Code/event_study/03_event_study.py"       # after the EST_WIN=(-140,-21) fix
 
 Outputs written to Data/manual/:
     lseg_fx_spot.csv            32 spot, RAW quotes, bare-ISO headers, MID
@@ -62,7 +62,7 @@ except ImportError:
 # ----------------------------------------------------------------------------
 START = "2019-01-01"
 END = "2026-06-30"                      # sample freeze (matches get_data.py)
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 MANUAL = ROOT / "Data/manual"
 MANUAL.mkdir(parents=True, exist_ok=True)
 
@@ -201,7 +201,7 @@ def main():
         save(out, fname)
 
     ld.close_session()
-    print("\nDone. Next:  python3 \"Code/get_data.py\"")
+    print("\nDone. Next:  python3 \"Code/data/get_data.py\"")
     print("NOTE: forwards are POINTS -> set FWD_IS_POINTS=True in build_fx_factors.py")
 
 

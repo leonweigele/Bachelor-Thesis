@@ -3,9 +3,9 @@ verify_results.py — compare current event-study outputs against a pinned basel
 ==================================================================================
 
 Usage:
-  python3 Code/verify_results.py                        # compare current vs baseline; exit 1 on any difference
-  python3 Code/verify_results.py --pin                  # bless ALL current outputs as baseline (deliberate step)
-  python3 Code/verify_results.py --pin FILE [FILE ...]  # bless only the named file(s), e.g. one pinned for the first time
+  python3 Code/event_study/verify_results.py                        # compare current vs baseline; exit 1 on any difference
+  python3 Code/event_study/verify_results.py --pin                  # bless ALL current outputs as baseline (deliberate step)
+  python3 Code/event_study/verify_results.py --pin FILE [FILE ...]  # bless only the named file(s), e.g. one pinned for the first time
 
 A difference is ANY of: a column present in one file but not the other; a
 duplicated or empty identifying key in either file; an added or removed row; a
@@ -25,7 +25,7 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 ES = ROOT / "Data/processed/event_study"
 BASE = ES / "baseline"
 FILES = ["car_summary.csv", "cross_event_diff.csv", "car_persistence_w50.csv"]
@@ -153,7 +153,7 @@ def compare():
                     print(e)
             if err_old and not err_cur:
                 print(f"  -> no baseline for {f} yet. Pin this file alone with: "
-                      f"python3 Code/verify_results.py --pin {f}")
+                      f"python3 Code/event_study/verify_results.py --pin {f}")
             ok_all = False
             continue
         ok, rep = compare_frames(f, old, cur)

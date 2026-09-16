@@ -13,7 +13,7 @@ Data policy: FRED first, LSEG second, no Yahoo Finance.
   - Course data (Project 2/3): copied over from Main/Data (old)/.
 
 Run:   pip install pandas requests openpyxl xlrd
-       python3 "Code/get_data.py"
+       python3 "Code/data/get_data.py"
 
 FRED routes: fredgraph.csv (no key) with fallback to the official API —
 get a free key at https://fred.stlouisfed.org/docs/api/api_key.html and
@@ -42,7 +42,7 @@ import requests
 START = "2019-01-01"
 FREEZE = "2026-06-30"      # sample freeze — cite in Ch. 4; change once, rerun
 
-ROOT = Path(__file__).resolve().parent.parent          # thesis folder
+ROOT = Path(__file__).resolve().parents[2]          # thesis folder
 RAW, MANUAL, PROC = ROOT / "Data/raw", ROOT / "Data/manual", ROOT / "Data/processed"
 OLD_RAW = ROOT / "Main/Data (old)/data/raw"            # old artefacts to reuse
 for p in (RAW, MANUAL, PROC):

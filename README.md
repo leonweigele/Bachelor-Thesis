@@ -47,7 +47,7 @@ supplement collected on 15 September 2026, as described below.
 
 | Path | Contents |
 |---|---|
-| `Code/` | The analysis pipeline (factors → returns → event study → regressions → figures), the download scripts and the two checks |
+| `Code/` | The analysis pipeline, split by method since 16 September 2026: `data/` (downloads, FX factors, returns, Comtrade extracts and check), `event_study/` (03 to 05, market-model table, verifier), `regression/` (07, 08), `figures/` (06, Figure 4.1), `common/` (shared helpers `es_common.py`, `thesis_style.py`), `legacy/` (scripts no longer part of the run), `tests/` |
 | `Data/` | `raw/` (FRED, GPR, TPU), `manual/` (LSEG CSVs, Comtrade extracts, legacy LSEG exports) and `processed/` (panel, returns, event-study outputs, pinned baseline) |
 | `Main/LaTeX Thesis/` | The thesis document (LaTeX source, chapters, tables) |
 | `Output/` | Generated figures and result tables |
@@ -62,21 +62,21 @@ These steps touch nothing in `Data/manual/`, `Data/raw/` or
 on 23 July 2026, and the Comtrade extracts in `Data/manual/`.
 
 ```bash
-python Code/build_fx_factors.py          # tercile classification from the saved lseg_fx_spot / lseg_fx_fwd1m_points CSVs (carry_classification.csv)
-python Code/02_build_returns.py          # returns, baskets, events.csv from the saved daily_panel.csv
-python Code/03_event_study.py            # CARs, estimation window [-140,-21]
-python Code/04_event_study_w50.py        # +/-50-day horizon, estimation window [-170,-51]
-python Code/05_cross_event_tests.py      # difference-in-CARs across events
-python Code/07_safehaven_regression.py   # Table 6.5
-python Code/08_regression_sensitivity.py # sensitivity of Table 6.5 (standard errors, single days, placebo windows) quoted in Sections 6.6 and 7.5; writes Output/tables/regression_sensitivity/
-python Code/make_mm_table.py             # Appendix Table 2 (market model)
-python Code/06_make_thesis_figures.py --install ; python Code/fig41_overview.py --install
-python Code/verify_results.py            # compare car_summary.csv, cross_event_diff.csv and car_persistence_w50.csv with the pinned baseline; exit 1 on any difference
-python Code/comtrade_check.py --offline  # coverage-aware check of the oil-basket classification on the saved Comtrade extracts
+python Code/data/build_fx_factors.py          # tercile classification from the saved lseg_fx_spot / lseg_fx_fwd1m_points CSVs (carry_classification.csv)
+python Code/data/02_build_returns.py          # returns, baskets, events.csv from the saved daily_panel.csv
+python Code/event_study/03_event_study.py            # CARs, estimation window [-140,-21]
+python Code/event_study/04_event_study_w50.py        # +/-50-day horizon, estimation window [-170,-51]
+python Code/event_study/05_cross_event_tests.py      # difference-in-CARs across events
+python Code/regression/07_safehaven_regression.py   # Table 6.5
+python Code/regression/08_regression_sensitivity.py # sensitivity of Table 6.5 (standard errors, single days, placebo windows) quoted in Sections 6.6 and 7.5; writes Output/tables/regression_sensitivity/
+python Code/event_study/make_mm_table.py             # Appendix Table 2 (market model)
+python Code/figures/06_make_thesis_figures.py --install ; python Code/figures/fig41_overview.py --install
+python Code/event_study/verify_results.py            # compare car_summary.csv, cross_event_diff.csv and car_persistence_w50.csv with the pinned baseline; exit 1 on any difference
+python Code/data/comtrade_check.py --offline  # coverage-aware check of the oil-basket classification on the saved Comtrade extracts
 ```
 
 The baseline in `Data/processed/event_study/baseline/` was pinned on
-15 September 2026 (`python Code/verify_results.py --pin`) after the
+15 September 2026 (`python Code/event_study/verify_results.py --pin`) after the
 `OIL_SPREAD` portfolio had been added and the retired 8 April `ceasefire`
 event dropped; the previous pin of 23 July 2026 is kept next to it as
 `*.bak_2026-07-23_prepin`. A matching run means the output files are
@@ -87,7 +87,7 @@ On 16 September 2026 `car_persistence_w50.csv`, the +/-50-day table behind the
 (0,50) column of Table 6.1, was added to the verifier (v3, record
 `.handoff/VERIFIER-W50-PROPOSAL-2026-09-16.md`). Its first pin was the file of
 11 August 2026, reproduced byte for byte from the saved inputs beforehand, with
-`python Code/verify_results.py --pin car_persistence_w50.csv`. Since v3 a pin
+`python Code/event_study/verify_results.py --pin car_persistence_w50.csv`. Since v3 a pin
 can name single files, the other baselines stay untouched, and any baseline
 that is overwritten is first copied to `<file>.bak_<date>_prepin`. The
 verifier's own tests run in temporary folders with
@@ -98,7 +98,7 @@ On 16 September 2026 the redundant `hormuz_closure` event was removed from
 2 March 2026 for the closure) mapped to the same trading day 0, so its rows
 duplicated the `hormuz` rows exactly. After re-running 02, 03 and 04,
 `car_summary.csv` (505 rows fewer) and `car_persistence_w50.csv` (15 rows fewer)
-were re-pinned with `python Code/verify_results.py --pin car_summary.csv
+were re-pinned with `python Code/event_study/verify_results.py --pin car_summary.csv
 car_persistence_w50.csv`. The previous pins are kept as `*.bak_2026-09-16_prepin`
 and `cross_event_diff.csv` was unaffected. Record: `.handoff/HORMUZ-CLOSURE-REMOVAL-2026-09-16.md`.
 
@@ -115,7 +115,7 @@ and `04_placebo_summary.csv` there.
 
 ## Comtrade evidence and remaining coverage gaps
 
-`Code/comtrade_check.py --offline` now reads the original reporter totals and
+`Code/data/comtrade_check.py --offline` now reads the original reporter totals and
 the saved official API responses in `Data/manual/comtrade_supplement_2026-09-15/`.
 It verifies response hashes and query directions. Existing reporter cells take
 priority, so supplementary partner rows are never added to an already reported
@@ -144,7 +144,7 @@ remain unchanged.
 Optional local check outputs and regression tests:
 
 ```bash
-python Code/comtrade_check.py --offline --report-dir Output/comtrade_check
+python Code/data/comtrade_check.py --offline --report-dir Output/comtrade_check
 python -m unittest discover -s Code/tests -p 'test_comtrade_check.py'
 ```
 
@@ -156,9 +156,9 @@ The offline check makes no API calls and does not change frozen inputs.
 ## Refreshing the raw data — not needed for reproduction; overwrites the saved inputs
 
 ```bash
-python Code/lseg_pull.py                 # LSEG Workspace API (needs the app key in Code/lseg-data.config.json); rewrites Data/manual/lseg_*.csv
-python Code/get_data.py                  # FRED (API key, or run off the university network), GPR, TPU; rebuilds Data/processed/daily_panel.csv
-python Code/comtrade_pull.py             # UN Comtrade HS 2709 extracts; runs the classification check afterwards
+python Code/data/lseg_pull.py                 # LSEG Workspace API (needs the app key in Code/data/lseg-data.config.json); rewrites Data/manual/lseg_*.csv
+python Code/data/get_data.py                  # FRED (API key, or run off the university network), GPR, TPU; rebuilds Data/processed/daily_panel.csv
+python Code/data/comtrade_pull.py             # UN Comtrade HS 2709 extracts; runs the classification check afterwards
 ```
 
 After a refresh, rerun the reproduction steps above; the verifier will then
@@ -168,14 +168,14 @@ Notes:
 
 - `Data/manual/LSEG_legacy_ends_2026-06-16/` holds the manual LSEG Excel
   exports of June 2026 (series end 16 June 2026, gold as `XAU=ZKBZ`, one
-  Brazilian NDF file). `Code/consolidate_lseg.py` belongs to that legacy
+  Brazilian NDF file). `Code/legacy/consolidate_lseg.py` belongs to that legacy
   route only; run over the shipped CSVs it would overwrite the 23 July inputs,
   so it refuses to write unless called with `--force`.
 - `Data/raw/data_gpr_daily_recent.xls` (2 July 2026) is a superseded manual
   download; the pipeline reads `Data/raw/gpr_daily.csv` (23 July 2026).
-- `Code/plot_currency_sensitivities.py` drew a figure that is no longer in the
+- `Code/legacy/plot_currency_sensitivities.py` drew a figure that is no longer in the
   thesis and is not part of the run.
-- `Code/fred_api_key.txt` and `Code/lseg-data.config.json` are local
+- `Code/data/fred_api_key.txt` and `Code/data/lseg-data.config.json` are local
   credentials, ignored by git and not part of anything handed in.
 
 Scripts run on whatever data is present and warn about gaps rather than

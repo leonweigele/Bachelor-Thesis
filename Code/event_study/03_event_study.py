@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PROC = ROOT / "Data/processed"
 OUT = PROC / "event_study"
 FIGS = ROOT / "Output/figures/ch06_results"
@@ -141,6 +141,8 @@ def run_event(data, name, date):
     return path_df, rows
 
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))  # shared helpers live in Code/common/
 from thesis_style import (apply_style, style_axis, legend_below,
                           panel_label, save_fig, PALETTE)
 import matplotlib.pyplot as plt

@@ -11,8 +11,8 @@ Day-0 mapping corrected 2026-08-20 (CODE_AUDIT.md): markers now resolve with
 searchsorted, matching the rest of the pipeline, instead of "nearest".
 
 Run from the thesis root AFTER get_data.py:
-    python3 "Code/fig41_overview.py"              # dry run -> _ch04_regen/
-    python3 "Code/fig41_overview.py" --install    # writes the thesis copies
+    python3 "Code/figures/fig41_overview.py"              # dry run -> _ch04_regen/
+    python3 "Code/figures/fig41_overview.py" --install    # writes the thesis copies
 Outputs -> Output/figures/ch04_background/{fig_overview_dollar,fig_overview_oil,
            fig_overview_gpr}.{png,pdf}
 
@@ -31,10 +31,10 @@ import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))  # shared helpers live in Code/common/
 from es_common import ensure_latin_modern, load_events
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PROC = ROOT / "Data/processed"
 RAW = ROOT / "Data/raw"
 FINAL_OUT = ROOT / "Output/figures/ch04_background"

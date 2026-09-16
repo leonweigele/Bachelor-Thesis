@@ -1,7 +1,7 @@
 """Refresh the original Comtrade extracts and check oil-basket signs.
 
 This overwrites the saved inputs. For reproduction without new API calls, use
-Code/comtrade_check.py --offline instead.
+Code/data/comtrade_check.py --offline instead.
 
 Pull annual HS 2709 reporter totals for 12 countries, 2019-2025, partner World,
 plus partners' exports to Türkiye. The coverage-aware checker then queries
@@ -15,8 +15,8 @@ exit 1 for a failed or incomplete check, and exit 0 for matching signs with
 reporter totals in every classification cell.
 
 USAGE
-  python3 Code/comtrade_pull.py                     # keyless public preview API
-  COMTRADE_API_KEY=xxx python3 Code/comtrade_pull.py # optional subscription key
+  python3 Code/data/comtrade_pull.py                     # keyless public preview API
+  COMTRADE_API_KEY=xxx python3 Code/data/comtrade_pull.py # optional subscription key
 
 OUTPUTS
   Data/manual/comtrade_crude_2709_api.csv         12 reporter countries
@@ -31,7 +31,7 @@ from pathlib import Path
 import pandas as pd
 import comtradeapicall as ct
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Data/manual"
 KEY = os.environ.get("COMTRADE_API_KEY")
 

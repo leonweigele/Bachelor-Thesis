@@ -10,10 +10,10 @@ __pycache__/
 /_to_delete/
 
 # LSEG Data Library app key — SECRET, never commit
-/Code/lseg-data.config.json
+/Code/data/lseg-data.config.json
 
 # FRED API key — SECRET, never commit
-/Code/fred_api_key.txt
+/Code/data/fred_api_key.txt
 
 # Reference material & working drafts — kept locally, not published
 # (folders created in the 2026-08-20 root reorganisation)
@@ -26,11 +26,11 @@ __pycache__/
 /audit.html
 /PROSE_FIXES_2026-08-20.md
 
-# Regenerable figure previews (Code/06_make_thesis_figures.py temp output)
+# Regenerable figure previews (Code/figures/06_make_thesis_figures.py temp output)
 /Output/figures/ch06_results_regen/
 
 # Licensed LSEG / Refinitiv market data — kept locally, NOT redistributable.
-# Regenerate from your own LSEG access via Code/get_data.py + consolidate_lseg.py
+# Regenerate from your own LSEG access via Code/data/get_data.py + consolidate_lseg.py
 # (see Data/manual/LSEG_TODO.md). Derived returns/factors/results are kept.
 /Data/manual/LSEG/
 /Data/manual/lseg_fx_spot.csv

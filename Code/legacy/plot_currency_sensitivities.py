@@ -22,9 +22,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))  # shared helpers live in Code/common/
 from thesis_style import apply_style, save_fig
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PROC = ROOT / "Data/processed"
 
 rx = pd.read_csv(PROC / "fx_excess_returns_monthly.csv", parse_dates=["date"], index_col="date")

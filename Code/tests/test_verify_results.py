@@ -1,8 +1,8 @@
-"""Regression checks for Code/verify_results.py.
+"""Regression checks for Code/event_study/verify_results.py.
 
 Every test builds a throw-away copy of the verifier, the three event-study
 output files and their baselines in a temporary folder, runs the script there
-as a subprocess (exactly as `python3 Code/verify_results.py` is run by hand)
+as a subprocess (exactly as `python3 Code/event_study/verify_results.py` is run by hand)
 and checks the exit code and the report. Nothing in the repository is touched.
 
 Run from the repo root:
@@ -10,7 +10,7 @@ Run from the repo root:
 
 Environment overrides:
     VERIFY_TEST_ROOT    repo root holding Data/processed/event_study (default: two levels up)
-    VERIFY_TEST_SCRIPT  verifier under test (default: <root>/Code/verify_results.py)
+    VERIFY_TEST_SCRIPT  verifier under test (default: <root>/Code/event_study/verify_results.py)
     VERIFY_TEST_V2      optional path to the previous verifier; enables the
                         check that its report lines for the two old files are reproduced
 """
@@ -26,7 +26,7 @@ from hashlib import sha256
 from pathlib import Path
 
 ROOT = Path(os.environ.get("VERIFY_TEST_ROOT", Path(__file__).resolve().parents[2]))
-SCRIPT = Path(os.environ.get("VERIFY_TEST_SCRIPT", ROOT / "Code/verify_results.py"))
+SCRIPT = Path(os.environ.get("VERIFY_TEST_SCRIPT", ROOT / "Code/event_study/verify_results.py"))
 V2 = os.environ.get("VERIFY_TEST_V2")
 ES = Path("Data/processed/event_study")
 SUMMARY, DIFF, W50 = "car_summary.csv", "cross_event_diff.csv", "car_persistence_w50.csv"
@@ -40,7 +40,7 @@ def digest(path):
 
 
 class VerifyResultsTests(unittest.TestCase):
-    """Fresh tree per test: Code/verify_results.py, the three current files and
+    """Fresh tree per test: Code/event_study/verify_results.py, the three current files and
     baselines for all three. The new file's baseline is a copy of its current
     file, i.e. the state right after `--pin car_persistence_w50.csv`."""
 
@@ -49,8 +49,8 @@ class VerifyResultsTests(unittest.TestCase):
         self.tmp = Path(self._tmp.name)
         self.es, self.base = self.tmp / ES, self.tmp / ES / "baseline"
         self.base.mkdir(parents=True)
-        (self.tmp / "Code").mkdir()
-        shutil.copy(SCRIPT, self.tmp / "Code/verify_results.py")
+        (self.tmp / "Code/event_study").mkdir(parents=True)
+        shutil.copy(SCRIPT, self.tmp / "Code/event_study/verify_results.py")
         for f in FILES:
             shutil.copy(ROOT / ES / f, self.es / f)
         for f in (SUMMARY, DIFF):
@@ -63,7 +63,7 @@ class VerifyResultsTests(unittest.TestCase):
 
     # ------------------------------------------------------------ helpers
     def run_verifier(self, *args, script=None):
-        script = script or self.tmp / "Code/verify_results.py"
+        script = script or self.tmp / "Code/event_study/verify_results.py"
         return subprocess.run([sys.executable, str(script), *args],
                               capture_output=True, text=True, cwd=self.tmp)
 

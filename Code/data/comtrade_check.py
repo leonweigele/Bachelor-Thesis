@@ -25,7 +25,7 @@ M49 = {"BRA": "76", "CAN": "124", "COL": "170", "JPN": "392", "KOR": "410", "KWT
        "TUR": "792"}
 EXPORTERS = {"NOR", "CAN", "MEX", "COL", "BRA", "SAU", "KWT"}
 IMPORTERS = {"JPN", "KOR", "IND", "THA", "S19", "TUR"}
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 API_CSV = ROOT / "Data/manual/comtrade_crude_2709_api.csv"
 MIRROR_CSV = ROOT / "Data/manual/comtrade_crude_2709_mirror_tur.csv"
 SUPPLEMENT = ROOT / "Data/manual/comtrade_supplement_2026-09-15"

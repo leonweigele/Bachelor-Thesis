@@ -32,7 +32,7 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "Data/manual/LSEG_legacy_ends_2026-06-16"   # legacy manual exports (moved 2026-09-14)
 OUT = ROOT / "Data/manual"
 
