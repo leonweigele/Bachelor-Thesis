@@ -66,12 +66,14 @@ python Code/data/build_fx_factors.py          # tercile classification from the 
 python Code/data/02_build_returns.py          # returns, baskets, events.csv from the saved daily_panel.csv
 python Code/event_study/03_event_study.py            # CARs, estimation window [-140,-21]
 python Code/event_study/04_event_study_w50.py        # +/-50-day horizon, estimation window [-170,-51]
-python Code/event_study/05_cross_event_tests.py      # difference-in-CARs across events
+python Code/event_study/05_cross_event_tests.py      # difference-in-CARs across events (all four pairs computed, three printed in Table 6.3)
+python Code/event_study/09_benchmark_sensitivity.py  # the twelve-day war's CARs and the Liberation Day - war difference under three benchmarks (Section 6.5 caveat); writes benchmark_sensitivity.csv
 python Code/regression/07_safehaven_regression.py   # Table 6.5
 python Code/regression/08_regression_sensitivity.py # sensitivity of Table 6.5 (standard errors, single days, placebo windows) quoted in Sections 6.6 and 7.5; writes Output/tables/regression_sensitivity/
 python Code/event_study/make_mm_table.py             # Appendix Table 2 (market model)
 python Code/figures/06_make_thesis_figures.py --install ; python Code/figures/fig41_overview.py --install
-python Code/event_study/verify_results.py            # compare car_summary.csv, cross_event_diff.csv and car_persistence_w50.csv with the pinned baseline; exit 1 on any difference
+python Code/event_study/verify_results.py            # compare car_summary.csv, cross_event_diff.csv, car_persistence_w50.csv and benchmark_sensitivity.csv with the pinned baseline; exit 1 on any difference
+python Code/event_study/10_prose_checks.py           # read the hand-typed numbers of Sections 5.1.1, 6.3, 6.5, 7.1, 7.5 and Tables 6.1/6.4 from the LaTeX and compare them with their recomputation, with exit 1 on a mismatch or a missing passage
 python Code/data/comtrade_check.py --offline  # coverage-aware check of the oil-basket classification on the saved Comtrade extracts
 ```
 
@@ -101,6 +103,19 @@ duplicated the `hormuz` rows exactly. After re-running 02, 03 and 04,
 were re-pinned with `python Code/event_study/verify_results.py --pin car_summary.csv
 car_persistence_w50.csv`. The previous pins are kept as `*.bak_2026-09-16_prepin`
 and `cross_event_diff.csv` was unaffected. Record: `.handoff/HORMUZ-CLOSURE-REMOVAL-2026-09-16.md`.
+
+On 16 September 2026 the Liberation Day vs twelve-day war pair was taken out of the
+printed Table 6.3 and of the difference figure, while `05_cross_event_tests.py` still
+computes it (`cross_event_diff.csv` unchanged, 96 rows, `TABLE_PAIRS` selects the
+printed rows). The war's [-140,-21] estimation window contains all 41 days of the
+Liberation Day event window, so its benchmark is contaminated (Section 6.5).
+`09_benchmark_sensitivity.py` records the war's CARs and the pair's difference under
+the pipeline benchmark, the same window without those 41 days, and Liberation Day's
+own window as a shared benchmark. Its output `benchmark_sensitivity.csv` is the
+fourth verifier file, pinned from its first run with
+`python Code/event_study/verify_results.py --pin benchmark_sensitivity.csv`. The
+thesis prints none of the cleaned rows. `06_make_thesis_figures.py` draws three
+difference panels (39 stems).
 
 On 16 September 2026 `08_regression_sensitivity.py` was added. It rebuilds the four
 specifications of Table 6.5 from the saved inputs, ties them to

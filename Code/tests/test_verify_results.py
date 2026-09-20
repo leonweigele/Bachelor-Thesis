@@ -1,6 +1,6 @@
 """Regression checks for Code/event_study/verify_results.py.
 
-Every test builds a throw-away copy of the verifier, the three event-study
+Every test builds a throw-away copy of the verifier, the four event-study
 output files and their baselines in a temporary folder, runs the script there
 as a subprocess (exactly as `python3 Code/event_study/verify_results.py` is run by hand)
 and checks the exit code and the report. Nothing in the repository is touched.
@@ -30,7 +30,8 @@ SCRIPT = Path(os.environ.get("VERIFY_TEST_SCRIPT", ROOT / "Code/event_study/veri
 V2 = os.environ.get("VERIFY_TEST_V2")
 ES = Path("Data/processed/event_study")
 SUMMARY, DIFF, W50 = "car_summary.csv", "cross_event_diff.csv", "car_persistence_w50.csv"
-FILES = [SUMMARY, DIFF, W50]
+SENS = "benchmark_sensitivity.csv"          # added 2026-09-16, pinned from its first run
+FILES = [SUMMARY, DIFF, W50, SENS]
 IDENTICAL, DIFFERS = "RESULT: IDENTICAL", "RESULT: DIFFERS"
 TODAY = f"{date.today():%Y-%m-%d}"
 
@@ -40,8 +41,8 @@ def digest(path):
 
 
 class VerifyResultsTests(unittest.TestCase):
-    """Fresh tree per test: Code/event_study/verify_results.py, the three current files and
-    baselines for all three. The new file's baseline is a copy of its current
+    """Fresh tree per test: Code/event_study/verify_results.py, the four current files and
+    baselines for all four. The new file's baseline is a copy of its current
     file, i.e. the state right after `--pin car_persistence_w50.csv`."""
 
     def setUp(self):
@@ -53,7 +54,7 @@ class VerifyResultsTests(unittest.TestCase):
         shutil.copy(SCRIPT, self.tmp / "Code/event_study/verify_results.py")
         for f in FILES:
             shutil.copy(ROOT / ES / f, self.es / f)
-        for f in (SUMMARY, DIFF):
+        for f in (SUMMARY, DIFF, SENS):
             shutil.copy(ROOT / ES / "baseline" / f, self.base / f)
         shutil.copy(self.es / W50, self.base / W50)
         self.n = {f: len(self.rows(f)) - 1 for f in FILES}      # data rows per file

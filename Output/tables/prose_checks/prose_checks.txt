@@ -1,0 +1,63 @@
+Prose checks: 37 thesis values in 10 passages read from the active LaTeX and compared with the recomputed results
+
+                                       passage                      file                         quantity          thesis   computed  match
+        Table 6.4 row 1 (estimation-window sd)    tab_se_sensitivity.tex                         t64_diff           -7.24  -7.237189   True
+        Table 6.4 row 1 (estimation-window sd)    tab_se_sensitivity.tex                          t64_se1            1.76   1.762744   True
+        Table 6.4 row 1 (estimation-window sd)    tab_se_sensitivity.tex                           t64_t1           -4.11  -4.105639   True
+        Table 6.4 row 1 (estimation-window sd)    tab_se_sensitivity.tex                         t64_lvl1               1          1   True
+Table 6.4 row 2 (plus mu-hat estimation error)    tab_se_sensitivity.tex                         t64_diff           -7.24  -7.237189   True
+Table 6.4 row 2 (plus mu-hat estimation error)    tab_se_sensitivity.tex                          t64_se2            1.91   1.910769   True
+Table 6.4 row 2 (plus mu-hat estimation error)    tab_se_sensitivity.tex                           t64_t2           -3.79  -3.787580   True
+Table 6.4 row 2 (plus mu-hat estimation error)    tab_se_sensitivity.tex                         t64_lvl2               1          1   True
+             Table 6.4 row 3 (event-window sd)    tab_se_sensitivity.tex                         t64_diff           -7.24  -7.237189   True
+             Table 6.4 row 3 (event-window sd)    tab_se_sensitivity.tex                          t64_se3            2.99   2.990952   True
+             Table 6.4 row 3 (event-window sd)    tab_se_sensitivity.tex                           t64_t3           -2.42  -2.419694   True
+             Table 6.4 row 3 (event-window sd)    tab_se_sensitivity.tex                         t64_lvl3               5          5   True
+            Table 6.4 row 4 (both corrections)    tab_se_sensitivity.tex                         t64_diff           -7.24  -7.237189   True
+            Table 6.4 row 4 (both corrections)    tab_se_sensitivity.tex                          t64_se4            3.24   3.242114   True
+            Table 6.4 row 4 (both corrections)    tab_se_sensitivity.tex                           t64_t4           -2.23  -2.232244   True
+            Table 6.4 row 4 (both corrections)    tab_se_sensitivity.tex                         t64_lvl4               5          5   True
+                Section 5.1.1 holiday footnote   05_data_methodology.tex                       t_original           -4.11  -4.105639   True
+                Section 5.1.1 holiday footnote   05_data_methodology.tex              t_excl_zero_returns           -4.03  -4.027637   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                         vix_9feb           19.96  19.960000   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                        vix_daym1           31.02  31.020000   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                        ukr_daym1     23~February 2022-02-23   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                        vix_dayp1           27.59  27.590000   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                   ukr_car_m20_m1           -0.63  -0.634522   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                     ukr_t_m20_m1           -0.63  -0.629440   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                    ukr_car_m5_m1           -0.09  -0.085065   True
+       Section 6.3 Ukraine anticipation caveat            06_results.tex                          ukr_ar0           +1.09   1.092656   True
+                  Section 6.5 IEEPA disclosure            06_results.tex                   ruling_rel_day              -6         -6   True
+                  Section 6.5 IEEPA disclosure            06_results.tex                   hormuz_est_end 30~January 2026 2026-01-30   True
+                  Section 6.5 IEEPA disclosure            06_results.tex                 hormuz_car_m6_m1           -0.25  -0.247657   True
+                  Section 6.5 IEEPA disclosure            06_results.tex                   hormuz_t_m6_m1           -0.45  -0.452995   True
+                  Section 6.5 IEEPA disclosure            06_results.tex                   hormuz_car_0_1           +1.39   1.392834   True
+                Section 7.1 asymmetry sentence         07_discussion.tex                   ld_car_0_1_abs            1.44   1.440864   True
+                Section 7.1 asymmetry sentence         07_discussion.tex                 hormuz_car_m6_m1           -0.25  -0.247657   True
+                  Section 7.5 strikes sentence         07_discussion.tex   strikes_days_on_or_after_onset              40         40   True
+                  Section 7.5 strikes sentence         07_discussion.tex                 strikes_est_days             120        120   True
+            Table 6.1 note, ceasefire sentence tab_es_dollar_horizon.tex                ceasefire_est_end         9~March 2026-03-09   True
+            Table 6.1 note, ceasefire sentence tab_es_dollar_horizon.tex ceasefire_days_on_or_after_onset             six          6   True
+
+Diagnostics (recomputed, not printed in the thesis, not compared):
+   section                                                                    quantity                 computed
+ Table 6.4 event-window sd of abnormal returns, days 0..+20, Liberation Day, % per day                 0.539107
+ Table 6.4         event-window sd of abnormal returns, days 0..+20, Hormuz, % per day                 0.367904
+ Table 6.4                             estimation-window sd, Liberation Day, % per day                 0.313289
+ Table 6.4                                     estimation-window sd, Hormuz, % per day                 0.223193
+Sec. 5.1.1               zero returns in the Liberation Day estimation window (of 120)                        7
+Sec. 5.1.1                       zero returns in the Hormuz estimation window (of 120)                        7
+Sec. 5.1.1                               zero returns in the two (0,+20) event windows                        0
+  Sec. 6.3                                                               Ukraine day 0               2022-02-24
+  Sec. 6.3                                                    Ukraine benchmark window 2021-08-12 to 2022-01-26
+  Sec. 6.3                                           Ukraine benchmark mean, % per day                 0.013211
+  Sec. 6.3                                             Ukraine benchmark sd, % per day                 0.225412
+  Sec. 6.5                         ruling 2026-02-20 = trading day of the Hormuz event                       -6
+  Sec. 6.5                                            raw return sum of days -6..-1, %                -0.350000
+  Sec. 7.1                                         Liberation Day CAR(0,+1), signed, %                -1.440864
+  Sec. 7.5                                                   strikes estimation window 2025-11-10 to 2026-04-24
+  Sec. 7.5                                              trading days after 25 May 2026                       26
+  Sec. 7.5                                             trading days after 17 June 2026                        9
+  Sec. 7.5                                                                  sample end               2026-06-30
+
+RESULT: All selected thesis values match the recomputed results. 37 values in 10 passages: Section 5.1.1 holiday footnote; Section 6.3 Ukraine anticipation caveat; Section 6.5 IEEPA disclosure; Section 7.1 asymmetry sentence; Section 7.5 strikes sentence; Table 6.1 note, ceasefire sentence; Table 6.4 row 1 (estimation-window sd); Table 6.4 row 2 (plus mu-hat estimation error); Table 6.4 row 3 (event-window sd); Table 6.4 row 4 (both corrections).

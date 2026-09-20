@@ -7,9 +7,9 @@ one-off session on 2026-08-04 and only the images landed on disk), and the
 fig_diff_* captions assert a confidence band that nothing on disk computed.
 This script puts the whole figure layer back under code.
 
-SCOPE — 40 files, of which the thesis includes 36:
+SCOPE — 39 files, of which the thesis includes 35:
   fig_car_<event>_<series>_half      4 events x 6 series          = 24
-  fig_diff_<pair>_half               4 pairs                      =  4
+  fig_diff_<pair>_half               3 pairs                      =  3
   fig_w50_<event>_<series>_half      3 events x 4 series          = 12
       (fig_w50_ukraine_* exist on disk but are not \\includegraphics'd
        anywhere in the thesis; regenerated for completeness only.)
@@ -29,7 +29,7 @@ VERTICAL SCALES (Option B, adopted 2026-09-15 after the 2026-09-11 comparison
 in Output/figures/ch06_results_B_shared_scale/). Within one figure the panels
 that show the same kind of quantity share one y-range: the five currency panels
 of each fig_car_<event> figure, the usd/oilexp/oilimp panels of each fig_w50
-figure, and all four fig_diff panels. Brent keeps its own range (it moves five
+figure, and all three fig_diff panels. Brent keeps its own range (it moves five
 to ten times as much). The shared range is the union of the ranges matplotlib
 would choose for the panels on their own (same data, same margins), so nothing
 is clipped and no number changes; the ranges used are written to YLIMITS.txt
@@ -43,19 +43,15 @@ at day 0 (as 03_event_study.py:242 does for its own cross-event figure via
 at -6.42 pp instead of the -7.237 pp that Table 6.3 / cross_event_diff.csv
 report. Verified numerically in verify_diff() below.
 
-CONTEXT MARKERS. Dated sub-events are marked with a dot and a text label.
-Two kinds:
-  - rows of Data/processed/events.csv (tariff pause, Hormuz ceasefire);
-  - context dates that are NOT events.csv rows but are documented in the
-    thesis and its sources — kept because the printed captions name them:
-      13 Mar 2026 Kharg Island strikes   content/04_background.tex:24
-      13 Apr 2026 US naval blockade      content/04_background.tex:26 (also
-                                         events.csv description of
-                                         hormuz_ceasefire: "collapsed 13 Apr")
-      24 Jun 2025 twelve-day-war ceasefire  content/04_background.tex:22
-  No entry is added to events.csv; the dates live only in this script's
-  MARKERS tables, with their provenance, and the discrepancy between the
-  Hormuz +/-50 caption and events.csv is reported by report_discrepancies().
+SUB-EVENT MARKERS. A sub-event is marked with a dot and a text label only if
+it is a row of Data/processed/events.csv with a CAR of its own in the event
+study (tariff pause in the Liberation Day figures, Hormuz ceasefire in the
+Hormuz +/-50 figures). The context dates that earlier versions also drew from
+the Chapter 4 narrative (13 Mar 2026 Kharg Island strikes, 13 Apr 2026 US
+naval blockade, 24 Jun 2025 twelve-day-war ceasefire) were removed on
+2026-09-16 at Leon's instruction: no marker without an events.csv row.
+resolve_marker_date() still accepts a literal date tuple, so nothing else
+would have to change if a context date were ever wanted again.
 
 VERIFICATION (run automatically, hard-fails on any mismatch):
   fig_car_*   every recomputed CAR path must equal the corresponding column
@@ -114,8 +110,11 @@ BAND_ALPHA = 0.15
 CAR_EVENTS = ["liberation_day", "iran_12day", "hormuz", "ukraine"]
 W50_EVENTS = ["hormuz", "liberation_day", "ukraine"]
 W50_SERIES = ["usd", "brent", "oilexp", "oilimp"]
+# (liberation_day, iran_12day) is computed by 05_cross_event_tests.py but not printed
+# (2026-09-16): the war's estimation window contains the whole Liberation Day event
+# window, so its benchmark is contaminated (thesis Section 6.5). No panel for it.
 DIFF_PAIRS = [("liberation_day", "hormuz"), ("liberation_day", "ukraine"),
-              ("hormuz", "ukraine"), ("liberation_day", "iran_12day")]
+              ("hormuz", "ukraine")]
 
 # figure titles: car figures use the chapter-6 event names, diff figures the
 # shorter names of 05_cross_event_tests.py (visible in the existing images)
@@ -129,15 +128,13 @@ PAUSE = ("events.csv", "tariff_pause")            # resolved from events.csv
 CEASE = ("events.csv", "hormuz_ceasefire")        # resolved from events.csv
 CAR_MARKERS = {
     "liberation_day": [(PAUSE, "tariff pause", "below")],
-    "iran_12day": [(("2025-06-24",), "ceasefire", "below")],          # 04_background.tex:22
-    "hormuz": [(("2026-03-13",), "Kharg Island strikes", "above")],   # 04_background.tex:24
+    "iran_12day": [],
+    "hormuz": [],
     "ukraine": [],
 }
 W50_MARKERS = {
     "liberation_day": [(PAUSE, "tariff pause", "below")],
-    "hormuz": [(("2026-03-13",), "Kharg Island strikes", "above"),    # 04_background.tex:24
-               (CEASE, "ceasefire", "above"),
-               (("2026-04-13",), "US blockade", "below")],            # 04_background.tex:26
+    "hormuz": [(CEASE, "ceasefire", "above")],
     "ukraine": [],
 }
 
@@ -329,13 +326,7 @@ def report_discrepancies():
     return (
         "CAPTION DISCREPANCIES (reported, not papered over):\n"
         "(a) The Hormuz +/-50 caption (content/06_results.tex, fig:car_hormuz_w50)\n"
-        "    marks a '13 April naval blockade' that has no row in events.csv.\n"
-        "    Handling: the marker is drawn from a context date hard-coded in this\n"
-        "    script, sourced to content/04_background.tex:26 and the events.csv\n"
-        "    description of hormuz_ceasefire ('collapsed 13 Apr'). No events.csv\n"
-        "    row was invented. Same treatment for the 13 Mar Kharg Island strikes\n"
-        "    (04_background.tex:24) and the 24 Jun 2025 ceasefire (:22).\n"
-        "(b) The same caption says the panel spans -10 to +50, while\n"
+        "    says the panel spans -10 to +50, while\n"
         "    04_event_study_w50.py hard-codes its own two-panel figures to +/-50.\n"
         "    Handling: these single-series panels follow the CAPTION (-10..+50) —\n"
         "    that is what the thesis prints and what the old images show; 04's\n"
@@ -400,7 +391,7 @@ def main(install=False):
                         + ("  (shared)" if skey in W50_SHARED else "  (own)"))
             verify_w50(check, stem, res[skey], event, col, w50_long)
 
-    # ---- fig_diff_* : all four panels share one scale ----------------------
+    # ---- fig_diff_* : all three panels share one scale ---------------------
     resd = {pair: (const_mean_event(data, "r_DTWEXBGS", ev_dates[pair[0]]),
                    const_mean_event(data, "r_DTWEXBGS", ev_dates[pair[1]]))
             for pair in DIFF_PAIRS}

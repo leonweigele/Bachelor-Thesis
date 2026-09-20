@@ -1,0 +1,19 @@
+section,quantity,computed
+Table 6.4,"event-window sd of abnormal returns, days 0..+20, Liberation Day, % per day",0.539107
+Table 6.4,"event-window sd of abnormal returns, days 0..+20, Hormuz, % per day",0.367904
+Table 6.4,"estimation-window sd, Liberation Day, % per day",0.313289
+Table 6.4,"estimation-window sd, Hormuz, % per day",0.223193
+Sec. 5.1.1,zero returns in the Liberation Day estimation window (of 120),7
+Sec. 5.1.1,zero returns in the Hormuz estimation window (of 120),7
+Sec. 5.1.1,"zero returns in the two (0,+20) event windows",0
+Sec. 6.3,Ukraine day 0,2022-02-24
+Sec. 6.3,Ukraine benchmark window,2021-08-12 to 2022-01-26
+Sec. 6.3,"Ukraine benchmark mean, % per day",0.013211
+Sec. 6.3,"Ukraine benchmark sd, % per day",0.225412
+Sec. 6.5,ruling 2026-02-20 = trading day of the Hormuz event,-6
+Sec. 6.5,"raw return sum of days -6..-1, %",-0.350000
+Sec. 7.1,"Liberation Day CAR(0,+1), signed, %",-1.440864
+Sec. 7.5,strikes estimation window,2025-11-10 to 2026-04-24
+Sec. 7.5,trading days after 25 May 2026,26
+Sec. 7.5,trading days after 17 June 2026,9
+Sec. 7.5,sample end,2026-06-30

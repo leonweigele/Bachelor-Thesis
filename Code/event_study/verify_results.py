@@ -28,12 +28,18 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 ES = ROOT / "Data/processed/event_study"
 BASE = ES / "baseline"
-FILES = ["car_summary.csv", "cross_event_diff.csv", "car_persistence_w50.csv"]
+FILES = ["car_summary.csv", "cross_event_diff.csv", "car_persistence_w50.csv",
+         "benchmark_sensitivity.csv"]
 KEYS = {
     "car_summary.csv": ["event", "series", "method", "window"],
     "cross_event_diff.csv": ["series", "pair", "window"],
     "car_persistence_w50.csv": ["series", "event"],
+    "benchmark_sensitivity.csv": ["benchmark", "window"],
 }
+# benchmark_sensitivity.csv (written by 09_benchmark_sensitivity.py, 2026-09-16) holds
+# the twelve-day war's CARs and the Liberation Day - war difference under three
+# benchmarks, one row per (benchmark, window). Numeric columns are rounded by the
+# script, the two significance columns are text.
 # car_persistence_w50.csv (written by 04_event_study_w50.py) is the wide table
 # behind Table 6.1's (0,50) column: one row per (series, event), columns
 # "(0,5)", "(0,20)", "(0,50)", cells like "-1.0**" (CAR in percent, two

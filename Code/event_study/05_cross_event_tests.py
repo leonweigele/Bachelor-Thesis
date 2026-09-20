@@ -16,9 +16,20 @@ Independence across the two event windows is reasonable here because the events 
 far apart in calendar time (the closest pair, Liberation Day vs the twelve-day war,
 is ~52 trading days apart, so the (0,h<=20) windows do not overlap).
 
+Computed vs printed pairs (2026-09-16). Every pair in PAIRS is computed and written to
+cross_event_diff.csv. A pair is printed in the thesis table only if neither event's
+[-140,-21] estimation window contains the other's [-20,+20] event window, so that no
+event's abnormal returns sit inside the other's benchmark. Liberation Day vs the
+twelve-day war fails that condition. The war's estimation window (2024-11-29 to
+2025-05-15) holds all 41 Liberation Day event-window days, which shifts the war's
+benchmark mean by 0.041 percentage points per day and its standard deviation by 13
+percent (a contaminated estimation benchmark, thesis Section 6.5). The pair stays in
+the CSV for the record and is left out of TABLE_PAIRS. Its row under cleaned
+benchmarks is in 09_benchmark_sensitivity.py.
+
 Outputs:
   Data/processed/event_study/cross_event_diff.csv     all pairs x series x windows
-  Main/LaTeX Thesis/content/tab_cross_event_diff.tex  dollar table for Section 5.3
+  Main/LaTeX Thesis/content/tab_cross_event_diff.tex  dollar table for Section 6.3 (TABLE_PAIRS only)
 """
 
 from pathlib import Path
@@ -39,6 +50,9 @@ PAIRS = [("liberation_day", "hormuz"),
          ("liberation_day", "ukraine"),
          ("hormuz", "ukraine"),
          ("liberation_day", "iran_12day")]
+# pairs printed in tab_cross_event_diff.tex: all of PAIRS except Liberation Day vs the
+# twelve-day war, whose benchmark is contaminated (module docstring, thesis Section 6.5).
+TABLE_PAIRS = [p for p in PAIRS if p != ("liberation_day", "iran_12day")]
 SERIES = ["r_DTWEXBGS", "USD_EW", "SAFE", "r_DCOILBRENTEU", "r_Oil_EUR", "r_Gold_EUR"]
 NICE_EV = {"liberation_day": "Liberation Day", "hormuz": "Hormuz crisis",
            "ukraine": "Ukraine", "iran_12day": "Twelve-day war"}
@@ -100,7 +114,7 @@ if __name__ == "__main__":
     res = pd.DataFrame(rows)
     res.to_csv(OUT / "cross_event_diff.csv", index=False)
 
-    # ---- LaTeX table: broad USD index, all pairs x horizons --------------------
+    # ---- LaTeX table: broad USD index, printed pairs x horizons ----------------
     usd = res[res.series == "r_DTWEXBGS"]
 
     def cell(a, b, h):
@@ -123,7 +137,7 @@ if __name__ == "__main__":
         r"\cmidrule(lr){2-5}",
         r"Contrast (A $-$ B) & \multicolumn{1}{c}{$h{=}1$} & \multicolumn{1}{c}{$h{=}5$} & \multicolumn{1}{c}{$h{=}10$} & \multicolumn{1}{c@{}}{$h{=}20$} \\", r"\midrule",
     ]
-    for a, b in PAIRS:
+    for a, b in TABLE_PAIRS:
         label = f"{NICE_EV[a]} $-$ {NICE_EV[b]}"
         lines.append(f"{label} & {cell(a,b,1)} & {cell(a,b,5)} & {cell(a,b,10)} & {cell(a,b,20)} \\\\")
     lines += [
@@ -132,9 +146,11 @@ if __name__ == "__main__":
         r"\item \textit{Notes.} Difference between two events' cumulative abnormal "
         r"returns of the broad nominal U.S.\ dollar index (\%), constant-mean model, "
         r"estimation window $[-140,-21]$. Standard errors follow "
-        r"equation~\eqref{eq:cross_event_difference}; each window includes day~0 "
+        r"equation~\eqref{eq:cross_event_difference}. Each window includes day~0 "
         r"through day~$h$, and events are treated as independent because their "
-        r"windows do not overlap. A positive value means the dollar rose "
+        r"windows do not overlap. The twelve-day war is not paired with Liberation "
+        r"Day because its estimation window contains the Liberation Day event "
+        r"window (Section~\ref{sec:es_robust}). A positive value means the dollar rose "
         r"more (or fell less) under shock~A than shock~B. "
         r"$^{*}/^{**}/^{***}$: 10/5/1\%.",
         r"\end{tablenotes}", r"\end{threeparttable}", r"\end{table}", "",

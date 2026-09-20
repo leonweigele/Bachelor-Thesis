@@ -72,15 +72,15 @@ without a clean one-month forward (BRL, CLP, COP, PEN) are excluded from the car
 
 \paragraph{Market model.} Alongside the constant-mean specification, the event study computes
 market-model abnormal returns, using the equal-weighted dollar basket as the market return
-(Code/\texttt{03\_event\_study.py}, method \texttt{market\_model}).
-Table~\ref{tab:market_model} reports the basket-level results: the safe-haven ordering under both treatment shocks is unchanged relative to the constant-mean results in Chapter~\ref{ch:results}.
+(\texttt{Code/event\_study/03\_event\_study.py}, method \texttt{market\_model}).
+Table~\ref{tab:market_model} reports the basket-level results. The safe-haven ordering under both treatment shocks is unchanged relative to the constant-mean results in Chapter~\ref{ch:results}.
 
 \input{content/tab_market_model}
 
-\paragraph{Benchmark and persistence figures.} Figure~\ref{fig:car_ukraine_app} shows the
+\paragraph{Further event figures.} Figure~\ref{fig:car_ukraine_app} shows the
 full portfolio response around the external Ukraine benchmark at the identification window.
 In the main text the Ukraine dollar path enters only through the
-cross-event differences of Figure~\ref{fig:cross_event_usd}. Figure~\ref{fig:car_liberation_w50_app} extends the Liberation Day window to $+50$ days, plotted from $-10$ to $+50$. The tariff drift deepens rather than reverts, the mirror image of the transitory Hormuz premium in Figure~\ref{fig:car_hormuz_w50}.
+cross-event differences of Figure~\ref{fig:cross_event_usd}. Figure~\ref{fig:car_iran_12day_app} shows the same panels for the twelve-day war. Its estimation window contains the Liberation Day event window, so its paths and bands are read with the caveat of Section~\ref{sec:es_robust}. Figure~\ref{fig:car_liberation_w50_app} extends the Liberation Day window to $+50$ days, plotted from $-10$ to $+50$. The tariff drift deepens rather than reverts, the mirror image of the transitory Hormuz premium in Figure~\ref{fig:car_hormuz_w50}.
 
 \begin{figure}[htbp]
   \centering
@@ -111,6 +111,32 @@ cross-event differences of Figure~\ref{fig:cross_event_usd}. Figure~\ref{fig:car
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_usd_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_brent_half}
+  \end{subfigure}
+  \\[0.8em]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_safe_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_risky_half}
+  \end{subfigure}
+  \\[0.8em]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_oilexp_half}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{fig_car_iran_12day_oilimp_half}
+  \end{subfigure}
+  \caption[Twelve-day war: portfolio CARs]{Twelve-day war (13~June 2025): cumulative abnormal returns over $-5$ to $+20$ trading days. Construction as in Figure~\ref{fig:car_liberation_day}. The estimation window contains the Liberation Day event window (Section~\ref{sec:es_robust}).}
+  \label{fig:car_iran_12day_app}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
     \includegraphics[width=\linewidth]{fig_w50_liberation_day_usd_half}
   \end{subfigure}\hfill
   \begin{subfigure}{0.48\linewidth}
@@ -126,10 +152,3 @@ cross-event differences of Figure~\ref{fig:cross_event_usd}. Figure~\ref{fig:car
   \caption[Liberation Day: CARs over $+50$ days]{Liberation Day, $-10$ to $+50$ trading days, estimation window $[-170,-51]$. Construction as in Figure~\ref{fig:car_liberation_day}. The post-announcement dollar decline deepens over the horizon. The 9~April tariff pause (marked) interrupts but does not reverse it.}
   \label{fig:car_liberation_w50_app}
 \end{figure}
-
-\paragraph{Regression robustness.} The safe-haven regression of
-Section~\ref{sec:results_regression} uses Newey--West (HAC) standard errors, so its inference is
-robust to the autocorrelation and volatility clustering of daily returns. This is the main reason a
-simple least-squares interaction is preferred here to a conditional-correlation model. The
-crisis windows are the same event-day-to-$+20$ windows used in the event study, so the
-regression and the event study rest on a common, transparent definition of each episode.

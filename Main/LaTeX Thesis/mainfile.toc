@@ -27,25 +27,24 @@
 \contentsline {chapter}{\numberline {6}Empirical Results}{26}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Dollar Response to the Tariff Shock}{26}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Dollar Response to the Military Shocks}{29}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Cross-Event Comparison}{33}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Oil, Gold and Equities}{35}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Robustness}{37}{section.6.5}%
+\contentsline {section}{\numberline {6.3}Cross-Event Comparison}{32}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Oil, Gold and Equities}{34}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Robustness}{36}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Regression Results}{40}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Discussion}{44}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Findings in Light of the Literature}{44}{section.7.1}%
-\contentsline {section}{\numberline {7.2}The Dollar's Safe Haven Is Conditional on Shock Type}{45}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Gold and the Oil Channel}{46}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Policy Implications}{47}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Limitations}{47}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Conclusion}{49}{chapter.8}%
-\contentsline {chapter}{\numberline {9}References}{51}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Data Sources}{56}{chapter.10}%
-\contentsline {chapter}{\nonumberline Appendix}{58}{chapter*.18}%
-\contentsline {section}{\numberline {1}Currency Universe and Classification}{58}{section.10.1}%
-\contentsline {section}{\numberline {2}Robustness}{60}{section.10.2}%
-\contentsline {paragraph}{\nonumberline Market model.}{60}{paragraph*.22}%
-\contentsline {paragraph}{\nonumberline Benchmark and persistence figures.}{60}{paragraph*.26}%
-\contentsline {paragraph}{\nonumberline Regression robustness.}{60}{paragraph*.30}%
+\contentsline {chapter}{\numberline {7}Discussion}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Findings in Light of the Literature}{43}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Dollar's Safe Haven Is Conditional on Shock Type}{44}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Gold and the Oil Channel}{45}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Policy Implications}{46}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Limitations}{46}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Conclusion}{48}{chapter.8}%
+\contentsline {chapter}{\numberline {9}References}{50}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Data Sources}{55}{chapter.10}%
+\contentsline {chapter}{\nonumberline Appendix}{57}{chapter*.17}%
+\contentsline {section}{\numberline {1}Currency Universe and Classification}{57}{section.10.1}%
+\contentsline {section}{\numberline {2}Robustness}{59}{section.10.2}%
+\contentsline {paragraph}{\nonumberline Market model.}{59}{paragraph*.21}%
+\contentsline {paragraph}{\nonumberline Further event figures.}{59}{paragraph*.25}%
 \xpg@aux {}{german}
 \xpg@aux {}{english}
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -13,3 +13,7 @@ Leon clarified on 15 September 2026 that the preference applies only to prose se
 ## Current thesis
 
 The working thesis is at `/Users/leon/Bachelor Thesis/Main/LaTeX Thesis/mainfile.tex`. Read the current source and `/Users/leon/Bachelor Thesis/THESIS-CONTEXT.md` before editing. Review folders contain historical copies.
+
+## Backups and git
+
+Backups of edited files go to `_backups/<original relative path>.bak_<date>_<tag>` (copy with the original modification time), never next to the file. See `_backups/README.txt`. Sessions that run inside a Cowork VM use git read-only (`GIT_OPTIONAL_LOCKS=0 git log/status/diff`) and never `git add`, `commit`, `stash` or `checkout` from there, because the VM cannot delete git's lock files. Commits are made from the Mac terminal.
